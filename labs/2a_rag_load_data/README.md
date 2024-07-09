@@ -1,13 +1,13 @@
-# Lab - Load data into Cosmos DB using the MongoDB API
+# Lab 2a - RAG - Load data into Cosmos DB using the MongoDB API
 
 This lab demonstrates bulk loading of data from the Cosmic Works JSON files into Cosmos DB for MongoDB.
 
-## Setup the lab environment
+## 2a.1 Setup the lab environment
 
 1. In the lab folder, create a `.env` file and add the following environment variables, replace `<mongodb_uri>` with your Cosmos DB for MongoDB API service connection string:
 
     ```text
-    MONGODB_URI=<mongodb_uri>
+    MONGODB_URI=mongodb+srv://aiapp1dayadmin:Aiapp1daypassword123@ai-2vk3646vubly4-mongo.mongocluster.cosmos.azure.com/?tls=true&authMechanism=SCRAM-SHA-256&retrywrites=false&maxIdleTimeMS=120000&tlsInsecure=true
     ```
 
 2. In Visual Studio Code, open a terminal window and navigate to the lab folder `load_data`.
@@ -18,7 +18,13 @@ This lab demonstrates bulk loading of data from the Cosmic Works JSON files into
     npm install
     ```
 
-## Bulk load product data
+4. Pick a collection name that you like 
+
+```
+const productCollection = db.collection('products_daniel');
+```
+
+## 2a.2 Bulk load product data
 
 There is more than one option when performing bulk operations in Cosmos DB for MongoDB. In this section, data will be loaded using the `bulkWrite` method. The `bulkWrite` method is used to perform multiple write operations in a single batch, write operations can include a mixture of insert, update, and delete operations.
 
@@ -66,7 +72,7 @@ There is more than one option when performing bulk operations in Cosmos DB for M
 
     ![A console window displays indicating products have been inserted into the products collection](media/products_loaded.png "Products loaded")
 
-## Bulk load of customer and sales data
+## 2a.3 Bulk load of customer and sales data
 
 In this section, data will be loaded using the `insertMany` method. The `insertMany` method is used to insert multiple documents into a collection, it differs from the `bulkWrite` method in that it only supports insert operations.
 
@@ -120,6 +126,14 @@ Customer data and sales data are also combined in a single JSON source, some pre
 
     ![A console window displays indicating customers and sales have been inserted into the customers and sales collections](media/customers_sales_loaded.png "Customers and sales loaded")
 
-## Summary
+## 2a.4 see the data in the Cosmos DB (MongoDB)
+
+Install MongoDb plugin from VS code store
+
+```
+MongoDB for VS code
+```
+
+then add a connection to the data.
 
 In this section bulk load operations were used to load product, customer, and sales data into Cosmos DB for MongoDB. Keep the database and its loaded data for use in subsequent labs.
