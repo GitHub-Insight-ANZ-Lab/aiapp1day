@@ -7,7 +7,7 @@ import {
 } from "react";
 import { OpenAIClient, AzureKeyCredential } from "@azure/openai";
 import { useEventDataContext } from "./EventDataProvider";
-import { API_VERSION } from "../constants";
+import { API_VERSION, API_URL } from "../constants";
 
 export type OpenAIProviderValue = {
   client?: OpenAIClient;
@@ -25,7 +25,7 @@ const OpenAIClientProvider: React.FC<PropsWithChildren> = ({ children }) => {
     if (eventCode) {
       setClient(
         new OpenAIClient(
-          `${window.location.origin}/api/${API_VERSION}`,
+          `${API_URL}`,
           new AzureKeyCredential(`${eventCode}`),
           {
             allowInsecureConnection: process.env.ENVIRONMENT === "development",
