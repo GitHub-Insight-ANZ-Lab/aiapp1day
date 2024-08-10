@@ -15,14 +15,27 @@ npm run dev
 
 
 
-| Variable Name                          | Value                                                                                                                             |
+|Variable Name| Value|
 |----------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------|
-| AZURE_COSMOSDB_CONNECTION_STRING       | mongodb+srv://aiapp1dayadmin:Aiapp1daypassword123@arg-syd-aiapp1day-mongo.mongocluster.cosmos.azure.com/?tls=true&authMechanism=SCRAM-SHA-256&retrywrites=false&maxIdleTimeMS=120000&tlsInsecure=true |
-| AZURE_OPENAI_API_INSTANCE_NAME         | arg-syd-aiapp1day-openai                                                                                                           |
-| AZURE_OPENAI_API_KEY                   | 70563d5a57cc45999cdd80b9bf50ed4d                                                                                                  |
-| AZURE_OPENAI_API_DEPLOYMENT_NAME       | completions                                                                                                                       |
-| AZURE_OPENAI_API_EMBEDDINGS_DEPLOYMENT_NAME | embeddings                                                                                                                        |
-| AZURE_OPENAI_API_VERSION               | 2023-09-01-preview                                                                                                                |
+|AZURE_COSMOSDB_CONNECTION_STRING|mongodb+srv://aiapp1dayadmin:Aiapp1daypassword123@arg-syd-aiapp1day-mongo.mongocluster.cosmos.azure.com/?tls=true&authMechanism=SCRAM-SHA-256&retrywrites=false&maxIdleTimeMS=120000&tlsInsecure=true|
+|AZURE_OPENAI_API_INSTANCE_NAME| arg-syd-aiapp1day-openai|
+|AZURE_OPENAI_API_ENDPOINT|https://arg-syd-aiapp1day-openai.openai.azure.com/|
+|AZURE_OPENAI_API_KEY|70563d5a57cc45999cdd80b9bf50ed4d|
+|AZURE_OPENAI_API_DEPLOYMENT_NAME|completions|
+|AZURE_OPENAI_API_EMBEDDINGS_DEPLOYMENT_NAME|embeddings|
+|AZURE_OPENAI_API_VERSION|2023-09-01-preview|
 
 
-https://arg-syd-aiapp1day-openai.openai.azure.com/openai/deployments/YOUR_DEPLOYMENT_NAME/completions?api-version=2024-06-01
+## Clone AI App in One Day Repo
+
+Create a folder to house the repository. Open a terminal and navigate to the folder.
+
+```bash
+git clone https://github.com/AzureCosmosDB/Azure-OpenAI-Node.js-Developer-Guide.git
+
+cd Azure-OpenAI-Node.js-Developer-Guide
+cd Backend
+```
+
+
+

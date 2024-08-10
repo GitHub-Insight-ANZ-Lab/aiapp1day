@@ -22,8 +22,8 @@ Create the Azure OpenAI client to call the Azure OpenAI Chat completion API:
 
 ```javascript
 const client = new OpenAIClient(
-    "<azure-openai-service-endpoint",
-    new AzureKeyCredential("<azure-openai-service-key>")
+    "https://arg-syd-aiapp1day-openai.openai.azure.com",
+    new AzureKeyCredential("70563d5a57cc45999cdd80b9bf50ed4d")
     );
 ```
 

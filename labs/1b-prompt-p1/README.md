@@ -1,15 +1,19 @@
 # Lab 1b - Explore and use Azure OpenAI models from code
 
 
-## endpoint details
+## Endpoint details
 
-```
-AZURE_OPENAI_API_INSTANCE_NAME=ai-2vk3646vubly4-openai
-AZURE_OPENAI_API_KEY=60962ab6c7e84818b3fbfc94a7d85450
-AZURE_OPENAI_API_DEPLOYMENT_NAME=completions
-AZURE_OPENAI_API_EMBEDDINGS_DEPLOYMENT_NAME=embeddings
-AZURE_OPENAI_API_VERSION=2023-09-01-preview
-```
+|Variable Name| Value|
+|---|---|
+|AZURE_OPENAI_API_INSTANCE_NAME| arg-syd-aiapp1day-openai|
+|AZURE_OPENAI_API_ENDPOINT|https://arg-syd-aiapp1day-openai.openai.azure.com/|
+|AZURE_OPENAI_API_KEY|70563d5a57cc45999cdd80b9bf50ed4d|
+|AZURE_OPENAI_API_DEPLOYMENT_NAME|completions|
+|AZURE_OPENAI_API_EMBEDDINGS_DEPLOYMENT_NAME|embeddings|
+|AZURE_OPENAI_API_VERSION|2023-09-01-preview|
+
+
+
 
 ## 1b.1 OpenAI Client Library
 
@@ -30,14 +34,14 @@ const { OpenAIClient, AzureKeyCredential } = require("@azure/openai");
 todo: grab some good examples from 
 https://microsoft.github.io/Workshop-Interact-with-OpenAI-models/Part-1-labs/Conversation-history/
 
-## 1b.2 Basic Prompting
+## 1b.2 Basic Prompt
 
 Create the Azure OpenAI client to call the Azure OpenAI Chat completion API:
 
 ```javascript
 const client = new OpenAIClient(
-    "<azure-openai-service-endpoint",
-    new AzureKeyCredential("<azure-openai-service-key>")
+    "https://arg-syd-aiapp1day-openai.openai.azure.com",
+    new AzureKeyCredential("70563d5a57cc45999cdd80b9bf50ed4d")
     );
 ```
 
@@ -63,6 +67,13 @@ chatResponse.then((result) => {
     }
 }).catch((err) => console.log(`Error: ${err}`));
 ```
+
+Open terminal window in VS code, and run below command
+
+```
+node app.js
+```
+
 
 The response from the Azure OpenAI service should be similar to the following:
 

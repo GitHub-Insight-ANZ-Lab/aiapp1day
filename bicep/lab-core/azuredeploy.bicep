@@ -103,13 +103,15 @@ var appServiceSettings = {
     name: '${name}-web'
     sku: appServiceSku
   }
-  web: {
-    name: '${name}-web'
-    git: {
-      repo: 'https://github.com/AzureCosmosDB/Azure-OpenAI-Developer-Guide-Front-End.git'
-      branch: 'main'
-    }
-  }  
+  playground: {
+    name: '${name}-playground'
+  }
+  api: {
+    name: '${name}-api'
+  }
+  chat: {
+    name: '${name}-chat'
+  }
 }
 
 /* *************************************************************** */
@@ -220,7 +222,7 @@ resource logAnalytics 'Microsoft.OperationalInsights/workspaces@2021-06-01' = {
   }
 }
 resource appServiceWebInsights 'Microsoft.Insights/components@2020-02-02' = {
-  name: '${appServiceSettings.web.name}-appi'
+  name: '${name}-appi'
   location: location
   kind: 'web'
   properties: {
@@ -251,7 +253,7 @@ resource appServicePlan 'Microsoft.Web/serverfarms@2022-03-01' = {
 /* *************************************************************** */
 
 resource appServiceWeb 'Microsoft.Web/sites@2022-03-01' = {
-  name: appServiceSettings.web.name
+  name: appServiceSettings.playground.name
   location: location
   properties: {
     serverFarmId: appServicePlan.id
@@ -270,20 +272,36 @@ resource appServiceWebSettings 'Microsoft.Web/sites/config@2022-03-01' = {
   kind: 'string'
   properties: {
     APPINSIGHTS_INSTRUMENTATIONKEY: appServiceWebInsights.properties.InstrumentationKey
-    API_ENDPOINT: '' // 'https://${backendApiContainerApp.properties.configuration.ingress.fqdn}'
   }
 }
 
-resource appServiceWebDeployment 'Microsoft.Web/sites/sourcecontrols@2021-03-01' = {
-  parent: appServiceWeb
-  name: 'web'
+resource appServiceApi 'Microsoft.Web/sites@2022-03-01' = {
+  name: appServiceSettings.api.name
+  location: location
   properties: {
-    repoUrl: appServiceSettings.web.git.repo
-    branch: appServiceSettings.web.git.branch
-    isManualIntegration: true
+    serverFarmId: appServicePlan.id
+    httpsOnly: true
+    siteConfig: {
+      linuxFxVersion: 'NODE|20-lts'
+      appCommandLine: 'pm2 serve /home/site/wwwroot/dist --no-daemon --spa'
+      alwaysOn: true
+    }
   }
 }
 
+resource appServiceChat 'Microsoft.Web/sites@2022-03-01' = {
+  name: appServiceSettings.chat.name
+  location: location
+  properties: {
+    serverFarmId: appServicePlan.id
+    httpsOnly: true
+    siteConfig: {
+      linuxFxVersion: 'NODE|20-lts'
+      appCommandLine: 'pm2 serve /home/site/wwwroot/dist --no-daemon --spa'
+      alwaysOn: true
+    }
+  }
+}
 
 /* *************************************************************** */
 /* Registry for Back-end API Image - Azure Container Registry */
