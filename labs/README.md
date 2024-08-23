@@ -1,10 +1,12 @@
 
-# Outline
+# Lab Outline
 
 
 ## Tech check
 
 [go to lab](0a-tech-check/README.md)
+
+
 
 
 ## Lab 1 - Prompt Engineering
@@ -15,10 +17,16 @@ todo: need to double check content is enough for 2h
 
 Duration: 20 minutes demo [go to lab](1a-azure-iac/README.md)
 
+todo: this is only a presenter demo. probably record the demo to be safe?
+todo: this IaC deployment is to show case how to deploy azure resource. we could have a user IaC template for anyway really want to deploy a app svc (assuming they dont have AOAI enabled).
+
+
 ### Lab 1b - Explore and use Azure OpenAI models from code
 
 Duration: 30 minutes [go to lab](1b-prompt-p1/README.md)
 
+todo: playground app is setup, it can be used for initial prompt exercise (i.e. from UI rather than code). https://arg-syd-aiapp1day-playground.azurewebsites.net/, enter AOAI sub key on top right.
+todo: playground app to be adjusted to test out functions (it is a cut down version without backend, use subkey directly)
 todo: to add more based on https://microsoft.github.io/Workshop-Interact-with-OpenAI-models/Part-1-labs/Basic-Prompting/
 
 ### Lab 1c - More Prompt Engineering
@@ -55,4 +63,7 @@ Duration: 30 minutes [go to lab](2c_rag_langchain/README.md)
 Duration: 30 minutes [go to lab](2d-rag_chatbot/README.md)
 
 todo: add a section to copy 2c code into backend api 
+todo: add speech service 
+todo: add translation service
+
 
