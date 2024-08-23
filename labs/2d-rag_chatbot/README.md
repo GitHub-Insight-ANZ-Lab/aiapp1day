@@ -5,7 +5,27 @@
 
 In the previous lab, the backend API code was configured and hosted locally. The backend API integrates vCore-based Azure Cosmos DB for MongoDB with Azure OpenAI. When the Azure resource template for this lab was run to deploy the necessary Azure resources, a front-end web application written as a SPA (single page application) in React was deployed.
 
-The frontend chatbox application is located in apps/chatbot. start the application with below commands
+
+The backend api app is located in apps/api. update your database name in cosmic_works_ai_agent.js
+```
+const DBNAME = 'aiapp1day_daniel'
+```
+
+start the application with below commands
+
+```
+npm install
+npm start dev
+```
+
+The frontend chatbot app is located in apps/chatbot. 
+
+update your databasen name in cosmic_works_ai_agent.js
+```
+const DBNAME = 'aiapp1day_daniel'
+```
+
+start the chatbot app with below commands, open browser and visit url: http://localhost:4000/.
 
 ```
 npm install
@@ -16,9 +36,7 @@ Navigating to local URL in the browser accesses the front-end application. Throu
 
 ![Front-end Web Application User Interface](images/2024-01-17-12-42-59.png)
 
-While the code for the SPA web application is outside the scope of this dev guide. It's worth noting that the Web App is configured with the URL for the Backend API using the **Application setting** named `API_ENDPOINT`. When the application was deployed as part of the Azure template deployment, it was automatically configured with this URL to connect the front-end SPA web application to the Backend API.
-
-![Web App resource showing the application settings with the API_ENDPOINT setting highlighted](images/2024-01-17-12-45-30.png)
+While the code for the SPA web application is outside the scope of this dev guide. It's worth noting that the Web App is configured with the URL for the Backend API in api/BACKEND_URI.ts.
 
 todo: current API_ENDPOINT is harded. probably just keep it simple for now rather than an app setting.
 
