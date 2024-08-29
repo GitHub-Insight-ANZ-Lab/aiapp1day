@@ -62,7 +62,7 @@ When developing a backend api, it is often useful to run the application locally
 
     ![The VSCode terminal window displays with the backend API started.](media/local_backend_running_console.png "Local backend api running")
 
-7. Open a browser and navigate to `http://localhost:4242/docs` to view the Swagger UI.
+7. Open a browser and navigate to `http://localhost:5000/docs` to view the Swagger UI.
 
     ![The Swagger UI displays for the locally running backend api](media/local_backend_swagger_ui.png "Local backend api Swagger UI")
 
@@ -128,7 +128,7 @@ Notice the steps of installing the pip dependencies, and running the **uvicorn**
 
     ![The VSCode terminal window displays the docker run command.](media//local_backend_docker_run.png "Local backend api Docker run")
 
-6. Open a browser and navigate to `http://localhost:4242/docs` to view the Swagger UI.
+6. Open a browser and navigate to `http://localhost:5000/docs` to view the Swagger UI.
 
 7. Repeat steps 8-10 from the previous section to test the backend api running in a container on Docker Desktop.
 
