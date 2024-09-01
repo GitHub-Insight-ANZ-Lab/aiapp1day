@@ -10,7 +10,7 @@ const Layout = () => {
             <header className={styles.header} role={"banner"}>
                 <div className={styles.headerContainer}>
                     <Link to="/" className={styles.headerTitleContainer}>
-                        <h3 className={styles.headerTitle}>Cosmos DB MongoDB vCore + Azure OpenAI</h3>
+                        <h3 className={styles.headerTitle}>Azure OpenAI RAG Chatbot </h3>
                     </Link>
                     <nav>
                         <ul className={styles.headerNavList}>
@@ -29,7 +29,7 @@ const Layout = () => {
                             </li>
                         </ul>
                     </nav>
-                    <h4 className={styles.headerRightText}>CosmicWorks</h4>
+                    <h4 className={styles.headerRightText}>AI App in 1 Day</h4>
                 </div>
             </header>
 
