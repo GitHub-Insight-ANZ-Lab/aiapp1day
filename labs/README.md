@@ -1,12 +1,15 @@
 
 # Lab Outline
 
+todo: i dropped original msft repo readme & license files. we need to add some readme back to declare the codes are from which original repos.
+
+
 
 ## Tech check
 
 [go to lab](0a-tech-check/README.md)
 
-
+todo: need to test end to end on a clean pc. maybe use azure windows pc?
 
 
 ## Lab 1 - Prompt Engineering
@@ -46,11 +49,14 @@ Duration: 30 minutes [go to lab](1d-backend-api/README.md)
 todo: add a basic AOAI completion api call so that it can be called in swagger directly. 
 
 
-## Lab 2 - RAG 
+## Lab 2 - RAG chatbot
 
 ### Lab 2a - Load custom data into database
 
 Duration: 30 minutes [go to lab](2a_rag_load_data/README.md)
+
+todo: make json file local and cut down total record count (otherwise embedding gen calc will take long)
+todo: could be good to add some data engineering step. i.e. convert excel data into json based. quality of the data is important
 
 ### Lab 2b - Vector search based on embedding
 
@@ -60,7 +66,7 @@ Duration: 30 minutes [go to lab](2b_rag_vector_search/README.md)
 ### Lab 2c - integrate Azure OpenAI with LangChain RAG
 
 Duration: 30 minutes [go to lab](2c_rag_langchain/README.md)
-
+todo: need some clean up to get rid of keyward cosmos_works in file names etc
 
 ### Lab 2d - End to end Chatbot Time!
 
