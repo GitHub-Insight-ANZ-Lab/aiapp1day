@@ -18,7 +18,7 @@ npm run dev
 |Variable Name| Value|
 |----------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------|
 |AZURE_COSMOSDB_CONNECTION_STRING|mongodb+srv://aiapp1dayadmin:Aiapp1daypassword123@arg-syd-aiapp1day-mongo.mongocluster.cosmos.azure.com/?tls=true&authMechanism=SCRAM-SHA-256&retrywrites=false&maxIdleTimeMS=120000&tlsInsecure=true|
-|AZURE_OPENAI_API_INSTANCE_NAME| arg-syd-aiapp1day-openai|
+|AZURE_OPENAI_API_INSTANCE_NAME|arg-syd-aiapp1day-openai|
 |AZURE_OPENAI_API_ENDPOINT|https://arg-syd-aiapp1day-openai.openai.azure.com/|
 |AZURE_OPENAI_API_KEY|70563d5a57cc45999cdd80b9bf50ed4d|
 |AZURE_OPENAI_API_DEPLOYMENT_NAME|completions|
@@ -31,11 +31,6 @@ npm run dev
 Create a folder to house the repository. Open a terminal and navigate to the folder.
 
 ```bash
-git clone https://github.com/AzureCosmosDB/Azure-OpenAI-Node.js-Developer-Guide.git
-
-cd Azure-OpenAI-Node.js-Developer-Guide
-cd Backend
+git clone https://github.com/GitHub-Insight-ANZ-Lab/aiapp1day.git
 ```
-
-
 
