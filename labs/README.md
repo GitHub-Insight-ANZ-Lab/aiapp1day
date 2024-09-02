@@ -17,6 +17,10 @@ todo: need to double check content is enough for 2h
 
 Duration: 20 minutes demo [go to lab](1a-azure-iac/README.md)
 
+Tenant: Insight AU Demo Pty Ltd
+Sub: sub-insight-ais-sbx-01
+RG: arg-syd-aiapp1day-lab
+
 todo: this is only a presenter demo. probably record the demo to be safe?
 todo: this IaC deployment is to show case how to deploy azure resource. we could have a user IaC template for anyway really want to deploy a app svc (assuming they dont have AOAI enabled).
 
