@@ -13,11 +13,12 @@ todo: need to double check content is enough for 2h
 
 ### Lab 1a - Deploying Azure Resource via IaC
 
-Duration: 20 minutes demo [go to lab](1a-azure resource/README.md)
+Duration: 20 minutes demo [go to lab](1a-azure-iac/README.md)
 
 ### Lab 1b - Explore and use Azure OpenAI models from code
 
 Duration: 30 minutes [go to lab](1b-prompt-p1/README.md)
+
 todo: to add more based on https://microsoft.github.io/Workshop-Interact-with-OpenAI-models/Part-1-labs/Basic-Prompting/
 
 ### Lab 1c - More Prompt Engineering
