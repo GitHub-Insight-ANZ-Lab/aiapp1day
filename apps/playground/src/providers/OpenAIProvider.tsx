@@ -7,7 +7,7 @@ import {
 } from "react";
 import { OpenAIClient, AzureKeyCredential } from "@azure/openai";
 import { useEventDataContext } from "./EventDataProvider";
-import { API_VERSION, API_URL } from "../constants";
+import { API_URL } from "../constants";
 
 export type OpenAIProviderValue = {
   client?: OpenAIClient;

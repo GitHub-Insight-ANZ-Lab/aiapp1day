@@ -55,7 +55,7 @@ const EventDataProvider: React.FC<PropsWithChildren> = ({ children }) => {
     const abortController = new AbortController();
     const getEventData = async (eventCode: string) => {
       try {
-        const data = await eventInfo(eventCode, abortController);
+        const data = await eventInfo(eventCode);
         setEventData(() => ({
           name: data.event_code,
           maxTokenCap: data.max_token_cap,
