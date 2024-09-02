@@ -11,10 +11,10 @@ todo: need some coding work to be done. the current backend api uses langchain w
 Create a folder to house the repository. Open a terminal and navigate to the folder. Clone the repository, then navigate to the `Backend` folder within the repository.
 
 ```bash
-git clone https://github.com/AzureCosmosDB/Azure-OpenAI-Node.js-Developer-Guide.git
+git clone https://github.com/GitHub-Insight-ANZ-Lab/aiapp1day.git
 
-cd Azure-OpenAI-Node.js-Developer-Guide
-cd Backend
+cd apps
+cd api
 ```
 
 ## 1d.2 Run the backend api locally
@@ -57,9 +57,7 @@ When developing a backend api, it is often useful to run the application locally
     npm run dev
     ```
 
-    ![The VSCode terminal window displays with the backend API started.](media/local_backend_running_console.png "Local backend api running")
-
-7. Open a browser and navigate to `http://localhost:4242/docs` to view the Swagger UI.
+7. Open a browser and navigate to `http://localhost:5000/docs` to view the Swagger UI.
 
     ![The Swagger UI displays for the locally running backend api](media/local_backend_swagger_ui.png "Local backend api Swagger UI")
 
@@ -72,7 +70,7 @@ When developing a backend api, it is often useful to run the application locally
     ```json
     {
         "session_id": "abc123",
-        "prompt": "What was the price of the product with sku `FR-R92B-58`"
+        "prompt": "hello, how are you"
     }
     ```
 
