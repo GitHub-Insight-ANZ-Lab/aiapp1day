@@ -1,5 +1,4 @@
 require('dotenv').config();
-const DBNAME = 'aiapp1day_daniel'
 const { MongoClient } = require('mongodb');
 const { AzureCosmosDBVectorStore,
     AzureCosmosDBSimilarityType
@@ -7,11 +6,11 @@ const { AzureCosmosDBVectorStore,
 const { OpenAIEmbeddings } = require("@langchain/openai")
 
 // set up the MongoDB client
-const dbClient = new MongoClient(process.env.AZURE_COSMOSDB_CONNECTION_STRING);
+const dbClient = new MongoClient(process.env.MONGODB_CONNECTION_STRING);
 // set up the Azure Cosmos DB vector store using the initialized MongoDB client
 const azureCosmosDBConfig = {
     client: dbClient,
-    databaseName: DBNAME,
+    databaseName: process.env.MONGODB_NAME,
     collectionName: "products",
     indexName: "VectorSearchIndex",
     embeddingKey: "contentVector",

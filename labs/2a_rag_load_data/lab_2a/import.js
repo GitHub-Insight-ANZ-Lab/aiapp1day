@@ -1,13 +1,14 @@
 require('dotenv').config();
 const { MongoClient } = require('mongodb');
-const DBNAME = 'aiapp1day_daniel'
+const fs = require('fs');
+const path = require('path');
 
 async function main() {    
-    const client = new MongoClient(process.env.MONGODB_URI);
+    const client = new MongoClient(process.env.MONGODB_CONNECTION_STRING);
     try {
         await client.connect();
         console.log('Connected to MongoDB');
-        const db = client.db(DBNAME);
+        const db = client.db(process.env.MONGODB_NAME);
 
         
     } catch (err) {

@@ -15,7 +15,7 @@ To simplify code, the LangChain package makes use of environment variables. The 
 2. Add the following settings to the `.env` file, populating the MongoDB connection string and replacing the values from the deployed Azure OpenAI service:
 
     ```bash
-    AZURE_COSMOSDB_CONNECTION_STRING=<mongodb_uri>
+    MONGODB_CONNECTION_STRING=<MONGODB_CONNECTION_STRING>
     AZURE_OPENAI_API_INSTANCE_NAME=<openai-service-name>
     AZURE_OPENAI_API_KEY=<azure_openai_api_key>
     AZURE_OPENAI_API_DEPLOYMENT_NAME=completions
@@ -23,7 +23,7 @@ To simplify code, the LangChain package makes use of environment variables. The 
     AZURE_OPENAI_API_VERSION=2023-09-01-preview
     ```
 
-    Replace `<mongodb_uri>` with the MongoDB connection string. Replace `<openai-service-name>` with the name of the deployed OpenAI service, and `<azure_openai_api_key>` with the Azure OpenAI API key. Leave all other values untouched.
+    Replace `<MONGODB_CONNECTION_STRING>` with the MongoDB connection string. Replace `<openai-service-name>` with the name of the deployed OpenAI service, and `<azure_openai_api_key>` with the Azure OpenAI API key. Leave all other values untouched.
 
     >**Note**: The Azure OpenAI service name is not the full endpoint. Only the service name is required. For example, if the endpoint is `https://myservicename.openai.azure.com/`, then the service name is `myservicename`.
 
@@ -68,13 +68,13 @@ The return value of a vector search in LangChain is a list of `Document` objects
     const { OpenAIEmbeddings } = require("@langchain/openai")
     ```
 
-3. Directly beneath the line of code that sets up the MongoDB connection `const dbClient = new MongoClient(process.env.AZURE_COSMOSDB_CONNECTION_STRING);`, add the following code to initialize the connection to the vector store that points to the `products` collection and associated index. The `OpenAIEmbeddings` uses the default values obtained from the environment variables to initialize.
+3. Directly beneath the line of code that sets up the MongoDB connection `const dbClient = new MongoClient(process.env.MONGODB_CONNECTION_STRING);`, add the following code to initialize the connection to the vector store that points to the `products` collection and associated index. The `OpenAIEmbeddings` uses the default values obtained from the environment variables to initialize.
 
     ```javascript
     // set up the Azure Cosmos DB vector store using the initialized MongoDB client
     const azureCosmosDBConfig = {
         client: dbClient,
-        databaseName: "cosmic_works",
+        databaseName: process.env.MONGODB_NAME,
         collectionName: "products",
         indexName: "VectorSearchIndex",
         embeddingKey: "contentVector",
@@ -183,19 +183,19 @@ We'll also define a reusable RAG chain to control the flow and behavior of the c
         // A system prompt describes the responsibilities, instructions, and persona of the AI.
         // Note the addition of the templated variable/placeholder for the list of products and the incoming question.
         const systemPrompt = `
-            You are a helpful, fun and friendly sales assistant for Cosmic Works, a bicycle and bicycle accessories store. 
+            You are a helpful, fun and friendly sales assistant for Contoso Bike Store, a bicycle and bicycle accessories store. 
             Your name is Cosmo.
-            You are designed to answer questions about the products that Cosmic Works sells.
+            You are designed to answer questions about the products that Contoso Bike Store sells.
 
             Only answer questions related to the information provided in the list of products below that are represented
             in JSON format.
 
             If you are asked a question that is not in the list, respond with "I don't know."
 
-            Only answer questions related to Cosmic Works products, customers, and sales orders.
+            Only answer questions related to Contoso Bike Store products, customers, and sales orders.
 
-            If a question is not related to Cosmic Works products, customers, or sales orders,
-            respond with "I only answer questions about Cosmic Works"
+            If a question is not related to Contoso Bike Store products, customers, or sales orders,
+            respond with "I only answer questions about Contoso Bike Store"
 
             List of products:
             {products}
@@ -278,18 +278,18 @@ In this section, we'll implement a LangChain agent that will be used to interact
         // Note the variable placeholders for the list of products and the incoming question are not included.
         // An agent system prompt contains only the persona and instructions for the AI.
         const systemMessage = `
-                You are a helpful, fun and friendly sales assistant for Cosmic Works, a bicycle and bicycle accessories store.
+                You are a helpful, fun and friendly sales assistant for Contoso Bike Store, a bicycle and bicycle accessories store.
         
                 Your name is Cosmo.
         
-                You are designed to answer questions about the products that Cosmic Works sells, the customers that buy them, and the sales orders that are placed by customers.
+                You are designed to answer questions about the products that Contoso Bike Store sells, the customers that buy them, and the sales orders that are placed by customers.
         
                 If you don't know the answer to a question, respond with "I don't know."
                 
-                Only answer questions related to Cosmic Works products, customers, and sales orders.
+                Only answer questions related to Contoso Bike Store products, customers, and sales orders.
                 
-                If a question is not related to Cosmic Works products, customers, or sales orders,
-                respond with "I only answer questions about Cosmic Works"          
+                If a question is not related to Contoso Bike Store products, customers, or sales orders,
+                respond with "I only answer questions about Contoso Bike Store"          
             `;
 
         // Create vector store retriever chain to retrieve documents and formats them as a string for the prompt.
@@ -298,10 +298,10 @@ In this section, we'll implement a LangChain agent that will be used to interact
         // Define tools for the agent can use, the description is important this is what the AI will 
         // use to decide which tool to use.
 
-        // A tool that retrieves product information from Cosmic Works based on the user's question.
+        // A tool that retrieves product information from Contoso Bike Store based on the user's question.
         const productsRetrieverTool = new DynamicTool({
             name: "products_retriever_tool",
-            description: `Searches Cosmic Works product information for similar products based on the question. 
+            description: `Searches Contoso Bike Store product information for similar products based on the question. 
                         Returns the product information in JSON format.`,
             func: async (input) => await retrieverChain.invoke(input),
         });
@@ -309,11 +309,11 @@ In this section, we'll implement a LangChain agent that will be used to interact
         // A tool that will lookup a product by its SKU. Note that this is not a vector store lookup.
         const productLookupTool = new DynamicTool({
             name: "product_sku_lookup_tool",
-            description: `Searches Cosmic Works product information for a single product by its SKU.
+            description: `Searches Contoso Bike Store product information for a single product by its SKU.
                         Returns the product information in JSON format.
                         If the product is not found, returns null.`,
             func: async (input) => {
-                const db = dbClient.db("cosmic_works");
+                const db = dbClient.db(process.env.MONGODB_NAME);
                 const products = db.collection("products");
                 const doc = await products.findOne({ "sku": input });            
                 if (doc) {                

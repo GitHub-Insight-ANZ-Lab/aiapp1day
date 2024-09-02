@@ -1,36 +1,42 @@
 # Lab 2a - RAG - Load data into Cosmos DB using the MongoDB API
 
-This lab demonstrates bulk loading of data from the Cosmic Works JSON files into Cosmos DB for MongoDB.
+This lab demonstrates bulk loading of data from the Contoso Bike Store JSON files into Cosmos DB for MongoDB.
 
 ## 2a.1 Setup the lab environment
 
-1. In the lab folder, create a `.env` file and add the following environment variables, replace `<mongodb_uri>` with your Cosmos DB for MongoDB API service connection string:
+1. In the lab folder, create a `.env` file and add the following environment variables, replace `<MONGODB_CONNECTION_STRING>` with your Cosmos DB for MongoDB API service connection string:
 
     ```text
-    MONGODB_URI=mongodb+srv://aiapp1dayadmin:Aiapp1daypassword123@ai-2vk3646vubly4-mongo.mongocluster.cosmos.azure.com/?tls=true&authMechanism=SCRAM-SHA-256&retrywrites=false&maxIdleTimeMS=120000&tlsInsecure=true
+    MONGODB_CONNECTION_STRING=mongodb+srv://aiapp1dayadmin:Aiapp1daypassword123@arg-syd-aiapp1day-mongo.mongocluster.cosmos.azure.com/?tls=true&authMechanism=SCRAM-SHA-256&retrywrites=false&maxIdleTimeMS=120000&tlsInsecure=true
     ```
 
-2. In Visual Studio Code, open a terminal window and navigate to the lab folder `lab_2a`.
+2. Choose a unique name for your CosmosDB database. While everyone in the workshop will share the same CosmosDB instance, you can select your own database name. Modify `MONGODB_Name` in `.env` file.
 
-3. Install the required packages by running the following command in the terminal window:
+    ```text
+    MONGODB_Name = 'aiapp1day_daniel_55'
+
+    MONGODB_Name = 'aiapp1day_{your_name}_{your_lucky_number}'
+    ```
+
+3. In Visual Studio Code, open a terminal window and navigate to the lab folder `lab_2a`.
+
+4. To install the required packages, execute the following command in the terminal window:
 
     ```bash
     npm install
     ```
 
-4. Pick a CosmosDB database name that you like, everyone in the workshop will share the same CosmosDB isntance but you can choose your own database name.
-
-    ```javascript
-    const productCollection = db.collection('products_daniel');
-    ```
 
 ## 2a.2 Prepare the data set
 
-The product data set is located in data\product.csv, the data set has multiple columns. but the tags column is a json string. 
-
 The qualitfy of the dataset feeding into the LLM model makes big different. Maybe it is usually the job of data team, but there could be various convertion and integration required to format the data set. Lets do a quick excerise on preparing the data set. No 'Rubbish in & Rubbish out' for our chatbot.
 
-create a convert.js file to parse the text into json format that is better for vector search.
+The product data set is located in data\product.csv, the data set has multiple columns. but the tags column is a json string. 
+
+1. this is the csv file
+    ![alt text](image.png)
+
+2. create a `convert.js` file to parse the text into json format that is better for vector search.
 
     ```javascript
     const fs = require('fs');
@@ -52,9 +58,6 @@ create a convert.js file to parse the text into json format that is better for v
                 if (header === 'tags') {
                     // Decode the JSON string
                     obj[header] = JSON.parse(values[index].replace(/'/g, '"'));
-                } else if (header === 'price') {
-                    // Convert price to integer
-                    obj[header] = parseFloat(values[index], 10);
                 } else {
                     obj[header] = values[index];
                 }
@@ -73,19 +76,18 @@ create a convert.js file to parse the text into json format that is better for v
     console.log('CSV file has been converted to JSON file successfully.');
     ```
 
-    
-
-4. Save the `convert.js` file.
-
-5. Run the application by executing the following command in the terminal window:
+3. Save the `convert.js` file. To run the application, execute the following command in the terminal window:
 
     ```bash
     node convert.js
     ```
 
-    6. check the product.json file. do a differ in VS code to compare product.json and product-original.json. there are certain discrepancies.
+4. Open the generated `product.json` file and see if any format issues stands out?
+    ![alt text](image-1.png)
 
-7. we need to convert price tag to a float in json
+5. Use the "Differ" feature in Visual Studio Code to compare `product.json` and `product-original.json` for any discrepancies. We noticed that `price` is a string rather than a float.
+
+6. To convert the price tag to a float in the JSON file, modify the code as follows:
 
     ```javascript
     if (header === 'tags') {
@@ -99,24 +101,28 @@ create a convert.js file to parse the text into json format that is better for v
     }
      ```
 
-8. run the code and compare the 2 josn files again. we noticed that description field seems to missing " in certain part.
+7. Run the code and compare the two JSON files again. We noticed that the description field seems to be missing quotation marks in certain parts.
 
-Changelle: can you think of a way to change the code to keep these quotation marks?
+>**Challenge**: Can you suggest a modification to the code that would preserve the quotation marks in the description field?
 
 
 ## 2a.3 Bulk load product data
 
 There is more than one option when performing bulk operations in Cosmos DB for MongoDB. In this section, data will be loaded using the `bulkWrite` method. The `bulkWrite` method is used to perform multiple write operations in a single batch, write operations can include a mixture of insert, update, and delete operations.
 
-1. Open the `index.js` file, and directly beneath the `const db = client.db('cosmic_works');` line, add the following code to fetch the product data from the Cosmic Works repository:
+1. Open the `import.js` file, and directly beneath the `const db = client.db('DBName');` line, add the following code to fetch the product data from the Contoso Bike Store repository:
 
     ```javascript
     // Load product data
     console.log('Loading product data')
     // Initialize the product collection pointer (will automatically be created if it doesn't exist)
     const productCollection = db.collection('products');
-    // Load the product data from the raw data from Cosmic Works while also removing the system properties
-    const productRawData = "https://cosmosdbcosmicworks.blob.core.windows.net/cosmic-works-small/product.json";
+
+    // Define the path to the local JSON file
+    const jsonFilePath = path.join('data', 'product.json');
+
+    // Read the JSON file
+    const productRawData = fs.readFileSync(jsonFilePath, 'utf8');
     const productData = (await (await fetch(productRawData)).json())
                             .map(prod => cleanData(prod));
     ```
@@ -142,12 +148,12 @@ There is more than one option when performing bulk operations in Cosmos DB for M
     console.log(`${result.insertedCount} products inserted`);
     ```
 
-4. Save the `index.js` file.
+4. Save the `import.js` file.
 
 5. Run the application by executing the following command in the terminal window:
 
     ```bash
-    npm start
+    node import.js
     ```
 
     ![A console window displays indicating products have been inserted into the products collection](media/products_loaded.png "Products loaded")
@@ -158,7 +164,7 @@ In this section, data will be loaded using the `insertMany` method. The `insertM
 
 Customer data and sales data are also combined in a single JSON source, some pre-processing is required to separate the data into two separate collections.
 
-1. Open the `index.js` file, and directly beneath the code for adding products, append the following code to fetch the customer and sales data from the Cosmic Works repository:
+1. Open the `import.js` file, and directly beneath the code for adding products, append the following code to fetch the customer and sales data from the Contoso Bike Store repository:
 
     ```javascript
     // Load customer and sales data
@@ -196,24 +202,26 @@ Customer data and sales data are also combined in a single JSON source, some pre
     console.log(`${result.insertedCount} sales inserted`);
     ```
 
-5. Save the `index.js` file.
+5. Save the `import.js` file.
 
 6. Run the application by executing the following command in the terminal window:
 
     ```bash
-    npm start
+    node import.js
     ```
 
     ![A console window displays indicating customers and sales have been inserted into the customers and sales collections](media/customers_sales_loaded.png "Customers and sales loaded")
 
-## 2a.4 see the data in the Cosmos DB (MongoDB)
+## 2a.4 Browse the data in the Cosmos DB (MongoDB)
 
-Install MongoDb plugin from VS code store
+1. Install MongoDb extension in VS code : MongoDB for VS code
 
-    ```text
-    MongoDB for VS code
-    ```
+    ![alt text](image-1.png)
 
-then add a connection to the data.
+2. then add a connection to the data.
+    ![alt text](image-2.png)
+
+3. Browse the json records in the product and customer table.
+    ![alt text](image.png)
 
 In this section bulk load operations were used to load product, customer, and sales data into Cosmos DB for MongoDB. Keep the database and its loaded data for use in subsequent labs.

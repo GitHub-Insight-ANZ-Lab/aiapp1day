@@ -1,5 +1,4 @@
 require('dotenv').config();
-const DBNAME = 'aiapp1day_daniel'
 const { MongoClient } = require('mongodb');
 const { AzureCosmosDBVectorStore,
     AzureCosmosDBSimilarityType
@@ -12,11 +11,11 @@ const { StringOutputParser } = require("@langchain/core/output_parsers")
 
 
 // set up the MongoDB client
-const dbClient = new MongoClient(process.env.AZURE_COSMOSDB_CONNECTION_STRING);
+const dbClient = new MongoClient(process.env.MONGODB_CONNECTION_STRING);
 // set up the Azure Cosmos DB vector store using the initialized MongoDB client
 const azureCosmosDBConfig = {
     client: dbClient,
-    databaseName: DBNAME,
+    databaseName: process.env.MONGODB_NAME,
     collectionName: "products",
     indexName: "VectorSearchIndex",
     embeddingKey: "contentVector",
@@ -76,19 +75,19 @@ async function ragLCELChain(question) {
     // A system prompt describes the responsibilities, instructions, and persona of the AI.
     // Note the addition of the templated variable/placeholder for the list of products and the incoming question.
     const systemPrompt = `
-        You are a helpful, fun and friendly sales assistant for Cosmic Works, a bicycle and bicycle accessories store. 
+        You are a helpful, fun and friendly sales assistant for Contoso Bike Store, a bicycle and bicycle accessories store. 
         Your name is Cosmo.
-        You are designed to answer questions about the products that Cosmic Works sells.
+        You are designed to answer questions about the products that Contoso Bike Store sells.
 
         Only answer questions related to the information provided in the list of products below that are represented
         in JSON format.
 
         If you are asked a question that is not in the list, respond with "I don't know."
 
-        Only answer questions related to Cosmic Works products, customers, and sales orders.
+        Only answer questions related to Contoso Bike Store products, customers, and sales orders.
 
-        If a question is not related to Cosmic Works products, customers, or sales orders,
-        respond with "I only answer questions about Cosmic Works"
+        If a question is not related to Contoso Bike Store products, customers, or sales orders,
+        respond with "I only answer questions about Contoso Bike Store"
 
         List of products:
         {products}
