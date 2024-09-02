@@ -5,17 +5,31 @@ export async function eventInfo(
   abortController: AbortController
 ): Promise<EventInfo> {
   try {
-    const response = await fetch(`/api/${API_VERSION}/eventinfo`, {
-      method: "POST",
-      headers: {
-        accept: "application/json",
-        "Content-Type": "application/json",
-        "api-key": eventCode,
+    // const response = await fetch(`/api/${API_VERSION}/eventinfo`, {
+    //   method: "POST",
+    //   headers: {
+    //     accept: "application/json",
+    //     "Content-Type": "application/json",
+    //     "api-key": eventCode,
+    //   },
+    //   body: JSON.stringify(eventCode),
+    //   signal: abortController.signal,
+    // });
+
+    const data = {
+      capabilities: {
+        "openai-chat": ["completions"],
+        "openai-dalle3": ["dalle3"]
       },
-      body: JSON.stringify(eventCode),
-      signal: abortController.signal,
-    });
-    const data = await response.json();
+      event_code: eventCode,
+      event_image_url: '',
+      max_token_cap: 999999,
+      is_authorized: true,
+      organizer_name: 'AI App in 1 day',
+      organizer_email: '',
+    };
+
+    // const data = await response.json();
     return data;
   } catch (error) {
     console.error("Error calling API:", error);

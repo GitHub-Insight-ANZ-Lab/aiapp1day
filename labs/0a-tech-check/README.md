@@ -23,3 +23,6 @@ npm run dev
 | AZURE_OPENAI_API_DEPLOYMENT_NAME       | completions                                                                                                                       |
 | AZURE_OPENAI_API_EMBEDDINGS_DEPLOYMENT_NAME | embeddings                                                                                                                        |
 | AZURE_OPENAI_API_VERSION               | 2023-09-01-preview                                                                                                                |
+
+
+https://arg-syd-aiapp1day-openai.openai.azure.com/openai/deployments/YOUR_DEPLOYMENT_NAME/completions?api-version=2024-06-01
