@@ -1,4 +1,5 @@
 require('dotenv').config();
+const DBNAME = 'aiapp1day_daniel'
 const { MongoClient } = require('mongodb');
 const { AgentExecutor } = require("langchain/agents");
 const { OpenAIFunctionsAgentOutputParser } = require("langchain/agents/openai/output_parser");
@@ -18,7 +19,7 @@ class CosmicWorksAIAgent {
         // set up the Azure Cosmos DB vector store
         const azureCosmosDBConfig = {
             client: this.dbClient,
-            databaseName: "cosmic_works",
+            databaseName: DBNAME,
             collectionName: "products",
             indexName: "VectorSearchIndex",
             embeddingKey: "contentVector",
