@@ -1,4 +1,4 @@
-# Lab - Vector search using vCore-based Azure Cosmos DB for MongoDB
+# Lab 2b - Vector search using vCore-based Azure Cosmos DB for MongoDB
 
 This lab demonstrates using an Azure OpenAI embedding model to vectorize documents already stored in Azure Cosmos DB API for MongoDB, storing the embedding vectors and the creation of a vector index. The lab also demonstrates how to use the vector index to perform vector searches, and how to use the vector search results in a RAG (Retrieval Augmented Generation) pattern to generate a response from a large language model (LLM).
 
@@ -14,7 +14,7 @@ This lab expects that data is already loaded into the Azure Cosmos DB API for Mo
     node catch_up.js
     ```
 
-## Setup the lab environment
+## 2b.1 Setup the lab environment
 
 1. Open the `.env` file in the Visual Studio Code editor.
 
@@ -35,7 +35,7 @@ This lab expects that data is already loaded into the Azure Cosmos DB API for Mo
     npm install
     ```
 
-## Create the Azure OpenAI client
+## 2b.2 Create the Azure OpenAI client
 
 1. Open the `index.js` file in the Visual Studio Code editor.
 
@@ -55,7 +55,7 @@ This lab expects that data is already loaded into the Azure Cosmos DB API for Mo
                         new AzureKeyCredential(process.env.AOAI_KEY));
     ```
 
-## Create a function to generate text embeddings
+## 2b.3 Create a function to generate text embeddings
 
 Vectorizing or embedding text is the process of converting text into a numerical representation. This guide has deployed an embedding model to Azure OpenAI, which can be used to generate embeddings for text. In this section, a function is introduced that uses the Azure OpenAI model to generate embeddings for text.
 
@@ -90,7 +90,7 @@ Vectorizing or embedding text is the process of converting text into a numerical
 
 6. Save the file.
 
-## Vectorize and store the embeddings in each document
+## 2b.4 Vectorize and store the embeddings in each document
 
 Now that the `generateEmbeddings` function is working, the next step is to use it to generate embeddings for each document and store the embeddings in a new field (contentVector) within the same document. The process of creating a vector embedding field on each document only needs to be done once. However, if a document changes, the vector embedding field will need to be updated with an updated vector.
 
@@ -183,7 +183,7 @@ In this section, a function is added that will loop through each document in a c
 
 7. Save the file.
 
-## Use vector search in vCore-based Azure Cosmos DB for MongoDB
+## 2b.5 Use vector search in vCore-based Azure Cosmos DB for MongoDB
 
 Now that each document has its associated vector embedding and the vector indexes have been created on each collection, we can now use the vector search capabilities of vCore-based Azure Cosmos DB for MongoDB. In this section, a function is added that will perform a vector search query that will return the most relevant documents based on the cosine similarity of the query vector and the content vectors of the documents in the collection.
 
@@ -246,7 +246,7 @@ Now that each document has its associated vector embedding and the vector indexe
 
 6. Save the file.
 
-## Use vector search in a RAG (Retrieval Augmented Generation) pattern
+## 2b.6 Use vector search in a RAG (Retrieval Augmented Generation) pattern
 
 In this section, a function is added that will use the vector search results to augment a prompt to a large language model (LLM). This is considered a RAG (Retrieval Augmented Generation) pattern. The function will use the vector search results to retrieve the most relevant documents and then use the unvectorized text of the retrieved documents to in the prompt to get an accurate response from the LLM.
 

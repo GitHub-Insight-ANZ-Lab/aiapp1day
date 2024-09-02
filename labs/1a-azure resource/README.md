@@ -1,6 +1,6 @@
+# Lab 1a - Deploying Azure Resource via IaC
 
 todo: we do this as a demo rather than asking everyone to do it. they wont have subscription setup anyway. then endpoint details will be given out
-
 
 
 # Provision Azure resources

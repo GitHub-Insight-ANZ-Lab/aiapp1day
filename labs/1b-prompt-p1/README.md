@@ -1,4 +1,4 @@
-# Lab 1 - Explore and use Azure OpenAI models from code
+# Lab 1b - Explore and use Azure OpenAI models from code
 
 
 ## endpoint details
@@ -11,7 +11,7 @@ AZURE_OPENAI_API_EMBEDDINGS_DEPLOYMENT_NAME=embeddings
 AZURE_OPENAI_API_VERSION=2023-09-01-preview
 ```
 
-## 1.1 OpenAI Client Library
+## 1b.1 OpenAI Client Library
 
 When integrating Azure OpenAI service in a solution written in Node.js, the OpenAI NPM client library is used. This library is maintained by OpenAI, and is compatible with the Azure OpenAI service.
 
@@ -30,7 +30,7 @@ const { OpenAIClient, AzureKeyCredential } = require("@azure/openai");
 todo: grab some good examples from 
 https://microsoft.github.io/Workshop-Interact-with-OpenAI-models/Part-1-labs/Conversation-history/
 
-## 1.2 Basic Prompting
+## 1b.2 Basic Prompting
 
 Create the Azure OpenAI client to call the Azure OpenAI Chat completion API:
 
@@ -86,10 +86,10 @@ Absolutely, I'd be glad to help you find the perfect bicycle. To narrow down the
 Once I have a better understanding of what you're looking for, I can recommend some options that would be a good fit for your needs.
 ```
 
-## 1.3 Conversation History
+## 1b.3 Conversation History
 
 todo: https://microsoft.github.io/Workshop-Interact-with-OpenAI-models/Part-1-labs/Conversation-history/
 
-## 1.4 Prompt engineering techniques
+## 1b.4 Prompt engineering techniques
 
 todo: https://microsoft.github.io/Workshop-Interact-with-OpenAI-models/Part-1-labs/Prompt-engineering-techniques/
