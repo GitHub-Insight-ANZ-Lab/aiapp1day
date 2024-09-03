@@ -1,7 +1,7 @@
 const express = require('express');
 const cors = require('cors')
 const swagger = require('./swagger');
-const CosmicWorksAIAgent = require('./cosmic_works/cosmic_works_ai_agent');
+const CosmicWorksAIAgent = require('./bikestore/agent');
 
 const app = express();
 app.use(express.json());

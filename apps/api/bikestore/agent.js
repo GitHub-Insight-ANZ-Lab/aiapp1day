@@ -113,7 +113,7 @@ class ContosoBikeStoreAgent {
                     Returns the product information in JSON format.
                     If the product is not found, returns null.`,
             func: async (input) => {
-                const db = this.dbClient.db("cosmic_works");
+                const db = this.dbClient.db(process.env.MONGODB_NAME);
                 const products = db.collection("products");
                 const doc = await products.findOne({ "sku": input });
                 if (doc) {

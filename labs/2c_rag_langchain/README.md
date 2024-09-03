@@ -74,7 +74,7 @@ The return value of a vector search in LangChain is a list of `Document` objects
     // set up the Azure Cosmos DB vector store using the initialized MongoDB client
     const azureCosmosDBConfig = {
         client: dbClient,
-        databaseName: "cosmic_works",
+        databaseName: process.env.MONGODB_NAME,
         collectionName: "products",
         indexName: "VectorSearchIndex",
         embeddingKey: "contentVector",
@@ -313,7 +313,7 @@ In this section, we'll implement a LangChain agent that will be used to interact
                         Returns the product information in JSON format.
                         If the product is not found, returns null.`,
             func: async (input) => {
-                const db = dbClient.db("cosmic_works");
+                const db = dbClient.db(process.env.MONGODB_NAME);
                 const products = db.collection("products");
                 const doc = await products.findOne({ "sku": input });            
                 if (doc) {                
