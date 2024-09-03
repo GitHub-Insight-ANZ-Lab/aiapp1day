@@ -34,7 +34,7 @@ The qualitfy of the dataset feeding into the LLM model makes big different. Mayb
 The product data set is located in data\product.csv, the data set has multiple columns. but the tags column is a json string. 
 
 1. this is the csv file
-    ![alt text](image.png)
+    ![alt text](media/image.png)
 
 2. create a `convert.js` file to parse the text into json format that is better for vector search.
 
@@ -83,7 +83,7 @@ The product data set is located in data\product.csv, the data set has multiple c
     ```
 
 4. Open the generated `product.json` file and see if any format issues stands out?
-    ![alt text](image-1.png)
+    ![alt text](media/image-1.png)
 
 5. Use the "Differ" feature in Visual Studio Code to compare `product.json` and `product-original.json` for any discrepancies. We noticed that `price` is a string rather than a float.
 
@@ -215,13 +215,12 @@ Customer data and sales data are also combined in a single JSON source, some pre
 ## 2a.4 Browse the data in the Cosmos DB (MongoDB)
 
 1. Install MongoDb extension in VS code : MongoDB for VS code
-
-    ![alt text](image-1.png)
+    ![alt text](media/image-6.png)
 
 2. then add a connection to the data.
-    ![alt text](image-2.png)
+    ![alt text](media/image-2.png)
 
 3. Browse the json records in the product and customer table.
-    ![alt text](image.png)
+    ![alt text](media/image-7.png)
 
 In this section bulk load operations were used to load product, customer, and sales data into Cosmos DB for MongoDB. Keep the database and its loaded data for use in subsequent labs.

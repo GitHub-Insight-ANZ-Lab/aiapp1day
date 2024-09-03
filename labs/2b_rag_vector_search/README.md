@@ -25,15 +25,25 @@ This lab demonstrates using an Azure OpenAI embedding model to vectorize documen
 
 ## 2b.2 Create the Azure OpenAI client
 
-1. Open the `embedding.js` file in the Visual Studio Code editor.
+1. Install the `@azure/openai` package by running the following command in the terminal window. 
 
-2. Beneath the line: `const { MongoClient } = require('mongodb');`, add the following code to import the Azure OpenAI client and Azure Key Credential classes:
+    ```bash
+    npm install @azure/openai@1.0.0-beta.11 --save
+    ```
+
+2. This will install the package and save it as a dependency in your project's `package.json` file.
+    ![alt text](media/image-4.png)
+
+
+3. Open the `embedding.js` file in the Visual Studio Code editor.
+
+4. Beneath the line: `const { MongoClient } = require('mongodb');`, add the following code to import the Azure OpenAI client and Azure Key Credential classes:
 
     ```javascript
     const { OpenAIClient, AzureKeyCredential} = require("@azure/openai");
     ```
 
-3. Beneath the code that sets up the MongoDB client, add the following code to create an instance of the Azure OpenAI client:
+5. Beneath the code that sets up the MongoDB client, add the following code to create an instance of the Azure OpenAI client:
 
     ```javascript
     // set up the Azure OpenAI client 
@@ -42,17 +52,6 @@ This lab demonstrates using an Azure OpenAI embedding model to vectorize documen
     const aoaiClient = new OpenAIClient(process.env.AZURE_OPENAI_API_INSTANCE_NAME, 
                         new AzureKeyCredential(process.env.AZURE_OPENAI_API_KEY));
     ```
-
-
-4. Install the `@azure/openai` package by running the following command in the terminal window. 
-
-    ```bash
-    npm install @azure/openai@1.0.0-beta.11 --save
-    ```
-
-5. This will install the package and save it as a dependency in your project's `package.json` file.
-    ![alt text](media/image-4.png)
-
 
 
 ## 2b.3 Create a function to generate text embeddings
