@@ -1,8 +1,5 @@
 {
-    "appService.zipIgnorePattern": [
-        "node_modules{,/**}",
-        ".vscode{,/**}"
-    ],
-    "appService.defaultWebAppToDeploy": "/subscriptions/9df3a442-42f1-40dd-8547-958c3e01597a/resourceGroups/arg-syd-aiapp1day-lab/providers/Microsoft.Web/sites/arg-syd-aiapp1day-web",
-    "appService.deploySubpath": "apps\\playground"
+    "cSpell.ignoreWords": [
+        "Jailbreaking"
+    ]
 }
