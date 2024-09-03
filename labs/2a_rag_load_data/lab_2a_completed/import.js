@@ -4,7 +4,7 @@ const fs = require('fs');
 const path = require('path');
 
 async function main() {    
-    const dbClient = new MongoClient(process.env.MONGODB_URI);
+    const dbClient = new MongoClient(process.env.MONGODB_CONNECTION_STRING);
     try {
         await dbClient.connect();
         console.log('Connected to MongoDB');

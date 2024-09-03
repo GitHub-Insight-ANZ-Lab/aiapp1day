@@ -1,13 +1,13 @@
 # Lab 2a - RAG - Load data into Cosmos DB using the MongoDB API
 
-This lab demonstrates bulk loading of data from the Cosmic Works JSON files into Cosmos DB for MongoDB.
+This lab demonstrates bulk loading of data from the Contoso Bike Store JSON files into Cosmos DB for MongoDB.
 
 ## 2a.1 Setup the lab environment
 
-1. In the lab folder, create a `.env` file and add the following environment variables, replace `<mongodb_uri>` with your Cosmos DB for MongoDB API service connection string:
+1. In the lab folder, create a `.env` file and add the following environment variables, replace `<MONGODB_CONNECTION_STRING>` with your Cosmos DB for MongoDB API service connection string:
 
     ```text
-    MONGODB_URI=mongodb+srv://aiapp1dayadmin:Aiapp1daypassword123@ai-2vk3646vubly4-mongo.mongocluster.cosmos.azure.com/?tls=true&authMechanism=SCRAM-SHA-256&retrywrites=false&maxIdleTimeMS=120000&tlsInsecure=true
+    MONGODB_CONNECTION_STRING=mongodb+srv://aiapp1dayadmin:Aiapp1daypassword123@arg-syd-aiapp1day-mongo.mongocluster.cosmos.azure.com/?tls=true&authMechanism=SCRAM-SHA-256&retrywrites=false&maxIdleTimeMS=120000&tlsInsecure=true
     ```
 
 2. Choose a unique name for your CosmosDB database. While everyone in the workshop will share the same CosmosDB instance, you can select your own database name. Modify `MONGODB_Name` in `.env` file.
@@ -103,14 +103,14 @@ The product data set is located in data\product.csv, the data set has multiple c
 
 7. Run the code and compare the two JSON files again. We noticed that the description field seems to be missing quotation marks in certain parts.
 
-**Challenge**: Can you suggest a modification to the code that would preserve the quotation marks in the description field?
+>**Challenge**: Can you suggest a modification to the code that would preserve the quotation marks in the description field?
 
 
 ## 2a.3 Bulk load product data
 
 There is more than one option when performing bulk operations in Cosmos DB for MongoDB. In this section, data will be loaded using the `bulkWrite` method. The `bulkWrite` method is used to perform multiple write operations in a single batch, write operations can include a mixture of insert, update, and delete operations.
 
-1. Open the `import.js` file, and directly beneath the `const db = client.db('DBName');` line, add the following code to fetch the product data from the Cosmic Works repository:
+1. Open the `import.js` file, and directly beneath the `const db = client.db('DBName');` line, add the following code to fetch the product data from the Contoso Bike Store repository:
 
     ```javascript
     // Load product data
@@ -164,7 +164,7 @@ In this section, data will be loaded using the `insertMany` method. The `insertM
 
 Customer data and sales data are also combined in a single JSON source, some pre-processing is required to separate the data into two separate collections.
 
-1. Open the `import.js` file, and directly beneath the code for adding products, append the following code to fetch the customer and sales data from the Cosmic Works repository:
+1. Open the `import.js` file, and directly beneath the code for adding products, append the following code to fetch the customer and sales data from the Contoso Bike Store repository:
 
     ```javascript
     // Load customer and sales data

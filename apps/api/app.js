@@ -32,7 +32,7 @@ app.get('/', (req, res) => {
  * @openapi
  * /ai:
  *   post:
- *     description: Run the Cosmic Works AI agent
+ *     description: Run the Contoso Bike Store AI agent
  *     requestBody:
  *       required: true
  *       content:

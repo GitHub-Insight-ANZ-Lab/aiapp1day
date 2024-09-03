@@ -3,7 +3,7 @@ const { MongoClient } = require('mongodb');
 const { OpenAIClient, AzureKeyCredential} = require("@azure/openai");
 
 // set up the MongoDB client
-const dbClient = new MongoClient(process.env.AZURE_COSMOSDB_CONNECTION_STRING);
+const dbClient = new MongoClient(process.env.MONGODB_CONNECTION_STRING);
 // set up the Azure OpenAI client 
 const embeddingsDeploymentName = "embeddings";
 const aoaiClient = new OpenAIClient("https://" + process.env.AZURE_OPENAI_API_INSTANCE_NAME + ".openai.azure.com/", 
@@ -15,27 +15,9 @@ async function main() {
         console.log('Connected to MongoDB');
         const db = dbClient.db(process.env.MONGODB_NAME);
 
-        // Load product data
-        console.log('Loading product data')
-        // Initialize the product collection pointer (will automatically be created if it doesn't exist)
-        const productCollection = db.collection('products');
-        // Load the product data from the raw data from Cosmic Works while also removing the system properties
-        const productRawData = "https://cosmosdbcosmicworks.blob.core.windows.net/cosmic-works-small/product.json";
-        const productData = (await (await fetch(productRawData)).json())
-                                .map(prod => cleanData(prod));
-        // Delete all existing products and insert the new data
-        await productCollection.deleteMany({});
-        // Utilize bulkWrite to insert all the products at once
-        var result = await productCollection.bulkWrite(
-            productData.map((product) => ({
-                insertOne: {
-                    document: product
-                }
-            }))
-        );
-        console.log(`${result.insertedCount} products inserted`);
-
         await addCollectionContentVectorField(db, 'products');
+        await addCollectionContentVectorField(db, 'customers');
+        await addCollectionContentVectorField(db, 'sales');
        
     } catch (err) {
         console.error(err);
@@ -110,16 +92,5 @@ async function addCollectionContentVectorField(db, collectionName) {
         console.log(`Vector index already exists on contentVector field in the ${collectionName} collection`);
     }
 }
-
-function cleanData(obj) {
-    cleaned =  Object.fromEntries(
-        Object.entries(obj).filter(([key, _]) => !key.startsWith('_'))
-    );
-    //rename id field to _id
-    cleaned["_id"] = cleaned["id"];
-    delete cleaned["id"];
-    return cleaned;
-}
-
 
 main().catch(console.error);

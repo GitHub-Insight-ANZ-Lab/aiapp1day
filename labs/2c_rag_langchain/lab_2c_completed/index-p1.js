@@ -6,7 +6,7 @@ const { AzureCosmosDBVectorStore,
 const { OpenAIEmbeddings } = require("@langchain/openai")
 
 // set up the MongoDB client
-const dbClient = new MongoClient(process.env.AZURE_COSMOSDB_CONNECTION_STRING);
+const dbClient = new MongoClient(process.env.MONGODB_CONNECTION_STRING);
 // set up the Azure Cosmos DB vector store using the initialized MongoDB client
 const azureCosmosDBConfig = {
     client: dbClient,

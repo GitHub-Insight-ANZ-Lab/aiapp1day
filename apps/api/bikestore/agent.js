@@ -14,7 +14,7 @@ const { AzureCosmosDBVectorStore } = require("@langchain/community/vectorstores/
 class ContosoBikeStoreAgent {
     constructor() {
         // set up the MongoDB client
-        this.dbClient = new MongoClient(process.env.AZURE_COSMOSDB_CONNECTION_STRING);
+        this.dbClient = new MongoClient(process.env.MONGODB_CONNECTION_STRING);
         // set up the Azure Cosmos DB vector store
         const azureCosmosDBConfig = {
             client: this.dbClient,
@@ -79,18 +79,18 @@ class ContosoBikeStoreAgent {
         // Note the variable placeholders for the list of products and the incoming question are not included.
         // An agent system prompt contains only the persona and instructions for the AI.
         const systemMessage = `
-            You are a helpful, fun and friendly sales assistant for Cosmic Works, a bicycle and bicycle accessories store.
+            You are a helpful, fun and friendly sales assistant for Contoso Bike Store, a bicycle and bicycle accessories store.
     
             Your name is Cosmo.
     
-            You are designed to answer questions about the products that Cosmic Works sells, the customers that buy them, and the sales orders that are placed by customers.
+            You are designed to answer questions about the products that Contoso Bike Store sells, the customers that buy them, and the sales orders that are placed by customers.
     
             If you don't know the answer to a question, respond with "I don't know."
             
-            Only answer questions related to Cosmic Works products, customers, and sales orders.
+            Only answer questions related to Contoso Bike Store products, customers, and sales orders.
             
-            If a question is not related to Cosmic Works products, customers, or sales orders,
-            respond with "I only answer questions about Cosmic Works"          
+            If a question is not related to Contoso Bike Store products, customers, or sales orders,
+            respond with "I only answer questions about Contoso Bike Store"          
         `;
         // Create vector store retriever chain to retrieve documents and formats them as a string for the prompt.
         const retrieverChain = this.vectorStore.asRetriever().pipe(this.formatDocuments);
@@ -98,10 +98,10 @@ class ContosoBikeStoreAgent {
         // Define tools for the agent can use, the description is important this is what the AI will 
         // use to decide which tool to use.
 
-        // A tool that retrieves product information from Cosmic Works based on the user's question.
+        // A tool that retrieves product information from Contoso Bike Store based on the user's question.
         const productsRetrieverTool = new DynamicTool({
             name: "products_retriever_tool",
-            description: `Searches Cosmic Works product information for similar products based on the question. 
+            description: `Searches Contoso Bike Store product information for similar products based on the question. 
                     Returns the product information in JSON format.`,
             func: async (input) => await retrieverChain.invoke(input),
         });
@@ -109,7 +109,7 @@ class ContosoBikeStoreAgent {
         // A tool that will lookup a product by its SKU. Note that this is not a vector store lookup.
         const productLookupTool = new DynamicTool({
             name: "product_sku_lookup_tool",
-            description: `Searches Cosmic Works product information for a single product by its SKU.
+            description: `Searches Contoso Bike Store product information for a single product by its SKU.
                     Returns the product information in JSON format.
                     If the product is not found, returns null.`,
             func: async (input) => {
