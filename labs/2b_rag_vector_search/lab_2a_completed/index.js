@@ -1,7 +1,6 @@
 require('dotenv').config();
 const { MongoClient } = require('mongodb');
 const { OpenAIClient, AzureKeyCredential} = require("@azure/openai");
-const DBNAME = 'aiapp1day_daniel'
 
 // set up the MongoDB client
 const dbClient = new MongoClient(process.env.AZURE_COSMOSDB_CONNECTION_STRING);
@@ -14,7 +13,7 @@ async function main() {
     try {
         await dbClient.connect();
         console.log('Connected to MongoDB');
-        const db = dbClient.db(DBNAME);
+        const db = dbClient.db(process.env.MONGODB_NAME);
 
         // Load product data
         console.log('Loading product data')
