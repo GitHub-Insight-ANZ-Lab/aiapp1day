@@ -1,5 +1,4 @@
 require('dotenv').config();
-const DBNAME = 'aiapp1day_daniel'
 const { MongoClient } = require('mongodb');
 const { AzureCosmosDBVectorStore,
     AzureCosmosDBSimilarityType
@@ -19,11 +18,11 @@ const { formatToOpenAIFunctionMessages } = require("langchain/agents/format_scra
 
 
 // set up the MongoDB client
-const dbClient = new MongoClient(process.env.AZURE_COSMOSDB_CONNECTION_STRING);
+const dbClient = new MongoClient(process.env.MONGODB_CONNECTION_STRING);
 // set up the Azure Cosmos DB vector store using the initialized MongoDB client
 const azureCosmosDBConfig = {
     client: dbClient,
-    databaseName: DBNAME,
+    databaseName: process.env.MONGODB_NAME,
     collectionName: "products",
     indexName: "VectorSearchIndex",
     embeddingKey: "contentVector",
@@ -84,19 +83,19 @@ async function ragLCELChain(question) {
     // A system prompt describes the responsibilities, instructions, and persona of the AI.
     // Note the addition of the templated variable/placeholder for the list of products and the incoming question.
     const systemPrompt = `
-        You are a helpful, fun and friendly sales assistant for Cosmic Works, a bicycle and bicycle accessories store. 
+        You are a helpful, fun and friendly sales assistant for Contoso Bike Store, a bicycle and bicycle accessories store. 
         Your name is Cosmo.
-        You are designed to answer questions about the products that Cosmic Works sells.
+        You are designed to answer questions about the products that Contoso Bike Store sells.
 
         Only answer questions related to the information provided in the list of products below that are represented
         in JSON format.
 
         If you are asked a question that is not in the list, respond with "I don't know."
 
-        Only answer questions related to Cosmic Works products, customers, and sales orders.
+        Only answer questions related to Contoso Bike Store products, customers, and sales orders.
 
-        If a question is not related to Cosmic Works products, customers, or sales orders,
-        respond with "I only answer questions about Cosmic Works"
+        If a question is not related to Contoso Bike Store products, customers, or sales orders,
+        respond with "I only answer questions about Contoso Bike Store"
 
         List of products:
         {products}
@@ -133,18 +132,18 @@ async function buildAgentExecutor() {
     // Note the variable placeholders for the list of products and the incoming question are not included.
     // An agent system prompt contains only the persona and instructions for the AI.
     const systemMessage = `
-            You are a helpful, fun and friendly sales assistant for Cosmic Works, a bicycle and bicycle accessories store.
+            You are a helpful, fun and friendly sales assistant for Contoso Bike Store, a bicycle and bicycle accessories store.
     
             Your name is Cosmo.
     
-            You are designed to answer questions about the products that Cosmic Works sells, the customers that buy them, and the sales orders that are placed by customers.
+            You are designed to answer questions about the products that Contoso Bike Store sells, the customers that buy them, and the sales orders that are placed by customers.
     
             If you don't know the answer to a question, respond with "I don't know."
             
-            Only answer questions related to Cosmic Works products, customers, and sales orders.
+            Only answer questions related to Contoso Bike Store products, customers, and sales orders.
             
-            If a question is not related to Cosmic Works products, customers, or sales orders,
-            respond with "I only answer questions about Cosmic Works"          
+            If a question is not related to Contoso Bike Store products, customers, or sales orders,
+            respond with "I only answer questions about Contoso Bike Store"          
         `;
 
     // Create vector store retriever chain to retrieve documents and formats them as a string for the prompt.
@@ -153,10 +152,10 @@ async function buildAgentExecutor() {
     // Define tools for the agent can use, the description is important this is what the AI will 
     // use to decide which tool to use.
 
-    // A tool that retrieves product information from Cosmic Works based on the user's question.
+    // A tool that retrieves product information from Contoso Bike Store based on the user's question.
     const productsRetrieverTool = new DynamicTool({
         name: "products_retriever_tool",
-        description: `Searches Cosmic Works product information for similar products based on the question. 
+        description: `Searches Contoso Bike Store product information for similar products based on the question. 
                     Returns the product information in JSON format.`,
         func: async (input) => await retrieverChain.invoke(input),
     });
@@ -164,11 +163,11 @@ async function buildAgentExecutor() {
     // A tool that will lookup a product by its SKU. Note that this is not a vector store lookup.
     const productLookupTool = new DynamicTool({
         name: "product_sku_lookup_tool",
-        description: `Searches Cosmic Works product information for a single product by its SKU.
+        description: `Searches Contoso Bike Store product information for a single product by its SKU.
                     Returns the product information in JSON format.
                     If the product is not found, returns null.`,
         func: async (input) => {
-            const db = dbClient.db("cosmic_works");
+            const db = dbClient.db(process.env.MONGODB_NAME);
             const products = db.collection("products");
             const doc = await products.findOne({ "sku": input });            
             if (doc) {                

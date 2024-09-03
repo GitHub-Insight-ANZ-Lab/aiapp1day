@@ -1,7 +1,7 @@
 const express = require('express');
 const cors = require('cors')
 const swagger = require('./swagger');
-const CosmicWorksAIAgent = require('./cosmic_works/cosmic_works_ai_agent');
+const CosmicWorksAIAgent = require('./bikestore/agent');
 
 const app = express();
 app.use(express.json());
@@ -32,7 +32,7 @@ app.get('/', (req, res) => {
  * @openapi
  * /ai:
  *   post:
- *     description: Run the Cosmic Works AI agent
+ *     description: Run the Contoso Bike Store AI agent
  *     requestBody:
  *       required: true
  *       content:

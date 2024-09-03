@@ -2,7 +2,7 @@ require('dotenv').config();
 const { MongoClient } = require('mongodb');
 
 // set up the MongoDB client
-const dbClient = new MongoClient(process.env.AZURE_COSMOSDB_CONNECTION_STRING);
+const dbClient = new MongoClient(process.env.MONGODB_CONNECTION_STRING);
 
 async function main() {
     try {
