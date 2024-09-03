@@ -19,7 +19,7 @@ const config = {
 
   organizationName: "GitHub-Insight-ANZ-Lab",
   projectName: "aiapp1day",
-  deploymentBranch: "feature/lab1",
+  deploymentBranch: "main",
   favicon: "img/favicon.ico",
 
   i18n: {
