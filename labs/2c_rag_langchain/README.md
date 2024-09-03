@@ -16,6 +16,7 @@ To simplify code, the LangChain package makes use of environment variables. The 
 
     ```bash
     MONGODB_CONNECTION_STRING=<MONGODB_CONNECTION_STRING>
+    MONGODB_Name=aiapp1day_{your_name}_{your_lucky_number}
     AZURE_OPENAI_API_INSTANCE_NAME=<openai-service-name>
     AZURE_OPENAI_API_KEY=<azure_openai_api_key>
     AZURE_OPENAI_API_DEPLOYMENT_NAME=completions
@@ -27,37 +28,34 @@ To simplify code, the LangChain package makes use of environment variables. The 
 
     >**Note**: The Azure OpenAI service name is not the full endpoint. Only the service name is required. For example, if the endpoint is `https://myservicename.openai.azure.com/`, then the service name is `myservicename`.
 
-3. In Visual Studio Code, open a terminal window and navigate to the lab folder `langchain`.
+3. In Visual Studio Code, open a terminal window and navigate to the lab folder `lab_2c`.
 
-4. Install the required packages by running the following command in the terminal window:
+4. Install the langchain packages by running the following command in the terminal window. 
+
+    ```bash
+    npm install langchain@0.1.21 --save
+    npm install @langchain/community@0.0.32 --save
+    ```
+
+5. This will install the package and save it as a dependency in your project's `package.json` file.
+    ![alt text](media/image.png)
+
+
+6. Install the required packages by running the following command in the terminal window:
 
     ```bash
     npm install
-    ```
-
-## Pre-requisites
-
-This lab expects that data is already loaded into the Azure Cosmos DB API for MongoDB collections, and the `contentVector` field is populated (along with a vector index created). You can run the `catch_up.js` script to load sample data, generate/populate the `contentVector` field and create the vector search index in each collection.
-
->**Note**: This script will take a few minutes to run. This script will load data, generate the `contentVector` field, and create the vector index in the `products` collection only. This `products` collection is the focus of the instructions provided in this lab.
-
-1. In the Visual Studio Code terminal, ensure you are in the `langchain` lab directory.
-
-2. Run the `catch_up.js` script to satisfy the lab pre-requisites.
-
-    ```bash
-    node catch_up.js
     ```
 
 ## 2c.1 Vector search with LangChain
 
 The first step is to initialize the connection to the vector store. The `AzureCosmosDBVectorStore` class is used to represent the vector store. This section will walk through the initialization of this connection as well as a test call that issues a vector search and outputs the results.
 
-When establishing the connection to the vector store (vCore-based Azure Cosmos DB for MongoDB), recall that in the previous lab, each collection was populated and a `contentVector` field added that contains the vectorized embeddings of the document itself. Finally, a vector index was also created on the `contentVector` field to enable vector search. The vector index in each collection is named `VectorSearchIndex`.
+When establishing the connection to the vector store, recall that in the previous lab, each collection was populated and a `contentVector` field added that contains the vectorized embeddings of the document itself. Finally, a vector index was also created on the `contentVector` field to enable vector search. The vector index in each collection is named `VectorSearchIndex`.
 
 The return value of a vector search in LangChain is a list of `Document` objects. The LangChain `Document` class contains two properties: `pageContent`, that represents the textual content that is typically used to augment the prompt, and `metadata` that contains all other attributes of the document. In the cell below, we'll use the `_id` field as the `pageContent`, and the rest of the fields are returned as metadata.
 
-1. Open the `index.js` file in the Visual Studio Code editor.
+1. Open the `vector-search.js` file in the Visual Studio Code editor.
 
 2. Directly beneath the line `const { MongoClient } = require('mongodb');`, add the following code to import the necessary LangChain packages. This code imports the AzureCosmosDBVectorStore that represents the vector index in a collection, the `AzureCosmosDBSimilarityType` that will allow us to perform a vector search using cosine similarity, and the `OpenAIEmbeddings` class that will be used to generate the embeddings for the user's input for the vector search.
 
@@ -95,12 +93,12 @@ The return value of a vector search in LangChain is a list of `Document` objects
     console.log(results);
     ```
 
-5. Save the `index.js` file.
+5. Save the `vector-search.js` file.
 
 6. Run the application by executing the following command in the terminal window:
 
     ```bash
-    npm start
+    node vector-search.js
     ```
 
     The output will be a list of `Document` objects that contain the metadata of the documents that are most similar to the user's input.
@@ -111,7 +109,9 @@ The return value of a vector search in LangChain is a list of `Document` objects
 
 7. Delete or comment out the code added in step 4.
 
-8. Save the `index.js` file.
+8. Save the `vector-search.js` file.
+
+>**Question** comparing the code here with the search function in 2b, can you tell the differences between them?
 
 ## 2c.2 RAG with LangChain
 
@@ -119,7 +119,7 @@ In this section, we'll implement the RAG pattern using LangChain. In LangChain, 
 
 We'll also define a reusable RAG chain to control the flow and behavior of the call into the LLM. This chain is defined using the LCEL syntax (LangChain Expression Language).
 
-1. Open the `index.js` file in the Visual Studio Code editor.
+1. Open the `langchian-rag.js` file in the Visual Studio Code editor.
 
 2. Directly preceding the final line of code in this file (where the main function is called), add the `formatDocuments` function that will be used to format the `Document` objects into a JSON string that will be used in the prompt for the LLM. The code is documented inline.
 
@@ -234,29 +234,31 @@ We'll also define a reusable RAG chain to control the flow and behavior of the c
     console.log(await ragLCELChain("What yellow products do you have?"));
     ```
 
-8. Save the `index.js` file.
+8. Save the `langchian-rag.js` file.
 
 9. Run the application by executing the following command in the terminal window:
 
     ```bash
-    npm start
+    node langchian-rag.js
     ```
 
     ![The console output shows the response from the LLM based on the augmented prompt and returns the LLM response.](media/rag_chain_output.png "RAG chain output")
 
-10. Delete or comment out the code added in step 7.
+10. Lets now try a different question. 
+    
+    ```javascript
+    console.log(await ragLCELChain("What is the name of the product that has the SKU TI-R982?"));
+    ```
 
-11. Save the `index.js` file.
+>**Question** Why do we get a response like this? how can we improve it?
 
-12. try out this example
 
-todo: need to add an example that user can play with the code so far before next agent section.
 
 ## 2c.3 LangChain agent
 
 In this section, we'll implement a LangChain agent that will be used to interact with the LLM. The agent will be used to control the flow and behavior of the call into the LLM. An agent differs from the previous RAG chain in that the RAG chain is a definition of a sequence of specific actions. Agents on the other hand are equipped with various tools and will determine which actions to take based on the context of the conversation. In this scenario, an agent will be equipped with two tools, one that uses a retriever chain from the vector store, and another that will perform a MongoDB lookup based on a SKU value. The reason the SKU lookup tool is introduced is because the vector store is built for semantic search. Some fields, such as the `_id` or `sku` fields do not have semantic meaning and therefore a direct lookup is more appropriate.
 
-1. Open the `index.js` file in the Visual Studio Code editor.
+1. Open the `langchian-agent.js` file in the Visual Studio Code editor.
 
 2. Immediately after the `const { StringOutputParser } = require("@langchain/core/output_parsers");` line of code, add the following dependencies to support the creation of the LangChain agent:
 
@@ -387,12 +389,12 @@ In this section, we'll implement a LangChain agent that will be used to interact
     console.log(await executeAgent(agentExecutor, "What yellow products do you have?"));
     ```
 
-5. Save the `index.js` file.
+5. Save the `langchain-agent.js` file.
 
 6. Run the application by executing the following command in the terminal window:
 
     ```bash
-    npm start
+    node langchain-agent.js
     ```
 
     ![The console output shows the response from the LangChain agent based on the user input.](media/agent_output.png "LangChain agent output")
@@ -401,12 +403,12 @@ In this section, we'll implement a LangChain agent that will be used to interact
 
 8. Find the commented line of code `//returnIntermediateSteps: true` in the `executeAgent` function and uncomment it to enable verbose output of the tool usage of the agent. This will output the intermediate steps of the agent that includes the function calls and their outputs.
 
-9. Save the `index.js` file.
+9. Save the `langchain-agent.js` file.
 
 10. Run the application by executing the following command in the terminal window:
 
     ```bash
-    npm start
+    node langchain-agent.js
     ```
 
     ![Partial console output shows the verbose output of the tool usage of the LangChain agent.](media/agent_verbose_output.png "LangChain agent verbose output")
@@ -414,6 +416,8 @@ In this section, we'll implement a LangChain agent that will be used to interact
     Notice the verbose output includes the selection, input, and observation(output) of the tool used by the agent.
 
 11. If desired, comment out the line of code `//returnIntermediateSteps: true` in the `executeAgent` function to disable verbose output of the tool usage of the agent.
+
+>**Question** Please think about the difference between `langchain-rag.js` and `langchain-agent.js`. Which one do you think is better?
 
 12. Experiment with additional questions of your own.
 

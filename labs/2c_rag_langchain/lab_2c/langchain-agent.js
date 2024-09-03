@@ -25,13 +25,10 @@ const vectorStore = new AzureCosmosDBVectorStore(new OpenAIEmbeddings(), azureCo
 // set up the OpenAI chat model
 const chatModel = new ChatOpenAI();
 
-
 async function main() {
     try {
         await dbClient.connect();
         console.log("Connected to MongoDB");
-
-        console.log(await ragLCELChain("What yellow products do you have?"));
 
     } catch (err) {
         console.error(err);
@@ -69,54 +66,6 @@ function formatDocuments(docs) {
     // Add two newlines after the last item
     strDocs += "\n\n";
     return strDocs;
-}
-
-async function ragLCELChain(question) { 
-    // A system prompt describes the responsibilities, instructions, and persona of the AI.
-    // Note the addition of the templated variable/placeholder for the list of products and the incoming question.
-    const systemPrompt = `
-        You are a helpful, fun and friendly sales assistant for Contoso Bike Store, a bicycle and bicycle accessories store. 
-        Your name is Cosmo.
-        You are designed to answer questions about the products that Contoso Bike Store sells.
-
-        Only answer questions related to the information provided in the list of products below that are represented
-        in JSON format.
-
-        If you are asked a question that is not in the list, respond with "I don't know."
-
-        Only answer questions related to Contoso Bike Store products, customers, and sales orders.
-
-        If a question is not related to Contoso Bike Store products, customers, or sales orders,
-        respond with "I only answer questions about Contoso Bike Store"
-
-        List of products:
-        {products}
-
-        Question:
-        {question}
-    `;
-
-    // Use a retriever on the Cosmos DB vector store
-    const retriever = vectorStore.asRetriever();
-
-    // Initialize the prompt
-    const prompt = PromptTemplate.fromTemplate(systemPrompt);
-
-    // The RAG chain will populate the variable placeholders of the system prompt
-    // with the formatted list of products based on the documents retrieved from the vector store.
-    // The RAG chain will then invoke the LLM with the populated prompt and the question.
-    // The response from the LLM is then parsed as a string and returned.
-    const ragChain  = RunnableSequence.from([
-        {
-            products: retriever.pipe(formatDocuments),
-            question: new RunnablePassthrough()
-        },
-        prompt,
-        chatModel,
-        new StringOutputParser()
-    ]);
-
-    return await ragChain.invoke(question);
 }
 
 
