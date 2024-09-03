@@ -10,7 +10,7 @@ This lab demonstrates bulk loading of data from the Cosmic Works JSON files into
     MONGODB_URI=mongodb+srv://aiapp1dayadmin:Aiapp1daypassword123@ai-2vk3646vubly4-mongo.mongocluster.cosmos.azure.com/?tls=true&authMechanism=SCRAM-SHA-256&retrywrites=false&maxIdleTimeMS=120000&tlsInsecure=true
     ```
 
-2. In Visual Studio Code, open a terminal window and navigate to the lab folder `load_data`.
+2. In Visual Studio Code, open a terminal window and navigate to the lab folder `lab_2a`.
 
 3. Install the required packages by running the following command in the terminal window:
 
@@ -18,13 +18,93 @@ This lab demonstrates bulk loading of data from the Cosmic Works JSON files into
     npm install
     ```
 
-4. Pick a collection name that you like 
+4. Pick a CosmosDB database name that you like, everyone in the workshop will share the same CosmosDB isntance but you can choose your own database name.
 
-```
-const productCollection = db.collection('products_daniel');
-```
+    ```javascript
+    const productCollection = db.collection('products_daniel');
+    ```
 
-## 2a.2 Bulk load product data
+## 2a.2 Prepare the data set
+
+The product data set is located in data\product.csv, the data set has multiple columns. but the tags column is a json string. 
+
+The qualitfy of the dataset feeding into the LLM model makes big different. Maybe it is usually the job of data team, but there could be various convertion and integration required to format the data set. Lets do a quick excerise on preparing the data set. No 'Rubbish in & Rubbish out' for our chatbot.
+
+create a convert.js file to parse the text into json format that is better for vector search.
+
+    ```javascript
+    const fs = require('fs');
+    const path = require('path');
+    const rootDir = 'data';
+
+    // Read CSV file
+    const csvFilePath = path.join(rootDir, 'product.csv');
+    const csvData = fs.readFileSync(csvFilePath, 'utf8');
+
+    // Convert CSV to JSON
+    function csvToJson(csv) {
+        const lines = csv.trim().split('\n');
+        const headers = lines[0].split(',').map(header => header.replace(/"/g, ''));
+        const jsonData = lines.slice(1).map(line => {
+            const values = line.split(/,(?=(?:(?:[^"]*"){2})*[^"]*$)/).map(value => value.replace(/"/g, ''));
+            const obj = {};
+            headers.forEach((header, index) => {
+                if (header === 'tags') {
+                    // Decode the JSON string
+                    obj[header] = JSON.parse(values[index].replace(/'/g, '"'));
+                } else if (header === 'price') {
+                    // Convert price to integer
+                    obj[header] = parseFloat(values[index], 10);
+                } else {
+                    obj[header] = values[index];
+                }
+            });
+            return obj;
+        });
+        return JSON.stringify(jsonData, null, 2);
+    }
+
+    const json = csvToJson(csvData);
+
+    // Write JSON to file
+    const jsonFilePath = path.join(rootDir, 'product.json');
+    fs.writeFileSync(jsonFilePath, json, 'utf8');
+
+    console.log('CSV file has been converted to JSON file successfully.');
+    ```
+
+    
+
+4. Save the `convert.js` file.
+
+5. Run the application by executing the following command in the terminal window:
+
+    ```bash
+    node convert.js
+    ```
+
+    6. check the product.json file. do a differ in VS code to compare product.json and product-original.json. there are certain discrepancies.
+
+7. we need to convert price tag to a float in json
+
+    ```javascript
+    if (header === 'tags') {
+        // Decode the JSON string
+        obj[header] = JSON.parse(values[index].replace(/'/g, '"'));
+    } else if (header === 'price') {
+        // Convert price to integer
+        obj[header] = parseFloat(values[index], 10);
+    } else {
+        obj[header] = values[index];
+    }
+     ```
+
+8. run the code and compare the 2 josn files again. we noticed that description field seems to missing " in certain part.
+
+Changelle: can you think of a way to change the code to keep these quotation marks?
+
+
+## 2a.3 Bulk load product data
 
 There is more than one option when performing bulk operations in Cosmos DB for MongoDB. In this section, data will be loaded using the `bulkWrite` method. The `bulkWrite` method is used to perform multiple write operations in a single batch, write operations can include a mixture of insert, update, and delete operations.
 
@@ -130,9 +210,9 @@ Customer data and sales data are also combined in a single JSON source, some pre
 
 Install MongoDb plugin from VS code store
 
-```
-MongoDB for VS code
-```
+    ```text
+    MongoDB for VS code
+    ```
 
 then add a connection to the data.
 

@@ -75,5 +75,6 @@ Duration: 30 minutes [go to lab](2d-rag_chatbot/README.md)
 todo: add a section to copy 2c code into backend api 
 todo: add speech service 
 todo: add translation service
+todo: add dall-e service
 
 

@@ -70,7 +70,7 @@ Vectorizing or embedding text is the process of converting text into a numerical
     }
     ```
 
-2. In the `main` function, beneath the `const db = dbClient.db('cosmic_works');` line of code, add the following code to test the new `generateEmbeddings` function:
+2. In the `main` function, beneath the `const db = dbClient.db(DBNAME);` line of code, add the following code to test the new `generateEmbeddings` function:
 
     ```javascript
     console.log(await generateEmbeddings("Hello, world!"));
@@ -161,7 +161,7 @@ In this section, a function is added that will loop through each document in a c
     }
     ```
 
-2. In the `main` function, beneath the `const db = dbClient.db('cosmic_works');` line of code, add the following code to call the new `addCollectionContentVectorField` function on the `products` collection:
+2. In the `main` function, beneath the `const db = dbClient.db(DBNAME);` line of code, add the following code to call the new `addCollectionContentVectorField` function on the `products` collection:
 
     ```javascript
     await addCollectionContentVectorField(db, 'products');
@@ -224,7 +224,7 @@ Now that each document has its associated vector embedding and the vector indexe
     }
     ```
 
-2. In the `main` function, beneath the `const db = dbClient.db('cosmic_works');` line of code, add the following code to test the new `vectorSearch` function:
+2. In the `main` function, beneath the `const db = dbClient.db(DBNAME);` line of code, add the following code to test the new `vectorSearch` function:
 
     ```javascript
     //vector search for the top 3 most relevant products
@@ -299,7 +299,7 @@ In this section, a function is added that will use the vector search results to 
     }
     ```
 
-2. In the `main` function, beneath the `const db = dbClient.db('cosmic_works');` line of code, add the following code to test the new `ragWithVectorsearch` function:
+2. In the `main` function, beneath the `const db = dbClient.db(DBNAME);` line of code, add the following code to test the new `ragWithVectorsearch` function:
 
     ```javascript
     //RAG with vector search for the top 3 most relevant products
