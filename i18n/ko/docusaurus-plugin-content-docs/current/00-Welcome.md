@@ -35,4 +35,4 @@ slug: /
 
 ## 학습자 피드백
 
-이 실습에 대한 여러분의 피드백을 듣고 싶습니다. [이 실습의 GitHub 리포지토리](https://github.com/rakeshln84/aiapp-lab-docs)를 방문하여 이슈 탭에서 버그나 제안을 하거나 풀 리퀘스트를 작성하여 제안을 보내주세요.
+이 실습에 대한 여러분의 피드백을 듣고 싶습니다. [이 실습의 GitHub 리포지토리](https://github.com/GitHub-Insight-ANZ-Lab/aiapp1day/)를 방문하여 이슈 탭에서 버그나 제안을 하거나 풀 리퀘스트를 작성하여 제안을 보내주세요.
