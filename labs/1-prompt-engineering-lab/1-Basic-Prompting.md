@@ -22,6 +22,32 @@ List the brand name and the country of origin.
 Rank the brands from 1 to 5 in the list.
 ```
 
+## Generating novel content
+
+Even though the outputs are generated based on frequencies of similar content in the training data, generative AI models are still capable of generating novel content that has never existed before.
+
+Try a prompt like this:
+
+```text title="Enter in the user prompt:"
+Write a limerick about a bike.
+```
+
+How was the limerick? If you didn't like it, you can always ask the chat session to generate a new one.
+
+Next lets check out the parameters we have available: Use the Temperature field on the right column of the chat interface, and set Temperature to zero. What do you observe when you retry the prompt?
+
+The Temperature parameter controls how "creative" the model is allowed to be. At low values of "Temperature", the model is very likely to respond with the completion with the highest weight, limiting the variability in the responses. At higher values of Temperature, low-weighted completions become more likely to be generated, allowing for more creative (but less precise) responses.
+
+Here is another prompt to try with different Temperature values:
+
+```text title="Enter in the user prompt:"
+What is a unique and long name for a new bike brand?
+```
+
+> Note: When dealing with LLMs, the results can be unpredictable. Changing the temperature here might or might not work as expected. Also, we are using a relatively old version of GPT3.5. The temperature effect is more visible in more recent LLMs such as GPT4.
+
+**Make sure the Temperature parameter is reset to 0.7 before you continue.**
+
 ## Information extraction
 
 The example below shows how you can combine a prompt with data to extract information using natural-language instructions. In this case, the completion extracts the bicycle model, company name, and country. Modify the prompt and the source data to extract different information.
@@ -84,31 +110,35 @@ At Contoso Bikes, we're committed to providing the best cycling experience for o
 
 ```
 
-## Generating novel content
+## Conversation History
 
-Even though the outputs are generated based on frequencies of similar content in the training data, generative AI models are still capable of generating novel content that has never existed before.
+Natural language generative AI models like GPT-3.5 are stateless, meaning they don't have memory of prior interactions. This means that each prompt is treated as a standalone request, and the model doesn't have context from previous prompts. This can lead to inconsistent or unexpected responses, especially in a conversational context.
 
-Try a prompt like this:
-
-```text title="Enter in the user prompt:"
-Write a limerick about a bike.
-```
-
-How was the limerick? If you didn't like it, you can always ask the chat session to generate a new one.
-
-Next lets check out the parameters we have available: Use the Temperature field on the right column of the chat interface, and set Temperature to zero. What do you observe when you retry the prompt?
-
-The Temperature parameter controls how "creative" the model is allowed to be. At low values of "Temperature", the model is very likely to respond with the completion with the highest weight, limiting the variability in the responses. At higher values of Temperature, low-weighted completions become more likely to be generated, allowing for more creative (but less precise) responses.
-
-Here is another prompt to try with different Temperature values:
+Try the following prompts:
 
 ```text title="Enter in the user prompt:"
-What is a unique and long name for a new bike brand?
+What is the model of the bicycle I bought last year?
 ```
 
-> Note: When dealing with LLMs, the results can be unpredictable. Changing the temperature here might or might not work as expected. Also, we are using a relatively old version of GPT3.5. The temperature effect is more visible in more recent LLMs such as GPT4.
+You will get a response like this:
 
-**Make sure the Temperature parameter is reset to 0.7 before you continue.**
+```text title="Response from the model:"
+I’m sorry, but I don’t have access to specific customer purchase history or personal data.
+```
+
+Now, clear the chat and try the following prompt:
+
+```text title="Enter in the user prompt:"
+I bought the Contoso 1482 last year. It's a great bike.
+```
+
+And then continue with the following prompts:
+
+```text title="Enter in the user prompt:"
+What is the model of the bicycle I bought last year?
+```
+
+What do you observe? You will now see that the model is able to respond with the model of the bike you mentioned in the previous prompt. This is because the application is sending all the previous chat history to the model as part of the prompt.
 
 ## Less-useful prompts
 
