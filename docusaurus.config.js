@@ -11,7 +11,7 @@ const config = {
   title: "Learn how to interact with OpenAI models",
   tagline: "A 75-minute workshop on OpenAI GPT Models for Microsoft AI Tour",
   url: "https://GitHub-Insight-ANZ-Lab.io/",
-  baseUrl: "/aiapp-lab-docs/",
+  baseUrl: "/aiapp1day/",
 
   onBrokenLinks: "ignore",
   onBrokenMarkdownLinks: "ignore",

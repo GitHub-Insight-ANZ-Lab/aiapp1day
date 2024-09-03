@@ -27,4 +27,4 @@ The lab is organized into sections, taking you from "understanding" (core concep
 
 ## Learner Feedback
 
-We would love to hear your feedback on this lab. Please visit the [GitHub repository for this lab](https://github.com/rakeshln84/aiapp-lab-docs), and use the Issues tab for bugs or suggestions or create a pull-request with your suggestions.
+We would love to hear your feedback on this lab. Please visit the [GitHub repository for this lab](https://github.com/GitHub-Insight-ANZ-Lab/aiapp1day/), and use the Issues tab for bugs or suggestions or create a pull-request with your suggestions.
