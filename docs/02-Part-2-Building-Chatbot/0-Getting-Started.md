@@ -33,4 +33,3 @@ The Azure resources required for this lab have already been provisioned for you.
 :::
 
 If you would like to provision the resources yourself, follow the instructions on the `Azure Deployment Guide` page.
-

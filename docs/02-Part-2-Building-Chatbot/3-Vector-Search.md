@@ -4,15 +4,15 @@ This lab demonstrates using an Azure OpenAI embedding model to vectorize documen
 
 ## Setup the lab environment
 
-1. Navigate to the lab folder `~/labs/02-LAB-02/2-vector-search/start` within the repository.
+1. Navigate to the lab folder `~/labs/02-LAB-02/3-Vector-Search/start` within the repository.
 
 ```bash
-cd  labs/02-LAB-02/2-vector-search/start
+cd  labs/02-LAB-02/3-Vector-Search/start
 code .
 ```
 
 :::info
-The `~/labs/02-LAB-02/2-vector-search/completed` folder contains the completed solution for this lab.
+The `~/labs/02-LAB-02/3-Vector-Search/completed` folder contains the completed solution for this lab.
 :::
 
 2. Open the `.env` file in the Visual Studio Code editor.

@@ -8,15 +8,15 @@ Throughout this lab, notice how much more concise the code is compared to the pr
 
 ## Setup the lab environment
 
-1. Navigate to the lab folder `~/labs/02-LAB-02/3-using-langchain/start` within the repository.
+1. Navigate to the lab folder `~/labs/02-LAB-02/4-Using-Langchain/start` within the repository.
 
 ```bash
-cd  labs/02-LAB-02/3-using-langchain/start
+cd  labs/02-LAB-02/4-Using-Langchain/start
 code .
 ```
 
 :::info
-The `~/labs/02-LAB-02/3-using-langchain/completed` folder contains the completed solution for this lab.
+The `~/labs/02-LAB-02/4-Using-Langchain/completed` folder contains the completed solution for this lab.
 :::
 
 2. To simplify code, the LangChain package makes use of environment variables. The `.env` file in this lab will reflect the naming conventions of the LangChain packages and differs from previous labs. Open the `.env` file in the Visual Studio Code editor.

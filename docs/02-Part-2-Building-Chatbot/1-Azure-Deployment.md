@@ -26,7 +26,7 @@ If Bicep is not installed, please follow https://learn.microsoft.com/en-us/azure
 
 ### Edit Settings
 
-Open a terminal and navigate to `labs/02-LAB-02/6-Azure-Deployment/lab-core` folder within the repository.
+Open a terminal and navigate to `labs/02-LAB-02/1-Azure-Deployment/lab-core` folder within the repository.
 
 Open the `azuredeploy.parameters.json` file, then edit the `name` to be the prefix of all resources.
 
@@ -70,7 +70,7 @@ This deployment will only create 2 web apps for the Chatbot Frontend and Backend
 
 ### Run Deployment
 
-Open a terminal and navigate to `labs/02-LAB-02/6-Azure-Deployment/lab-user` folder within the repository.
+Open a terminal and navigate to `labs/02-LAB-02/1-Azure-Deployment/lab-user` folder within the repository.
 
 1. Login
 
