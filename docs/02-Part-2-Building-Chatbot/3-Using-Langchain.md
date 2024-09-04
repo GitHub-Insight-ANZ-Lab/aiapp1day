@@ -60,7 +60,7 @@ The `~/labs/02-LAB-02/2c_rag_langchain/completed` folder contains the completed 
    npm install
    ```
 
-## 2c.1 Vector search with LangChain
+## Vector search with LangChain
 
 The first step is to initialize the connection to the vector store. The `AzureCosmosDBVectorStore` class is used to represent the vector store. This section will walk through the initialization of this connection as well as a test call that issues a vector search and outputs the results.
 
@@ -130,7 +130,7 @@ The return value of a vector search in LangChain is a list of `Document` objects
 
 > **Question** comparing the code here with the search function in 2b, can you tell the differences between them?
 
-## 2c.2 RAG with LangChain
+## RAG with LangChain
 
 In this section, we'll implement the RAG pattern using LangChain. In LangChain, a **retriever** is used to augment the prompt with contextual data. In this case, the already established vector store will be used as the retriever. By default, the prompt is augmented with the `pageContent` field of the retrieved document that customarily contains the text content of the embedded vector. In our case, the document itself serves as the textual content, so we'll have to do some pre-processing to format the text of the product list that is expected in our system prompt (JSON string) - see the `formatDocuments` function below for this implementation.
 
@@ -276,7 +276,7 @@ We'll also define a reusable RAG chain to control the flow and behavior of the c
 
 > **Question** Why do we get a response like this? how can we improve it?
 
-## 2c.3 LangChain agent
+## LangChain agent
 
 In this section, we'll implement a LangChain agent that will be used to interact with the LLM. The agent will be used to control the flow and behavior of the call into the LLM. An agent differs from the previous RAG chain in that the RAG chain is a definition of a sequence of specific actions. Agents on the other hand are equipped with various tools and will determine which actions to take based on the context of the conversation. In this scenario, an agent will be equipped with two tools, one that uses a retriever chain from the vector store, and another that will perform a MongoDB lookup based on a SKU value. The reason the SKU lookup tool is introduced is because the vector store is built for semantic search. Some fields, such as the `_id` or `sku` fields do not have semantic meaning and therefore a direct lookup is more appropriate.
 

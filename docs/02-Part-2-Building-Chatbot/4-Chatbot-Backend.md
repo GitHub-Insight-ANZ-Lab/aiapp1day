@@ -3,21 +3,11 @@
 The backend api is a Node.js web application, using Express and Swagger, that will expose endpoints for the frontend application to interact with. The backend api could be deployed as containerized application that will be deployed to [Azure Container Apps](https://learn.microsoft.com/en-us/azure/container-apps/overview) or Azure App service.
 
 
-## Clone the Code Repo
-
-Create a folder to house the repository. Open a terminal and navigate to the folder. Clone the repository, then navigate to the `Backend` folder within the repository.
-
-```bash
-git clone https://github.com/GitHub-Insight-ANZ-Lab/aiapp1day.git
-
-cd apps/api
-```
-
 ## Run the backend api locally
 
 When developing a backend api, it is often useful to run the application locally to test and debug. This section outlines how to run the backend api locally while watching the file system for code changes. Any detected changes will automatically restart the backend api.
 
-1. Open the backend api folder location in VS Code.
+1. Open the backend api folder location in VS Code: `apps/api`
 
 2. Open a **Terminal** window in VS Code (<kbd>CTRL</kbd>+<kbd>`</kbd>).
 
