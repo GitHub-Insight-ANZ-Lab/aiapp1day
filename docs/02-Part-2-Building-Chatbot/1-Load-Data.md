@@ -2,19 +2,19 @@
 
 This lab demonstrates bulk loading of data from the Contoso Bike Store JSON files into Cosmos DB for MongoDB.
 
-## 2a.1 Setup the lab environment
+## Setup the lab environment
 
 1. Clone the repository to your local machine if you have not already done so.
 
-```bash
-git clone https://github.com/GitHub-Insight-ANZ-Lab/aiapp1day.git
-```
+   ```bash
+   git clone https://github.com/GitHub-Insight-ANZ-Lab/aiapp1day.git
+   ```
 
 2. Navigate to the lab folder [~/labs/02-LAB-02/2a_rag_load_data/start](https://github.com/GitHub-Insight-ANZ-Lab/aiapp1day/tree/main/labs/02-LAB-02/2a_rag_load_data/start) within the repository.
 
-```bash
-cd  labs/02-LAB-02/2a_rag_load_data/start
-```
+   ```bash
+   cd  labs/02-LAB-02/2a_rag_load_data/start
+   ```
 
 :::info
 The `~/labs/02-LAB-02/2a_rag_load_data/completed` folder contains the completed solution for this lab.
@@ -42,7 +42,7 @@ The `~/labs/02-LAB-02/2a_rag_load_data/completed` folder contains the completed 
    npm install
    ```
 
-## 2a.2 Prepare the data set
+## Prepare the data set
 
 The qualitfy of the dataset feeding into the LLM model makes big different. Maybe it is usually the job of data team, but there could be various convertion and integration required to format the data set. Lets do a quick excerise on preparing the data set. No 'Rubbish in & Rubbish out' for our chatbot.
 
@@ -124,7 +124,7 @@ The product data set is located in data\product.csv, the data set has multiple c
 
 > **Challenge**: Can you suggest a modification to the code that would preserve the quotation marks in the description field?
 
-## 2a.3 Bulk load product data
+## Bulk load product data
 
 There is more than one option when performing bulk operations in Cosmos DB for MongoDB. In this section, data will be loaded using the `bulkWrite` method. The `bulkWrite` method is used to perform multiple write operations in a single batch, write operations can include a mixture of insert, update, and delete operations.
 
@@ -177,7 +177,7 @@ There is more than one option when performing bulk operations in Cosmos DB for M
 
    ![A console window displays indicating products have been inserted into the products collection](images/rag_load_data_products_loaded.png "Products loaded")
 
-## 2a.3 Bulk load of customer and sales data
+## Bulk load of customer and sales data
 
 In this section, data will be loaded using the `insertMany` method. The `insertMany` method is used to insert multiple documents into a collection, it differs from the `bulkWrite` method in that it only supports insert operations.
 
@@ -240,7 +240,7 @@ Customer data and sales data are also combined in a single JSON source, some pre
 
    ![A console window displays indicating customers and sales have been inserted into the customers and sales collections](images/rag_load_data_customers_sales_loaded.png "Customers and sales loaded")
 
-## 2a.4 Browse the data in the Cosmos DB (MongoDB)
+## Browse the data in the Cosmos DB (MongoDB)
 
 1. Install MongoDb extension in VS code : MongoDB for VS code
    ![alt text](images/rag_load_data_image-6.png)
