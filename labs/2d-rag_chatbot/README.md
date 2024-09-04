@@ -1,71 +1,78 @@
 # Lab 2d - End to end Chatbot Time!
 
 
-# 2d.1 Connect the chat user interface with the chatbot API
+# 2d.1 Add LangChain Agent to Backend API
+
+1. In the previous task, we have create a LangChain agent and it is able to RAG to response to our question. Now, lets add the code into our Backend API service.
+
+2. Do a diff in VS code between `agent.js` and  `langchain-agent.js`. you will see there are additional code added in the function to manage chat history.
+   ![alt text](image.png)
+   
+3. Copy `agent.js` into `apps\api\bikestore\agent.js` so that the backend is able to connect to both CosmosDb and OpenAI service
+
+
+# 2d.2 Connect the chat user interface with the chatbot API
 
 In the previous lab, the backend API code was configured and hosted locally. The backend API integrates vCore-based Azure Cosmos DB for MongoDB with Azure OpenAI. When the Azure resource template for this lab was run to deploy the necessary Azure resources, a front-end web application written as a SPA (single page application) in React was deployed.
 
+1. The backend api app is located in `apps/api`. update database name and other connection details in `.env` file.
 
-The backend api app is located in apps/api. update your database name in cosmic_works_ai_agent.js
-```
-const DBNAME = 'aiapp1day_daniel'
-```
+    ```bash
+    MONGODB_CONNECTION_STRING=mongodb+srv://<user>:<password>@<db>.mongocluster.cosmos.azure.com/?tls=true&authMechanism=SCRAM-SHA-256&retrywrites=false&maxIdleTimeMS=120000
+    MONGODB_Name=aiapp1day_{your_name}_{your_lucky_number}
+    AZURE_OPENAI_API_INSTANCE_NAME=<openai-service-name>
+    AZURE_OPENAI_API_KEY=<azure_openai_api_key>
+    AZURE_OPENAI_API_DEPLOYMENT_NAME=completions
+    AZURE_OPENAI_API_EMBEDDINGS_DEPLOYMENT_NAME=embeddings
+    AZURE_OPENAI_API_VERSION=2023-09-01-preview
+    ```
 
-start the application with below commands
+2. Start the application with below commands.
 
-```
-npm install
-npm start dev
-```
+    ```
+    npm install
+    npm start dev
+    ```
 
-The frontend chatbot app is located in apps/chatbot. 
+3. The frontend chatbot app is located in `apps/chatbot`. update backend url in `.env` file. While the code for the SPA web application is outside the scope of this dev guide. It's worth noting that the Web App is configured with the URL for the Backend API in `.env`.
+    ```
+    BACKEND_URI=http://localhost:5000
+    ```
 
-update your databasen name in cosmic_works_ai_agent.js
-```
-const DBNAME = 'aiapp1day_daniel'
-```
+4. start the chatbot app with below commands, open browser and visit url: http://localhost:4000/.
 
-start the chatbot app with below commands, open browser and visit url: http://localhost:4000/.
+    ```
+    npm install
+    npm start dev
+    ```
 
-```
-npm install
-npm start dev
-```
+5. Navigating to local URL in the browser accesses the front-end application. Through this front-end application User Interface, questions can be submitted to the Azure OpenAI model about the Bike Store company data, then it will generate responses accordingly.
 
-Navigating to local URL in the browser accesses the front-end application. Through this front-end application User Interface, questions can be submitted to the Azure OpenAI model about the CosmicWorks company data, then it will generate responses accordingly.
-
-![Front-end Web Application User Interface](images/2024-01-17-12-42-59.png)
-
-While the code for the SPA web application is outside the scope of this dev guide. It's worth noting that the Web App is configured with the URL for the Backend API in api/BACKEND_URI.ts.
-
-todo: current API_ENDPOINT is harded. probably just keep it simple for now rather than an app setting.
-
-# 2d.2 add langchain code to api app
-
-todo: move langchain rag code from 2c into API app
+    ![Front-end Web Application User Interface](images/2024-01-17-12-42-59.png)
 
 
-# 2d.3 Run chatbox end to end
+# 2d.3 Ask questions about data and observe the responses
 
+1. To ask the AI questions about the Bike Store company data, type the questions in to the front-end application chat user interface. The web application includes tiles with a couple example questions to get started. To use these, simply click on the question tile and it will generate an answer.
 
-## Ask questions about data and observe the responses
+    ![Front-end Web Application User Interface](images/2024-01-17-12-42-59.png)
 
-To ask the AI questions about the CosmicWorks company data, type the questions in to the front-end application chat user interface. The web application includes tiles with a couple example questions to get started. To use these, simply click on the question tile and it will generate an answer.
-
-![Front-end Web Application User Interface](images/2024-01-17-12-42-59.png)
-
-These example questions are:
-- What was the price of the product with sku `FR-R92B-58`?
-- What is the SKU of HL Road Frame - Black?
-- What is HL Road Frame?
+2. These example questions are:
+   - What was the price of the product with sku `FR-R92B-58`?
+   - What is the SKU of HL Road Frame - Black?
+   - What is HL Road Frame?
 
 > **Note**: It's possible the first time you ask a question within the Front end application there may be an error. Occasionally when the Azure Bicep template deploys the front end application there will be an issue configuring the use of the `API_ENDPOINT` app setting. If this happens, simply navigate to **Deployment** -> **Deployment Center**, then click **Sync** to have the Web App refresh the deployment of the front end app from it's GitHub repository source code. This should fix that error.
 
-The chat user interface presents as a traditional chat application style interface when asking questions.
+3. The chat user interface presents as a traditional chat application style interface when asking questions.
 
 ![Chat user interface screenshot with question and generated answer displayed](images/2024-01-17-12-53-13.png)
 
-Go ahead, ask the service a few questions about CosmicWorks and observe the responses.
+4. Go ahead, ask the service a few questions about Bike Store and observe the responses.
+
+>**Question** How does the HTTP and Restful response looks like? Use the dev tools in the browser to inspect the actually request/ response payload.
+
+# 2d.4 More things to think about
 
 ## What do I do if the responses are incorrect?
 
