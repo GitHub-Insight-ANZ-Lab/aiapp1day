@@ -1,6 +1,6 @@
 # Build a Chatbot Backend
 
-The backend api is a Node.js web application, using Express and Swagger, that will expose endpoints for the frontend application to interact with. The backend api could be deployed as containerized application that will be deployed to [Azure Container Apps](https://learn.microsoft.com/en-us/azure/container-apps/overview) or Azure App service.
+The backend api is a Node.js web application, using Express and Swagger, that will expose endpoints for the frontend application to interact with. The backend api could be deployed as web app on Azure App service.
 
 
 ## Run the backend api locally

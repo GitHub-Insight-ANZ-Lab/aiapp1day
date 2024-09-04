@@ -4,29 +4,24 @@ This lab demonstrates bulk loading of data from the Contoso Bike Store JSON file
 
 ## Setup the lab environment
 
-1. Clone the repository to your local machine if you have not already done so.
+1. Navigate to the lab folder [~/labs/02-LAB/1-load-data/start](https://github.com/GitHub-Insight-ANZ-Lab/aiapp1day/tree/main/labs/02-LAB/1-Load-Data/start) within the repository.
 
    ```bash
-   git clone https://github.com/GitHub-Insight-ANZ-Lab/aiapp1day.git
-   ```
-
-2. Navigate to the lab folder [~/labs/02-LAB-02/2a_rag_load_data/start](https://github.com/GitHub-Insight-ANZ-Lab/aiapp1day/tree/main/labs/02-LAB-02/2a_rag_load_data/start) within the repository.
-
-   ```bash
-   cd  labs/02-LAB-02/2a_rag_load_data/start
+   cd  labs/02-LAB/1-load-data/start
+   code .
    ```
 
 :::info
-The `~/labs/02-LAB-02/2a_rag_load_data/completed` folder contains the completed solution for this lab.
+The `~/labs/02-LAB/1-load-data/completed` folder contains the completed solution for this lab.
 :::
 
-3. In the lab folder, create a `.env` file and add the following environment variables, replace `<MONGODB_CONNECTION_STRING>` with your Cosmos DB for MongoDB API service connection string:
+2. In the lab folder, create a `.env` file and add the following environment variables, replace `<MONGODB_CONNECTION_STRING>` with your Cosmos DB for MongoDB API service connection string:
 
    ```text
    MONGODB_CONNECTION_STRING=mongodb+srv://aiapp1dayadmin:Aiapp1daypassword123@arg-syd-aiapp1day-mongo.mongocluster.cosmos.azure.com/?tls=true&authMechanism=SCRAM-SHA-256&retrywrites=false&maxIdleTimeMS=120000&tlsInsecure=true
    ```
 
-4. Choose a unique name for your CosmosDB database. While everyone in the workshop will share the same CosmosDB instance, you can select your own database name. Modify `MONGODB_Name` in `.env` file.
+3. Choose a unique name for your CosmosDB database. While everyone in the workshop will share the same CosmosDB instance, you can select your own database name. Modify `MONGODB_Name` in `.env` file.
 
    ```text
    MONGODB_Name = 'aiapp1day_daniel_55'
@@ -34,9 +29,9 @@ The `~/labs/02-LAB-02/2a_rag_load_data/completed` folder contains the completed 
    MONGODB_Name = 'aiapp1day_{your_name}_{your_lucky_number}'
    ```
 
-5. In Visual Studio Code, open a terminal window and navigate to the lab folder `labs/02-LAB-02/2a_rag_load_data/start` .
+4. In Visual Studio Code, open a terminal window and navigate to the lab folder `start` .
 
-6. To install the required packages, execute the following command in the terminal window:
+5. To install the required packages, execute the following command in the terminal window:
 
    ```bash
    npm install

@@ -8,25 +8,20 @@ Throughout this lab, notice how much more concise the code is compared to the pr
 
 ## Setup the lab environment
 
-1. Clone the repository to your local machine if you have not already done so.
+1. Navigate to the lab folder [~/labs/02-LAB/3-using-langchain/start](https://github.com/GitHub-Insight-ANZ-Lab/aiapp1day/tree/main/labs/02-LAB/3-Using-Langchain/start) within the repository.
 
 ```bash
-git clone https://github.com/GitHub-Insight-ANZ-Lab/aiapp1day.git
-```
-
-2. Navigate to the lab folder [~/labs/02-LAB-02/2c_rag_langchain/start](https://github.com/GitHub-Insight-ANZ-Lab/aiapp1day/tree/main/labs/02-LAB-02/2c_rag_langchain/start) within the repository.
-
-```bash
-cd  labs/02-LAB-02/2c_rag_langchain/start
+cd  labs/02-LAB/3-using-langchain/start
+code .
 ```
 
 :::info
-The `~/labs/02-LAB-02/2c_rag_langchain/completed` folder contains the completed solution for this lab.
+The `~/labs/02-LAB/3-using-langchain/completed` folder contains the completed solution for this lab.
 :::
 
-3. To simplify code, the LangChain package makes use of environment variables. The `.env` file in this lab will reflect the naming conventions of the LangChain packages and differs from previous labs. Open the `.env` file in the Visual Studio Code editor.
+2. To simplify code, the LangChain package makes use of environment variables. The `.env` file in this lab will reflect the naming conventions of the LangChain packages and differs from previous labs. Open the `.env` file in the Visual Studio Code editor.
 
-4. Add the following settings to the `.env` file, populating the MongoDB connection string and replacing the values from the deployed Azure OpenAI service:
+3. Add the following settings to the `.env` file, populating the MongoDB connection string and replacing the values from the deployed Azure OpenAI service:
 
    ```bash
    MONGODB_CONNECTION_STRING=<MONGODB_CONNECTION_STRING>
@@ -42,19 +37,19 @@ The `~/labs/02-LAB-02/2c_rag_langchain/completed` folder contains the completed 
 
    > **Note**: The Azure OpenAI service name is not the full endpoint. Only the service name is required. For example, if the endpoint is `https://myservicename.openai.azure.com/`, then the service name is `myservicename`.
 
-5. In Visual Studio Code, open a terminal window and navigate to the lab folder `lab_2c`.
+4. In Visual Studio Code, open a terminal window and navigate to the lab folder `start`.
 
-6. Install the langchain packages by running the following command in the terminal window.
+5. Install the langchain packages by running the following command in the terminal window.
 
    ```bash
    npm install langchain@0.1.21 --save
    npm install @langchain/community@0.0.32 --save
    ```
 
-7. This will install the package and save it as a dependency in your project's `package.json` file.
+6. This will install the package and save it as a dependency in your project's `package.json` file.
    ![alt text](images/rag_chain_image.png)
 
-8. Install the required packages by running the following command in the terminal window:
+7. Install the required packages by running the following command in the terminal window:
 
    ```bash
    npm install
