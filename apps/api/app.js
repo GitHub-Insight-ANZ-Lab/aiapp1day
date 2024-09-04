@@ -1,7 +1,7 @@
 const express = require('express');
 const cors = require('cors')
 const swagger = require('./swagger');
-const CosmicWorksAIAgent = require('./bikestore/agent');
+const BikeStoreAgent = require('./bikestore/agent');
 
 const app = express();
 app.use(express.json());
@@ -58,7 +58,7 @@ app.post('/ai', async (req, res) => {
     if (agentInstancesMap.has(session_id)) {
         agent = agentInstancesMap.get(session_id);
     } else {
-        agent = new CosmicWorksAIAgent();
+        agent = new BikeStoreAgent();
         agentInstancesMap.set(session_id, agent);
     }
 
