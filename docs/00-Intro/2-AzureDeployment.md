@@ -9,15 +9,7 @@
 
 ## Clone the repository
 
-Create a folder to house the repository. Open a terminal and navigate to the folder. Clone the repository, then navigate to the `labs/02-LAB-02/deploy` folder within the repository.
-
-```bash
-git clone https://github.com/GitHub-Insight-ANZ-Lab/aiapp1day.git
-
-cd aiapp1day
-cd Labs
-cd deploy
-```
+Open a terminal and navigate to `labs/02-LAB/deploy` folder within the repository.
 
 Open the `azuredeploy.parameters.json` file, then edit the `mongoDbPassword` to a password you wish to use for the MongoDB Admin User:
 
