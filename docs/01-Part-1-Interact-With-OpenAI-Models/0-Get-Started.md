@@ -1,6 +1,6 @@
 ---
 title: Get started
-slug: /setup
+slug: /lab1-setup
 ---
 
 :::info WORKSHOP PRE-REQUISITES
