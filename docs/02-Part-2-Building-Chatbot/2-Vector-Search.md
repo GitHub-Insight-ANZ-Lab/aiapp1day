@@ -4,9 +4,25 @@ This lab demonstrates using an Azure OpenAI embedding model to vectorize documen
 
 ## 2b.1 Setup the lab environment
 
-1. Open the `.env` file in the Visual Studio Code editor.
+1. Clone the repository to your local machine if you have not already done so.
 
-2. Add the following settings to the `.env` file, replacing the values from the deployed Azure OpenAI service. Please also copy `MONGODB_CONNECTION_STRING` and `MONGODB_Name` from previous lab.
+```bash
+git clone https://github.com/GitHub-Insight-ANZ-Lab/aiapp1day.git
+```
+
+2. Navigate to the lab folder [~/labs/02-LAB-02/2b_rag_vector_search/start](https://github.com/GitHub-Insight-ANZ-Lab/aiapp1day/tree/main/labs/02-LAB-02/2b_rag_vector_search/start) within the repository.
+
+```bash
+cd  labs/02-LAB-02/2b_rag_vector_search/start
+```
+
+:::info
+The `~/labs/02-LAB-02/2b_rag_vector_search/completed` folder contains the completed solution for this lab.
+:::
+
+3. Open the `.env` file in the Visual Studio Code editor.
+
+4. Add the following settings to the `.env` file, replacing the values from the deployed Azure OpenAI service. Please also copy `MONGODB_CONNECTION_STRING` and `MONGODB_Name` from previous lab.
 
    ```bash
    AZURE_OPENAI_API_INSTANCE_NAME=https://<openai-service-name>-openai.openai.azure.com/
@@ -15,9 +31,9 @@ This lab demonstrates using an Azure OpenAI embedding model to vectorize documen
 
    Replace `<openai-service-name>` with the name of the deployed OpenAI service, and `<azure_openai_api_key>` with the Azure OpenAI API key.
 
-3. In Visual Studio Code, open a terminal window and navigate to the lab folder `lab_2b`.
+5. In Visual Studio Code, open a terminal window and navigate to the lab folder `lab_2b`.
 
-4. Install the required packages by running the following command in the terminal window:
+6. Install the required packages by running the following command in the terminal window:
 
    ```bash
    npm install
