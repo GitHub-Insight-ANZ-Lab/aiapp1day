@@ -4,15 +4,15 @@ This lab demonstrates bulk loading of data from the Contoso Bike Store JSON file
 
 ## Setup the lab environment
 
-1. Navigate to the lab folder `~/labs/02-LAB-02/1-load-data/start` within the repository.
+1. Navigate to the lab folder `~/labs/02-LAB-02/2-Load-Data/start` within the repository.
 
    ```bash
-   cd  labs/02-LAB-02/1-load-data/start
+   cd  labs/02-LAB-02/2-Load-Data/start
    code .
    ```
 
 :::info
-The `~/labs/02-LAB-02/1-load-data/completed` folder contains the completed solution for this lab.
+The `~/labs/02-LAB-02/2-Load-Data/completed` folder contains the completed solution for this lab.
 :::
 
 2. In the lab folder, create a `.env` file and add the following environment variables, replace `<MONGODB_CONNECTION_STRING>` with your Cosmos DB for MongoDB API service connection string:

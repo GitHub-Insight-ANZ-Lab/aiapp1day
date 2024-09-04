@@ -30,7 +30,7 @@ When developing a backend api, it is often useful to run the application locally
 
 1. In the previous task, we have create a LangChain agent and it is able to RAG to response to our question. Now, lets add the code into our Backend API service.
 
-2. Do a diff in VS code between `labs\02-LAB-02\4-Chatbot-Backend\agent.js` and  `labs\02-LAB-02\4-Chatbot-Backend\langchain-agent.js`. you will see there are additional code added in the function to manage chat history.
+2. Do a diff in VS code between `labs\02-LAB-02\5-Chatbot-Backend\agent.js` and  `labs\02-LAB-02\5-Chatbot-Backend\langchain-agent.js`. you will see there are additional code added in the function to manage chat history.
    ![alt text](images/chatbot-frontend-image-1.png)
    
 3. Copy `agent.js` into `apps\api\bikestore\agent.js` so that the backend is able to connect to both CosmosDb and OpenAI service
