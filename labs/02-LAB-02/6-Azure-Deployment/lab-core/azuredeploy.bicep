@@ -1,11 +1,3 @@
-/* *************************************************************** 
-Azure Cosmos DB + Azure OpenAI Node.js developer guide lab
-******************************************************************
-This Azure resource deployment template uses some of the following practices:
-- [Abbrevation examples for Azure resources](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/resource-abbreviations)
-*/
-
-
 
 /* *************************************************************** */
 /* Parameters */
@@ -221,6 +213,7 @@ resource logAnalytics 'Microsoft.OperationalInsights/workspaces@2021-06-01' = {
     }
   }
 }
+
 resource appServiceWebInsights 'Microsoft.Insights/components@2020-02-02' = {
   name: '${name}-appi'
   location: location
