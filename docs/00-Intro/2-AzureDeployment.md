@@ -3,39 +3,57 @@ title: "Azure Deployment"
 slug: /
 ---
 
+## Prerequisites
 
-## backend
+- Owner on Azure subscription
+- Account approved for Azure OpenAI service
+- Azure CLI installed
+- Azure PowerShell installed
 
-cd apps\api
-npm install
-npm run dev
+## Clone the repository
 
-## frontend
-
-cd apps\chatbot
-npm install
-npm run dev
-
-## endpoint details
-
-
-
-|Variable Name| Value|
-|----------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------|
-|MONGODB_CONNECTION_STRING|mongodb+srv://aiapp1dayadmin:Aiapp1daypassword123@arg-syd-aiapp1day-mongo.mongocluster.cosmos.azure.com/?tls=true&authMechanism=SCRAM-SHA-256&retrywrites=false&maxIdleTimeMS=120000&tlsInsecure=true|
-|MONGODB_Name|aiapp1day_your_name_your_lucky_number
-|AZURE_OPENAI_API_INSTANCE_NAME|arg-syd-aiapp1day-openai|
-|AZURE_OPENAI_API_ENDPOINT|https://arg-syd-aiapp1day-openai.openai.azure.com/|
-|AZURE_OPENAI_API_KEY|70563d5a57cc45999cdd80b9bf50ed4d|
-|AZURE_OPENAI_API_DEPLOYMENT_NAME|completions|
-|AZURE_OPENAI_API_EMBEDDINGS_DEPLOYMENT_NAME|embeddings|
-|AZURE_OPENAI_API_VERSION|2023-09-01-preview|
-
-
-## Clone AI App in One Day Repo
-
-Create a folder to house the repository. Open a terminal and navigate to the folder.
+Create a folder to house the repository. Open a terminal and navigate to the folder. Clone the repository, then navigate to the `labs/02-LAB-02/deploy` folder within the repository.
 
 ```bash
 git clone https://github.com/GitHub-Insight-ANZ-Lab/aiapp1day.git
+
+cd aiapp1day
+cd Labs
+cd deploy
+```
+
+Open the `azuredeploy.parameters.json` file, then edit the `mongoDbPassword` to a password you wish to use for the MongoDB Admin User:
+
+![editing the azuredeploy.parameters.json file with mongoDBPassword parameter highlighted](images/editor-azuredeploy-parameters-json-password.png)
+
+When the Azure Bicep template is deployed, this parameters file will be used to configure the Mongo DB Password and other parameters when provisioning the Azure resources.
+
+## Login to Azure
+
+Open a terminal window and log in to Azure using the following command:
+
+```Powershell
+Connect-AzAccount
+```
+
+### Set the desired subscription (Optional)
+
+If you have more than one subscription associated with your account, set the desired subscription using the following command:
+
+```Powershell
+Set-AzContext -SubscriptionId <subscription-id>
+```
+
+## Create resource group
+
+```Powershell
+New-AzResourceGroup -Name mongo-devguide-rg -Location 'eastus'
+```
+
+## Deploy using bicep template
+
+Deploy the solution resources using the following command (this will take a few minutes to run):
+
+```Powershell
+New-AzResourceGroupDeployment -ResourceGroupName mongo-devguide-rg -TemplateFile .\azuredeploy.bicep -TemplateParameterFile .\azuredeploy.parameters.json -c
 ```

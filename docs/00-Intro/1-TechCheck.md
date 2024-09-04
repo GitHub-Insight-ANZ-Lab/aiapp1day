@@ -18,7 +18,8 @@ npm run dev
 
 ## endpoint details
 
-
+Prompt Playground URL
+https://arg-syd-aiapp1day-playground.azurewebsites.net/
 
 |Variable Name| Value|
 |----------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------|
