@@ -50,7 +50,9 @@ In the previous lab, the backend API code was configured and hosted locally. The
    - What is the SKU of HL Road Frame - Black?
    - What is HL Road Frame?
 
-> **Note**: It's possible the first time you ask a question within the Front end application there may be an error. Occasionally when the Azure Bicep template deploys the front end application there will be an issue configuring the use of the `API_ENDPOINT` app setting. If this happens, simply navigate to **Deployment** -> **Deployment Center**, then click **Sync** to have the Web App refresh the deployment of the front end app from it's GitHub repository source code. This should fix that error.
+    :::info
+    It's possible the first time you ask a question within the Front end application there may be an error. Occasionally when the Azure Bicep template deploys the front end application there will be an issue configuring the use of the `API_ENDPOINT` app setting. If this happens, simply navigate to **Deployment** -> **Deployment Center**, then click **Sync** to have the Web App refresh the deployment of the front end app from it's GitHub repository source code. This should fix that error.
+    :::
 
 3. The chat user interface presents as a traditional chat application style interface when asking questions.
 
@@ -58,8 +60,10 @@ In the previous lab, the backend API code was configured and hosted locally. The
 
 4. Go ahead, ask the service a few questions about Bike Store and observe the responses.
 
->**Question** How does the HTTP and Restful response looks like? Use the dev tools in the browser to inspect the actually request/ response payload.
-    ![alt text](images/raw-request.png)
+    :::info
+    How does the HTTP and Restful response looks like? Use the dev tools in the browser to inspect the actually request/ response payload.
+        ![alt text](images/raw-request.png)
+    :::
 
 ## More things to think about
 
@@ -83,13 +87,17 @@ For example, the word `hamburger` gets broken up into the tokens `ham`, `bur` an
 
 The total number of tokens processed in a given request depends on the length of the input, output and request parameters. The quantity of tokens being processed will also affect the response latency and throughput for the models.
 
-> **Note**: The [pricing of the Azure OpenAI](https://azure.microsoft.com/pricing/details/cognitive-services/openai-service/) service is primarily based on token usage.
+:::info
+The [pricing of the Azure OpenAI](https://azure.microsoft.com/pricing/details/cognitive-services/openai-service/) service is primarily based on token usage.
+:::
 
 #### Exceeding Token Quota Limits
 
 Azure OpenAI has **tokens per minute** quota limits on the service. This quota limit, is based on the OpenAI model being used and the Azure region it's hosted in.
 
-> **Note**: The [Azure OpenAI Quotas and limits documentation](https://learn.microsoft.com/azure/ai-services/openai/quotas-limits) contains further information on the specific quotas per OpenAI model and Azure region.
+:::info
+The [Azure OpenAI Quotas and limits documentation](https://learn.microsoft.com/azure/ai-services/openai/quotas-limits) contains further information on the specific quotas per OpenAI model and Azure region.
+:::
 
 If an applications usage of an Azure OpenAI model exceeds the token quota limits, then the service will respond with a **Rate Limit Error** (Error code 429).
 
