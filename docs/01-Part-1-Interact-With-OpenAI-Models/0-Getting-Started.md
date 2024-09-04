@@ -11,7 +11,8 @@ slug: /lab1-setup
 
 :::
 
-For this lab you are using a custom playground build on-top of the Azure OpenAI Service. In this playground you will have the opportunity to play with the prompts and learn how to interact with OpenAI Models.
+For this lab you are using a custom playground build on-top of the Azure OpenAI Service. In this playground you will have the opportunity to play with the prompts and learn how to interact with OpenAI Models. 
+https://arg-syd-aiapp1day-playground.azurewebsites.net
 
 ## Authenticate
 
