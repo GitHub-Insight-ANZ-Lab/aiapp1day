@@ -20,8 +20,10 @@ The `~/labs/02-LAB-02/2-vector-search/completed` folder contains the completed s
 3. Add the following settings to the `.env` file, replacing the values from the deployed Azure OpenAI service. Please also copy `MONGODB_CONNECTION_STRING` and `MONGODB_Name` from previous lab.
 
    ```bash
-   AZURE_OPENAI_API_INSTANCE_NAME=https://<openai-service-name>-openai.openai.azure.com/
-   AZURE_OPENAI_API_KEY=<azure_openai_api_key>
+    MONGODB_CONNECTION_STRING=mongodb+srv://<user>:<password>@<db>.mongocluster.cosmos.azure.com/?tls=true&authMechanism=SCRAM-SHA-256&retrywrites=false&maxIdleTimeMS=120000
+    MONGODB_Name=aiapp1day_{your_name}_{your_lucky_number}
+    AZURE_OPENAI_API_INSTANCE_NAME=<azure-open-ai-endpoint>
+    AZURE_OPENAI_API_KEY=<azure-open-ai-access-key>
    ```
 
    Replace `<openai-service-name>` with the name of the deployed OpenAI service, and `<azure_openai_api_key>` with the Azure OpenAI API key.
@@ -59,8 +61,7 @@ The `~/labs/02-LAB-02/2-vector-search/completed` folder contains the completed s
    // set up the Azure OpenAI client
    const embeddingsDeploymentName = "embeddings";
    const completionsDeploymentName = "completions";
-   const aoaiClient = new OpenAIClient(
-     process.env.AZURE_OPENAI_API_INSTANCE_NAME,
+   const aoaiClient = new OpenAIClient("https://" + process.env.AZURE_OPENAI_API_INSTANCE_NAME + ".openai.azure.com/", 
      new AzureKeyCredential(process.env.AZURE_OPENAI_API_KEY)
    );
    ```
@@ -101,9 +102,6 @@ Vectorizing or embedding text is the process of converting text into a numerical
 
 > **Question** Try a different input strimg and see if vector array length changes. Hmm, no matter how long the input string is, the return of creating embeddings with "text-embedding-ada-3" is always a vector of 1536. Why?
 
-5. Remove the line of code from step 2.
-
-6. Save the file.
 
 ## Vectorize and store the embeddings in each document
 
@@ -209,6 +207,8 @@ In this section, a function is added that will loop through each document in a c
 
    ![Console output displays the progress of vectorizing and storing the embeddings in each document.](images/vectorize_and_store_embeddings.png "Vectorizing and storing the embeddings in each document")
 
+>**Tips** Missing `generateEmbeddings` error? we had this function earlier, grab it and put it in.
+
 5. Lets have a look how the record in the database looks like especially the vector field and index.
 
    ![alt text](images/rag_with_vector_search_image-6.png)
@@ -219,9 +219,7 @@ In this section, a function is added that will loop through each document in a c
 
 7. Repeat steps 2-4 for the `customers` and `sales` collections by modifying the collection name in the `addCollectionContentVectorField` function call (each collection only needs to be vectorized once).
 
-8. Once complete, remove all calls to the `addCollectionContentVectorField` function from the main function.
-
-9. Save the file.
+8. Save the file and run the code again to import data.
 
 ## Use vector search
 
@@ -291,9 +289,8 @@ Now that each document has its associated vector embedding and the vector indexe
 
    ![Console output displays the search results.](images/vector_search_results.png "Vector search results")
 
-5. Delete the code added in step 2.
+>**Tips** Oh no. Missing `generateEmbeddings` again. Why the search query need to generate embeddings ?
 
-6. Save the file.
 
 ## Use vector search in a RAG (Retrieval Augmented Generation) pattern
 
@@ -380,7 +377,7 @@ In this section, a function is added that will use the vector search results to 
 
    ![Console output displays the response from the LLM.](images/rag_with_vector_search_response.png "Response from the LLM")
 
-> **Challenge:** Are you interested in exploring the raw HTTP calls behind the scenes?
+>**Tips** Yes, it is a test, both `vectorSearch` and `generateEmbeddings` are missing.
 
 ## Well Done!
 
