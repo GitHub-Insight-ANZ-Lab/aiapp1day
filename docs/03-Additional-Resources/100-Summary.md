@@ -25,7 +25,3 @@ Here are a few resources to help you take that next step in signing up and learn
 - [Azure OpenAI Service pricing](https://azure.microsoft.com/en-us/products/cognitive-services/openai-service/#pricing)
 - [Azure AI Hub](https://github.com/Azure-Samples/azure-ai), a curated collection with examples and applications of Azure OpenAI Serviice
 - The [Transparency Note for Azure OpenAI Service](https://learn.microsoft.com/en-us/legal/cognitive-services/openai/transparency-note) provides details on the capabilities, use cases and limitations of Azure OpenAI models.
-
-## Next Steps
-
-That's it for this workshop! In the next session, we'll dive deeper into tbuilding a chatbot using your own data with Azure OpenAI Service.

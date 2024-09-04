@@ -1,11 +1,7 @@
 ---
-title: "Welcome"
+title: "Introduction"
 slug: /
 ---
-
-:::info
-This is a **75-minute** workshop that will give you a hands-on introduction to the core concepts and best practices for interacting with OpenAI models.
-:::
 
 ## Learning Objectives
 
@@ -13,17 +9,17 @@ By the end of this workshop, you should be able to:
 
 - Describe GPT model capabilities and implementation
 - Understand prompt engineering concepts and best practices
-- Apply prompt engineering techniques to your own generative AI solutions
+- Apply prompt engineering techniques to build a Chatbot
+- Implement RAG (Retrieval Augmented Generation) to bring in external knowledge
 
 ## Lab Outline
 
-The lab is organized into sections, taking you from "understanding" (core concepts) to "doing" (hands-on exercises). Prioritize completing the exercises within the allotted time. You can then any remaining session time for open-ended exploration to build your own intuition for prompt engineering.
+The lab is organized into two parts. The first part focuses on understanding the basics of interacting with OpenAI models. You will be exploring the various prompt techniques and understanding how to guide the models to create better answers. The second part focuses on building a chatbot using the concepts learned in the first part. You will be using the Azure OpenAI Service and bringing in external knowledge using RAG (Retrieval Augmented Generation) to build a chatbot that can answer questions based on the knowledge base provided.
 
-1. [Setup](/setup). Activate your access to the custom workshop Playground.
-2. [Part 1](/Part-1-labs/Basic-Prompting). Learn the basics of interacting with the GPT Models .
-3. [Part 2](/Part-2-labs/System-Message). Learn how to guide the models to ​create better answers.
-4. [Concepts & resources](/ai-models).
-5. [Learnings and Resources](/summary). Recap what you learned & identify next steps.
+1. [Setup](/01-Lab-Setup). Set up your development environment.
+2. [Lab 1 - Interact with Open AI Models](/01-Part-1-Interact-With-OpenAI-Models/0-Getting-Started.md). Learn the basics of interacting with the GPT Models and how to guide the models to create better answers.
+3. [Lab 2 - Building Chatbot](/02-Part-2-Building-Chatbot/0-Getting-Started.md). Implement RAG (Retrieval Augmented Generation) to bring in external knowledge to build a chatbot.
+4. [Additional Resources](/03-Additional-Resources/1-Explore-Models.md). Additional resources to help you learn more about Azure OpenAI Service.
 
 ## Learner Feedback
 
