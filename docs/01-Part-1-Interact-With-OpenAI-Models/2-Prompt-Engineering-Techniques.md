@@ -1,4 +1,4 @@
-# Prompt engineering techniques
+# Prompt Engineering Techniques
 
 :::tip Do OpenAI models learn?
 OpenAI models like GPT-3 do not learn or adapt during user interactions. They generate responses based on pre-training with a large dataset and do not update their knowledge from individual conversations. Any improvements or updates to the model's capabilities are made through a controlled retraining process by OpenAI, not through real-time learning.
