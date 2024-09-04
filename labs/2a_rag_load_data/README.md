@@ -171,9 +171,10 @@ Customer data and sales data are also combined in a single JSON source, some pre
     console.log('Retrieving combined Customer/Sales data');
     const customerCollection = db.collection('customers');
     const salesCollection = db.collection('sales');
-    const custSalesRawData = "https://cosmosdbcosmicworks.blob.core.windows.net/cosmic-works-small/customer.json";
-    const custSalesData = (await (await fetch(custSalesRawData)).json())
-                            .map(custSales => cleanData(custSales));
+
+    const custSalesRawData = fs.readFileSync(path.join('data', 'custSalesData.json'), 'utf8');
+    const custSalesData = JSON.parse(custSalesRawData)
+                                .map(custSales => cleanData(custSales));   
     ```
 
 2. Split the customer data from the sales data by appending the following code (to the code in the previous step):
