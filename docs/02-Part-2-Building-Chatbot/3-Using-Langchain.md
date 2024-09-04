@@ -8,11 +8,25 @@ Throughout this lab, notice how much more concise the code is compared to the pr
 
 ## Setup the lab environment
 
-To simplify code, the LangChain package makes use of environment variables. The `.env` file in this lab will reflect the naming conventions of the LangChain packages and differs from previous labs.
+1. Clone the repository to your local machine if you have not already done so.
 
-1. Open the `.env` file in the Visual Studio Code editor.
+```bash
+git clone https://github.com/GitHub-Insight-ANZ-Lab/aiapp1day.git
+```
 
-2. Add the following settings to the `.env` file, populating the MongoDB connection string and replacing the values from the deployed Azure OpenAI service:
+2. Navigate to the lab folder [~/labs/02-LAB-02/2c_rag_langchain/start](https://github.com/GitHub-Insight-ANZ-Lab/aiapp1day/tree/main/labs/02-LAB-02/2c_rag_langchain/start) within the repository.
+
+```bash
+cd  labs/02-LAB-02/2c_rag_langchain/start
+```
+
+:::info
+The `~/labs/02-LAB-02/2c_rag_langchain/completed` folder contains the completed solution for this lab.
+:::
+
+3. To simplify code, the LangChain package makes use of environment variables. The `.env` file in this lab will reflect the naming conventions of the LangChain packages and differs from previous labs. Open the `.env` file in the Visual Studio Code editor.
+
+4. Add the following settings to the `.env` file, populating the MongoDB connection string and replacing the values from the deployed Azure OpenAI service:
 
    ```bash
    MONGODB_CONNECTION_STRING=<MONGODB_CONNECTION_STRING>
@@ -28,19 +42,19 @@ To simplify code, the LangChain package makes use of environment variables. The 
 
    > **Note**: The Azure OpenAI service name is not the full endpoint. Only the service name is required. For example, if the endpoint is `https://myservicename.openai.azure.com/`, then the service name is `myservicename`.
 
-3. In Visual Studio Code, open a terminal window and navigate to the lab folder `lab_2c`.
+5. In Visual Studio Code, open a terminal window and navigate to the lab folder `lab_2c`.
 
-4. Install the langchain packages by running the following command in the terminal window.
+6. Install the langchain packages by running the following command in the terminal window.
 
    ```bash
    npm install langchain@0.1.21 --save
    npm install @langchain/community@0.0.32 --save
    ```
 
-5. This will install the package and save it as a dependency in your project's `package.json` file.
+7. This will install the package and save it as a dependency in your project's `package.json` file.
    ![alt text](images/rag_chain_image.png)
 
-6. Install the required packages by running the following command in the terminal window:
+8. Install the required packages by running the following command in the terminal window:
 
    ```bash
    npm install
