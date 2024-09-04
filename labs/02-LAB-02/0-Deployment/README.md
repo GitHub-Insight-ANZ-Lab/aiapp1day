@@ -1,4 +1,4 @@
-# Azure Deployment
+# Azure Deployment Guide
 
 ## Prerequisites
 
