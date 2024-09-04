@@ -1,8 +1,5 @@
 # Lab 1a - Deploying Azure Resource via IaC
 
-todo: we do this as a demo rather than asking everyone to do it. they wont have subscription setup anyway. then endpoint details will be given out
-
-
 # Provision Azure resources
 
 The labs include an Azure Bicep template that will deploy the following Azure resources the solution will be deployed to:
@@ -30,9 +27,6 @@ This lab will walk you through deploying the Azure resources necessary for the s
 
 > **Note**: You will need an Azure Subscription and have the necessary permissions to provision the Azure resources.
 
-Please visit the lab repository to complete [this lab](https://github.com/AzureCosmosDB/Azure-OpenAI-Node.js-Developer-Guide/blob/main/Labs/deploy/deploy.md).
-
-
 ## Prerequisites
 
 - Owner on Azure subscription
@@ -45,9 +39,9 @@ Please visit the lab repository to complete [this lab](https://github.com/AzureC
 Create a folder to house the repository. Open a terminal and navigate to the folder. Clone the repository, then navigate to the `Labs/deploy` folder within the repository.
 
 ```bash
-git clone https://github.com/AzureCosmosDB/Azure-OpenAI-Node.js-Developer-Guide.git
+git clone https://github.com/GitHub-Insight-ANZ-Lab/aiapp1day.git
 
-cd Azure-OpenAI-Node.js-Developer-Guide
+cd aiapp1day
 cd Labs
 cd deploy
 ```
@@ -79,7 +73,6 @@ Set-AzContext -SubscriptionId <subscription-id>
 ```Powershell
 New-AzResourceGroup -Name aiapp1day-rg -Location 'eastus'
 ```
-
 
 ## Deploy using bicep template
 
