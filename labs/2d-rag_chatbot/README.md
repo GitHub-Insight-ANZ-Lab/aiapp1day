@@ -53,24 +53,24 @@ In the previous lab, the backend API code was configured and hosted locally. The
 
 # 2d.3 Ask questions about data and observe the responses
 
-To ask the AI questions about the Bike Store company data, type the questions in to the front-end application chat user interface. The web application includes tiles with a couple example questions to get started. To use these, simply click on the question tile and it will generate an answer.
+1. To ask the AI questions about the Bike Store company data, type the questions in to the front-end application chat user interface. The web application includes tiles with a couple example questions to get started. To use these, simply click on the question tile and it will generate an answer.
 
-![Front-end Web Application User Interface](images/2024-01-17-12-42-59.png)
+    ![Front-end Web Application User Interface](images/2024-01-17-12-42-59.png)
 
-These example questions are:
-- What was the price of the product with sku `FR-R92B-58`?
-- What is the SKU of HL Road Frame - Black?
-- What is HL Road Frame?
+2. These example questions are:
+   - What was the price of the product with sku `FR-R92B-58`?
+   - What is the SKU of HL Road Frame - Black?
+   - What is HL Road Frame?
 
 > **Note**: It's possible the first time you ask a question within the Front end application there may be an error. Occasionally when the Azure Bicep template deploys the front end application there will be an issue configuring the use of the `API_ENDPOINT` app setting. If this happens, simply navigate to **Deployment** -> **Deployment Center**, then click **Sync** to have the Web App refresh the deployment of the front end app from it's GitHub repository source code. This should fix that error.
 
-The chat user interface presents as a traditional chat application style interface when asking questions.
+3. The chat user interface presents as a traditional chat application style interface when asking questions.
 
 ![Chat user interface screenshot with question and generated answer displayed](images/2024-01-17-12-53-13.png)
 
-Go ahead, ask the service a few questions about Bike Store and observe the responses.
+4. Go ahead, ask the service a few questions about Bike Store and observe the responses.
 
->**Question** 
+>**Question** How does the HTTP and Restful response looks like? Use the dev tools in the browser to inspect the actually request/ response payload.
 
 # 2d.4 More things to think about
 
