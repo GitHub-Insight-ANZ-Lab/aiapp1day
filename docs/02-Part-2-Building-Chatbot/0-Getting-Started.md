@@ -16,7 +16,7 @@ slug: /lab2-setup
 
 For this lab, you will be building a chatbot that uses Azure Cosmos DB for MongoDB's vector search capabilities and Azure OpenAI services to create a conversational experience. The chatbot will be able to retrieve documents from Azure Cosmos DB using vector search and provide responses to user queries using Azure OpenAI services.
 
-## Architecture Overview
+## Solution Architecture
 
 ![Solution Architecture Diagram](images/architecture.jpg)
 
@@ -26,10 +26,11 @@ The Node.js backend API is responsible for generating responses to user queries.
 
 ## Provision Azure resources (Optional)
 
+If you would like to provision the resources yourself, follow the instructions on the `Azure Deployment Guide` page.
+
 :::info
 
-The Azure resources required for this lab have already been provisioned for you.
+Shared Azure resources required for this lab have already been deployed. 
 
 :::
 
-If you would like to provision the resources yourself, follow the instructions on the `Azure Deployment Guide` page.
