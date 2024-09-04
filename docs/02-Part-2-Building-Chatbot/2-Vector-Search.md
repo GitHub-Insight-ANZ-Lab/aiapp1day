@@ -4,7 +4,7 @@ This lab demonstrates using an Azure OpenAI embedding model to vectorize documen
 
 ## Setup the lab environment
 
-1. Navigate to the lab folder [~/labs/02-LAB-02/2-vector-search/start](https://github.com/GitHub-Insight-ANZ-Lab/aiapp1day/tree/main/labs/02-LAB-02/2-Vector-Search/start) within the repository.
+1. Navigate to the lab folder `~/labs/02-LAB-02/2-vector-search/start` within the repository.
 
 ```bash
 cd  labs/02-LAB-02/2-vector-search/start
@@ -61,7 +61,10 @@ The `~/labs/02-LAB-02/2-vector-search/completed` folder contains the completed s
    // set up the Azure OpenAI client
    const embeddingsDeploymentName = "embeddings";
    const completionsDeploymentName = "completions";
-   const aoaiClient = new OpenAIClient("https://" + process.env.AZURE_OPENAI_API_INSTANCE_NAME + ".openai.azure.com/", 
+   const aoaiClient = new OpenAIClient(
+     "https://" +
+       process.env.AZURE_OPENAI_API_INSTANCE_NAME +
+       ".openai.azure.com/",
      new AzureKeyCredential(process.env.AZURE_OPENAI_API_KEY)
    );
    ```
@@ -101,7 +104,6 @@ Vectorizing or embedding text is the process of converting text into a numerical
    ![Console output displays a large numerical vector.](images/text_embedding_output.png "Vector representation of text")
 
 > **Question** Try a different input strimg and see if vector array length changes. Hmm, no matter how long the input string is, the return of creating embeddings with "text-embedding-ada-3" is always a vector of 1536. Why?
-
 
 ## Vectorize and store the embeddings in each document
 
@@ -207,7 +209,7 @@ In this section, a function is added that will loop through each document in a c
 
    ![Console output displays the progress of vectorizing and storing the embeddings in each document.](images/vectorize_and_store_embeddings.png "Vectorizing and storing the embeddings in each document")
 
->**Tips** Missing `generateEmbeddings` error? we had this function earlier, grab it and put it in.
+> **Tips** Missing `generateEmbeddings` error? we had this function earlier, grab it and put it in.
 
 5. Lets have a look how the record in the database looks like especially the vector field and index.
 
@@ -289,8 +291,7 @@ Now that each document has its associated vector embedding and the vector indexe
 
    ![Console output displays the search results.](images/vector_search_results.png "Vector search results")
 
->**Tips** Oh no. Missing `generateEmbeddings` again. Why the search query need to generate embeddings ?
-
+> **Tips** Oh no. Missing `generateEmbeddings` again. Why the search query need to generate embeddings ?
 
 ## Use vector search in a RAG (Retrieval Augmented Generation) pattern
 
@@ -377,7 +378,7 @@ In this section, a function is added that will use the vector search results to 
 
    ![Console output displays the response from the LLM.](images/rag_with_vector_search_response.png "Response from the LLM")
 
->**Tips** Yes, it is a test, both `vectorSearch` and `generateEmbeddings` are missing.
+> **Tips** Yes, it is a test, both `vectorSearch` and `generateEmbeddings` are missing.
 
 ## Well Done!
 
