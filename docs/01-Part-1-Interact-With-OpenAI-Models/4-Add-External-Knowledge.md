@@ -1,4 +1,4 @@
-# Add Knowledge
+# Add External Knowledge
 
 :::tip Retrieval Augmented Generation
 Retrieval-Augmented Generation (RAG) is an AI technique that retrieves relevant information from a database and then uses it to help generate more informed and contextually accurate text responses.
