@@ -20,7 +20,7 @@ npm init -y
    Install the latest openai client library using `npm`:
 
 ```bash
-npm install @azure/openai
+npm install @azure/openai@1.0.0-beta.11
 ```
 
 4. Create a new `app.js` file for the Node.js program, and add the following variable definition using `require` to use the OpenAI library.
@@ -172,7 +172,7 @@ const chatResponse = client.getChatCompletions("completions", [
 // Purely for convenience and clarity, this function handles tool call responses.
 function applyToolCall({ function: call, id }) {
   if (call.name === "search_bike") {
-    const { location, company . model} = JSON.parse(call.arguments);
+    const { location, company} = JSON.parse(call.arguments);
     // In a real application, this would be a call an external service or database.
     return {
       role: "tool",
@@ -189,10 +189,9 @@ function applyToolCall({ function: call, id }) {
 ```javascript
 
 chatResponse
-  .then((result) => {
+  .then(async (result) => {
     for (const choice of result.choices) {
       console.log(choice.message.content);
-      const choice = result.choices[0];
       const responseMessage = choice.message;
       if (responseMessage?.role === "assistant") {
         const requestedToolCalls = responseMessage?.toolCalls;
