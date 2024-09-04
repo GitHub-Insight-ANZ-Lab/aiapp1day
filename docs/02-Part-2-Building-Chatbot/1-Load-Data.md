@@ -4,7 +4,7 @@ This lab demonstrates bulk loading of data from the Contoso Bike Store JSON file
 
 ## Setup the lab environment
 
-1. Navigate to the lab folder [~/labs/02-LAB-02/1-load-data/start](https://github.com/GitHub-Insight-ANZ-Lab/aiapp1day/tree/main/labs/02-LAB-02/1-Load-Data/start) within the repository.
+1. Navigate to the lab folder `~/labs/02-LAB-02/1-load-data/start` within the repository.
 
    ```bash
    cd  labs/02-LAB-02/1-load-data/start
@@ -135,9 +135,13 @@ There is more than one option when performing bulk operations in Cosmos DB for M
    const jsonFilePath = path.join("data", "product.json");
 
    // Read the JSON file
-   const productRawData = fs.readFileSync(path.join('data', 'product.json'), 'utf8');
-   const productData = JSON.parse(productRawData)
-                           .map(prod => cleanData(prod));
+   const productRawData = fs.readFileSync(
+     path.join("data", "product.json"),
+     "utf8"
+   );
+   const productData = JSON.parse(productRawData).map((prod) =>
+     cleanData(prod)
+   );
    ```
 
 2. Optionally, append the following code (to the code in the previous step) to delete any existing products in the collection. This helps if the application is run multiple times so there is no duplicates.
@@ -237,15 +241,15 @@ Customer data and sales data are also combined in a single JSON source, some pre
 ## Browse the data in the Cosmos DB (MongoDB)
 
 1. Install MongoDb extension in VS code : `MongoDB for VS code`
-   
+
    ![alt text](images/rag_load_data_image-6.png)
 
 2. then add a connection to the data.
-   
+
    ![alt text](images/rag_load_data_image-2.png)
 
 3. Browse the json records in the product and customer table.
-   
+
    ![alt text](images/rag_load_data_image-7.png)
 
 In this section bulk load operations were used to load product, customer, and sales data into Cosmos DB for MongoDB. Keep the database and its loaded data for use in subsequent labs.
