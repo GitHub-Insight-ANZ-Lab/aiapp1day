@@ -1,8 +1,4 @@
----
-title: "Tech Check"
-slug: /
----
-
+# Tech Check
 
 ## backend
 

@@ -1,7 +1,4 @@
----
-title: "Azure Deployment"
-slug: /
----
+# Azure Deployment
 
 ## Prerequisites
 
