@@ -113,10 +113,6 @@ You can call a function from the model to perform a specific task. The available
 
 In the following example, the model calls the `search_bike` function to retrieve bikes from the search index based on the location, company, and model of the bike.
 
-`````javascript
-
-````javascript
-
 1. Add the function `searchBikeStore` in `app.js` file:
 
 ```javascript
@@ -142,7 +138,7 @@ const searchBikeStore = {
     required: ["location"],
   },
 };
-`````
+```
 
 2. Call the chat completions API, by passing the `searchBikeStore` function.
 
