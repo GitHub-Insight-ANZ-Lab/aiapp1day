@@ -188,7 +188,7 @@ function applyToolCall({ function: call, id }) {
 }
 ```
 
-4. Print the final response from the tool call to the console. In some cases, you may need to send the tool call response back to the model along with the original conversation history to get the final response.
+4. Print the final response from the tool call to the console. In some cases, you may need to send the response from the tool back to the model along with the original conversation history to get the final response.
 
 ```javascript
 
