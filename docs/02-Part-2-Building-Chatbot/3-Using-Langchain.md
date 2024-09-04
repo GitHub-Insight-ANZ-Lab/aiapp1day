@@ -8,7 +8,7 @@ Throughout this lab, notice how much more concise the code is compared to the pr
 
 ## Setup the lab environment
 
-1. Navigate to the lab folder [~/labs/02-LAB-02/3-using-langchain/start](https://github.com/GitHub-Insight-ANZ-Lab/aiapp1day/tree/main/labs/02-LAB-02/3-Using-Langchain/start) within the repository.
+1. Navigate to the lab folder `~/labs/02-LAB-02/3-using-langchain/start` within the repository.
 
 ```bash
 cd  labs/02-LAB-02/3-using-langchain/start
