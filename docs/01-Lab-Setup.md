@@ -53,7 +53,6 @@ You can also deploy the resources using the instructions provided in the `Azure 
 | AI Proxy Playground  | https://arg-syd-aiapp1day-playground.azurewebsites.net |
 | Azure OpenAI API Key | 70563d5a57cc45999cdd80b9bf50ed4d                       |
 
-<br/>
 
 ### Azure OpenAI Resource Configuration
 
@@ -66,9 +65,8 @@ You can also deploy the resources using the instructions provided in the `Azure 
 | AZURE_OPENAI_API_EMBEDDINGS_DEPLOYMENT_NAME | embeddings                                        |
 | AZURE_OPENAI_API_VERSION                    | 2023-09-01-preview                                |
 
-<br/>
 
-### vCore-based Cosmos DB for MongoDB
+### Azure Cosmos DB for MongoDB
 
 The Cosmos DB is used as a backend database for the chatbot. You will be populating the database with sample data during the labs. It is important to note that you are required to create a new database with a unique name on the Cosmos DB instance provided below.
 The database name should be in the format `aiapp1day_your_name_your_lucky_number`.
@@ -77,3 +75,18 @@ The database name should be in the format `aiapp1day_your_name_your_lucky_number
 | ------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | MONGODB_CONNECTION_STRING | mongodb+srv://aiapp1dayadmin:Aiapp1daypassword123@arg-syd-aiapp1day-mongo.mongocluster.cosmos.azure.com/?tls=true&authMechanism=SCRAM-SHA-256&retrywrites=false&maxIdleTimeMS=120000&tlsInsecure=true |
 | MONGODB_Name              | aiapp1day_your_name_your_lucky_number                                                                                                                                                                 |
+
+## Sign up Azure Subscription
+
+### Free Account with $200 credit
+Create an free Azure account with $200 credit to use on Azure services within 30 days here. 
+
+https://azure.microsoft.com/en-au/pricing/purchase-options/azure-account?icid=azurefreeaccount
+
+### Visual Studio subscribers
+
+Monthly Azure credits for Visual Studio subscribers, activate Azure credits here:
+
+https://azure.microsoft.com/en-au/pricing/member-offers/credit-for-visual-studio-subscribers
+
+
