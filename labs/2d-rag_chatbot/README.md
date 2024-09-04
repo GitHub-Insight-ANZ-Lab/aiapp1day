@@ -5,34 +5,38 @@
 
 In the previous lab, the backend API code was configured and hosted locally. The backend API integrates vCore-based Azure Cosmos DB for MongoDB with Azure OpenAI. When the Azure resource template for this lab was run to deploy the necessary Azure resources, a front-end web application written as a SPA (single page application) in React was deployed.
 
+1. The backend api app is located in `apps/api`. update database name and other connection details in `.env` file.
 
-The backend api app is located in apps/api. update your database name in cosmic_works_ai_agent.js
-```
-const DBNAME = 'aiapp1day_daniel'
-```
+    ```bash
+    MONGODB_CONNECTION_STRING=mongodb+srv://<user>:<password>@<db>.mongocluster.cosmos.azure.com/?tls=true&authMechanism=SCRAM-SHA-256&retrywrites=false&maxIdleTimeMS=120000
+    MONGODB_Name=aiapp1day_{your_name}_{your_lucky_number}
+    AZURE_OPENAI_API_INSTANCE_NAME=<openai-service-name>
+    AZURE_OPENAI_API_KEY=<azure_openai_api_key>
+    AZURE_OPENAI_API_DEPLOYMENT_NAME=completions
+    AZURE_OPENAI_API_EMBEDDINGS_DEPLOYMENT_NAME=embeddings
+    AZURE_OPENAI_API_VERSION=2023-09-01-preview
+    ```
 
-start the application with below commands
+2. Start the application with below commands.
 
-```
-npm install
-npm start dev
-```
+    ```
+    npm install
+    npm start dev
+    ```
 
-The frontend chatbot app is located in apps/chatbot. 
+3. The frontend chatbot app is located in `apps/chatbot`. update backend url in `.env` file.
+    ```
+    BACKEND_URI=http://localhost:5000
+    ```
 
-update your databasen name in cosmic_works_ai_agent.js
-```
-const DBNAME = 'aiapp1day_daniel'
-```
+4. start the chatbot app with below commands, open browser and visit url: http://localhost:4000/.
 
-start the chatbot app with below commands, open browser and visit url: http://localhost:4000/.
+    ```
+    npm install
+    npm start dev
+    ```
 
-```
-npm install
-npm start dev
-```
-
-Navigating to local URL in the browser accesses the front-end application. Through this front-end application User Interface, questions can be submitted to the Azure OpenAI model about the CosmicWorks company data, then it will generate responses accordingly.
+5. Navigating to local URL in the browser accesses the front-end application. Through this front-end application User Interface, questions can be submitted to the Azure OpenAI model about the Bike Store company data, then it will generate responses accordingly.
 
 ![Front-end Web Application User Interface](images/2024-01-17-12-42-59.png)
 
@@ -50,7 +54,7 @@ todo: move langchain rag code from 2c into API app
 
 ## Ask questions about data and observe the responses
 
-To ask the AI questions about the CosmicWorks company data, type the questions in to the front-end application chat user interface. The web application includes tiles with a couple example questions to get started. To use these, simply click on the question tile and it will generate an answer.
+To ask the AI questions about the Bike Store company data, type the questions in to the front-end application chat user interface. The web application includes tiles with a couple example questions to get started. To use these, simply click on the question tile and it will generate an answer.
 
 ![Front-end Web Application User Interface](images/2024-01-17-12-42-59.png)
 
@@ -65,7 +69,10 @@ The chat user interface presents as a traditional chat application style interfa
 
 ![Chat user interface screenshot with question and generated answer displayed](images/2024-01-17-12-53-13.png)
 
-Go ahead, ask the service a few questions about CosmicWorks and observe the responses.
+Go ahead, ask the service a few questions about Bike Store and observe the responses.
+
+
+# 2d.4 More things to think about
 
 ## What do I do if the responses are incorrect?
 
