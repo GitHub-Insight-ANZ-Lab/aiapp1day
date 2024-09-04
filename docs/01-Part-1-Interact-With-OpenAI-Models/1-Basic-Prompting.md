@@ -197,9 +197,3 @@ As we've seen, natural language Generative AI models can produce unexpected or u
 Prompt Engineering is a complex and rapidly-evolving practice. [This article](https://learn.microsoft.com/azure/cognitive-services/openai/concepts/advanced-prompt-engineering) on Microsoft Learn provides the latest guidance.
 
 In the next labs we are going to learn how to steer the models to create the response we want.
-
-:::info[Hackathon Challenge]
-
-TODO: Add a hackathon challenge here
-
-:::

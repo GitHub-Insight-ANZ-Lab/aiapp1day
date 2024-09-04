@@ -74,8 +74,15 @@ Ask:
 I'm looking for a bike in Seattle store. Can you help me find a bike from Trek company and model Domane SLR 9?
 ```
 
-The agent should start asking you about location, price and hotel features and finally call the function and return the properties in json format.
+The Model has determined that the function `search_bike` should be called based on the user's input. The response will include the arguments for the function `search_bike`. You would use this response and glue the data to function to get the final response.
 
-:::info[Assignment]
-TODO: Add an assignment here
-:::
+```json title="Response"
+{
+  "function": "search_bike",
+  "arguments": {
+    "location": "Seattle",
+    "company": "Trek",
+    "model": "Domane SLR 9"
+  }
+}
+```

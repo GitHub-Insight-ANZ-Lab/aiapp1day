@@ -132,13 +132,6 @@ Due to the violent nature of this request the content safety kicks in on the use
 
 This will happen for either the user input or the model response that is returned.
 
-:::info[Assignment]
-Create a system message that allows the assistant only to:
-
-TODO: Add a task here
-
-:::
-
 ## Resetting the system message
 
 Once you're done customizing the system message, refresh the app to reset the system message to its default, or replace it with:
