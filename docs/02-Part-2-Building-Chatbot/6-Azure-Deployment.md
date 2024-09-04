@@ -14,22 +14,23 @@ This deployment will create all service required including OpenAI services and M
 ### Prerequisites
 
 - Owner on Azure subscription
-- Azure PowerShell installed
+- PowerShell 7 installed
 - Bicep installed
 - Account subscription approved for Azure OpenAI service
 
-If the Azure Powershell Module is not installed, please follow https://learn.microsoft.com/en-us/powershell/azure/install-azure-powershell?view=azps-12.2.0
+If Powershell 7 is not installed, please follow 
+https://learn.microsoft.com/en-us/powershell/scripting/install/installing-powershell-on-windows?view=powershell-7.4#installing-the-msi-package
 
-```Powershell
-Install-Module -Name Az -Repository PSGallery -Force
-```
+If Bicep is not installed, please follow https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/install. Windows installer is here: https://github.com/Azure/bicep/releases/latest/download/bicep-setup-win-x64.exe
 
 
 ### Edit Settings
 
 Open a terminal and navigate to `labs/02-LAB-02/6-Azure-Deployment/lab-core` folder within the repository.
 
-Open the `azuredeploy.parameters.json` file, then edit the `mongoDbPassword` to a password you wish to use for the MongoDB Admin User:
+Open the `azuredeploy.parameters.json` file, then edit the `name` to be the prefix of all resources.
+
+Also edit the `mongoDbPassword` to a password you wish to use for the MongoDB Admin User:
 
 ![editing the azuredeploy.parameters.json file with mongoDBPassword parameter highlighted](images/editor-azuredeploy-parameters-json-password.png)
 
@@ -41,23 +42,21 @@ Open a terminal window and log in to Azure using the following command:
 
 1. Login
 
-```Powershell
-Connect-AzAccount
-```
+    ```Powershell
+    Connect-AzAccount
+    ```
 
-2. Set the desired subscription (Optional)
+2. Set the desired subscription (Optional). If you have more than one subscription associated with your account, set the desired subscription using the following command:
 
-If you have more than one subscription associated with your account, set the desired subscription using the following command:
-
-```Powershell
-Set-AzContext -SubscriptionId <subscription-id>
-```
+    ```Powershell
+    Set-AzContext -SubscriptionId <subscription-id>
+    ```
 
 3. Create resource group
 
-```Powershell
-New-AzResourceGroup -Name {your-rg-name} -Location 'eastus'
-```
+    ```Powershell
+    New-AzResourceGroup -Name {your-rg-name} -Location 'eastus'
+    ```
 
 4. Deploy the solution resources using the following command (this will take a few minutes to run):
 
@@ -75,27 +74,25 @@ Open a terminal and navigate to `labs/02-LAB-02/6-Azure-Deployment/lab-user` fol
 
 1. Login
 
-```Powershell
-Connect-AzAccount
-```
+    ```Powershell
+    Connect-AzAccount
+    ```
 
-2. Set the desired subscription (Optional)
+2. Set the desired subscription (Optional). If you have more than one subscription associated with your account, set the desired subscription using the following command:
 
-If you have more than one subscription associated with your account, set the desired subscription using the following command:
-
-```Powershell
-Set-AzContext -SubscriptionId <subscription-id>
-```
+    ```Powershell
+    Set-AzContext -SubscriptionId <subscription-id>
+    ```
 
 3. Create resource group
 
-```Powershell
-New-AzResourceGroup -Name {your-rg-name} -Location 'eastus'
-```
+    ```Powershell
+    New-AzResourceGroup -Name {your-rg-name} -Location 'eastus'
+    ```
 
 4. Deploy the solution resources using the following command (this will take a few minutes to run):
 
-```Powershell
-New-AzResourceGroupDeployment -ResourceGroupName {your-rg-name} -TemplateFile .\azuredeploy.bicep -TemplateParameterFile .\azuredeploy.parameters.json -c
-```
+    ```Powershell
+    New-AzResourceGroupDeployment -ResourceGroupName {your-rg-name} -TemplateFile .\azuredeploy.bicep -TemplateParameterFile .\azuredeploy.parameters.json -c
+    ```
 
