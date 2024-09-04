@@ -4,25 +4,20 @@ This lab demonstrates using an Azure OpenAI embedding model to vectorize documen
 
 ## Setup the lab environment
 
-1. Clone the repository to your local machine if you have not already done so.
+1. Navigate to the lab folder [~/labs/02-LAB/2-vector-search/start](https://github.com/GitHub-Insight-ANZ-Lab/aiapp1day/tree/main/labs/02-LAB/2-Vector-Search/start) within the repository.
 
 ```bash
-git clone https://github.com/GitHub-Insight-ANZ-Lab/aiapp1day.git
-```
-
-2. Navigate to the lab folder [~/labs/02-LAB-02/2b_rag_vector_search/start](https://github.com/GitHub-Insight-ANZ-Lab/aiapp1day/tree/main/labs/02-LAB-02/2b_rag_vector_search/start) within the repository.
-
-```bash
-cd  labs/02-LAB-02/2b_rag_vector_search/start
+cd  labs/02-LAB/2-vector-search/start
+code .
 ```
 
 :::info
-The `~/labs/02-LAB-02/2b_rag_vector_search/completed` folder contains the completed solution for this lab.
+The `~/labs/02-LAB/2-vector-search/completed` folder contains the completed solution for this lab.
 :::
 
-3. Open the `.env` file in the Visual Studio Code editor.
+2. Open the `.env` file in the Visual Studio Code editor.
 
-4. Add the following settings to the `.env` file, replacing the values from the deployed Azure OpenAI service. Please also copy `MONGODB_CONNECTION_STRING` and `MONGODB_Name` from previous lab.
+3. Add the following settings to the `.env` file, replacing the values from the deployed Azure OpenAI service. Please also copy `MONGODB_CONNECTION_STRING` and `MONGODB_Name` from previous lab.
 
    ```bash
    AZURE_OPENAI_API_INSTANCE_NAME=https://<openai-service-name>-openai.openai.azure.com/
@@ -31,9 +26,9 @@ The `~/labs/02-LAB-02/2b_rag_vector_search/completed` folder contains the comple
 
    Replace `<openai-service-name>` with the name of the deployed OpenAI service, and `<azure_openai_api_key>` with the Azure OpenAI API key.
 
-5. In Visual Studio Code, open a terminal window and navigate to the lab folder `lab_2b`.
+4. In Visual Studio Code, open a terminal window and navigate to the lab folder `start`.
 
-6. Install the required packages by running the following command in the terminal window:
+5. Install the required packages by running the following command in the terminal window:
 
    ```bash
    npm install
