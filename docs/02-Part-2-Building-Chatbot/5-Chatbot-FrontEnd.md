@@ -21,7 +21,6 @@ In the previous lab, the backend API code was configured and hosted locally. The
 
     ```
     npm install
-    npm start dev
     ```
 
 3. The frontend chatbot app is located in `apps/chatbot`. update backend url in `.env` file. While the code for the SPA web application is outside the scope of this dev guide. It's worth noting that the Web App is configured with the URL for the Backend API in `.env`.
@@ -32,8 +31,7 @@ In the previous lab, the backend API code was configured and hosted locally. The
 4. start the chatbot app with below commands, open browser and visit url: http://localhost:4000/.
 
     ```
-    npm install
-    npm start dev
+    npm run dev
     ```
 
 5. Navigating to local URL in the browser accesses the front-end application. Through this front-end application User Interface, questions can be submitted to the Azure OpenAI model about the Bike Store company data, then it will generate responses accordingly.
