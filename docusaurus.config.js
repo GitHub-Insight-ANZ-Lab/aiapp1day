@@ -8,8 +8,9 @@ import { themes as prismThemes } from "prism-react-renderer";
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "Learn how to interact with OpenAI models",
-  tagline: "A 75-minute workshop on OpenAI GPT Models for Microsoft AI Tour",
+  title: "AI Apps In A Day",
+  tagline:
+    "Accelerate Your AI Journey: Learn the Basics of AI and Build Your First AI App",
   url: "https://GitHub-Insight-ANZ-Lab.io/",
   baseUrl: "/aiapp1day/",
 
@@ -24,7 +25,7 @@ const config = {
 
   i18n: {
     defaultLocale: "en",
-    locales: ["en", "ko"],
+    locales: ["en"],
   },
 
   presets: [
@@ -55,9 +56,9 @@ const config = {
       },
 
       navbar: {
-        title: "Learn how to interact with OpenAI models",
+        title: "Learn the Basics of AI and Build Your First AI App",
         logo: {
-          alt: "Workshop: Learn how to interact with OpenAI models",
+          alt: "Workshop: Learn the Basics of AI and Build Your First AI App",
           src: "img/logo-ws3.png",
         },
         items: [
