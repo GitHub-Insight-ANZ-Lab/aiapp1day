@@ -1,5 +1,5 @@
 ---
-title: Get started
+title: Getting started
 slug: /lab2-setup
 ---
 
