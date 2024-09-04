@@ -59,6 +59,7 @@ In the previous lab, the backend API code was configured and hosted locally. The
 4. Go ahead, ask the service a few questions about Bike Store and observe the responses.
 
 >**Question** How does the HTTP and Restful response looks like? Use the dev tools in the browser to inspect the actually request/ response payload.
+    ![alt text](images/raw-request.png)
 
 ## More things to think about
 
