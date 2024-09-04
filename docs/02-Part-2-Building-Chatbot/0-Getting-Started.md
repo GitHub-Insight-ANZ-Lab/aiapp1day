@@ -32,4 +32,4 @@ The Azure resources required for this lab have already been provisioned for you.
 
 :::
 
-If you would like to provision the resources yourself, follow the instructions on the lab guide - [AI Chatbot Deployment](https://github.com/GitHub-Insight-ANZ-Lab/aiapp1day/blob/main/labs/02-LAB-02/0-Deployment/README.md)
+If you would like to provision the resources yourself, follow the instructions on the lab guide - [Deployment Guide](https://github.com/GitHub-Insight-ANZ-Lab/aiapp1day/blob/main/labs/02-LAB-02/0-Deployment/README.md)
