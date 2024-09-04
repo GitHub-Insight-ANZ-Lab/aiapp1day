@@ -6,7 +6,7 @@ Azure OpenAI SDK is a set of libraries that allow you to interact with Azure Ope
 
 In this lab, you will learn how to use the Azure OpenAI SDK to interact with Azure OpenAI services from your code using Node.js.
 
-## Create Node.js project
+## Setup Node.js project
 
 1. Create a new directory `openai-nodejs` and navigate to the directory:
 
@@ -109,7 +109,13 @@ const chatResponse = client.getChatCompletions("completions", [
 
 ## Function Calling
 
-You can call a function from the model to perform a specific task. The function can be called based on the conversation history.
+You can call a function from the model to perform a specific task. The available functions are passed to the model. The model analyzes the conversation history and decides when and how to call the function. The model also extracts the required parameters for the function from the conversation history.
+
+In the following example, the model calls the `search_bike` function to retrieve bikes from the search index based on the location, company, and model of the bike.
+
+`````javascript
+
+````javascript
 
 1. Add the function `searchBikeStore` in `app.js` file:
 
@@ -136,7 +142,7 @@ const searchBikeStore = {
     required: ["location"],
   },
 };
-```
+`````
 
 2. Call the chat completions API, by passing the `searchBikeStore` function.
 
@@ -164,7 +170,7 @@ const chatResponse = client.getChatCompletions("completions", [
 ]);
 ```
 
-3. The model decides when and how to call the function based on the conversation history. The response message includes one or more "tool calls" that must be resolved via "tool messages". Add the following function to handle the request from the model to invoke the function. The parameters for the function are extracted from the conversation history and passed to the function.
+3. The response message includes one or more "tool calls" that must be resolved via "tool messages". Add the following function to handle the request from the model to invoke the function.
 
 ```javascript
 // Purely for convenience and clarity, this function handles tool call responses.
