@@ -4,15 +4,15 @@ This lab demonstrates bulk loading of data from the Contoso Bike Store JSON file
 
 ## Setup the lab environment
 
-1. Navigate to the lab folder [~/labs/02-LAB/1-load-data/start](https://github.com/GitHub-Insight-ANZ-Lab/aiapp1day/tree/main/labs/02-LAB/1-Load-Data/start) within the repository.
+1. Navigate to the lab folder [~/labs/02-LAB-02/1-load-data/start](https://github.com/GitHub-Insight-ANZ-Lab/aiapp1day/tree/main/labs/02-LAB-02/1-Load-Data/start) within the repository.
 
    ```bash
-   cd  labs/02-LAB/1-load-data/start
+   cd  labs/02-LAB-02/1-load-data/start
    code .
    ```
 
 :::info
-The `~/labs/02-LAB/1-load-data/completed` folder contains the completed solution for this lab.
+The `~/labs/02-LAB-02/1-load-data/completed` folder contains the completed solution for this lab.
 :::
 
 2. In the lab folder, create a `.env` file and add the following environment variables, replace `<MONGODB_CONNECTION_STRING>` with your Cosmos DB for MongoDB API service connection string:
@@ -123,7 +123,7 @@ The product data set is located in data\product.csv, the data set has multiple c
 
 There is more than one option when performing bulk operations in Cosmos DB for MongoDB. In this section, data will be loaded using the `bulkWrite` method. The `bulkWrite` method is used to perform multiple write operations in a single batch, write operations can include a mixture of insert, update, and delete operations.
 
-1. Open the `import.js` file, and directly beneath the `const db = client.db('DBName');` line, add the following code to fetch the product data from the Contoso Bike Store repository:
+1. Open the `import.js` file, and directly beneath the `const db = client.db(process.env.MONGODB_NAME);` line, add the following code to fetch the product data from the Contoso Bike Store repository:
 
    ```javascript
    // Load product data
@@ -135,10 +135,9 @@ There is more than one option when performing bulk operations in Cosmos DB for M
    const jsonFilePath = path.join("data", "product.json");
 
    // Read the JSON file
-   const productRawData = fs.readFileSync(jsonFilePath, "utf8");
-   const productData = (await (await fetch(productRawData)).json()).map(
-     (prod) => cleanData(prod)
-   );
+   const productRawData = fs.readFileSync(path.join('data', 'product.json'), 'utf8');
+   const productData = JSON.parse(productRawData)
+                           .map(prod => cleanData(prod));
    ```
 
 2. Optionally, append the following code (to the code in the previous step) to delete any existing products in the collection. This helps if the application is run multiple times so there is no duplicates.
@@ -237,13 +236,16 @@ Customer data and sales data are also combined in a single JSON source, some pre
 
 ## Browse the data in the Cosmos DB (MongoDB)
 
-1. Install MongoDb extension in VS code : MongoDB for VS code
+1. Install MongoDb extension in VS code : `MongoDB for VS code`
+   
    ![alt text](images/rag_load_data_image-6.png)
 
 2. then add a connection to the data.
+   
    ![alt text](images/rag_load_data_image-2.png)
 
 3. Browse the json records in the product and customer table.
+   
    ![alt text](images/rag_load_data_image-7.png)
 
 In this section bulk load operations were used to load product, customer, and sales data into Cosmos DB for MongoDB. Keep the database and its loaded data for use in subsequent labs.

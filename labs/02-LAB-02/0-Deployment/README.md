@@ -9,7 +9,7 @@
 
 ## Clone the repository
 
-Open a terminal and navigate to `labs/02-LAB/deploy` folder within the repository.
+Open a terminal and navigate to `labs/02-LAB-02/deploy` folder within the repository.
 
 Open the `azuredeploy.parameters.json` file, then edit the `mongoDbPassword` to a password you wish to use for the MongoDB Admin User:
 
