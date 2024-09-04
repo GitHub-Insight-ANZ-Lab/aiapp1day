@@ -30,7 +30,7 @@ When developing a backend api, it is often useful to run the application locally
 
 1. In the previous task, we have create a LangChain agent and it is able to RAG to response to our question. Now, lets add the code into our Backend API service.
 
-2. Do a diff in VS code between `agent.js` and  `langchain-agent.js`. you will see there are additional code added in the function to manage chat history.
+2. Do a diff in VS code between `labs\02-LAB-02\4-Chatbot-Backend\agent.js` and  `labs\02-LAB-02\4-Chatbot-Backend\langchain-agent.js`. you will see there are additional code added in the function to manage chat history.
    ![alt text](images/chatbot-frontend-image-1.png)
    
 3. Copy `agent.js` into `apps\api\bikestore\agent.js` so that the backend is able to connect to both CosmosDb and OpenAI service
@@ -50,7 +50,7 @@ When developing a backend api, it is often useful to run the application locally
    npm run dev
    ```
 
-3. Open a browser and navigate to `http://localhost:5000/docs` to view the Swagger UI.
+3. Open a browser and navigate to http://localhost:5000/docs to view the Swagger UI.
 
    ![The Swagger UI displays for the locally running backend api](images/local_backend_swagger_ui.png "Local backend api Swagger UI")
 
