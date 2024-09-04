@@ -41,11 +41,3 @@ In this technique, the LLM is responsible for breaking the task down into smalle
 I like to ride my bike around the city, but I'm not sure if I should buy a new one or repair my old one. Can you help me decide?
 Take a step-by-step approach in your response, cite sources, and give reasoning before sharing a final answer in the below format: ANSWER is: <name>
 ```
-
-:::info[Assignment]
-Create a prompt for the assistant that helps determine the best way of traveling between Amsterdam and London and explain why.
-:::
-
-```
-
-```
