@@ -24,7 +24,12 @@ The Front-end Web App is a static SPA application written in React. Since React 
 
 The Node.js backend API is responsible for generating responses to user queries. It queries Azure Cosmos DB to extract relevant documents using vector search and then uses Azure OpenAI services to generate responses to user queries.
 
-## Provision Azure resources (Azure Cosmos DB workspace, Azure OpenAI, etc.)
+## Provision Azure resources (Optional)
+
+:::info
 
 The Azure resources required for this lab have already been provisioned for you.
+
+:::
+
 If you would like to provision the resources yourself, follow the instructions below on the lab guide - [AI Chatbot Deployment](https://github.com/GitHub-Insight-ANZ-Lab/aiapp1day/blob/main/labs/02-LAB-02/deploy/README.md)
