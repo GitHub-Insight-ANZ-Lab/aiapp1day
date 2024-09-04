@@ -31,7 +31,7 @@ The name defaults to a unique string generated from the resource group identifie
 many resources.
 ''')
 @maxLength(17)
-param name string = 'dg${uniqueString(resourceGroup().id)}'
+param name string = 'ai-${uniqueString(resourceGroup().id)}'
 
 @description('Specifies the SKU for the Azure App Service plan. Defaults to **B1**')
 @allowed([
@@ -39,7 +39,7 @@ param name string = 'dg${uniqueString(resourceGroup().id)}'
   'S1'
   'P0v3'
 ])
-param appServiceSku string = 'P0v3' //'B1'
+param appServiceSku string = 'S1' //'B1'
 
 @description('Specifies the SKU for the Azure OpenAI resource. Defaults to **S0**')
 @allowed([
@@ -69,25 +69,25 @@ var openAiSettings = {
   maxConversationTokens: '100'
   maxCompletionTokens: '500'
   completionsModel: {
-    name: 'gpt-35-turbo'
-    version: '0613'
+    name: 'gpt-4o'
+    version: '2024-05-13'
     deployment: {
       name: 'completions'
     }
     sku: {
       name: 'Standard'
-      capacity: 120
+      capacity: 60
     }
   }
   embeddingsModel: {
-    name: 'text-embedding-ada-002'
-    version: '2'
+    name: 'text-embedding-3-small'
+    version: '1'
     deployment: {
       name: 'embeddings'
     }
     sku: {
       name: 'Standard'
-      capacity: 120     
+      capacity: 60
     }
   }
 }
@@ -103,13 +103,15 @@ var appServiceSettings = {
     name: '${name}-web'
     sku: appServiceSku
   }
-  web: {
-    name: '${name}-web'
-    git: {
-      repo: 'https://github.com/AzureCosmosDB/Azure-OpenAI-Developer-Guide-Front-End.git'
-      branch: 'main'
-    }
-  }  
+  playground: {
+    name: '${name}-playground'
+  }
+  api: {
+    name: '${name}-api'
+  }
+  chat: {
+    name: '${name}-chat'
+  }
 }
 
 /* *************************************************************** */
@@ -220,7 +222,7 @@ resource logAnalytics 'Microsoft.OperationalInsights/workspaces@2021-06-01' = {
   }
 }
 resource appServiceWebInsights 'Microsoft.Insights/components@2020-02-02' = {
-  name: '${appServiceSettings.web.name}-appi'
+  name: '${name}-appi'
   location: location
   kind: 'web'
   properties: {
@@ -228,6 +230,7 @@ resource appServiceWebInsights 'Microsoft.Insights/components@2020-02-02' = {
     WorkspaceResourceId: logAnalytics.id
   }
 }
+
 
 /* *************************************************************** */
 /* App Plan Hosting - Azure App Service Plan */
@@ -250,7 +253,7 @@ resource appServicePlan 'Microsoft.Web/serverfarms@2022-03-01' = {
 /* *************************************************************** */
 
 resource appServiceWeb 'Microsoft.Web/sites@2022-03-01' = {
-  name: appServiceSettings.web.name
+  name: appServiceSettings.playground.name
   location: location
   properties: {
     serverFarmId: appServicePlan.id
@@ -269,20 +272,36 @@ resource appServiceWebSettings 'Microsoft.Web/sites/config@2022-03-01' = {
   kind: 'string'
   properties: {
     APPINSIGHTS_INSTRUMENTATIONKEY: appServiceWebInsights.properties.InstrumentationKey
-    API_ENDPOINT: 'https://${backendApiContainerApp.properties.configuration.ingress.fqdn}'
   }
 }
 
-resource appServiceWebDeployment 'Microsoft.Web/sites/sourcecontrols@2021-03-01' = {
-  parent: appServiceWeb
-  name: 'web'
+resource appServiceApi 'Microsoft.Web/sites@2022-03-01' = {
+  name: appServiceSettings.api.name
+  location: location
   properties: {
-    repoUrl: appServiceSettings.web.git.repo
-    branch: appServiceSettings.web.git.branch
-    isManualIntegration: true
+    serverFarmId: appServicePlan.id
+    httpsOnly: true
+    siteConfig: {
+      linuxFxVersion: 'NODE|20-lts'
+      appCommandLine: 'pm2 serve /home/site/wwwroot/dist --no-daemon --spa'
+      alwaysOn: true
+    }
   }
 }
 
+resource appServiceChat 'Microsoft.Web/sites@2022-03-01' = {
+  name: appServiceSettings.chat.name
+  location: location
+  properties: {
+    serverFarmId: appServicePlan.id
+    httpsOnly: true
+    siteConfig: {
+      linuxFxVersion: 'NODE|20-lts'
+      appCommandLine: 'pm2 serve /home/site/wwwroot/dist --no-daemon --spa'
+      alwaysOn: true
+    }
+  }
+}
 
 /* *************************************************************** */
 /* Registry for Back-end API Image - Azure Container Registry */
@@ -295,94 +314,5 @@ resource containerRegistry 'Microsoft.ContainerRegistry/registries@2023-01-01-pr
   }
   properties: {
     adminUserEnabled: true
-  }
-}
-
-/* *************************************************************** */
-/* Container environment - Azure Container App Environment  */
-/* *************************************************************** */
-resource containerAppEnvironment 'Microsoft.App/managedEnvironments@2023-05-01' = {
-  name: '${name}-containerappenv'
-  location: location
-  properties: {
-    appLogsConfiguration: {
-      destination: 'log-analytics'
-      logAnalyticsConfiguration: {
-        customerId: logAnalytics.properties.customerId
-        sharedKey: logAnalytics.listKeys().primarySharedKey
-      }
-    }
-    workloadProfiles: [
-      {
-        name: 'Warm'
-        minimumCount: 1
-        maximumCount: 10
-        workloadProfileType: 'E4'
-      }
-    ]
-    infrastructureResourceGroup: 'ME_${resourceGroup().name}'
-  }
-}
-
-/* *************************************************************** */
-/* Back-end API App Application - Azure Container App */
-/* deploys default hello world */
-/* *************************************************************** */
-resource backendApiContainerApp 'Microsoft.App/containerApps@2023-05-01' = {
-  name: '${name}-api'
-  location: location
-  properties: {
-    environmentId: containerAppEnvironment.id
-    configuration: {
-      ingress: {
-        external: true
-        targetPort: 80
-        allowInsecure: false
-        traffic: [
-          {
-            latestRevision: true
-            weight: 100
-          }
-        ]   
-        corsPolicy: {
-          allowCredentials: false
-          allowedHeaders: [
-            '*'
-          ]
-          allowedOrigins: [
-            '*'
-          ]
-        }
-      }
-      registries: [
-        {
-          server: containerRegistry.name
-          username: containerRegistry.properties.loginServer
-          passwordSecretRef: 'container-registry-password'
-        }
-      ]
-      secrets: [
-        {
-          name: 'container-registry-password'
-          value: containerRegistry.listCredentials().passwords[0].value
-        }
-      ]
-    }
-    template: {
-      containers: [
-        {
-          name: 'hello-world'
-          image: 'mcr.microsoft.com/azuredocs/containerapps-helloworld:latest'
-          resources: {
-            cpu: 1
-            memory: '2Gi'
-          }         
-        }
-      ]
-      scale: {
-        minReplicas: 1
-        maxReplicas: 1
-      }
-    }
   }
 }
