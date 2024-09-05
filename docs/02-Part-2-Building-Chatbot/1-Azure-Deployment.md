@@ -102,3 +102,13 @@ Open a terminal and navigate to `labs/02-LAB-02/1-Azure-Deployment/lab-user` fol
     New-AzResourceGroupDeployment -ResourceGroupName {your-rg-name} -TemplateFile .\azuredeploy.bicep -TemplateParameterFile .\azuredeploy.parameters.json -c
     ```
 
+## Deployed Azure Resources
+
+### Azure Resource List
+
+    ![alt text](images/azure-all-resources.png)
+
+
+### Azure OpenAI Models
+
+    ![alt text](images/azure-openai-models.png)
