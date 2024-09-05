@@ -10,6 +10,8 @@ In this lab, you will load the product catalog data into Azure Cosmos DB. The pr
 
 The product catalog data is shared in a CSV file. You will be writing a custom script to convert the CSV file to JSON format and then load the JSON data into the Cosmos DB.
 
+![alt text](images/rag_load_data_create_vector.png)
+
 ## Setup the lab environment
 
 1. Navigate to the lab folder `~/labs/02-LAB-02/2-Load-Data/start` within the repository.
