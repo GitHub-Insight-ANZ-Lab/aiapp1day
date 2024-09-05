@@ -1,6 +1,17 @@
+:::tip Text Embeddings
+
+The text embeddings are a type of vector representation of data over a continuous vector space where similar items are close together and dissimilar items are far apart. This allows us to perform operations on the vectors to find similar items, perform clustering, and more.
+
+:::
+
 # Vector search using text embeddings
 
-This lab demonstrates using an Azure OpenAI embedding model to vectorize documents already stored in Azure Cosmos DB API for MongoDB, storing the embedding vectors and the creation of a vector index. The lab also demonstrates how to use the vector index to perform vector searches, and how to use the vector search results in a RAG (Retrieval Augmented Generation) pattern to generate a response from a large language model (LLM).
+In the previous lab, you loaded the product catalog into Azure Cosmos DB. The Chatbot will use the product catalog to fetch the relevant products based on the user's query.
+When fetching the relevant products, the Chatbot application will compare the semantic similarity of the user's query with the product details. Hence the user's query and the product details need to be converted into a vector representation.
+
+In this lab, you will learn how to use an Azure OpenAI embedding model to generate text embeddings. You will create a script to iterate over the documents in the Cosmos DB collections, and generate embeddings for each document.
+
+You will also learn how to use the vector index to retrieve the relevant documents based on the cosine similarity of the query vector and the content vectors of the documents in the collection.
 
 ## Setup the lab environment
 
@@ -103,9 +114,9 @@ Vectorizing or embedding text is the process of converting text into a numerical
 
    ![Console output displays a large numerical vector.](images/text_embedding_output.png "Vector representation of text")
 
-  :::info
-  Try a different input strimg and see if vector array length changes. Hmm, no matter how long the input string is, the return of creating embeddings with "text-embedding-ada-3" is always a vector of 1536. Why?
-  :::
+:::info
+Try a different input strimg and see if vector array length changes. Hmm, no matter how long the input string is, the return of creating embeddings with "text-embedding-ada-3" is always a vector of 1536. Why?
+:::
 
 ## Vectorize and store the embeddings in each document
 
@@ -213,9 +224,9 @@ Generating embedding vectors for each document will take some time, exercise pat
 
    ![Console output displays the progress of vectorizing and storing the embeddings in each document.](images/vectorize_and_store_embeddings.png "Vectorizing and storing the embeddings in each document")
 
-  :::info
-  Missing `generateEmbeddings` error? we had this function earlier, grab it and put it in.
-  :::
+:::info
+Missing `generateEmbeddings` error? we had this function earlier, grab it and put it in.
+:::
 
 5. Lets have a look how the record in the database looks like especially the vector field and index.
 
@@ -297,9 +308,9 @@ Now that each document has its associated vector embedding and the vector indexe
 
    ![Console output displays the search results.](images/vector_search_results.png "Vector search results")
 
-  :::info
-  Oh no. Missing `generateEmbeddings` again. Why the search query need to generate embeddings ?
-  :::
+:::info
+Oh no. Missing `generateEmbeddings` again. Why the search query need to generate embeddings ?
+:::
 
 ## Use vector search in a RAG (Retrieval Augmented Generation) pattern
 
@@ -386,9 +397,9 @@ In this section, a function is added that will use the vector search results to 
 
    ![Console output displays the response from the LLM.](images/rag_with_vector_search_response.png "Response from the LLM")
 
-  :::info
-  Yes, it is a test, both `vectorSearch` and `generateEmbeddings` are missing.
-  :::
+:::info
+Yes, it is a test, both `vectorSearch` and `generateEmbeddings` are missing.
+:::
 
 ## Well Done!
 

@@ -1,58 +1,58 @@
 # Build a Chatbot Frontend
 
-
 ## Connect Chatbot FrontEnd with BackEnd API
 
 In the previous lab, the backend API code was configured and hosted locally. The backend API integrates vCore-based Azure Cosmos DB for MongoDB with Azure OpenAI. When the Azure resource template for this lab was run to deploy the necessary Azure resources, a front-end web application written as a SPA (single page application) in React was deployed.
 
 1. The backend api app is located in `apps/api`. update database name and other connection details in `.env` file.
 
-    ```bash
-    MONGODB_CONNECTION_STRING=mongodb+srv://<user>:<password>@<db>.mongocluster.cosmos.azure.com/?tls=true&authMechanism=SCRAM-SHA-256&retrywrites=false&maxIdleTimeMS=120000
-    MONGODB_Name=aiapp1day_{your_name}_{your_lucky_number}
-    AZURE_OPENAI_API_INSTANCE_NAME=<openai-service-name>
-    AZURE_OPENAI_API_KEY=<azure_openai_api_key>
-    AZURE_OPENAI_API_DEPLOYMENT_NAME=completions
-    AZURE_OPENAI_API_EMBEDDINGS_DEPLOYMENT_NAME=embeddings
-    AZURE_OPENAI_API_VERSION=2023-09-01-preview
-    ```
+   ```bash
+   MONGODB_CONNECTION_STRING=mongodb+srv://<user>:<password>@<db>.mongocluster.cosmos.azure.com/?tls=true&authMechanism=SCRAM-SHA-256&retrywrites=false&maxIdleTimeMS=120000
+   MONGODB_Name=aiapp1day_{your_name}_{your_lucky_number}
+   AZURE_OPENAI_API_INSTANCE_NAME=<openai-service-name>
+   AZURE_OPENAI_API_KEY=<azure_openai_api_key>
+   AZURE_OPENAI_API_DEPLOYMENT_NAME=completions
+   AZURE_OPENAI_API_EMBEDDINGS_DEPLOYMENT_NAME=embeddings
+   AZURE_OPENAI_API_VERSION=2023-09-01-preview
+   ```
 
 2. Start the application with below commands.
 
-    ```
-    npm install
-    ```
+   ```
+   npm install
+   ```
 
 3. The frontend chatbot app is located in `apps/chatbot`. update backend url in `.env` file. While the code for the SPA web application is outside the scope of this dev guide. It's worth noting that the Web App is configured with the URL for the Backend API in `.env`.
-    ```
-    BACKEND_URI=http://localhost:5000
-    ```
+
+   ```
+   BACKEND_URI=http://localhost:5000
+   ```
 
 4. start the chatbot app with below commands, open browser and visit url: http://localhost:4000/.
 
-    ```
-    npm run dev
-    ```
+   ```
+   npm run dev
+   ```
 
 5. Navigating to local URL in the browser accesses the front-end application. Through this front-end application User Interface, questions can be submitted to the Azure OpenAI model about the Bike Store company data, then it will generate responses accordingly.
 
-    ![Front-end Web Application User Interface](images/2024-01-17-12-42-59.png)
-
+   ![Front-end Web Application User Interface](images/2024-01-17-12-42-59.png)
 
 ## Ask questions about data and observe the responses
 
 1. To ask the AI questions about the Bike Store company data, type the questions in to the front-end application chat user interface. The web application includes tiles with a couple example questions to get started. To use these, simply click on the question tile and it will generate an answer.
 
-    ![Front-end Web Application User Interface](images/2024-01-17-12-42-59.png)
+   ![Front-end Web Application User Interface](images/2024-01-17-12-42-59.png)
 
 2. These example questions are:
+
    - What was the price of the product with sku `FR-R92B-58`?
    - What is the SKU of HL Road Frame - Black?
    - What is HL Road Frame?
 
-    :::info
-    It's possible the first time you ask a question within the Front end application there may be an error. Occasionally when the Azure Bicep template deploys the front end application there will be an issue configuring the use of the `API_ENDPOINT` app setting. If this happens, simply navigate to **Deployment** -> **Deployment Center**, then click **Sync** to have the Web App refresh the deployment of the front end app from it's GitHub repository source code. This should fix that error.
-    :::
+   :::info
+   It's possible the first time you ask a question within the Front end application there may be an error. Occasionally when the Azure Bicep template deploys the front end application there will be an issue configuring the use of the `API_ENDPOINT` app setting. If this happens, simply navigate to **Deployment** -> **Deployment Center**, then click **Sync** to have the Web App refresh the deployment of the front end app from it's GitHub repository source code. This should fix that error.
+   :::
 
 3. The chat user interface presents as a traditional chat application style interface when asking questions.
 
@@ -60,10 +60,10 @@ In the previous lab, the backend API code was configured and hosted locally. The
 
 4. Go ahead, ask the service a few questions about Bike Store and observe the responses.
 
-    :::info
-    How does the HTTP and Restful response looks like? Use the dev tools in the browser to inspect the actually request/ response payload.
-        ![alt text](images/raw-request.png)
-    :::
+   :::info
+   How does the HTTP and Restful response looks like? Use the dev tools in the browser to inspect the actually request/ response payload.
+   ![alt text](images/raw-request.png)
+   :::
 
 ## More things to think about
 

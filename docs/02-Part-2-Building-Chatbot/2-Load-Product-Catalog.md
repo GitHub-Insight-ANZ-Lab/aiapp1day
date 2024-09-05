@@ -1,6 +1,14 @@
-# Load data into Cosmos DB
+# Load Product Catalog
 
-This lab demonstrates bulk loading of data from the Contoso Bike Store JSON files into Cosmos DB for MongoDB.
+:::tip Azure Cosmos DB
+
+Azure Cosmos DB is a globally distributed, multi-model database service for any scale. The vCore-based Azure Cosmos DB for MongoDB supports Vector Search, which allows you to search for documents based on their similarity to a query document.
+
+:::
+
+In this lab, you will load the product catalog data into Azure Cosmos DB. The product catalog will be used by the chatbot to answer questions related to the products in the catalog.
+
+The product catalog data are shared in a CSV file. You will be writing a custom script to convert the CSV file to JSON format and then load the JSON data into the Cosmos DB for MongoDB.
 
 ## Setup the lab environment
 
