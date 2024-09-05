@@ -90,13 +90,14 @@ const chatResponse = client.getChatCompletions("completions", [
         content:
             "I'm looking for a bike in Seattle store. Can you help me find a bike from Trek company and model Domane SLR 9?",
     },
-]);
+], options);
 
 
 // Purely for convenience and clarity, this function handles tool call responses.
 function applyToolCall({ function: call, id }) {
     if (call.name === "search_bike") {
-        const { location, company } = JSON.parse(call.arguments);
+        console.log('[applyToolCall] invoked');
+        const { location, company, model } = JSON.parse(call.arguments);
         // In a real application, this would be a call an external service or database.
         return {
             role: "tool",
@@ -108,11 +109,19 @@ function applyToolCall({ function: call, id }) {
 }
 
 
+
+
 chatResponse
     .then(async (result) => {
+
+        console.log('[chatResponse]:' + JSON.stringify(result));
+        console.log('')
+        console.log('[chatResponse][Message]:' + JSON.stringify(result.choices[0].message));
+        console.log('')
+
         for (const choice of result.choices) {
-            console.log(choice.message.content);
             const responseMessage = choice.message;
+
             if (responseMessage?.role === "assistant") {
                 const requestedToolCalls = responseMessage?.toolCalls;
                 if (requestedToolCalls?.length) {
@@ -121,11 +130,17 @@ chatResponse
                         ...requestedToolCalls.map(applyToolCall),
                     ];
 
-                    console.log(toolCallResolutionMessages);
-                    const result = await client.getChatCompletions(deploymentName, toolCallResolutionMessages);
-                    // continue handling the response as normal
+                    console.log('[toolCallResolutionMessages]:' + JSON.stringify(toolCallResolutionMessages));
+                    console.log('')
+
+                    const result = await client.getChatCompletions('completions', toolCallResolutionMessages);
+                    console.log('[chatResponse_with_toolcall]:' + JSON.stringify(result));
+                    console.log('')
+                    console.log('[chatResponse_with_toolcall][Message]:' + JSON.stringify(result.choices[0].message));
+                    console.log('')
                 }
             }
         }
     })
     .catch((err) => console.log(`Error: ${err}`));
+
