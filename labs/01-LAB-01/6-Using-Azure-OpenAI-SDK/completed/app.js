@@ -5,6 +5,7 @@ const client = new OpenAIClient(
     new AzureKeyCredential("70563d5a57cc45999cdd80b9bf50ed4d")
 );
 
+// code block from earlier step
 //   const chatResponse = client.getChatCompletions("completions", [
 //     { role: "user", content: "What are the different types of road bikes?" },
 //   ]);
@@ -18,6 +19,7 @@ const client = new OpenAIClient(
 //     { role: "user", content: "Do you sell bicycles?" },
 //   ]);
 
+// code block from earlier step
 // const chatResponse = client.getChatCompletions("completions", [
 //     {
 //         role: "system",
@@ -59,7 +61,7 @@ const searchBikeStore = {
     },
 };
 
-
+// code block from earlier step
 //   chatResponse
 //   .then((result) => {
 //     for (const choice of result.choices) {
