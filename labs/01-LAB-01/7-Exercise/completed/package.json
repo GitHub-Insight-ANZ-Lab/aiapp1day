@@ -1,0 +1,17 @@
+{
+  "name": "01-lab-01",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node app.js port=5000",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@azure/openai": "^1.0.0-beta.11",
+    "prompt-sync": "^4.2.0"
+  }
+}

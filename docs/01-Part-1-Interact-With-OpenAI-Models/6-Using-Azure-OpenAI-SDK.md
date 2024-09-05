@@ -152,18 +152,22 @@ const options = {
   ],
 };
 
-const chatResponse = client.getChatCompletions("completions", [
-  {
-    role: "system",
-    content:
-      "You are a helpful, fun and friendly sales assistant for Contoso Bike Store, a bicycle and bicycle accessories store.",
-  },
-  {
-    role: "user",
-    content:
-      "I'm looking for a bike in Seattle store. Can you help me find a bike from Trek company and model Domane SLR 9?",
-  },
-]);
+const chatResponse = client.getChatCompletions(
+  "completions",
+  [
+    {
+      role: "system",
+      content:
+        "You are a helpful, fun and friendly sales assistant for Contoso Bike Store, a bicycle and bicycle accessories store.",
+    },
+    {
+      role: "user",
+      content:
+        "I'm looking for a bike in Seattle store. Can you help me find a bike from Trek company and model Domane SLR 9?",
+    },
+  ],
+  options
+);
 ```
 
 3. The response message includes one or more "tool calls" that must be resolved via "tool messages". Add the following function to handle the request from the model to invoke the function.
@@ -172,7 +176,7 @@ const chatResponse = client.getChatCompletions("completions", [
 // Purely for convenience and clarity, this function handles tool call responses.
 function applyToolCall({ function: call, id }) {
   if (call.name === "search_bike") {
-    const { location, company} = JSON.parse(call.arguments);
+    const { location, company } = JSON.parse(call.arguments);
     // In a real application, this would be a call an external service or database.
     return {
       role: "tool",
@@ -187,7 +191,6 @@ function applyToolCall({ function: call, id }) {
 4. Print the final response from the tool call to the console. In some cases, you may need to send the response from the tool back to the model along with the original conversation history to get the final response.
 
 ```javascript
-
 chatResponse
   .then(async (result) => {
     for (const choice of result.choices) {
@@ -202,13 +205,14 @@ chatResponse
           ];
 
           console.log(toolCallResolutionMessages);
-          const result = await client.getChatCompletions(deploymentName, toolCallResolutionMessages);
+          const result = await client.getChatCompletions(
+            deploymentName,
+            toolCallResolutionMessages
+          );
           // continue handling the response as normal
         }
       }
     }
   })
   .catch((err) => console.log(`Error: ${err}`));
-
-
 ```
