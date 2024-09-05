@@ -6,6 +6,10 @@ Prompt engineering is a concept in Natural Language Processing (NLP) that involv
 
 Lets start with a few prompts and observe the response using the chat interface.
 
+:::info
+To start, select `completions` in the `Model` dropdown list on the right top corner under `Configuration`.
+:::
+
 Here are some examples to try, but get creative with your own prompts and see what happens!
 
 ```text title="Enter in the user prompt:"
@@ -44,7 +48,9 @@ Here is another prompt to try with different Temperature values:
 What is a unique and long name for a new bike brand?
 ```
 
-> Note: When dealing with LLMs, the results can be unpredictable. Changing the temperature here might or might not work as expected. Also, we are using a relatively old version of GPT3.5. The temperature effect is more visible in more recent LLMs such as GPT4.
+:::info
+When dealing with LLMs, the results can be unpredictable. Changing the temperature here might or might not work as expected. Also, we are using a relatively old version of GPT3.5. The temperature effect is more visible in more recent LLMs such as GPT4.
+:::
 
 **Make sure the Temperature parameter is reset to 0.7 before you continue.**
 
@@ -140,6 +146,10 @@ What is the model of the bicycle I bought last year?
 
 What do you observe? You will now see that the model is able to respond with the model of the bike you mentioned in the previous prompt. This is because the application is sending all the previous chat history to the model as part of the prompt.
 
+:::info
+Open `Developer Tools` in Chrome and switch to `Network` tab, inspect the Http request Payloads and Responses. All of your `Conversation History` are sent to API during each chat turn.
+:::
+
 ## Less-useful prompts
 
 Natural language generative AI models have a number of limitations:
@@ -178,9 +188,13 @@ What are the 5 stocks listed on https://finance.yahoo.com/trending-tickers with 
 
 Although the model will respond with a plausible answer, look closely: those aren't actually the 5 largest stocks today. Foundational AI models are not capable of performing actions, so they can't actually visit the web page and read the list of stocks. Instead, they generate a plausible response based on the prompt and the training data.
 
+:::info
+To overcome this, we will discuss `Function Calling` later.
+:::
+
 ## Completions are not facts
 
-Clear the contents of the prompt box. Enter the following text, then click Generate.
+Clear the contents of the prompt box. Enter the following text, then click `Send`.
 
 ```text title="Enter in the user prompt:"
 Write a short summary of the famous cyclist, Harold Bloomsbury. Please include references.

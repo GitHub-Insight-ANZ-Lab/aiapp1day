@@ -22,12 +22,14 @@ In the later modules, you will also be interacting with the Azure OpenAI Service
 You will be using your AI Proxy API Key that you registered for.
 
 1. Navigate to the AI Proxy Playground. You will find this link when you registered for this workshop.
+
 2. Enter the **API Key** at top-right and click `Authorize` to login.
+
    ![AI Tour Playground](./images/aitour-playground-chat.png)
 
 ## Explore
 
-On successful login, the playground application should update to show a `Logout` button at top-right, as shown below. To validate your setup, enter a query in the user prompt input box (region 2) and click `Send`. You should get a conversational response in the chat session are (region 3) as shown below.
+On **API Key** is entered, the playground application should update to show a `Logout` button at top-right, as shown below. To validate your setup, enter a query in the user prompt input box (region 2) and click `Send`. You should get a conversational response in the chat session are (region 3) as shown below.
 
 Let's take a minute to familiarize ourselves with the different regions of this app.
 
