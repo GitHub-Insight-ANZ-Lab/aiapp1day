@@ -1,6 +1,6 @@
 # Workflow Orchestration using LangChain
 
-In the previous lab, the `mongodb` package was used to perform a vector search through a db command to find product documents that were most similar to the user's input. In this lab, you will use the LangChain package to perform the same search. LangChain has a vector store class named `AzureCosmosDBVectorStore`, a community contribution, that supports vector search in vCore-based Azure Cosmos DB.
+In the previous lab, the `mongodb` package was used to perform a vector search through a db command to find product documents that were most similar to the user's input. In this lab, you will use the LangChain package to perform the same search. LangChain has a vector store class named `AzureCosmosDBVectorStore`, a community contribution, that supports vector search in Azure Cosmos DB.
 
 The `AzureCosmosDBVectorStore` class represents a single vector index in the database, therefore for the instructions for this lab will focus on the `products` collection, however the same steps can be used with the `customers` and `sales` collections as well.
 
@@ -19,9 +19,7 @@ code .
 The `~/labs/02-LAB-02/4-Using-Langchain/completed` folder contains the completed solution for this lab.
 :::
 
-2. To simplify code, the LangChain package makes use of environment variables. The `.env` file in this lab will reflect the naming conventions of the LangChain packages and differs from previous labs. Open the `.env` file in the Visual Studio Code editor.
-
-3. Add the following settings to the `.env` file, populating the MongoDB connection string and replacing the values from the deployed Azure OpenAI service:
+2. Edit following settings to the `.env` file, populating the MongoDB connection string and replacing the values from the deployed Azure OpenAI service:
 
    ```bash
    MONGODB_CONNECTION_STRING=<MONGODB_CONNECTION_STRING>
@@ -39,19 +37,19 @@ The `~/labs/02-LAB-02/4-Using-Langchain/completed` folder contains the completed
    The Azure OpenAI service name is not the full endpoint. Only the service name is required. For example, if the endpoint is `https://myservicename.openai.azure.com/`, then the service name is `myservicename`.
    :::
 
-4. In Visual Studio Code, open a terminal window and navigate to the lab folder `start`.
+3. In Visual Studio Code, open a terminal window and navigate to the lab folder `start`.
 
-5. Install the langchain packages by running the following command in the terminal window.
+4. Install the langchain packages by running the following command in the terminal window.
 
    ```bash
    npm install langchain@0.1.21 --save
    npm install @langchain/community@0.0.32 --save
    ```
 
-6. This will install the package and save it as a dependency in your project's `package.json` file.
+5. This will install the package and save it as a dependency in your project's `package.json` file.
    ![alt text](images/rag_chain_image.png)
 
-7. Install the required packages by running the following command in the terminal window:
+6. Install the required packages by running the following command in the terminal window:
 
    ```bash
    npm install
@@ -123,12 +121,8 @@ The return value of a vector search in LangChain is a list of `Document` objects
 
    ![A portion of the console output shows search results with products that are similar to the user query.](images/initial_vector_search.png "Initial vector search results")
 
-7. Delete or comment out the code added in step 4.
-
-8. Save the `vector-search.js` file.
-
    :::info
-   comparing the code here with the search function in 2b, can you tell the differences between them?
+   Please compare `vectorStore.similaritySearch` with previous section's `ragWithVectorsearch`, can you tell the differences between them?
    :::
 
 ## RAG with LangChain
@@ -281,7 +275,9 @@ Why do we get a response like this? how can we improve it?
 
 ## LangChain agent
 
-In this section, we'll implement a LangChain agent that will be used to interact with the LLM. The agent will be used to control the flow and behavior of the call into the LLM. An agent differs from the previous RAG chain in that the RAG chain is a definition of a sequence of specific actions. Agents on the other hand are equipped with various tools and will determine which actions to take based on the context of the conversation. In this scenario, an agent will be equipped with two tools, one that uses a retriever chain from the vector store, and another that will perform a MongoDB lookup based on a SKU value. The reason the SKU lookup tool is introduced is because the vector store is built for semantic search. Some fields, such as the `_id` or `sku` fields do not have semantic meaning and therefore a direct lookup is more appropriate.
+In this section, we'll implement a LangChain agent that will be used to interact with the LLM. The agent will be used to control the flow and behavior of the call into the LLM. An agent differs from the previous RAG chain in that the RAG chain is a definition of a sequence of specific actions. Agents on the other hand are equipped with various tools and will determine which actions to take based on the context of the conversation. 
+
+In this scenario, an agent will be equipped with two tools, one that uses a retriever chain from the vector store, and another that will perform a MongoDB lookup based on a SKU value. The reason the SKU lookup tool is introduced is because the vector store is built for semantic search. Some fields, such as the `_id` or `sku` fields do not have semantic meaning and therefore a direct lookup is more appropriate.
 
 1. Open the `langchian-agent.js` file in the Visual Studio Code editor.
 
@@ -461,4 +457,4 @@ Please think about the difference between `langchain-rag.js` and `langchain-agen
 
 ## Summary
 
-In this lab, you used the LangChain package to perform a vector search in vCore-based Azure Cosmos DB. You initialized the connection to the vector store, performed a vector search, implemented the RAG pattern using LangChain, and created a LangChain agent. You also experimented with the LangChain agent and observed the verbose output of the tool usage of the agent.
+In this lab, you used the LangChain package to perform a vector search in Azure Cosmos DB. You initialized the connection to the vector store, performed a vector search, implemented the RAG pattern using LangChain, and created a LangChain agent. You also experimented with the LangChain agent and observed the verbose output of the tool usage of the agent.

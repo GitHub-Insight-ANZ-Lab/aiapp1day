@@ -4,7 +4,9 @@
 
 The lab and tutorials have been adapted from the following Microsoft repositories. We've streamlined and modified the steps to better fit the workshop.
 
-**Special thanks to the original developers for their content and labs.**
+:::tip
+Special thanks to the original developers for their content and labs.
+:::
 
 ### Azure OpenAI Cosmos DB hackathon
 

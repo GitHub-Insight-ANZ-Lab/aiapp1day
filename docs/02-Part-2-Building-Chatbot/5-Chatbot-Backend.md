@@ -11,7 +11,7 @@ When developing a backend api, it is often useful to run the application locally
 
 2. Open a **Terminal** window in VS Code (<kbd>CTRL</kbd>+<kbd>`</kbd>).
 
-3. Add the following settings to the `.env` file, populating the MongoDB connection string and replacing the values from the deployed Azure OpenAI service:
+3. Edit following settings in the `.env` file, populating the MongoDB connection string and replacing the values from the deployed Azure OpenAI service:
 
    ```bash
    AZURE_OPENAI_API_INSTANCE_NAME=<openai-service-name>
@@ -30,12 +30,13 @@ When developing a backend api, it is often useful to run the application locally
 
 ## Add LangChain Agent to Backend API
 
-1. In the previous task, we have create a LangChain agent and it is able to RAG to response to our question. Now, lets add the code into our Backend API service.
+1. In the previous task, we created a LangChain agent that is capable of generating responses using RAG. Now, let's integrate this code into our Backend API service.
 
-2. Do a diff in VS code between `labs\02-LAB-02\5-Chatbot-Backend\agent.js` and  `labs\02-LAB-02\5-Chatbot-Backend\langchain-agent.js`. you will see there are additional code added in the function to manage chat history.
+2. Compare `labs\02-LAB-02\5-Chatbot-Backend\agent.js` and `labs\02-LAB-02\5-Chatbot-Backend\langchain-agent.js`. You will notice that additional code has been added to the function to manage chat history.
+   
    ![alt text](images/chatbot-frontend-image-1.png)
    
-3. Copy `agent.js` into `apps\api\bikestore\agent.js` so that the backend is able to connect to both CosmosDb and OpenAI service
+3. Copy `agent.js` into `apps/api/bikestore/agent.js` to enable the backend to connect to both CosmosDb and OpenAI service.
 
 
 ## Test out Backend API Swagger
@@ -73,4 +74,4 @@ When developing a backend api, it is often useful to run the application locally
 
     ![The Swagger UI displays the POST /ai endpoint reponse that has a status of ready.](images/local_backend_swagger_ui_ai_response.png "Local backend api Swagger UI AI response")
 
-7. In the Terminal window, press <kbd>CTRL</kbd>+<kbd>C</kbd> to stop the backend api.
+7. Please keep the backend running.

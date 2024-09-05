@@ -2,7 +2,7 @@
 
 :::tip Azure Cosmos DB
 
-Azure Cosmos DB is a globally distributed, multi-model database service for any scale. The vCore-based Azure Cosmos DB for MongoDB supports Vector Search, which allows you to search for documents based on their similarity to a query document.
+Azure Cosmos DB is a globally distributed, multi-model database service for any scale. The Azure Cosmos DB for MongoDB supports Vector Search, which allows you to search for documents based on their similarity to a query document.
 
 :::
 
@@ -25,13 +25,13 @@ The product catalog data is shared in a CSV file. You will be writing a custom s
 The `~/labs/02-LAB-02/2-Load-Data/completed` folder contains the completed solution for this lab.
 :::
 
-2. In the lab folder, create a `.env` file and add the following environment variables, replace `<MONGODB_CONNECTION_STRING>` with your Cosmos DB service connection string:
+2. In the lab folder, edit a `.env` file and set the following environment variables, replace `<MONGODB_CONNECTION_STRING>` with your Cosmos DB service connection string:
 
    ```text
-   MONGODB_CONNECTION_STRING=mongodb+srv://aiapp1dayadmin:Aiapp1daypassword123@arg-syd-aiapp1day-mongo.mongocluster.cosmos.azure.com/?tls=true&authMechanism=SCRAM-SHA-256&retrywrites=false&maxIdleTimeMS=120000&tlsInsecure=true
+   MONGODB_CONNECTION_STRING=mongodb+srv://<user>:<password>@<db>.mongocluster.cosmos.azure.com/?tls=true&authMechanism=SCRAM-SHA-256&retrywrites=false&maxIdleTimeMS=120000
    ```
 
-3. Choose a unique name for your CosmosDB database. While everyone in the workshop will share the same CosmosDB instance, you can select your own database name. Modify `MONGODB_Name` in `.env` file.
+3. Choose a unique name for your CosmosDB database, modify `MONGODB_Name` in `.env` file. Everyone in the workshop will share the same CosmosDB instance (unless you have deployed your own Azure resources)
 
    ```text
    MONGODB_Name = 'aiapp1day_daniel_55'
@@ -39,7 +39,7 @@ The `~/labs/02-LAB-02/2-Load-Data/completed` folder contains the completed solut
    MONGODB_Name = 'aiapp1day_{your_name}_{your_lucky_number}'
    ```
 
-4. In Visual Studio Code, open a terminal window and navigate to the lab folder `start` .
+4. In Visual Studio Code, open a terminal window and navigate to `start` folder.
 
 5. To install the required packages, execute the following command in the terminal window:
 
@@ -49,14 +49,14 @@ The `~/labs/02-LAB-02/2-Load-Data/completed` folder contains the completed solut
 
 ## Prepare the data set
 
-The qualitfy of the dataset feeding into the LLM model makes big different. Maybe it is usually the job of data team, but there could be various convertion and integration required to format the data set. Lets do a quick excerise on preparing the data set. No 'Rubbish in & Rubbish out' for our chatbot.
+The quality of the dataset feeding into the LLM model makes a big difference. While it is typically the responsibility of the data team, there may be various conversions and integrations required to format the dataset. Let's quickly exercise on preparing the dataset to ensure we avoid the "Rubbish in & Rubbish out" scenario for our chatbot.
 
-The product data set is located in data\product.csv, the data set has multiple columns. but the tags column is a json string.
+The `product` data set is located in the `data\product.csv` file. It consists of multiple columns, and the `tags` column contains a JSON string.
 
-1. this is the csv file
+1. This is the csv file, please the file and take a good look.
    ![alt text](images/rag_load_data_image.png)
 
-2. create a `convert.js` file to parse the text into json format that is better for vector search.
+2. Open the `convert.js` file and paste the following code to parse the text into JSON format for better vector search.
 
    ```javascript
    const fs = require("fs");
@@ -109,7 +109,7 @@ The product data set is located in data\product.csv, the data set has multiple c
 4. Open the generated `product.json` file and see if any format issues stands out?
    ![alt text](images/rag_load_data_image-1.png)
 
-5. Use the "Differ" feature in Visual Studio Code to compare `product.json` and `product-original.json` for any discrepancies. We noticed that `price` is a string rather than a float.
+5. Use the `Differ` feature in Visual Studio Code to compare `product.json` and `product-original.json` (the ideal format) for any discrepancies. The `price` field is a string rather than float.
 
 6. To convert the price tag to a float in the JSON file, modify the code as follows:
 
@@ -125,9 +125,9 @@ The product data set is located in data\product.csv, the data set has multiple c
    }
    ```
 
-7. Run the code and compare the two JSON files again. We noticed that the description field seems to be missing quotation marks in certain parts.
+7. Execute the code again and compare the two JSON files once more. It appears that the description field is missing quotation marks in some parts still.
 
-   :::info
+   :::note
    Can you suggest a modification to the code that would preserve the quotation marks in the description field?
    :::
 
@@ -187,11 +187,14 @@ There is more than one option when performing bulk operations in Cosmos DB. In t
 
    ![A console window displays indicating products have been inserted into the products collection](images/rag_load_data_products_loaded.png "Products loaded")
 
+   :::tip
+   We reduced the total products in the data set from 295 to only 49 in the end. Do you know why?
+   :::
+
+
 ## Bulk load of customer and sales data
 
-In this section, data will be loaded using the `insertMany` method. The `insertMany` method is used to insert multiple documents into a collection, it differs from the `bulkWrite` method in that it only supports insert operations.
-
-Customer data and sales data are also combined in a single JSON source, some pre-processing is required to separate the data into two separate collections.
+`Customer` data and `sales` data are also combined in a single JSON source, some pre-processing is required to separate the data into two separate collections.
 
 1. Open the `import.js` file, and directly beneath the code for adding products, append the following code to fetch the customer and sales data from the Contoso Bike Store repository:
 
@@ -250,13 +253,13 @@ Customer data and sales data are also combined in a single JSON source, some pre
 
    ![A console window displays indicating customers and sales have been inserted into the customers and sales collections](images/rag_load_data_customers_sales_loaded.png "Customers and sales loaded")
 
-## Browse the data in the Cosmos DB (MongoDB)
+## Browse the data in the Cosmos DB
 
 1. Install MongoDb extension in VS code : `MongoDB for VS code`
 
    ![alt text](images/rag_load_data_image-6.png)
 
-2. then add a connection to the data.
+2. Add a connection to the data.
 
    ![alt text](images/rag_load_data_image-2.png)
 
@@ -264,4 +267,5 @@ Customer data and sales data are also combined in a single JSON source, some pre
 
    ![alt text](images/rag_load_data_image-7.png)
 
-In this section bulk load operations were used to load product, customer, and sales data into Cosmos DB. Keep the database and its loaded data for use in subsequent labs.
+
+In this section, bulk load operations were used to load `product`, `customer`, and `sales` data into Cosmos DB. We need to process the dataset and perform data engineering tasks to ensure the data is of high quality, which will lead to better results in vector search and LLM outcomes.
