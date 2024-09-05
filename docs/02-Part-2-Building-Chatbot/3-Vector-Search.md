@@ -4,15 +4,15 @@ This lab demonstrates using an Azure OpenAI embedding model to vectorize documen
 
 ## Setup the lab environment
 
-1. Navigate to the lab folder `~/labs/02-LAB-02/2-vector-search/start` within the repository.
+1. Navigate to the lab folder `~/labs/02-LAB-02/3-Vector-Search/start` within the repository.
 
 ```bash
-cd  labs/02-LAB-02/2-vector-search/start
+cd  labs/02-LAB-02/3-Vector-Search/start
 code .
 ```
 
 :::info
-The `~/labs/02-LAB-02/2-vector-search/completed` folder contains the completed solution for this lab.
+The `~/labs/02-LAB-02/3-Vector-Search/completed` folder contains the completed solution for this lab.
 :::
 
 2. Open the `.env` file in the Visual Studio Code editor.
@@ -103,7 +103,9 @@ Vectorizing or embedding text is the process of converting text into a numerical
 
    ![Console output displays a large numerical vector.](images/text_embedding_output.png "Vector representation of text")
 
-> **Question** Try a different input strimg and see if vector array length changes. Hmm, no matter how long the input string is, the return of creating embeddings with "text-embedding-ada-3" is always a vector of 1536. Why?
+  :::info
+  Try a different input strimg and see if vector array length changes. Hmm, no matter how long the input string is, the return of creating embeddings with "text-embedding-ada-3" is always a vector of 1536. Why?
+  :::
 
 ## Vectorize and store the embeddings in each document
 
@@ -111,7 +113,9 @@ Now that the `generateEmbeddings` function is working, the next step is to use i
 
 In this section, a function is added that will loop through each document in a collection, generate the vector embedding, and store the vector embedding in the document itself. The function takes advantage of `bulkWrite` operations to perform upserts on the existing documents in an efficient way. Lastly, the function will create a vector index (VectorSearchIndex) on the collection to enable vector search queries if it does not already exist.
 
-> **Note**: Generating embedding vectors for each document will take some time, exercise patience during this section until the process is complete.
+:::info
+Generating embedding vectors for each document will take some time, exercise patience during this section until the process is complete.
+:::
 
 1. In `vectorize.js`, add the following code directly above the last line of the file (that calls the `main` function) - the code is documented inline to explain the steps taken:
 
@@ -209,7 +213,9 @@ In this section, a function is added that will loop through each document in a c
 
    ![Console output displays the progress of vectorizing and storing the embeddings in each document.](images/vectorize_and_store_embeddings.png "Vectorizing and storing the embeddings in each document")
 
-> **Tips** Missing `generateEmbeddings` error? we had this function earlier, grab it and put it in.
+  :::info
+  Missing `generateEmbeddings` error? we had this function earlier, grab it and put it in.
+  :::
 
 5. Lets have a look how the record in the database looks like especially the vector field and index.
 
@@ -291,7 +297,9 @@ Now that each document has its associated vector embedding and the vector indexe
 
    ![Console output displays the search results.](images/vector_search_results.png "Vector search results")
 
-> **Tips** Oh no. Missing `generateEmbeddings` again. Why the search query need to generate embeddings ?
+  :::info
+  Oh no. Missing `generateEmbeddings` again. Why the search query need to generate embeddings ?
+  :::
 
 ## Use vector search in a RAG (Retrieval Augmented Generation) pattern
 
@@ -378,7 +386,9 @@ In this section, a function is added that will use the vector search results to 
 
    ![Console output displays the response from the LLM.](images/rag_with_vector_search_response.png "Response from the LLM")
 
-> **Tips** Yes, it is a test, both `vectorSearch` and `generateEmbeddings` are missing.
+  :::info
+  Yes, it is a test, both `vectorSearch` and `generateEmbeddings` are missing.
+  :::
 
 ## Well Done!
 

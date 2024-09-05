@@ -26,7 +26,7 @@ If Bicep is not installed, please follow https://learn.microsoft.com/en-us/azure
 
 ### Edit Settings
 
-Open a terminal and navigate to `labs/02-LAB-02/6-Azure-Deployment/lab-core` folder within the repository.
+Open a terminal and navigate to `labs/02-LAB-02/1-Azure-Deployment/lab-core` folder within the repository.
 
 Open the `azuredeploy.parameters.json` file, then edit the `name` to be the prefix of all resources.
 
@@ -52,16 +52,16 @@ Open a terminal window and log in to Azure using the following command:
     Set-AzContext -SubscriptionId <subscription-id>
     ```
 
-3. Create resource group
+3. Create resource group, replace `your-rg-name` with the resource group name you like, could be aiapp1day-daniel-rg. 
 
     ```Powershell
-    New-AzResourceGroup -Name {your-rg-name} -Location 'eastus'
+    New-AzResourceGroup -Name your-rg-name -Location 'eastus'
     ```
 
 4. Deploy the solution resources using the following command (this will take a few minutes to run):
 
     ```Powershell
-    New-AzResourceGroupDeployment -ResourceGroupName {your-rg-name} -TemplateFile .\azuredeploy.bicep -TemplateParameterFile .\azuredeploy.parameters.json -c
+    New-AzResourceGroupDeployment -ResourceGroupName your-rg-name -TemplateFile .\azuredeploy.bicep -TemplateParameterFile .\azuredeploy.parameters.json -c
     ```
 
 ## Deploy App Service Only
@@ -70,7 +70,7 @@ This deployment will only create 2 web apps for the Chatbot Frontend and Backend
 
 ### Run Deployment
 
-Open a terminal and navigate to `labs/02-LAB-02/6-Azure-Deployment/lab-user` folder within the repository.
+Open a terminal and navigate to `labs/02-LAB-02/1-Azure-Deployment/lab-user` folder within the repository.
 
 1. Login
 
@@ -84,15 +84,15 @@ Open a terminal and navigate to `labs/02-LAB-02/6-Azure-Deployment/lab-user` fol
     Set-AzContext -SubscriptionId <subscription-id>
     ```
 
-3. Create resource group
+3. Create resource group, replace `your-rg-name` with the resource group name you like, could be aiapp1day-daniel-rg.
 
     ```Powershell
-    New-AzResourceGroup -Name {your-rg-name} -Location 'eastus'
+    New-AzResourceGroup -Name your-rg-name -Location 'eastus'
     ```
 
 4. Deploy the solution resources using the following command (this will take a few minutes to run):
 
     ```Powershell
-    New-AzResourceGroupDeployment -ResourceGroupName {your-rg-name} -TemplateFile .\azuredeploy.bicep -TemplateParameterFile .\azuredeploy.parameters.json -c
+    New-AzResourceGroupDeployment -ResourceGroupName your-rg-name -TemplateFile .\azuredeploy.bicep -TemplateParameterFile .\azuredeploy.parameters.json -c
     ```
 

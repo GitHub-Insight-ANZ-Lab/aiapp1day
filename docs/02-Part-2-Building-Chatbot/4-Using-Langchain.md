@@ -8,15 +8,15 @@ Throughout this lab, notice how much more concise the code is compared to the pr
 
 ## Setup the lab environment
 
-1. Navigate to the lab folder `~/labs/02-LAB-02/3-using-langchain/start` within the repository.
+1. Navigate to the lab folder `~/labs/02-LAB-02/4-Using-Langchain/start` within the repository.
 
 ```bash
-cd  labs/02-LAB-02/3-using-langchain/start
+cd  labs/02-LAB-02/4-Using-Langchain/start
 code .
 ```
 
 :::info
-The `~/labs/02-LAB-02/3-using-langchain/completed` folder contains the completed solution for this lab.
+The `~/labs/02-LAB-02/4-Using-Langchain/completed` folder contains the completed solution for this lab.
 :::
 
 2. To simplify code, the LangChain package makes use of environment variables. The `.env` file in this lab will reflect the naming conventions of the LangChain packages and differs from previous labs. Open the `.env` file in the Visual Studio Code editor.
@@ -35,7 +35,9 @@ The `~/labs/02-LAB-02/3-using-langchain/completed` folder contains the completed
 
    Replace `<MONGODB_CONNECTION_STRING>` with the MongoDB connection string. Replace `<openai-service-name>` with the name of the deployed OpenAI service, and `<azure_openai_api_key>` with the Azure OpenAI API key. Leave all other values untouched.
 
-   > **Note**: The Azure OpenAI service name is not the full endpoint. Only the service name is required. For example, if the endpoint is `https://myservicename.openai.azure.com/`, then the service name is `myservicename`.
+   :::info
+   The Azure OpenAI service name is not the full endpoint. Only the service name is required. For example, if the endpoint is `https://myservicename.openai.azure.com/`, then the service name is `myservicename`.
+   :::
 
 4. In Visual Studio Code, open a terminal window and navigate to the lab folder `start`.
 
@@ -115,7 +117,9 @@ The return value of a vector search in LangChain is a list of `Document` objects
 
    The output will be a list of `Document` objects that contain the metadata of the documents that are most similar to the user's input.
 
-   > **Note**: The `Document` objects contain the `page_content` and `metadata` properties. The `page_content` is the `_id` field of the document, and the `metadata` contains all other fields of the document.
+   :::info
+   The `Document` objects contain the `page_content` and `metadata` properties. The `page_content` is the `_id` field of the document, and the `metadata` contains all other fields of the document.
+   :::
 
    ![A portion of the console output shows search results with products that are similar to the user query.](images/initial_vector_search.png "Initial vector search results")
 
@@ -123,7 +127,9 @@ The return value of a vector search in LangChain is a list of `Document` objects
 
 8. Save the `vector-search.js` file.
 
-> **Question** comparing the code here with the search function in 2b, can you tell the differences between them?
+    :::info
+    comparing the code here with the search function in 2b, can you tell the differences between them?
+    :::
 
 ## RAG with LangChain
 
@@ -261,15 +267,17 @@ We'll also define a reusable RAG chain to control the flow and behavior of the c
 
 10. Lets now try a different question.
 
-    ```javascript
-    console.log(
-      await ragLCELChain(
-        "What is the name of the product that has the SKU TI-R982?"
-      )
-    );
-    ```
+  ```javascript
+  console.log(
+    await ragLCELChain(
+      "What is the name of the product that has the SKU TI-R982?"
+    )
+  );
+  ```
 
-> **Question** Why do we get a response like this? how can we improve it?
+  :::info
+  Why do we get a response like this? how can we improve it?
+  :::
 
 ## LangChain agent
 
@@ -445,7 +453,9 @@ In this section, we'll implement a LangChain agent that will be used to interact
 
 11. If desired, comment out the line of code `//returnIntermediateSteps: true` in the `executeAgent` function to disable verbose output of the tool usage of the agent.
 
-> **Question** Please think about the difference between `langchain-rag.js` and `langchain-agent.js`. Which one do you think is better?
+  :::info
+  Please think about the difference between `langchain-rag.js` and `langchain-agent.js`. Which one do you think is better?
+  :::
 
 12. Experiment with additional questions of your own.
 

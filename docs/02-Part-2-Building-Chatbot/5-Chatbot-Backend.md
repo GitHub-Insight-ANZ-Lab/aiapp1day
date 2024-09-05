@@ -23,14 +23,16 @@ When developing a backend api, it is often useful to run the application locally
 
    Replace `<MONGODB_CONNECTION_STRING>` with the MongoDB connection string. Replace `<openai-service-name>` with the name of the deployed OpenAI service, and `<azure_openai_api_key>` with the Azure OpenAI API key. Leave all other values untouched.
 
-   > **Note**: The Azure OpenAI service name is not the full endpoint. Only the service name is required. For example, if the endpoint is `https://myservicename.openai.azure.com/`, then the service name is `myservicename`.
+   :::info
+   The Azure OpenAI service name is not the full endpoint. Only the service name is required. For example, if the endpoint is `https://myservicename.openai.azure.com/`, then the service name is `myservicename`.
+   :::
 
 
 ## Add LangChain Agent to Backend API
 
 1. In the previous task, we have create a LangChain agent and it is able to RAG to response to our question. Now, lets add the code into our Backend API service.
 
-2. Do a diff in VS code between `labs\02-LAB-02\4-Chatbot-Backend\agent.js` and  `labs\02-LAB-02\4-Chatbot-Backend\langchain-agent.js`. you will see there are additional code added in the function to manage chat history.
+2. Do a diff in VS code between `labs\02-LAB-02\5-Chatbot-Backend\agent.js` and  `labs\02-LAB-02\5-Chatbot-Backend\langchain-agent.js`. you will see there are additional code added in the function to manage chat history.
    ![alt text](images/chatbot-frontend-image-1.png)
    
 3. Copy `agent.js` into `apps\api\bikestore\agent.js` so that the backend is able to connect to both CosmosDb and OpenAI service
