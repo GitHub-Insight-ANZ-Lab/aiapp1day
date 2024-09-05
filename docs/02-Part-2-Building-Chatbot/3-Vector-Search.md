@@ -4,7 +4,7 @@
 The text embeddings are a type of vector representation of data over a continuous vector space where similar items are close together and dissimilar items are far apart. This allows us to perform operations on the vectors to find similar items, perform clustering, and more.
 :::
 
-In the previous lab, you loaded the product catalog into Azure Cosmos DB. The Chatbot will use the product catalog to fetch the relevant products based on the user's query.
+In the previous lab, you loaded the `product` catalog into Azure Cosmos DB. The Chatbot will use the product catalog to fetch the relevant products based on the user's query.
 When fetching the relevant products, the Chatbot application will compare the semantic similarity of the user's query with the product details. Hence the user's query and the product details need to be converted into a vector representation.
 
 In this lab, you will learn how to use an Azure OpenAI embedding model to generate text embeddings. You will create a script to iterate over the documents in the Cosmos DB collections, and generate embeddings for each document.
@@ -26,7 +26,7 @@ The `~/labs/02-LAB-02/3-Vector-Search/completed` folder contains the completed s
 
 2. Open the `.env` file in the Visual Studio Code editor.
 
-3. Add the following settings to the `.env` file, replacing the values from the deployed Azure OpenAI service. Please also copy `MONGODB_CONNECTION_STRING` and `MONGODB_Name` from previous lab.
+3. Edit following settings in the `.env` file, replacing the values from the deployed Azure OpenAI service. Please also copy `MONGODB_CONNECTION_STRING` and `MONGODB_Name` from previous lab.
 
    ```bash
     MONGODB_CONNECTION_STRING=mongodb+srv://<user>:<password>@<db>.mongocluster.cosmos.azure.com/?tls=true&authMechanism=SCRAM-SHA-256&retrywrites=false&maxIdleTimeMS=120000
@@ -55,6 +55,10 @@ The `~/labs/02-LAB-02/3-Vector-Search/completed` folder contains the completed s
 
 2. This will install the package and save it as a dependency in your project's `package.json` file.
    ![alt text](images/rag_with_vector_search_image-4.png)
+
+    :::tip
+    Why do we use a beta version of the package rather than latest?
+    :::
 
 3. Open the `embedding.js` file in the Visual Studio Code editor.
 
@@ -112,9 +116,11 @@ Vectorizing or embedding text is the process of converting text into a numerical
 
    ![Console output displays a large numerical vector.](images/text_embedding_output.png "Vector representation of text")
 
-:::info
-Try a different input strimg and see if vector array length changes. Hmm, no matter how long the input string is, the return of creating embeddings with "text-embedding-ada-3" is always a vector of 1536. Why?
-:::
+  :::info
+  Please try a different input string and see if the length of the vector array changes. 
+  
+  It seems that no matter how long the input string is, the return of creating embeddings with "text-embedding-ada-3" is always a vector of length 1536. Why is that?
+  :::
 
 ## Vectorize and store the embeddings in each document
 
@@ -124,6 +130,10 @@ In this section, a function is added that will loop through each document in a c
 
 :::info
 Generating embedding vectors for each document will take some time, exercise patience during this section until the process is complete.
+:::
+
+:::danger
+We have a lot of people doing the lab at the same time. Get in quick before rate limit is hit!
 :::
 
 1. In `vectorize.js`, add the following code directly above the last line of the file (that calls the `main` function) - the code is documented inline to explain the steps taken:
@@ -222,15 +232,15 @@ Generating embedding vectors for each document will take some time, exercise pat
 
    ![Console output displays the progress of vectorizing and storing the embeddings in each document.](images/vectorize_and_store_embeddings.png "Vectorizing and storing the embeddings in each document")
 
-:::info
-Missing `generateEmbeddings` error? we had this function earlier, grab it and put it in.
-:::
+    :::info
+    Missing `generateEmbeddings` error? we used this function earlier, please grab it and put it in.
+    :::
 
 5. Lets have a look how the record in the database looks like especially the vector field and index.
 
    ![alt text](images/rag_with_vector_search_image-6.png)
 
-6. Our vector index is created too.
+6. The vector index is created too.
 
    ![alt text](images/rag_with_vector_search_image-5.png)
 
@@ -240,7 +250,7 @@ Missing `generateEmbeddings` error? we had this function earlier, grab it and pu
 
 ## Use vector search
 
-Now that each document has its associated vector embedding and the vector indexes have been created on each collection, we can now use the vector search capabilities of vCore-based Azure Cosmos DB. In this section, a function is added that will perform a vector search query that will return the most relevant documents based on the cosine similarity of the query vector and the content vectors of the documents in the collection.
+Now that each document has its associated vector embedding and the vector indexes have been created on each collection, we can now use the vector search capabilities of Azure Cosmos DB. In this section, a function is added that will perform a vector search query that will return the most relevant documents based on the cosine similarity of the query vector and the content vectors of the documents in the collection.
 
 1. In `search.js`, add the following code directly above the last line of the file (that calls the `main` function) - the code is documented inline to explain the steps taken. This code introduces two functions, one to perform a vector search and another to neatly print the search results:
 
@@ -306,9 +316,9 @@ Now that each document has its associated vector embedding and the vector indexe
 
    ![Console output displays the search results.](images/vector_search_results.png "Vector search results")
 
-:::info
-Oh no. Missing `generateEmbeddings` again. Why the search query need to generate embeddings ?
-:::
+    :::info
+    Oh no. Missing `generateEmbeddings` again. Why the search query need to generate embeddings ?
+    :::
 
 ## Use vector search in a RAG (Retrieval Augmented Generation) pattern
 
@@ -395,9 +405,9 @@ In this section, a function is added that will use the vector search results to 
 
    ![Console output displays the response from the LLM.](images/rag_with_vector_search_response.png "Response from the LLM")
 
-:::info
-Yes, it is a test, both `vectorSearch` and `generateEmbeddings` are missing.
-:::
+    :::info
+    Yes, it is a test, both `vectorSearch` and `generateEmbeddings` are missing.
+    :::
 
 ## Well Done!
 

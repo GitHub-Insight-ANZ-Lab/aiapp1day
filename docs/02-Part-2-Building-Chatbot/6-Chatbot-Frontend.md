@@ -1,40 +1,22 @@
 # Build a Chatbot Frontend
 
+In the previous lab, we configured and hosted the backend API code locally. The backend API integrates Azure Cosmos DB and Azure OpenAI. Now, let's focus on the front-end web Chatbot application. This application is a single page application (SPA) written in React.
+
 ## Connect Chatbot FrontEnd with BackEnd API
 
-In the previous lab, the backend API code was configured and hosted locally. The backend API integrates vCore-based Azure Cosmos DB with Azure OpenAI. When the Azure resource template for this lab was run to deploy the necessary Azure resources, a front-end web application written as a SPA (single page application) in React was deployed.
-
-1. The backend api app is located in `apps/api`. update database name and other connection details in `.env` file.
-
-   ```bash
-   MONGODB_CONNECTION_STRING=mongodb+srv://<user>:<password>@<db>.mongocluster.cosmos.azure.com/?tls=true&authMechanism=SCRAM-SHA-256&retrywrites=false&maxIdleTimeMS=120000
-   MONGODB_Name=aiapp1day_{your_name}_{your_lucky_number}
-   AZURE_OPENAI_API_INSTANCE_NAME=<openai-service-name>
-   AZURE_OPENAI_API_KEY=<azure_openai_api_key>
-   AZURE_OPENAI_API_DEPLOYMENT_NAME=completions
-   AZURE_OPENAI_API_EMBEDDINGS_DEPLOYMENT_NAME=embeddings
-   AZURE_OPENAI_API_VERSION=2023-09-01-preview
-   ```
-
-2. Start the application with below commands.
-
-   ```
-   npm install
-   ```
-
-3. The frontend chatbot app is located in `apps/chatbot`. update backend url in `.env` file. While the code for the SPA web application is outside the scope of this dev guide. It's worth noting that the Web App is configured with the URL for the Backend API in `.env`.
+1. The frontend chatbot app is located in `apps/chatbot`. update backend url in `.env` file. While the code for the SPA web application is outside the scope of this dev guide. It's worth noting that the Web App is configured with the URL for the Backend API in `.env`.
 
    ```
    BACKEND_URI=http://localhost:5000
    ```
 
-4. start the chatbot app with below commands, open browser and visit url: http://localhost:4000/.
+2. Start the chatbot app with below commands, open browser and visit url: http://localhost:4000/.
 
    ```
    npm run dev
    ```
 
-5. Navigating to local URL in the browser accesses the front-end application. Through this front-end application User Interface, questions can be submitted to the Azure OpenAI model about the Bike Store company data, then it will generate responses accordingly.
+3. Navigating to local URL in the browser accesses the front-end application. Through this front-end application User Interface, questions can be submitted to the Azure OpenAI model about the Bike Store company data, then it will generate responses accordingly.
 
    ![Front-end Web Application User Interface](images/2024-01-17-12-42-59.png)
 
@@ -50,18 +32,15 @@ In the previous lab, the backend API code was configured and hosted locally. The
    - What is the SKU of HL Road Frame - Black?
    - What is HL Road Frame?
 
-   :::info
-   It's possible the first time you ask a question within the Front end application there may be an error. Occasionally when the Azure Bicep template deploys the front end application there will be an issue configuring the use of the `API_ENDPOINT` app setting. If this happens, simply navigate to **Deployment** -> **Deployment Center**, then click **Sync** to have the Web App refresh the deployment of the front end app from it's GitHub repository source code. This should fix that error.
-   :::
-
 3. The chat user interface presents as a traditional chat application style interface when asking questions.
 
-![Chat user interface screenshot with question and generated answer displayed](images/chatbot-frontend-image-2.png)
+   ![Chat user interface screenshot with question and generated answer displayed](images/chatbot-frontend-image-2.png)
 
 4. Go ahead, ask the service a few questions about Bike Store and observe the responses.
 
    :::info
-   How does the HTTP and Restful response looks like? Use the dev tools in the browser to inspect the actually request/ response payload.
+   What do the HTTP and RESTful request & responses look like? Use the browser's developer tools to inspect the actual request and response payloads.
+
    ![alt text](images/raw-request.png)
    :::
 
@@ -69,7 +48,7 @@ In the previous lab, the backend API code was configured and hosted locally. The
 
 ### What do I do if the responses are incorrect?
 
-It's important to remember the model is pre-trained with data, given a system message to guide it, in addition to the company data it has access to via vCore-based Azure Cosmos DB. There are times when the Azure OpenAI model may generate an incorrect response to the prompt given that is either incomplete or even a hallucination (aka includes information that is not correct or accurate).
+It's important to remember the model is pre-trained with data, given a system message to guide it, in addition to the company data it has access to via Azure Cosmos DB. There are times when the Azure OpenAI model may generate an incorrect response to the prompt given that is either incomplete or even a hallucination (aka includes information that is not correct or accurate).
 
 There are a few options of how this can be handled when the response is incorrect:
 
