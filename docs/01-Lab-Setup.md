@@ -10,7 +10,7 @@ slug: /lab-setup
 
 Install the following tools on your machine:
 - [Visual Studio Code](https://code.visualstudio.com/download)
-- [Node.js](https://nodejs.org/en/download/prebuilt-installer)
+- [Node.js](https://nodejs.org/en/download/prebuilt-installer) (v20.17)
 - [Git](https://git-scm.com/downloads) (Optional)
 
 ## Windows Sandbox
@@ -32,6 +32,11 @@ Clone [aiapp1day](https://github.com/GitHub-Insight-ANZ-Lab/aiapp1day) repositor
    git clone https://github.com/GitHub-Insight-ANZ-Lab/aiapp1day.git
    ```
 
+   :::info
+   If you don't have git installed, you can download the repo as zip file from above page.
+   :::
+
+
 The resources for the labs can be found in the following directories:
 - Node.js Backend API: `~/apps/backend`
 - Frontend Web App: `~/apps/chatbot`
@@ -44,7 +49,9 @@ The resources for the labs can be found in the following directories:
 
 The Azure Resources required for the labs have already been provisioned for you. The details of the Azure resources are provided in the table below. You will be required to use this information during the labs.
 
-You can also deploy the resources using the instructions provided in the `Azure Deployment Guide` page.
+   :::info
+   If you have Azure Subscription already, we suggest you to deploy these resources to your own Azure subscription using the instructions and `bicep` provided in the `Azure Deployment Guide` page.
+   :::
 
 ### Azure AI Proxy Playground
 
@@ -68,13 +75,18 @@ You can also deploy the resources using the instructions provided in the `Azure 
 
 ### Azure Cosmos DB for MongoDB
 
-The Cosmos DB is used as a backend database for the chatbot. You will be populating the database with sample data during the labs. It is important to note that you are required to create a new database with a unique name on the Cosmos DB instance provided below.
-The database name should be in the format `aiapp1day_your_name_your_lucky_number`.
+The Cosmos DB is used as vector store for the chatbot. During the labs, you will populate the database with sample data and create vector column. It is important to note that you are required to create a new database with a unique name on the shared Cosmos DB instance provided below.
+
+The database name should be in the format `aiapp1day_{your_name}_{your_lucky_number}`.
 
 | Variable Name             | Value                                                                                                                                                                                                 |
 | ------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | MONGODB_CONNECTION_STRING | mongodb+srv://aiapp1dayadmin:Aiapp1daypassword123@arg-syd-aiapp1day-mongo.mongocluster.cosmos.azure.com/?tls=true&authMechanism=SCRAM-SHA-256&retrywrites=false&maxIdleTimeMS=120000&tlsInsecure=true |
-| MONGODB_Name              | aiapp1day_your_name_your_lucky_number                                                                                                                                                                 |
+| MONGODB_Name              | aiapp1day_\{your_name\}_\{your_lucky_number\}                                                                                  |
+
+:::info
+Be aware, above API keys and connection details will be reset after the workshop.
+:::
 
 ## Sign up Azure Subscription
 

@@ -8,7 +8,7 @@ slug: /lab2-setup
 - VS Code
 - Node.js 18.x or later
 - Azure OpenAI API Key
-- Access to Azure Cosmos DB
+- Azure Cosmos DB
 
   :::
 

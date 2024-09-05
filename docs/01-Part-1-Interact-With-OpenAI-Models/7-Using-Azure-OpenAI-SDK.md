@@ -144,30 +144,26 @@ const searchBikeStore = {
 
 ```javascript
 const options = {
-  tools: [
-    {
-      type: "function",
-      function: searchBikeStore,
-    },
-  ],
+    tools: [
+        {
+            type: "function",
+            function: searchBikeStore,
+        },
+    ],
 };
 
-const chatResponse = client.getChatCompletions(
-  "completions",
-  [
+const chatResponse = client.getChatCompletions("completions", [
     {
-      role: "system",
-      content:
-        "You are a helpful, fun and friendly sales assistant for Contoso Bike Store, a bicycle and bicycle accessories store.",
+        role: "system",
+        content:
+            "You are a helpful, fun and friendly sales assistant for Contoso Bike Store, a bicycle and bicycle accessories store.",
     },
     {
-      role: "user",
-      content:
-        "I'm looking for a bike in Seattle store. Can you help me find a bike from Trek company and model Domane SLR 9?",
+        role: "user",
+        content:
+            "I'm looking for a bike in Seattle store. Can you help me find a bike from Trek company and model Domane SLR 9?",
     },
-  ],
-  options
-);
+], options);
 ```
 
 3. The response message includes one or more "tool calls" that must be resolved via "tool messages". Add the following function to handle the request from the model to invoke the function.
@@ -175,44 +171,58 @@ const chatResponse = client.getChatCompletions(
 ```javascript
 // Purely for convenience and clarity, this function handles tool call responses.
 function applyToolCall({ function: call, id }) {
-  if (call.name === "search_bike") {
-    const { location, company } = JSON.parse(call.arguments);
-    // In a real application, this would be a call an external service or database.
-    return {
-      role: "tool",
-      content: `The bike from ${company} company and model ${model} is available in ${location} store.`,
-      toolCallId: id,
-    };
-  }
-  throw new Error(`Unknown tool call: ${call.name}`);
+    if (call.name === "search_bike") {
+        console.log('[applyToolCall] invoked');
+        const { location, company, model } = JSON.parse(call.arguments);
+        // In a real application, this would be a call an external service or database.
+        return {
+            role: "tool",
+            content: `The bike from ${company} company and model ${model} is available in ${location} store.`,
+            toolCallId: id,
+        };
+    }
+    throw new Error(`Unknown tool call: ${call.name}`);
 }
 ```
 
 4. Print the final response from the tool call to the console. In some cases, you may need to send the response from the tool back to the model along with the original conversation history to get the final response.
 
 ```javascript
-chatResponse
-  .then(async (result) => {
-    for (const choice of result.choices) {
-      console.log(choice.message.content);
-      const responseMessage = choice.message;
-      if (responseMessage?.role === "assistant") {
-        const requestedToolCalls = responseMessage?.toolCalls;
-        if (requestedToolCalls?.length) {
-          const toolCallResolutionMessages = [
-            responseMessage,
-            ...requestedToolCalls.map(applyToolCall),
-          ];
 
-          console.log(toolCallResolutionMessages);
-          const result = await client.getChatCompletions(
-            deploymentName,
-            toolCallResolutionMessages
-          );
-          // continue handling the response as normal
+chatResponse
+    .then(async (result) => {
+
+        console.log('[chatResponse]:' + JSON.stringify(result));
+        console.log('')
+        console.log('[chatResponse][Message]:' + JSON.stringify(result.choices[0].message));
+        console.log('')
+
+        for (const choice of result.choices) {
+            const responseMessage = choice.message;
+
+            if (responseMessage?.role === "assistant") {
+                const requestedToolCalls = responseMessage?.toolCalls;
+                if (requestedToolCalls?.length) {
+                    const toolCallResolutionMessages = [
+                        responseMessage,
+                        ...requestedToolCalls.map(applyToolCall),
+                    ];
+
+                    console.log('[toolCallResolutionMessages]:' + JSON.stringify(toolCallResolutionMessages));
+                    console.log('')
+
+                    const result = await client.getChatCompletions('completions', toolCallResolutionMessages);
+                    console.log('[chatResponse_with_toolcall]:' + JSON.stringify(result));
+                    console.log('')
+                    console.log('[chatResponse_with_toolcall][Message]:' + JSON.stringify(result.choices[0].message));
+                    console.log('')
+                }
+            }
         }
-      }
-    }
-  })
-  .catch((err) => console.log(`Error: ${err}`));
+    })
+    .catch((err) => console.log(`Error: ${err}`));
 ```
+
+:::tip
+Where do you think the actual `applyToolCall` execution is? on the server-side or client-side?
+:::
