@@ -1,10 +1,13 @@
 # Create Images
 
-:::tip What is DALL-E?
+:::tip
+What is DALL-E?
 DALL-E is a neural network based model that can generate graphical data from natural language input. Put more simply, you can provide DALL-E with a description and it can generate an appropriate image.
 :::
 
-The Azure OpenAI service includes the DALL-E model, which you can use to generate original images based on natural language prompts.
+The Azure OpenAI service includes the DALL-E model, which you can use to generate original images based on natural language prompts. 
+
+**Switch to the `Image` tab on the top nav bar in the playgroup**
 
 For example, you might submit the following natural language prompt to DALL-E:
 
