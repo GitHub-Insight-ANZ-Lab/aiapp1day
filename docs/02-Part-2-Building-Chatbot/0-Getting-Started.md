@@ -16,7 +16,7 @@ slug: /lab2-setup
 
 For this lab, you will be building a chatbot for a bicycle store that can answer queries about bicycles and accessories.
 
-The product catalog for the bicycle store is stored in Azure Cosmos DB database. The chatbot will use Azure Cosmos DB for MongoDB's vector search capabilities to retrieve relevant documents from the database based on the user's query.
+The product catalog for the bicycle store is stored in Azure Cosmos DB database. The chatbot will use Azure Cosmos DB vector search capabilities to retrieve relevant documents from the database based on the user's query.
 
 The Chatbot application will use the retrieved documents to generate the final response using Chat Completion API from Azure OpenAI.
 
