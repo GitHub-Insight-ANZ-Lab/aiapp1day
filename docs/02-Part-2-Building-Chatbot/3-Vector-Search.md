@@ -1,10 +1,8 @@
-:::tip Text Embeddings
-
-The text embeddings are a type of vector representation of data over a continuous vector space where similar items are close together and dissimilar items are far apart. This allows us to perform operations on the vectors to find similar items, perform clustering, and more.
-
-:::
-
 # Vector search using text embeddings
+
+:::tip Text Embeddings
+The text embeddings are a type of vector representation of data over a continuous vector space where similar items are close together and dissimilar items are far apart. This allows us to perform operations on the vectors to find similar items, perform clustering, and more.
+:::
 
 In the previous lab, you loaded the product catalog into Azure Cosmos DB. The Chatbot will use the product catalog to fetch the relevant products based on the user's query.
 When fetching the relevant products, the Chatbot application will compare the semantic similarity of the user's query with the product details. Hence the user's query and the product details need to be converted into a vector representation.
@@ -242,7 +240,7 @@ Missing `generateEmbeddings` error? we had this function earlier, grab it and pu
 
 ## Use vector search
 
-Now that each document has its associated vector embedding and the vector indexes have been created on each collection, we can now use the vector search capabilities of vCore-based Azure Cosmos DB for MongoDB. In this section, a function is added that will perform a vector search query that will return the most relevant documents based on the cosine similarity of the query vector and the content vectors of the documents in the collection.
+Now that each document has its associated vector embedding and the vector indexes have been created on each collection, we can now use the vector search capabilities of vCore-based Azure Cosmos DB. In this section, a function is added that will perform a vector search query that will return the most relevant documents based on the cosine similarity of the query vector and the content vectors of the documents in the collection.
 
 1. In `search.js`, add the following code directly above the last line of the file (that calls the `main` function) - the code is documented inline to explain the steps taken. This code introduces two functions, one to perform a vector search and another to neatly print the search results:
 

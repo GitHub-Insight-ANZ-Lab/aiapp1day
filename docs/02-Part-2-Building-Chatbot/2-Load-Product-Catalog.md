@@ -8,7 +8,7 @@ Azure Cosmos DB is a globally distributed, multi-model database service for any 
 
 In this lab, you will load the product catalog data into Azure Cosmos DB. The product catalog will be used by the chatbot to answer questions related to the products in the catalog.
 
-The product catalog data are shared in a CSV file. You will be writing a custom script to convert the CSV file to JSON format and then load the JSON data into the Cosmos DB for MongoDB.
+The product catalog data is shared in a CSV file. You will be writing a custom script to convert the CSV file to JSON format and then load the JSON data into the Cosmos DB.
 
 ## Setup the lab environment
 
@@ -23,7 +23,7 @@ The product catalog data are shared in a CSV file. You will be writing a custom 
 The `~/labs/02-LAB-02/2-Load-Data/completed` folder contains the completed solution for this lab.
 :::
 
-2. In the lab folder, create a `.env` file and add the following environment variables, replace `<MONGODB_CONNECTION_STRING>` with your Cosmos DB for MongoDB API service connection string:
+2. In the lab folder, create a `.env` file and add the following environment variables, replace `<MONGODB_CONNECTION_STRING>` with your Cosmos DB service connection string:
 
    ```text
    MONGODB_CONNECTION_STRING=mongodb+srv://aiapp1dayadmin:Aiapp1daypassword123@arg-syd-aiapp1day-mongo.mongocluster.cosmos.azure.com/?tls=true&authMechanism=SCRAM-SHA-256&retrywrites=false&maxIdleTimeMS=120000&tlsInsecure=true
@@ -131,7 +131,7 @@ The product data set is located in data\product.csv, the data set has multiple c
 
 ## Bulk load product data
 
-There is more than one option when performing bulk operations in Cosmos DB for MongoDB. In this section, data will be loaded using the `bulkWrite` method. The `bulkWrite` method is used to perform multiple write operations in a single batch, write operations can include a mixture of insert, update, and delete operations.
+There is more than one option when performing bulk operations in Cosmos DB. In this section, data will be loaded using the `bulkWrite` method. The `bulkWrite` method is used to perform multiple write operations in a single batch, write operations can include a mixture of insert, update, and delete operations.
 
 1. Open the `import.js` file, and directly beneath the `const db = client.db(process.env.MONGODB_NAME);` line, add the following code to fetch the product data from the Contoso Bike Store repository:
 
@@ -262,4 +262,4 @@ Customer data and sales data are also combined in a single JSON source, some pre
 
    ![alt text](images/rag_load_data_image-7.png)
 
-In this section bulk load operations were used to load product, customer, and sales data into Cosmos DB for MongoDB. Keep the database and its loaded data for use in subsequent labs.
+In this section bulk load operations were used to load product, customer, and sales data into Cosmos DB. Keep the database and its loaded data for use in subsequent labs.

@@ -1,6 +1,6 @@
 # Workflow Orchestration using LangChain
 
-In the previous lab, the `mongodb` package was used to perform a vector search through a db command to find product documents that were most similar to the user's input. In this lab, you will use the LangChain package to perform the same search. LangChain has a vector store class named `AzureCosmosDBVectorStore`, a community contribution, that supports vector search in vCore-based Azure Cosmos DB for MongoDB.
+In the previous lab, the `mongodb` package was used to perform a vector search through a db command to find product documents that were most similar to the user's input. In this lab, you will use the LangChain package to perform the same search. LangChain has a vector store class named `AzureCosmosDBVectorStore`, a community contribution, that supports vector search in vCore-based Azure Cosmos DB.
 
 The `AzureCosmosDBVectorStore` class represents a single vector index in the database, therefore for the instructions for this lab will focus on the `products` collection, however the same steps can be used with the `customers` and `sales` collections as well.
 
@@ -127,9 +127,9 @@ The return value of a vector search in LangChain is a list of `Document` objects
 
 8. Save the `vector-search.js` file.
 
-    :::info
-    comparing the code here with the search function in 2b, can you tell the differences between them?
-    :::
+   :::info
+   comparing the code here with the search function in 2b, can you tell the differences between them?
+   :::
 
 ## RAG with LangChain
 
@@ -267,17 +267,17 @@ We'll also define a reusable RAG chain to control the flow and behavior of the c
 
 10. Lets now try a different question.
 
-  ```javascript
-  console.log(
-    await ragLCELChain(
-      "What is the name of the product that has the SKU TI-R982?"
-    )
-  );
-  ```
+```javascript
+console.log(
+  await ragLCELChain(
+    "What is the name of the product that has the SKU TI-R982?"
+  )
+);
+```
 
-  :::info
-  Why do we get a response like this? how can we improve it?
-  :::
+:::info
+Why do we get a response like this? how can we improve it?
+:::
 
 ## LangChain agent
 
@@ -453,12 +453,12 @@ In this section, we'll implement a LangChain agent that will be used to interact
 
 11. If desired, comment out the line of code `//returnIntermediateSteps: true` in the `executeAgent` function to disable verbose output of the tool usage of the agent.
 
-  :::info
-  Please think about the difference between `langchain-rag.js` and `langchain-agent.js`. Which one do you think is better?
-  :::
+:::info
+Please think about the difference between `langchain-rag.js` and `langchain-agent.js`. Which one do you think is better?
+:::
 
 12. Experiment with additional questions of your own.
 
 ## Summary
 
-In this lab, you used the LangChain package to perform a vector search in vCore-based Azure Cosmos DB for MongoDB. You initialized the connection to the vector store, performed a vector search, implemented the RAG pattern using LangChain, and created a LangChain agent. You also experimented with the LangChain agent and observed the verbose output of the tool usage of the agent.
+In this lab, you used the LangChain package to perform a vector search in vCore-based Azure Cosmos DB. You initialized the connection to the vector store, performed a vector search, implemented the RAG pattern using LangChain, and created a LangChain agent. You also experimented with the LangChain agent and observed the verbose output of the tool usage of the agent.

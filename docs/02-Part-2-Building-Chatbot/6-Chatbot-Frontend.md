@@ -2,7 +2,7 @@
 
 ## Connect Chatbot FrontEnd with BackEnd API
 
-In the previous lab, the backend API code was configured and hosted locally. The backend API integrates vCore-based Azure Cosmos DB for MongoDB with Azure OpenAI. When the Azure resource template for this lab was run to deploy the necessary Azure resources, a front-end web application written as a SPA (single page application) in React was deployed.
+In the previous lab, the backend API code was configured and hosted locally. The backend API integrates vCore-based Azure Cosmos DB with Azure OpenAI. When the Azure resource template for this lab was run to deploy the necessary Azure resources, a front-end web application written as a SPA (single page application) in React was deployed.
 
 1. The backend api app is located in `apps/api`. update database name and other connection details in `.env` file.
 
@@ -69,7 +69,7 @@ In the previous lab, the backend API code was configured and hosted locally. The
 
 ### What do I do if the responses are incorrect?
 
-It's important to remember the model is pre-trained with data, given a system message to guide it, in addition to the company data it has access to via vCore-based Azure Cosmos DB for MongoDB. There are times when the Azure OpenAI model may generate an incorrect response to the prompt given that is either incomplete or even a hallucination (aka includes information that is not correct or accurate).
+It's important to remember the model is pre-trained with data, given a system message to guide it, in addition to the company data it has access to via vCore-based Azure Cosmos DB. There are times when the Azure OpenAI model may generate an incorrect response to the prompt given that is either incomplete or even a hallucination (aka includes information that is not correct or accurate).
 
 There are a few options of how this can be handled when the response is incorrect:
 
