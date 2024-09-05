@@ -82,6 +82,17 @@ var openAiSettings = {
       capacity: 60
     }
   }
+  dalleModel: {
+    name: 'dall-e-3'
+    version: '3.0'
+    deployment: {
+      name: 'dalle3'
+    }
+    sku: {
+      name: 'Standard'
+      capacity: 2
+    }
+  }
 }
 
 var mongovCoreSettings = {
@@ -200,6 +211,26 @@ resource openAiCompletionsModelDeployment 'Microsoft.CognitiveServices/accounts/
   }
 }
 
+
+resource openAiDalleModelDeployment 'Microsoft.CognitiveServices/accounts/deployments@2023-05-01' = {
+  parent: openAiAccount
+  name: openAiSettings.dalleModel.deployment.name
+  dependsOn: [
+    openAiEmbeddingsModelDeployment
+  ]
+  sku: {
+    name: openAiSettings.dalleModel.sku.name
+    capacity: openAiSettings.dalleModel.sku.capacity
+  }
+  properties: {
+    model: {
+      format: 'OpenAI'
+      name: openAiSettings.dalleModel.name
+      version: openAiSettings.dalleModel.version
+    }    
+  }
+}
+
 /* *************************************************************** */
 /* Logging and instrumentation */
 /* *************************************************************** */
@@ -293,19 +324,5 @@ resource appServiceChat 'Microsoft.Web/sites@2022-03-01' = {
       appCommandLine: 'pm2 serve /home/site/wwwroot/dist --no-daemon --spa'
       alwaysOn: true
     }
-  }
-}
-
-/* *************************************************************** */
-/* Registry for Back-end API Image - Azure Container Registry */
-/* *************************************************************** */
-resource containerRegistry 'Microsoft.ContainerRegistry/registries@2023-01-01-preview' = {
-  name: replace('${name}registry','-', '')
-  location: location
-  sku: {
-    name: acrSku
-  }
-  properties: {
-    adminUserEnabled: true
   }
 }
