@@ -24,7 +24,7 @@ The product catalog for the bicycle store is stored in Azure Cosmos DB database.
 
 1. [Azure Deployment Guide](/02-Part-2-Building-Chatbot/1-Azure-Deployment.md): **The Azure resources required for this lab have already been provisioned for you.** If you would like to provision the resources on your own subscription, follow the instructions on the [Azure Deployment Guide](/02-Part-2-Building-Chatbot/1-Azure-Deployment.md) page.
 
-2. [Loading Product Catalog](/02-Part-2-Building-Chatbot/2-Load-Product-Catalog.md): The first step in building the solution is to load some sample data into the Azure Cosmos DB database to build a product catalog.
+2. [Loading Product Catalog](/02-Part-2-Building-Chatbot/2-Load-Product-Catalog.md): The first step in building the chatbot is to load some sample data into the Azure Cosmos DB database to build a product catalog.
 
 3. [Vector Search with Azure Cosmos DB](/02-Part-2-Building-Chatbot/3-Vector-Search.md): Use text embeddings to perform vector search in Azure Cosmos DB.
 
