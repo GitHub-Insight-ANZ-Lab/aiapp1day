@@ -4,7 +4,7 @@ In the previous lab, we configured and hosted the backend API code locally. The 
 
 ## Connect Chatbot FrontEnd with BackEnd API
 
-1. The frontend app is located in `apps/chatbot`. update backend url in `.env` file. While the code for the SPA web application is outside the scope of this dev guide. It's worth noting that the Web App is configured with the URL for the Backend API in `.env`.
+1. The frontend chatbot app is located in `apps/chatbot`. update backend url in `.env` file. While the code for the SPA web application is outside the scope of this dev guide. It's worth noting that the Web App is configured with the URL for the Backend API in `.env`.
 
    ```
    BACKEND_URI=http://localhost:5000
