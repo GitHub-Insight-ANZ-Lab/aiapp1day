@@ -2,7 +2,7 @@
 
 In the previous lab, we configured and hosted the backend API code locally. The backend API integrates Azure Cosmos DB and Azure OpenAI. Now, let's focus on the front-end web application. This application is a single page application (SPA) written in React.
 
-## Connect the FrontEnd with BackEnd API
+## Connect Chatbot FrontEnd with BackEnd API
 
 1. The frontend app is located in `apps/chatbot`. update backend url in `.env` file. While the code for the SPA web application is outside the scope of this dev guide. It's worth noting that the Web App is configured with the URL for the Backend API in `.env`.
 

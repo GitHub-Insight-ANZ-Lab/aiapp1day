@@ -23,7 +23,7 @@ First update the system message.
 - Which function to all if all information is gathered
 
 ```text title="System Message"
-You are Contoso Bike Store chatbot that helps users with finding the available bikes in the store.
+You are Contoso Bike Store AI assistant that helps users with finding the available bikes in the store.
 In the conversation with the user, your goal is to retrieve the required fields for the function search_bike.
 ```
 

@@ -137,5 +137,5 @@ This will happen for either the user input or the model response that is returne
 Once you're done customizing the system message, refresh the app to reset the system message to its default, or replace it with:
 
 ```text title="Enter in the system message:"
-You are an chatbot that helps people find information.
+You are an AI assistant that helps people find information.
 ```
