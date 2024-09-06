@@ -45,7 +45,7 @@ Set the system message:
 You are a friendly, polite AI assistance.
 ```
 
-Now ask the assitant:
+Now ask the assistant:
 
 ```text title="Enter in the user prompt:"
 How can you help me?
