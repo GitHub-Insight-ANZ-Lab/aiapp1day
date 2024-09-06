@@ -14,7 +14,7 @@ By the end of this workshop, you should be able to:
 
 ## Lab Outline
 
-The lab is organized into two parts. The first part focuses on understanding the basics of interacting with OpenAI models. You will be exploring the various prompt techniques and understanding how to guide the models to create better answers. The second part focuses on building a solution using the concepts learned in the first part. You will be using the Azure OpenAI Service and bringing in external knowledge using RAG (Retrieval Augmented Generation) to answer questions based on the knowledge base provided.
+The lab is organized into two parts. The first part focuses on understanding the basics of interacting with OpenAI models. You will be exploring the various prompt techniques and understanding how to guide the models to create better answers. The second part focuses on building a chatbot using the concepts learned in the first part. You will be using the Azure OpenAI Service and bringing in external knowledge using RAG (Retrieval Augmented Generation) to answer questions based on the knowledge base provided.
 
 1. [Setup Instructions](/01-Lab-Setup.md). Set up your development environment.
 2. [LAB 1 - Interact with Open AI Models](/01-Part-1-Interact-With-OpenAI-Models/0-Getting-Started.md). Learn the basics of interacting with the GPT Models and how to guide the models to create better answers.
