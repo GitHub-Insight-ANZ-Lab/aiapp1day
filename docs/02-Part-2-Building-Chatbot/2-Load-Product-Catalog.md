@@ -6,7 +6,7 @@ Azure Cosmos DB is a globally distributed, multi-model database service for any 
 
 :::
 
-In this lab, you will load the product catalog data into Azure Cosmos DB. The product catalog will be used by the chatbot to answer questions related to the products in the catalog.
+In this lab, you will load the product catalog data into Azure Cosmos DB. The product catalog will be used by the AI assistant to answer questions related to the products in the catalog.
 
 The product catalog data is shared in a CSV file. You will be writing a custom script to convert the CSV file to JSON format and then load the JSON data into the Cosmos DB.
 
@@ -49,7 +49,7 @@ The `~/labs/02-LAB-02/2-Load-Data/completed` folder contains the completed solut
 
 ## Prepare the data set
 
-The quality of the dataset feeding into the LLM model makes a big difference. While it is typically the responsibility of the data team, there may be various conversions and integrations required to format the dataset. Let's quickly exercise on preparing the dataset to ensure we avoid the "Rubbish in & Rubbish out" scenario for our chatbot.
+The quality of the dataset feeding into the LLM model makes a big difference. While it is typically the responsibility of the data team, there may be various conversions and integrations required to format the dataset. Let us avoid the "Rubbish in & Rubbish out" scenario for our product catalog assistant by preparing the dataset.
 
 The `product` data set is located in the `data\product.csv` file. It consists of multiple columns, and the `tags` column contains a JSON string.
 

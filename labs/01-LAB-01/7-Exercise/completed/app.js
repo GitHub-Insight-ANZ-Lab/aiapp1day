@@ -13,7 +13,7 @@ async function main() {
   );
 
   const deploymentId = "completions";
-  console.log("The chatbot is ready. Type 'exit' to quit.");
+  console.log("The AI assistant is ready. Type 'exit' to quit.");
 
   const getLightStatus = {
     name: "get_light_status",

@@ -14,11 +14,9 @@ slug: /lab2-setup
 
 ## Introduction
 
-For this lab, you will be building a chatbot for a bicycle store that can answer queries about bicycles and accessories.
+For this lab, you will be building an assistant for a bicycle store that can answer queries about bicycles and accessories for you.
 
-The product catalog for the bicycle store is stored in Azure Cosmos DB database. The chatbot will use Azure Cosmos DB vector search capabilities to retrieve relevant documents from the database based on the user's query.
-
-The Chatbot application will use the retrieved documents to generate the final response using Chat Completion API from Azure OpenAI.
+The product catalog for the bicycle store is stored in Azure Cosmos DB database. The solution will use Azure Cosmos DB vector search capabilities to retrieve relevant documents from the database based on the user's query. It will generate the final response using Chat Completion API from Azure OpenAI.
 
 ![RAG](images/rag_design.png)
 
@@ -26,15 +24,15 @@ The Chatbot application will use the retrieved documents to generate the final r
 
 1. [Azure Deployment Guide](/02-Part-2-Building-Chatbot/1-Azure-Deployment.md): **The Azure resources required for this lab have already been provisioned for you.** If you would like to provision the resources on your own subscription, follow the instructions on the [Azure Deployment Guide](/02-Part-2-Building-Chatbot/1-Azure-Deployment.md) page.
 
-2. [Loading Product Catalog](/02-Part-2-Building-Chatbot/2-Load-Product-Catalog.md): The first step in building the chatbot is to load some sample data into the Azure Cosmos DB database to build a product catalog.
+2. [Loading Product Catalog](/02-Part-2-Building-Chatbot/2-Load-Product-Catalog.md): The first step in building the solution is to load some sample data into the Azure Cosmos DB database to build a product catalog.
 
 3. [Vector Search with Azure Cosmos DB](/02-Part-2-Building-Chatbot/3-Vector-Search.md): Use text embeddings to perform vector search in Azure Cosmos DB.
 
 4. [Workflow Orchestration using LangChain](/02-Part-2-Building-Chatbot/4-Using-Langchain.md): Use LangChain to orchestrate the workflow of querying Azure Cosmos DB and Azure OpenAI services.
 
-5. [Chatbot Backend API](/02-Part-2-Building-Chatbot/5-Chatbot-Backend.md): Build the Node.js backend API to expose the chatbot functionality.
+5. [Chatbot Backend API](/02-Part-2-Building-Chatbot/5-Chatbot-Backend.md): Build the Node.js backend API to expose the Azure Open AI functionality.
 
-6. [Chatbot Frontend](/02-Part-2-Building-Chatbot/6-Chatbot-Frontend.md): Connect the Chatbot Frontend with the Backend API.
+6. [Chatbot Frontend](/02-Part-2-Building-Chatbot/6-Chatbot-Frontend.md): Connect the Frontend with the Backend API.
 
 ## Deployment Architecture
 
