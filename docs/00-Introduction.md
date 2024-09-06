@@ -5,7 +5,7 @@ slug: /
 
 ## Learning Objectives
 
-By the end of this workshop, you should be able to:
+By the end of this lab, you should be able to:
 
 - Describe GPT model capabilities and implementation
 - Understand prompt engineering concepts and best practices

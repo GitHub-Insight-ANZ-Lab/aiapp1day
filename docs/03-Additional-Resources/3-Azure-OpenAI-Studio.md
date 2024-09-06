@@ -6,10 +6,10 @@ slug: /azure-openai-studio
 ## Azure OpenAI Studio
 
 :::warning ADDITIONAL SETUP REQUIRED
-This workshop can be completed at home as a self-guided session. However, this will require additional setup effort and dependencies as described.
+This lab can be completed at home as a self-guided session. However, this will require additional setup effort and dependencies as described.
 :::
 
-For a self-guided workshop, you will need the following:
+For a self-guided lab, you will need the following:
 
 - [ ] An Azure Subscription → [Apply here for a free account](https://aka.ms/azure/free).
 - [ ] Access to Azure OpenAI → [Apply here if required](https://learn.microsoft.com/azure/ai-services/openai/overview#how-do-i-get-access-to-azure-openai).
@@ -24,5 +24,5 @@ You can then [navigate to the Azure OpenAI Studio](https://oai.azure.com/) to co
 
 :::info OpenAI Playground APP
 
-The OpenAI platform has its own [Playground application](https://platform.openai.com/playground) that these exercises should also work on, once you log in with a valid OpenAI account. We encourage you to explore this on your own - but for our workshop documentation, we will focus on Azure OpenAI usage.
+The OpenAI platform has its own [Playground application](https://platform.openai.com/playground) that these exercises should also work on, once you log in with a valid account. We encourage you to explore this on your own - but for our hackathon documentation, we will focus on Azure OpenAI usage.
 :::

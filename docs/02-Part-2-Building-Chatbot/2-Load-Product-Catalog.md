@@ -31,7 +31,7 @@ The `~/labs/02-LAB-02/2-Load-Data/completed` folder contains the completed solut
    MONGODB_CONNECTION_STRING=mongodb+srv://<user>:<password>@<db>.mongocluster.cosmos.azure.com/?tls=true&authMechanism=SCRAM-SHA-256&retrywrites=false&maxIdleTimeMS=120000
    ```
 
-3. Choose a unique name for your CosmosDB database, modify `MONGODB_Name` in `.env` file. Everyone in the workshop will share the same CosmosDB instance (unless you have deployed your own Azure resources)
+3. Choose a unique name for your CosmosDB database, modify `MONGODB_Name` in `.env` file. Everyone in the hackathon will share the same CosmosDB instance (unless you have deployed your own Azure resources)
 
    ```text
    MONGODB_Name = 'aiapp1day_daniel_55'
@@ -191,7 +191,6 @@ There is more than one option when performing bulk operations in Cosmos DB. In t
    We reduced the total products in the data set from 295 to only 49 in the end. Do you know why?
    :::
 
-
 ## Bulk load of customer and sales data
 
 `Customer` data and `sales` data are also combined in a single JSON source, some pre-processing is required to separate the data into two separate collections.
@@ -266,6 +265,5 @@ There is more than one option when performing bulk operations in Cosmos DB. In t
 3. Browse the json records in the product and customer table.
 
    ![alt text](images/rag_load_data_image-7.png)
-
 
 In this section, bulk load operations were used to load `product`, `customer`, and `sales` data into Cosmos DB. We need to process the dataset and perform data engineering tasks to ensure the data is of high quality, which will lead to better results in vector search and LLM outcomes.
