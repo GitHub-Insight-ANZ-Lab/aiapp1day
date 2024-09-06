@@ -14,11 +14,9 @@ slug: /lab2-setup
 
 ## Introduction
 
-For this lab, you will be building a chatbot for a bicycle store that can answer queries about bicycles and accessories.
+For this lab, you will be building a chatbot for a bicycle store that can answer queries about bicycles and accessories for you.
 
-The product catalog for the bicycle store is stored in Azure Cosmos DB database. The chatbot will use Azure Cosmos DB vector search capabilities to retrieve relevant documents from the database based on the user's query.
-
-The Chatbot application will use the retrieved documents to generate the final response using Chat Completion API from Azure OpenAI.
+The product catalog for the bicycle store is stored in Azure Cosmos DB database. The solution will use Azure Cosmos DB vector search capabilities to retrieve relevant documents from the database based on the user's query. It will generate the final response using Chat Completion API from Azure OpenAI.
 
 ### Data Ingestion
 
@@ -38,9 +36,9 @@ The Chatbot application will use the retrieved documents to generate the final r
 
 4. [Workflow Orchestration using LangChain](/02-Part-2-Building-Chatbot/4-Using-Langchain.md): Use LangChain to orchestrate the workflow of querying Azure Cosmos DB and Azure OpenAI services.
 
-5. [Chatbot Backend API](/02-Part-2-Building-Chatbot/5-Chatbot-Backend.md): Build the Node.js backend API to expose the chatbot functionality.
+5. [Chatbot Backend API](/02-Part-2-Building-Chatbot/5-Chatbot-Backend.md): Build the Node.js backend API to expose the Azure Open AI functionality.
 
-6. [Chatbot Frontend](/02-Part-2-Building-Chatbot/6-Chatbot-Frontend.md): Connect the Chatbot Frontend with the Backend API.
+6. [Chatbot Frontend](/02-Part-2-Building-Chatbot/6-Chatbot-Frontend.md): Connect Chatbot Frontend with the Backend API.
 
 ## Deployment Architecture
 

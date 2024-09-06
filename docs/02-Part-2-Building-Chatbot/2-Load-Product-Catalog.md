@@ -49,7 +49,7 @@ The `~/labs/02-LAB-02/2-Load-Data/completed` folder contains the completed solut
 
 ## Prepare the data set
 
-The quality of the dataset feeding into the LLM model makes a big difference. While it is typically the responsibility of the data team, there may be various conversions and integrations required to format the dataset. Let's quickly exercise on preparing the dataset to ensure we avoid the "Rubbish in & Rubbish out" scenario for our chatbot.
+The quality of the dataset feeding into the LLM model makes a big difference. While it is typically the responsibility of the data team, there may be various conversions and integrations required to format the dataset. Let us avoid the "Rubbish in & Rubbish out" scenario for our product catalog assistant by preparing the dataset.
 
 The `product` data set is located in the `data\product.csv` file. It consists of multiple columns, and the `tags` column contains a JSON string.
 
