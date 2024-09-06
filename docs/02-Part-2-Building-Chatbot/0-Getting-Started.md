@@ -20,6 +20,12 @@ The product catalog for the bicycle store is stored in Azure Cosmos DB database.
 
 The Chatbot application will use the retrieved documents to generate the final response using Chat Completion API from Azure OpenAI.
 
+### Data Ingestion
+
+![RAG](images/rag_design_data_ingestion.png)
+
+### Query Processing
+
 ![RAG](images/rag_design.png)
 
 ## Lab Outline
