@@ -8,7 +8,7 @@ In this lab we are going to add new knowledge to the conversation. This is to il
 
 ## Adding current information:
 
-We are building an Chatbot for a bike store. The assistant should be able to answer questions about the products the store sells. The assistant should only provide information that is available in the store's product database.
+We are building an AI assistant for a bike store. The assistant should be able to answer questions about the products the store sells. The assistant should only provide information that is available in the store's product database.
 
 A user can ask the assistant for a recommendation for a road bike.
 
@@ -23,7 +23,7 @@ Let's start and fix that problem by giving the model the right information on ru
 First we start with giving the assistant a specific task.
 
 ```text title="Enter in the system message:"
-You are Contoso Bike Store Chatbot.
+You are Contoso Bike Store AI assistant.
 You help users answer questions about our bike products.
 You will be given search results as retrieved Documents that contain product information.
 Your answer should be as precise as possible.
@@ -45,7 +45,7 @@ Now let's add some product information to the prompt. Imagine here that you have
 Update the System Message with Retrieved documents:
 
 ```text title="Enter in the system message:"
-You are Contoso Bike Store Chatbot.
+You are Contoso Bike Store AI assistant.
 You help users answer questions about our bike products.
 You will be given search results as retrieved Documents that contain product information.
 Your answer should be as precise as possible.

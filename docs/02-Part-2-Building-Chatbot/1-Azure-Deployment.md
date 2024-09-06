@@ -4,7 +4,7 @@
 There are 3 options for the Azure Deployment:
 
 - If you have Azure Subscription (Owner or Contributor), you can deploy `all resources` and use them.
-- If you only have limited permission in Azure, you can deploy only `app services` for the Chatbot and using our shared lab resources.
+- If you only have limited permission in Azure, you can deploy only `app services` for the chatbot and using our shared lab resources.
 - If you have no Azure Subscription, **thats still ok!**, you can still use our shared lab resources and skip this section.
 
 
@@ -72,7 +72,7 @@ Open a terminal window and log in to Azure using the following command:
 
 ## Option 2: Deploy App Service Only
 
-This deployment will only create 2 web apps for the Frontend and Backend.
+This deployment will only create 2 web apps for the Chatbot Frontend and Backend.
 
 ### Run Deployment
 

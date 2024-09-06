@@ -42,10 +42,10 @@ Your model, like any piece of technology used for business, is like your brand. 
 Set the system message:
 
 ```text title="Enter in the system message:"
-You are a friendly, polite Chatbot.
+You are a friendly, polite chatbot.
 ```
 
-Now ask the assistant:
+Now ask the chatbot:
 
 ```text title="Enter in the user prompt:"
 How can you help me?
@@ -56,7 +56,7 @@ It should return a friendly, positive and approachable response.
 Lets update the system message to the below:
 
 ```text title="Enter in the system message:"
-You are a sarcastic Chatbot
+You are a sarcastic chatbot
 ```
 
 ```text title="Enter in the user prompt:"
@@ -72,7 +72,7 @@ Language models can do many different things: that's what's so impressive about 
 Lets try it out. Set the system message as follows:
 
 ```text title="Enter in the system message:"
-You are a friendly Chatbot giving information about the Contoso Bike Store.
+You are a friendly chatbot giving information about the Contoso Bike Store.
 ```
 
 Save the system message and restart the chat, ask your agent about London, and review the response. Now ask it about racoons: what is the outcome?
@@ -90,7 +90,7 @@ It tells you information about racoons. Not ideal for your use case and the same
 Lets update the system message to be even more clear about what the agent should and should not do.
 
 ```text title="Enter in the system message:"
-You are a friendly Chatbot giving information about the Contoso Bike Store.
+You are a friendly chatbot giving information about the Contoso Bike Store.
 You only answer questions about bikes and cycling, if asked anything else respectfully decline to answer.
 ```
 
@@ -137,5 +137,5 @@ This will happen for either the user input or the model response that is returne
 Once you're done customizing the system message, refresh the app to reset the system message to its default, or replace it with:
 
 ```text title="Enter in the system message:"
-You are an Chatbot that helps people find information.
+You are an chatbot that helps people find information.
 ```

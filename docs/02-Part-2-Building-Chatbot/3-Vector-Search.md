@@ -5,7 +5,7 @@ The text embeddings are a type of vector representation of data over a continuou
 :::
 
 In the previous lab, you loaded the `product` catalog into Azure Cosmos DB. The Chatbot will use the product catalog to fetch the relevant products based on the user's query.
-When fetching the relevant products, the AI application will compare the semantic similarity of the user's query with the product details. Hence the user's query and the product details need to be converted into a vector representation.
+When fetching the relevant products, the chatbot application will compare the semantic similarity of the user's query with the product details. Hence the user's query and the product details need to be converted into a vector representation.
 
 In this lab, you will learn how to use an Azure OpenAI embedding model to generate text embeddings. You will create a script to iterate over the documents in the Cosmos DB collections, and generate embeddings for each document.
 

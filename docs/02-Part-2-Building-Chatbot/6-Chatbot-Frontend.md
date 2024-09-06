@@ -1,4 +1,4 @@
-# Build the Frontend
+# Build Chatbot Frontend
 
 In the previous lab, we configured and hosted the backend API code locally. The backend API integrates Azure Cosmos DB and Azure OpenAI. Now, let's focus on the front-end web application. This application is a single page application (SPA) written in React.
 

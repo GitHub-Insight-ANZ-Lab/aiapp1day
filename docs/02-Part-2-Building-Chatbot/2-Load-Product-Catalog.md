@@ -6,7 +6,7 @@ Azure Cosmos DB is a globally distributed, multi-model database service for any 
 
 :::
 
-In this lab, you will load the product catalog data into Azure Cosmos DB. The product catalog will be used by the Chatbot to answer questions related to the products in the catalog.
+In this lab, you will load the product catalog data into Azure Cosmos DB. The product catalog will be used by the chatbot to answer questions related to the products in the catalog.
 
 The product catalog data is shared in a CSV file. You will be writing a custom script to convert the CSV file to JSON format and then load the JSON data into the Cosmos DB.
 
