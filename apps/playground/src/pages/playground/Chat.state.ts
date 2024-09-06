@@ -7,7 +7,7 @@ import { UsageData } from "../../interfaces/UsageData";
 
 const defaultSysPrompt: ChatRequestSystemMessage = {
   role: "system",
-  content: "You are an AI assistant that helps people find information.",
+  content: "You are an Chatbot that helps people find information.",
 };
 
 export type ChatResponseMessageExtended = ChatResponseMessage & {
