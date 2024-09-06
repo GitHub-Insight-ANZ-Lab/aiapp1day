@@ -42,7 +42,7 @@ Your model, like any piece of technology used for business, is like your brand. 
 Set the system message:
 
 ```text title="Enter in the system message:"
-You are a friendly, polite AI assistance.
+You are a friendly, polite AI assistant.
 ```
 
 Now ask the assistant:
