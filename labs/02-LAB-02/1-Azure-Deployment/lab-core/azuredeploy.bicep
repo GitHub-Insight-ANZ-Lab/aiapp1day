@@ -311,6 +311,15 @@ resource appServiceApi 'Microsoft.Web/sites@2022-03-01' = {
   }
 }
 
+resource appServiceWebSettingsApi 'Microsoft.Web/sites/config@2022-03-01' = {
+  parent: appServiceApi
+  name: 'appsettings'
+  kind: 'string'
+  properties: {
+    APPINSIGHTS_INSTRUMENTATIONKEY: appServiceWebInsights.properties.InstrumentationKey
+  }
+}
+
 resource appServiceChat 'Microsoft.Web/sites@2022-03-01' = {
   name: appServiceSettings.chat.name
   location: location
@@ -324,3 +333,13 @@ resource appServiceChat 'Microsoft.Web/sites@2022-03-01' = {
     }
   }
 }
+
+resource appServiceWebSettingsChat 'Microsoft.Web/sites/config@2022-03-01' = {
+  parent: appServiceChat
+  name: 'appsettings'
+  kind: 'string'
+  properties: {
+    APPINSIGHTS_INSTRUMENTATIONKEY: appServiceWebInsights.properties.InstrumentationKey
+  }
+}
+
