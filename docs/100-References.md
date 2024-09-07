@@ -11,6 +11,7 @@ Special thanks to the original developers for their content and labs.
 ### Azure OpenAI Cosmos DB hackathon
 
 https://github.com/AzureCosmosDB/Azure-OpenAI-Node.js-Developer-Guide
+
 https://github.com/AzureCosmosDB/Azure-OpenAI-Developer-Guide-Front-End
 
 ### Azure OpenAI Proxy

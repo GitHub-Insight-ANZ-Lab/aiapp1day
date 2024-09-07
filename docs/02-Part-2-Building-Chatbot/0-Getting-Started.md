@@ -16,6 +16,13 @@ slug: /lab2-setup
 
 For this lab, you will be building a chatbot for a bicycle store that can answer queries about bicycles and accessories for you.
 
+### Chatbot Demo
+
+https://arg-syd-aiapp1day-chat.azurewebsites.net/
+
+![alt text](images/chatbot-image.png)
+
+
 The product catalog for the bicycle store is stored in Azure Cosmos DB database. The solution will use Azure Cosmos DB vector search capabilities to retrieve relevant documents from the database based on the user's query. It will generate the final response using Chat Completion API from Azure OpenAI.
 
 ### Data Ingestion
