@@ -13,5 +13,6 @@ az group create --name {your_rg_name} --location eastus
 az deployment group create --resource-group {your_rg_name} --template-file ./azuredeploy.bicep --parameters ./azuredeploy.parameters.json --what-if
 
 # Deploy resources using the Bicep template and parameters file
-az deployment group create --resource-group arg-syd-aiapp1day-lab --template-file ./azuredeploy.bicep --parameters ./azuredeploy.parameters.json
+az deployment group create --resource-group {your_rg_name} --template-file ./azuredeploy.bicep --parameters ./azuredeploy.parameters.json
+
 
