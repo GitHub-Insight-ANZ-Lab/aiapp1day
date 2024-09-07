@@ -305,7 +305,7 @@ resource appServiceApi 'Microsoft.Web/sites@2022-03-01' = {
     httpsOnly: true
     siteConfig: {
       linuxFxVersion: 'NODE|20-lts'
-      appCommandLine: 'pm2 serve /home/site/wwwroot/dist --no-daemon --spa'
+      appCommandLine: 'pm2 start app.js --no-daemon'
       alwaysOn: true
     }
   }
