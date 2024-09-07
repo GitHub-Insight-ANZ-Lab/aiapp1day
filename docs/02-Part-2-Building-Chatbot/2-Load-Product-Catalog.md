@@ -10,7 +10,7 @@ In this lab, you will load the product catalog data into Azure Cosmos DB. The pr
 
 The product catalog data is shared in a CSV file. You will be writing a custom script to convert the CSV file to JSON format and then load the JSON data into the Cosmos DB.
 
-![alt text](images/rag_load_data_create_vector.png)
+![RAG](images/rag_design_data_ingestion.png)
 
 ## Setup the lab environment
 
@@ -49,14 +49,15 @@ The `~/labs/02-LAB-02/2-Load-Data/completed` folder contains the completed solut
 
 ## Prepare the data set
 
-The quality of the dataset feeding into the LLM model makes a big difference. While it is typically the responsibility of the data team, there may be various conversions and integrations required to format the dataset. Let us avoid the "Rubbish in & Rubbish out" scenario for our product catalog assistant by preparing the dataset.
+The quality of the dataset feeding into the LLM model makes a big difference. While it is typically the responsibility of the data team, there may be various conversions and integrations required to format the dataset. Let's take a look at the product dataset and see if any modifications are needed before loading it into Cosmos DB.
 
-The `product` data set is located in the `data\product.csv` file. It consists of multiple columns, and the `tags` column contains a JSON string.
+The `product` data set is located in the `data\product.csv` file. It has the following fields: `id`,`categoryId`,`categoryName`,`sku`,`name`,`description`,`price`,`tags`. The `tags` field is a JSON array of strings.
 
-1. This is the csv file, please the file and take a good look.
+1. Here is a snapshot of the `product.csv` file:
+
    ![alt text](images/rag_load_data_image.png)
 
-2. Open the `convert.js` file and paste the following code to parse the text into JSON format for better vector search.
+2. The first step is to convert the CSV file to JSON format. Open the `convert.js` file and paste the following code. This will parse the CSV file and generate `product.json` file with the data.
 
    ```javascript
    const fs = require("fs");
@@ -100,7 +101,7 @@ The `product` data set is located in the `data\product.csv` file. It consists of
    console.log("CSV file has been converted to JSON file successfully.");
    ```
 
-3. Save the `convert.js` file. To run the application, execute the following command in the terminal window:
+3. Save the `convert.js` file. Run the following command in the terminal window to execute the script:
 
    ```bash
    node convert.js
@@ -133,9 +134,11 @@ The `product` data set is located in the `data\product.csv` file. It consists of
 
 ## Bulk load product data
 
-There is more than one option when performing bulk operations in Cosmos DB. In this section, data will be loaded using the `bulkWrite` method. The `bulkWrite` method is used to perform multiple write operations in a single batch, write operations can include a mixture of insert, update, and delete operations.
+There are multiple options available for performing bulk operations in Cosmos DB. In this section, we will focus on using the `bulkWrite` method. The `bulkWrite` method allows you to execute multiple write operations in a single batch, including insert, update, and delete operations.
 
-1. Open the `import.js` file, and directly beneath the `const db = client.db(process.env.MONGODB_NAME);` line, add the following code to fetch the product data from the Contoso Bike Store repository:
+1. Open the `import.js` file, and add the following code after the code block `const db = client.db(process.env.MONGODB_NAME);`.
+
+   This will read the `product.json` file and load the data into the `productRawData` variable. The database collection for `product` is also initialized. Note that MongoDB will create the collections if they do not already exist.
 
    ```javascript
    // Load product data
@@ -156,7 +159,7 @@ There is more than one option when performing bulk operations in Cosmos DB. In t
    );
    ```
 
-2. Optionally, append the following code (to the code in the previous step) to delete any existing products in the collection. This helps if the application is run multiple times so there is no duplicates.
+2. You may run the upload script multiple times, which will result in duplicate data. To avoid having duplicate data, add the following code to delete any existing products before loading the new data:
 
    ```javascript
    // Delete any existing products
@@ -164,7 +167,7 @@ There is more than one option when performing bulk operations in Cosmos DB. In t
    await productCollection.deleteMany({});
    ```
 
-3. Append the following code (to the code in the previous step) to bulk load the product data into the collection:
+3. Append the following code to the previous code block to load the product data into the collection using the `bulkWrite` method:
 
    ```javascript
    var result = await productCollection.bulkWrite(
@@ -193,9 +196,11 @@ There is more than one option when performing bulk operations in Cosmos DB. In t
 
 ## Bulk load of customer and sales data
 
-`Customer` data and `sales` data are also combined in a single JSON source, some pre-processing is required to separate the data into two separate collections.
+The `Customer` and `Sales` data is in the `custSalesData.json` file. We will be splitting the data into two collections, `customers` and `sales`, and loading them into Cosmos DB.
 
-1. Open the `import.js` file, and directly beneath the code for adding products, append the following code to fetch the customer and sales data from the Contoso Bike Store repository:
+1. Open the `import.js` file, and add the following code next to the previous code block. This will read the `custSalesData.json` file and load the data into the `custSaledData` variable.
+
+   The database collections for `customers` and `sales` are also initialized.
 
    ```javascript
    // Load customer and sales data
@@ -212,7 +217,7 @@ There is more than one option when performing bulk operations in Cosmos DB. In t
    );
    ```
 
-2. Split the customer data from the sales data by appending the following code (to the code in the previous step):
+2. Add the following code to split the `custSalesData` into `customer` and `sales` data:
 
    ```javascript
    console.log("Split customer and sales data");
@@ -224,7 +229,7 @@ There is more than one option when performing bulk operations in Cosmos DB. In t
    );
    ```
 
-3. Append the following code (to the code in the previous step) to bulk load the customer data into the collection using the `insertMany` method:
+3. Add the following code to load the customer data into the collection using the `insertMany` method:
 
    ```javascript
    console.log("Loading customer data");
@@ -233,7 +238,7 @@ There is more than one option when performing bulk operations in Cosmos DB. In t
    console.log(`${result.insertedCount} customers inserted`);
    ```
 
-4. Append the following code (to the code in the previous step) to bulk load the sales data into the collection using the `insertMany` method:
+4. Add the following code to load the sales data into the collection using the `insertMany` method:
 
    ```javascript
    console.log("Loading sales data");
@@ -266,4 +271,4 @@ There is more than one option when performing bulk operations in Cosmos DB. In t
 
    ![alt text](images/rag_load_data_image-7.png)
 
-In this section, bulk load operations were used to load `product`, `customer`, and `sales` data into Cosmos DB. We need to process the dataset and perform data engineering tasks to ensure the data is of high quality, which will lead to better results in vector search and LLM outcomes.
+In this section, we used bulk load operations to load `product`, `customer`, and `sales` data into Cosmos DB. We also had to cleanup the data before loading it into the database. In the next section, we will convert the data into embeddings and perform vector search on the data.

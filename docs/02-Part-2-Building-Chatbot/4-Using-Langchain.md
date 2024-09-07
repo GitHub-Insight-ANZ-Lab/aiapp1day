@@ -19,7 +19,7 @@ code .
 The `~/labs/02-LAB-02/4-Using-Langchain/completed` folder contains the completed solution for this lab.
 :::
 
-2. Edit following settings to the `.env` file, populating the MongoDB connection string and replacing the values from the deployed Azure OpenAI service:
+3. Edit following settings in the `.env` file to replace `<openai-service-name>` with the name of the deployed OpenAI service, and `<azure_openai_api_key>` with the Azure OpenAI API key. Also update `MONGODB_CONNECTION_STRING` and `MONGODB_Name` with the actual values.
 
    ```bash
    MONGODB_CONNECTION_STRING=<MONGODB_CONNECTION_STRING>
@@ -31,25 +31,23 @@ The `~/labs/02-LAB-02/4-Using-Langchain/completed` folder contains the completed
    AZURE_OPENAI_API_VERSION=2023-09-01-preview
    ```
 
-   Replace `<MONGODB_CONNECTION_STRING>` with the MongoDB connection string. Replace `<openai-service-name>` with the name of the deployed OpenAI service, and `<azure_openai_api_key>` with the Azure OpenAI API key. Leave all other values untouched.
-
    :::info
    The Azure OpenAI service name is not the full endpoint. Only the service name is required. For example, if the endpoint is `https://myservicename.openai.azure.com/`, then the service name is `myservicename`.
    :::
 
-3. In Visual Studio Code, open a terminal window and navigate to the lab folder `start`.
+4. In Visual Studio Code, open a terminal window and navigate to the lab folder `start`.
 
-4. Install the langchain packages by running the following command in the terminal window.
+5. Install the langchain packages by running the following command in the terminal window.
 
    ```bash
    npm install langchain@0.1.21 --save
    npm install @langchain/community@0.0.32 --save
    ```
 
-5. This will install the package and save it as a dependency in your project's `package.json` file.
+6. This will install the package and save it as a dependency in your project's `package.json` file.
    ![alt text](images/rag_chain_image.png)
 
-6. Install the required packages by running the following command in the terminal window:
+7. Install the required packages by running the following command in the terminal window:
 
    ```bash
    npm install
@@ -275,7 +273,7 @@ Why do we get a response like this? how can we improve it?
 
 ## LangChain agent
 
-In this section, we'll implement a LangChain agent that will be used to interact with the LLM. The agent will be used to control the flow and behavior of the call into the LLM. An agent differs from the previous RAG chain in that the RAG chain is a definition of a sequence of specific actions. Agents on the other hand are equipped with various tools and will determine which actions to take based on the context of the conversation. 
+In this section, we'll implement a LangChain agent that will be used to interact with the LLM. The agent will be used to control the flow and behavior of the call into the LLM. An agent differs from the previous RAG chain in that the RAG chain is a definition of a sequence of specific actions. Agents on the other hand are equipped with various tools and will determine which actions to take based on the context of the conversation.
 
 In this scenario, an agent will be equipped with two tools, one that uses a retriever chain from the vector store, and another that will perform a MongoDB lookup based on a SKU value. The reason the SKU lookup tool is introduced is because the vector store is built for semantic search. Some fields, such as the `_id` or `sku` fields do not have semantic meaning and therefore a direct lookup is more appropriate.
 

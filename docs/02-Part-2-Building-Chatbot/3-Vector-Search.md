@@ -26,7 +26,7 @@ The `~/labs/02-LAB-02/3-Vector-Search/completed` folder contains the completed s
 
 2. Open the `.env` file in the Visual Studio Code editor.
 
-3. Edit following settings in the `.env` file, replacing the values from the deployed Azure OpenAI service. Please also copy `MONGODB_CONNECTION_STRING` and `MONGODB_Name` from previous lab.
+3. Edit following settings in the `.env` file to replace `<openai-service-name>` with the name of the deployed OpenAI service, and `<azure_openai_api_key>` with the Azure OpenAI API key. Also update `MONGODB_CONNECTION_STRING` and `MONGODB_Name` with the actual values.
 
    ```bash
     MONGODB_CONNECTION_STRING=mongodb+srv://<user>:<password>@<db>.mongocluster.cosmos.azure.com/?tls=true&authMechanism=SCRAM-SHA-256&retrywrites=false&maxIdleTimeMS=120000
@@ -34,8 +34,6 @@ The `~/labs/02-LAB-02/3-Vector-Search/completed` folder contains the completed s
     AZURE_OPENAI_API_INSTANCE_NAME=<azure-open-ai-endpoint>
     AZURE_OPENAI_API_KEY=<azure-open-ai-access-key>
    ```
-
-   Replace `<openai-service-name>` with the name of the deployed OpenAI service, and `<azure_openai_api_key>` with the Azure OpenAI API key.
 
 4. In Visual Studio Code, open a terminal window and navigate to the lab folder `start`.
 
@@ -56,19 +54,15 @@ The `~/labs/02-LAB-02/3-Vector-Search/completed` folder contains the completed s
 2. This will install the package and save it as a dependency in your project's `package.json` file.
    ![alt text](images/rag_with_vector_search_image-4.png)
 
-    :::tip
-    Why do we use a beta version of the package rather than latest?
-    :::
-
 3. Open the `embedding.js` file in the Visual Studio Code editor.
 
-4. Beneath the line: `const { MongoClient } = require('mongodb');`, add the following code to import the Azure OpenAI client and Azure Key Credential classes:
+4. Add the following code to import the Azure OpenAI client and Azure Key Credential classes at the top of the file:
 
    ```javascript
    const { OpenAIClient, AzureKeyCredential } = require("@azure/openai");
    ```
 
-5. Beneath the code that sets up the MongoDB client, add the following code to create an instance of the Azure OpenAI client:
+5. Add the following code to create an instance of the Azure OpenAI client afer the imports:
 
    ```javascript
    // set up the Azure OpenAI client
@@ -84,9 +78,9 @@ The `~/labs/02-LAB-02/3-Vector-Search/completed` folder contains the completed s
 
 ## Create a function to generate text embeddings
 
-Vectorizing or embedding text is the process of converting text into a numerical representation. This guide has deployed an embedding model to Azure OpenAI, which can be used to generate embeddings for text. In this section, a function is introduced that uses the Azure OpenAI model to generate embeddings for text.
+Vectorizing or embedding text is the process of converting text into a numerical representation. The embedding model to generate text embeddings is already deployed in Azure OpenAI. In this step you will create a function that will generate embeddings for the provided text.
 
-1. In `embedding.js`, add the following code directly above the last line of the file (that calls the `main` function):
+1. In `embedding.js`, add the following code after the `main` function:
 
    ```javascript
    async function generateEmbeddings(text) {
@@ -100,7 +94,7 @@ Vectorizing or embedding text is the process of converting text into a numerical
    }
    ```
 
-2. In the `main` function, beneath the `const db = dbClient.db(process.env.MONGODB_NAME);` line of code, add the following code to test the new `generateEmbeddings` function:
+2. Now call the `generateEmbeddings` function with a sample text string to test the function. Add the following code in the `main` function after the `const db = dbClient.db(process.env.MONGODB_NAME);` line:
 
    ```javascript
    console.log(await generateEmbeddings("Hello, world!"));
@@ -116,25 +110,21 @@ Vectorizing or embedding text is the process of converting text into a numerical
 
    ![Console output displays a large numerical vector.](images/text_embedding_output.png "Vector representation of text")
 
-  :::info
-  Please try a different input string and see if the length of the vector array changes. 
-  
-  It seems that no matter how long the input string is, the return of creating embeddings with "text-embedding-ada-3" is always a vector of length 1536. Why is that?
-  :::
+:::info
+Please try a different input string and see if the length of the vector array changes.
 
-## Vectorize and store the embeddings in each document
+It seems that no matter how long the input string is, the return of creating embeddings with "text-embedding-ada-3" is always a vector of length 1536. Why is that?
+:::
+
+## Vectorize and store the embeddings for each document
 
 Now that the `generateEmbeddings` function is working, the next step is to use it to generate embeddings for each document and store the embeddings in a new field (contentVector) within the same document. The process of creating a vector embedding field on each document only needs to be done once. However, if a document changes, the vector embedding field will need to be updated with an updated vector.
 
 In this section, a function is added that will loop through each document in a collection, generate the vector embedding, and store the vector embedding in the document itself. The function takes advantage of `bulkWrite` operations to perform upserts on the existing documents in an efficient way. Lastly, the function will create a vector index (VectorSearchIndex) on the collection to enable vector search queries if it does not already exist.
 
-:::info
-Generating embedding vectors for each document will take some time, exercise patience during this section until the process is complete.
-:::
-
-:::danger
+<!-- :::danger
 We have a lot of people doing the lab at the same time. Get in quick before rate limit is hit!
-:::
+::: -->
 
 1. In `vectorize.js`, add the following code directly above the last line of the file (that calls the `main` function) - the code is documented inline to explain the steps taken:
 
@@ -232,27 +222,28 @@ We have a lot of people doing the lab at the same time. Get in quick before rate
 
    ![Console output displays the progress of vectorizing and storing the embeddings in each document.](images/vectorize_and_store_embeddings.png "Vectorizing and storing the embeddings in each document")
 
-    :::info
-    Missing `generateEmbeddings` error? we used this function earlier, please grab it and put it in.
-    :::
-
-5. Lets have a look how the record in the database looks like especially the vector field and index.
+5. Let us check the `products` collection in the Azure Cosmos DB Data Explorer. The `contentVector` field should be populated with the vector embeddings for each document.
 
    ![alt text](images/rag_with_vector_search_image-6.png)
 
-6. The vector index is created too.
+6. You also notice that the `VectorSearchIndex` index has been created on the `contentVector` field.
 
    ![alt text](images/rag_with_vector_search_image-5.png)
 
-7. Repeat steps 2-4 for the `customers` and `sales` collections by modifying the collection name in the `addCollectionContentVectorField` function call (each collection only needs to be vectorized once).
+7. Repeat the steps 2 to 4 to create the vector embeddings for the `customers` and `sales` collections. Modify the collection name in the
+   `addCollectionContentVectorField` function call. You have to update your vectors by running the script again if there are any changes in the documents.
 
-8. Save the file and run the code again to import data.
+   ```javascript
+   await addCollectionContentVectorField(db, "customers");
+   await addCollectionContentVectorField(db, "sales");
+   ```
 
 ## Use vector search
 
-Now that each document has its associated vector embedding and the vector indexes have been created on each collection, we can now use the vector search capabilities of Azure Cosmos DB. In this section, a function is added that will perform a vector search query that will return the most relevant documents based on the cosine similarity of the query vector and the content vectors of the documents in the collection.
+We have generated vector embeddings for each document and created vector indexes.
+In this section, we will add the steps to retrieve the most relevant documents from Cosmos DB based based on the cosine similarity of the query vector and the content vectors of the documents in the collection.
 
-1. In `search.js`, add the following code directly above the last line of the file (that calls the `main` function) - the code is documented inline to explain the steps taken. This code introduces two functions, one to perform a vector search and another to neatly print the search results:
+1. In `search.js`, add the following code directly above the last line of the file (that calls the `main` function) - the code is documented inline to explain the steps taken. This code introduces two functions, one to perform a vector search and another to format and print the search results:
 
    ```javascript
    async function vectorSearch(db, collectionName, query, numResults = 3) {
@@ -316,13 +307,9 @@ Now that each document has its associated vector embedding and the vector indexe
 
    ![Console output displays the search results.](images/vector_search_results.png "Vector search results")
 
-    :::info
-    Oh no. Missing `generateEmbeddings` again. Why the search query need to generate embeddings ?
-    :::
-
 ## Use vector search in a RAG (Retrieval Augmented Generation) pattern
 
-In this section, a function is added that will use the vector search results to augment a prompt to a large language model (LLM). This is considered a RAG (Retrieval Augmented Generation) pattern. The function will use the vector search results to retrieve the most relevant documents and then use the unvectorized text of the retrieved documents to in the prompt to get an accurate response from the LLM.
+In this section, a function is added that will use the vector search results to augment a prompt to a large language model (LLM). This is considered a RAG (Retrieval Augmented Generation) pattern. The function will use the search results in the prompt to the LLM.
 
 1. In `rag.js`, add the following code directly above the last line of the file (that calls the `main` function) - the code is documented inline to explain the steps taken:
 
@@ -405,10 +392,6 @@ In this section, a function is added that will use the vector search results to 
 
    ![Console output displays the response from the LLM.](images/rag_with_vector_search_response.png "Response from the LLM")
 
-    :::info
-    Yes, it is a test, both `vectorSearch` and `generateEmbeddings` are missing.
-    :::
-
 ## Well Done!
 
-In this lab, you have learned how to use an Azure OpenAI embedding model to vectorize documents already stored in Azure Cosmos DB API for MongoDB, store the embedding vectors, and create a vector index. You have also learned how to use the vector index to perform vector searches, and how to use the vector search results in a RAG (Retrieval Augmented Generation) pattern to generate a response from a large language model (LLM).
+In this lab, you have learned how to use an Azure OpenAI embedding model to vectorize documents stored in Azure Cosmos DB. You have also learned how to use the vector index to perform vector search, and how to use the search results to augment your prompt to a large language model in a RAG pattern.
