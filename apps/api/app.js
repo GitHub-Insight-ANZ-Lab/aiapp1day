@@ -5,8 +5,7 @@ const BikeStoreAgent = require('./bikestore/agent');
 
 const app = express();
 app.use(express.json());
-app.use(cors()); // enable all CORS requests
-
+// app.use(cors()); // enable all CORS requests
 
 // This map is to store agents and their chat history for each session.
 // This is for demonstration only and should be hydrated by storing these
@@ -72,19 +71,7 @@ swagger(app)
 
 // parse out hosting port from cmd arguments if passed in
 // otherwise default to port 5000
-var port = (() => {
-    const { argv } = require('node:process');
-    var port = 5000; // default
-    if (argv){
-        argv.forEach((v, i) => {
-            if (v && (v.toLowerCase().startsWith('port=')))
-            {
-                port = v.substring(5);
-            }
-        });
-    }
-    return port;
-})();
+const port = process.env.PORT || 5000;
 
 app.listen(port, () => {
     console.log(`Server started on port ${port}`);

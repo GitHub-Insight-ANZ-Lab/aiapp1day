@@ -60,7 +60,7 @@ Open a terminal window and log in to Azure using the following command:
    az deployment group create --resource-group {your-rg-name}-rg --template-file ./azuredeploy.bicep --parameters ./azuredeploy.parameters.json
    ```
 
-6. Go to `Resource Group`'s `Deployment` tab to check progress in the Azure Portal.
+6. Go to `Resource Group`'s `Deployments` tab to check progress in the Azure Portal.
 
 
 ## Option 2: Deploy App Service Only
@@ -101,7 +101,7 @@ Open a terminal and navigate to `labs/02-LAB-02/1-Azure-Deployment/lab-user` fol
    az deployment group create --resource-group {your-rg-name}-rg --template-file ./azuredeploy.bicep --parameters ./azuredeploy.parameters.json
    ```
 
-6. Go to `Resource Group`'s `Deployment` tab to check progress in the Azure Portal.
+6. Go to `Resource Group`'s `Deployments` tab to check progress in the Azure Portal.
 
 
 ## Deployed Azure Resources
