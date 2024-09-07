@@ -1,6 +1,6 @@
-# Build a Chatbot Frontend
+# Build Chatbot Frontend
 
-In the previous lab, we configured and hosted the backend API code locally. The backend API integrates Azure Cosmos DB and Azure OpenAI. Now, let's focus on the front-end web Chatbot application. This application is a single page application (SPA) written in React.
+In the previous lab, we configured and hosted the backend API code locally. The backend API integrates Azure Cosmos DB and Azure OpenAI. Now, let's focus on the front-end web application. This application is a single page application (SPA) written in React.
 
 ## Connect Chatbot FrontEnd with BackEnd API
 
@@ -10,7 +10,7 @@ In the previous lab, we configured and hosted the backend API code locally. The 
    BACKEND_URI=http://localhost:5000
    ```
 
-2. Start the chatbot app with below commands, open browser and visit url: http://localhost:4000/.
+2. Start the app with below commands, open browser and visit url: http://localhost:4000/.
 
    ```
    npm run dev

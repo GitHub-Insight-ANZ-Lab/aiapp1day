@@ -15,7 +15,7 @@ const Layout = () => {
                     <nav>
                         <ul className={styles.headerNavList}>
                             
-                            <li className={styles.headerNavLeftMargin}>
+                            {/* <li className={styles.headerNavLeftMargin}>
                                 <a href="https://github.com/cosmosdb" target={"_blank"} title="Github repository link">
                                     <img
                                         src={github}
@@ -26,7 +26,7 @@ const Layout = () => {
                                         className={styles.githubLogo}
                                     />
                                 </a>
-                            </li>
+                            </li> */}
                         </ul>
                     </nav>
                     <h4 className={styles.headerRightText}>AI App in 1 Day</h4>
