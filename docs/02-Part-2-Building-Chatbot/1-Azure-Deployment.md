@@ -13,8 +13,7 @@ This deployment will create all the resources required for the lab, including Az
 ### Prerequisites
 
 - Azure subscription (Owner or Contributor)
-- [PowerShell 7](https://learn.microsoft.com/en-us/powershell/scripting/install/installing-powershell-on-windows?view=powershell-7.4#installing-the-msi-package)
-- [Bicep](https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/install)
+- [Azure Cli](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli) (Azure Cli includes Bicep)
 - Access to Azure OpenAI service
 
 ### Configure Deployment
@@ -34,26 +33,35 @@ Open a terminal window and log in to Azure using the following command:
 1. Login
 
    ```Powershell
-   Connect-AzAccount
+   az login
    ```
 
 2. Set the desired subscription (Optional). If you have more than one subscription associated with your account, set the desired subscription using the following command:
 
    ```Powershell
-   Set-AzContext -SubscriptionId <subscription-id>
+   az account set -SubscriptionId <subscription-id>
    ```
 
 3. Create resource group, replace \{your-rg-name\} with the resource group name you like, could be aiapp1day-daniel-rg.
 
    ```Powershell
-   New-AzResourceGroup -Name {your-rg-name} -Location 'eastus'
+   az group create --name {your-rg-name} --location eastus
    ```
 
-4. Deploy the solution resources using the following command (this will take a few minutes to run):
+4. Do a What-If test deployment first
 
    ```Powershell
-   New-AzResourceGroupDeployment -ResourceGroupName {your-rg-name} -TemplateFile .\azuredeploy.bicep -TemplateParameterFile .\azuredeploy.parameters.json -c
+   az deployment group create --resource-group {your-rg-name}-rg --template-file ./azuredeploy.bicep --parameters ./azuredeploy.parameters.json --what-if
    ```
+
+5. Deploy the solution resources using the following command (this will take a few minutes to run):
+
+   ```Powershell
+   az deployment group create --resource-group {your-rg-name}-rg --template-file ./azuredeploy.bicep --parameters ./azuredeploy.parameters.json
+   ```
+
+6. Go to `Resource Group`'s `Deployment` tab to check progress in the Azure Portal.
+
 
 ## Option 2: Deploy App Service Only
 
@@ -66,26 +74,35 @@ Open a terminal and navigate to `labs/02-LAB-02/1-Azure-Deployment/lab-user` fol
 1. Login
 
    ```Powershell
-   Connect-AzAccount
+   az login
    ```
 
 2. Set the desired subscription (Optional). If you have more than one subscription associated with your account, set the desired subscription using the following command:
 
    ```Powershell
-   Set-AzContext -SubscriptionId <subscription-id>
+   az account set -SubscriptionId <subscription-id>
    ```
 
 3. Create resource group, replace \{your-rg-name\} with the resource group name you like, could be aiapp1day-daniel-rg.
 
    ```Powershell
-   New-AzResourceGroup -Name {your-rg-name} -Location 'eastus'
+   az group create --name {your-rg-name} --location eastus
    ```
 
-4. Deploy the solution resources using the following command (this will take a few minutes to run):
+4. Do a What-If test deployment first
 
    ```Powershell
-   New-AzResourceGroupDeployment -ResourceGroupName {your-rg-name} -TemplateFile .\azuredeploy.bicep -TemplateParameterFile .\azuredeploy.parameters.json -c
+   az deployment group create --resource-group {your-rg-name}-rg --template-file ./azuredeploy.bicep --parameters ./azuredeploy.parameters.json --what-if
    ```
+
+5. Deploy the solution resources using the following command (this will take a few minutes to run):
+
+   ```Powershell
+   az deployment group create --resource-group {your-rg-name}-rg --template-file ./azuredeploy.bicep --parameters ./azuredeploy.parameters.json
+   ```
+
+6. Go to `Resource Group`'s `Deployment` tab to check progress in the Azure Portal.
+
 
 ## Deployed Azure Resources
 

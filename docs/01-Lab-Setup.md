@@ -11,7 +11,16 @@ Install the following tools on your machine:
 
 - [Visual Studio Code](https://code.visualstudio.com/download)
 - [Node.js](https://nodejs.org/en/download/prebuilt-installer) (v20.17)
+- [Azure Cli](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli) (Suggested)
 - [Git](https://git-scm.com/downloads) (Optional)
+
+:::info
+If your device is restrictive, you can download `VS Code` / `Node.js` / `Azure Cli` zip package, then add `Node.js` & `Azure Cli\bin` folder path to env variable. Need to restart `VS Code`.
+
+    ```bash
+    set PATH=%PATH%;C:\your\path\here\;
+    ```
+:::
 
 ## Windows Sandbox
 

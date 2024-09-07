@@ -48,8 +48,6 @@ param mongoDbUserName string
 @secure()
 param mongoDbPassword string
 
-@description('Azure Container Registry SKU. Defaults to **Basic**')
-param acrSku string = 'Basic'
 
 /* *************************************************************** */
 /* Variables */

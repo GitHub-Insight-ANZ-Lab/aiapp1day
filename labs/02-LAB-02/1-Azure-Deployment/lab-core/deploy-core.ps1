@@ -1,10 +1,17 @@
 
 
-Connect-AzAccount
+# Log in to Azure
+az login
 
-Set-AzContext -SubscriptionId 9df3a442-42f1-40dd-8547-958c3e01597a
+# Set the subscription context
+az account set --subscription {xxx-xxx-xxx-xxx}
 
-New-AzResourceGroup -Name aiapp1day-core-rg -Location 'eastus'
+# Create a new resource group
+az group create --name {your_rg_name} --location eastus
 
-New-AzResourceGroupDeployment -ResourceGroupName arg-syd-aiapp1day-lab -TemplateFile .\azuredeploy.bicep -TemplateParameterFile .\azuredeploy.parameters.json -c
+#  What-If using the Bicep template and parameters file
+az deployment group create --resource-group {your_rg_name} --template-file ./azuredeploy.bicep --parameters ./azuredeploy.parameters.json --what-if
+
+# Deploy resources using the Bicep template and parameters file
+az deployment group create --resource-group {your_rg_name} --template-file ./azuredeploy.bicep --parameters ./azuredeploy.parameters.json
 
