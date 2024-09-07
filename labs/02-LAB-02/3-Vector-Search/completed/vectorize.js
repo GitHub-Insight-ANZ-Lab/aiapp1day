@@ -36,7 +36,7 @@ async function generateEmbeddings(text) {
 
 async function addCollectionContentVectorField(db, collectionName) {
     const collection = db.collection(collectionName); 
-    const docs = await collection.find({}).toArray();
+    const docs = await collection.find({}).limit(50).toArray();
     const bulkOperations = [];
     console.log(`Generating content vectors for ${docs.length} documents in ${collectionName} collection`);
     for (let i=0; i<docs.length; i++) {

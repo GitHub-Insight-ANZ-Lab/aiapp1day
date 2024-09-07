@@ -8,7 +8,7 @@ async function main() {
     try {
         await dbClient.connect();
         console.log('Connected to MongoDB');
-        const db = process.env.MONGODB_NAME;
+        const db = dbClient.db(process.env.MONGODB_NAME); 
 
         
     } catch (err) {

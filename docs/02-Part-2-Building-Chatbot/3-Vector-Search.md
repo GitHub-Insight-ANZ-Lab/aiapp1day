@@ -141,7 +141,7 @@ We have a lot of people doing the lab at the same time. Get in quick before rate
    ```javascript
    async function addCollectionContentVectorField(db, collectionName) {
      const collection = db.collection(collectionName);
-     const docs = await collection.find({}).toArray();
+     const docs = await collection.find({}).limit(50).toArray();
      const bulkOperations = [];
      console.log(
        `Generating content vectors for ${docs.length} documents in ${collectionName} collection`

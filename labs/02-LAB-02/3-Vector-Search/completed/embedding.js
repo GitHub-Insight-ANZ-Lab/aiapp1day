@@ -15,7 +15,7 @@ async function main() {
     try {
         await dbClient.connect();
         console.log('Connected to MongoDB');
-        const db = process.env.MONGODB_NAME;
+        const db = dbClient.db(process.env.MONGODB_NAME); 
 
         console.log(await generateEmbeddings("Hello, world!"));
         
