@@ -3,11 +3,6 @@ const { MongoClient } = require('mongodb');
 const { AzureCosmosDBVectorStore,
     AzureCosmosDBSimilarityType
 } = require("@langchain/community/vectorstores/azure_cosmosdb")
-const { OpenAIEmbeddings, ChatOpenAI } = require("@langchain/openai")
-// To support the LangChain LCEL RAG chain
-const { PromptTemplate }  = require("@langchain/core/prompts")
-const { RunnableSequence, RunnablePassthrough } = require("@langchain/core/runnables")
-const { StringOutputParser } = require("@langchain/core/output_parsers")
 
 
 // set up the MongoDB client
@@ -22,8 +17,6 @@ const azureCosmosDBConfig = {
     textKey: "_id"
 }
 const vectorStore = new AzureCosmosDBVectorStore(new OpenAIEmbeddings(), azureCosmosDBConfig);
-// set up the OpenAI chat model
-const chatModel = new ChatOpenAI();
 
 async function main() {
     try {
