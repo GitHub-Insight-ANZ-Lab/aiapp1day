@@ -2,7 +2,6 @@
 
 The backend api is a Node.js web application, using Express and Swagger, that will expose endpoints for the frontend application to interact with. The backend api could be deployed as web app on Azure App service.
 
-
 ## Run the backend api locally
 
 When developing a backend api, it is often useful to run the application locally to test and debug. This section outlines how to run the backend api locally while watching the file system for code changes. Any detected changes will automatically restart the backend api.
@@ -11,7 +10,7 @@ When developing a backend api, it is often useful to run the application locally
 
 2. Open a **Terminal** window in VS Code (<kbd>CTRL</kbd>+<kbd>`</kbd>).
 
-3. Edit following settings in the `.env` file, populating the MongoDB connection string and replacing the values from the deployed Azure OpenAI service:
+3. Edit following settings in the `.env` file to replace `<openai-service-name>` with the name of the deployed OpenAI service, and `<azure_openai_api_key>` with the Azure OpenAI API key. Also update `MONGODB_CONNECTION_STRING` and `MONGODB_Name` with the actual values.
 
    ```bash
    AZURE_OPENAI_API_INSTANCE_NAME=<openai-service-name>
@@ -21,23 +20,19 @@ When developing a backend api, it is often useful to run the application locally
    AZURE_OPENAI_API_VERSION=2023-09-01-preview
    ```
 
-   Replace `<MONGODB_CONNECTION_STRING>` with the MongoDB connection string. Replace `<openai-service-name>` with the name of the deployed OpenAI service, and `<azure_openai_api_key>` with the Azure OpenAI API key. Leave all other values untouched.
-
    :::info
    The Azure OpenAI service name is not the full endpoint. Only the service name is required. For example, if the endpoint is `https://myservicename.openai.azure.com/`, then the service name is `myservicename`.
    :::
-
 
 ## Add LangChain Agent to Backend API
 
 1. In the previous task, we created a LangChain agent that is capable of generating responses using RAG. Now, let's integrate this code into our Backend API service.
 
 2. Compare `labs\02-LAB-02\5-Chatbot-Backend\agent.js` and `labs\02-LAB-02\5-Chatbot-Backend\langchain-agent.js`. You will notice that additional code has been added to the function to manage chat history.
-   
-   ![alt text](images/chatbot-frontend-image-1.png)
-   
-3. Copy `agent.js` into `apps/api/bikestore/agent.js` to enable the backend to connect to both CosmosDb and OpenAI service.
 
+   ![alt text](images/chatbot-frontend-image-1.png)
+
+3. Copy `agent.js` into `apps/api/bikestore/agent.js` to enable the backend to connect to both CosmosDb and OpenAI service.
 
 ## Test out Backend API Swagger
 
@@ -72,6 +67,6 @@ When developing a backend api, it is often useful to run the application locally
 
 6. Select **Execute** to send the request. Observe that the response indicates the price as being `$1431.50`.
 
-    ![The Swagger UI displays the POST /ai endpoint reponse that has a status of ready.](images/local_backend_swagger_ui_ai_response.png "Local backend api Swagger UI AI response")
+   ![The Swagger UI displays the POST /ai endpoint reponse that has a status of ready.](images/local_backend_swagger_ui_ai_response.png "Local backend api Swagger UI AI response")
 
 7. Please keep the backend running.
