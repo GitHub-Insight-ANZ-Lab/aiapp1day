@@ -34,6 +34,12 @@ When developing a backend api, it is often useful to run the application locally
 
 3. Copy `agent.js` into `apps/api/bikestore/agent.js` to enable the backend to connect to both CosmosDb and OpenAI service.
 
+4. Take your time and have a look at these files:
+   - `apps\api\app.js` configures node.js app
+   - `apps\api\swagger.js` configures swagger
+   - `apps\api\bikestore\agent.js` contains Langchain agent logics
+
+
 ## Test out Backend API Swagger
 
 1. Run the following command to install any dependencies:
