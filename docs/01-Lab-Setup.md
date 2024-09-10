@@ -127,7 +127,13 @@ Be aware, above API keys and connection details will be reset after the hackatho
 Lets do a connection test to access CosMos Db and OpenAI service.
 
 1. Switch to VS Code `Search` tab, replace `<MONGODB_Name>` placeholder with your own database name. Search for `<MONGODB_Name>` and replace with `aiapp1day_xxxxx_xx` (for example: aiapp1day_daniel_66). Then click replace all. The placeholder string will be replaced in the whole repo so that you have a dedicated database on the shared Cosmos DB instance.
-        
+
+    :::info
+    Make sure the `<` and `>` included in search & replace.
+    
+    if you are deploying your own Azure resources, please update above shared keys and connection string with your own.
+    :::
+
     ![alt text](images/setup.png)
     
 2. Now again, replace `<MONGODB_CONNECTION_STRING>` with `mongodb+srv://aiapp1dayadmin:Aiapp1daypassword123@arg-syd-aiapp1day-mongo.mongocluster.cosmos.azure.com/?tls=true&authMechanism=SCRAM-SHA-256&retrywrites=false&maxIdleTimeMS=120000&tlsInsecure=true`
@@ -135,12 +141,6 @@ Lets do a connection test to access CosMos Db and OpenAI service.
 3. One more time, replace `<AZURE_OPENAI_API_INSTANCE_NAME>` with `arg-syd-aiapp1day-openai`
 
 4. Last time, replace `<AZURE_OPENAI_API_KEY>` with `70563d5a57cc45999cdd80b9bf50ed4d`
-
-    :::info
-    Make sure the `<` and `>` included in search & replace.
-    
-    if you are deploying your own Azure resources, please update above shared keys and connection string with your own.
-    :::
 
 5. Navigate to the setup test folder `~/labs/01-Setup/` within the repository.
 
