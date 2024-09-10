@@ -17,3 +17,9 @@ https://github.com/AzureCosmosDB/Azure-OpenAI-Developer-Guide-Front-End
 ### Azure OpenAI Proxy
 
 https://github.com/microsoft/Workshop-Interact-with-OpenAI-models/
+
+### Azure AI Search
+
+https://learn.microsoft.com/en-us/azure/search/search-get-started-vector?tabs=azure-cli#single-vector-search
+
+https://github.com/Azure-Samples/azure-search-rest-samples/tree/main/Quickstart-vectors
