@@ -39,7 +39,7 @@ Open a terminal window and log in to Azure using the following command:
 2. Set the desired subscription (Optional). If you have more than one subscription associated with your account, set the desired subscription using the following command:
 
    ```Powershell
-   az account set -SubscriptionId <subscription-id>
+   az account set --subscription <subscription-id>
    ```
 
 3. Create resource group, replace \{your-rg-name\} with the resource group name you like, could be aiapp1day-daniel-rg.
@@ -80,7 +80,7 @@ Open a terminal and navigate to `labs/02-LAB-02/1-Azure-Deployment/lab-user` fol
 2. Set the desired subscription (Optional). If you have more than one subscription associated with your account, set the desired subscription using the following command:
 
    ```Powershell
-   az account set -SubscriptionId <subscription-id>
+   az account set --subscription <subscription-id>
    ```
 
 3. Create resource group, replace \{your-rg-name\} with the resource group name you like, could be aiapp1day-daniel-rg.
