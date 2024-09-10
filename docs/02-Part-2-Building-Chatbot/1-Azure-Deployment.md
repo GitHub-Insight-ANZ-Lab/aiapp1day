@@ -25,7 +25,7 @@ This deployment will create all the resources required for the lab, including Az
 
 Open a terminal and navigate to `labs/02-LAB-02/1-Azure-Deployment/lab-core` folder within the repository.
 
-Open the `azuredeploy.parameters.json` file, edit the `name` (it will be the prefix of all resources).
+Open the `azuredeploy.parameters.json` file, edit the `name` (it will be the prefix of all resources). e.g.: arg-syd-daniel
 
 Then edit the `mongoDbPassword` to a password you wish to use for the MongoDB Admin User. When the Azure Bicep template is deployed, this parameters file will be used to configure the Mongo DB Password and other parameters when provisioning the Azure resources.
 
