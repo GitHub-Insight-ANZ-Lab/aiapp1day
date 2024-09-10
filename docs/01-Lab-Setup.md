@@ -109,7 +109,7 @@ If you have Azure Subscription, you can provision these resources by yourself us
 
 The Cosmos DB is used as vector store for the chatbot. During the labs, you will populate the database with sample data and create vector column. It is important to note that you are required to **create a new database with a unique name** in the shared Cosmos DB instance.
 
-The database name could be in the format `<MONGODB_Name>` so that you have your own copy of data.
+The database name could be in the format `aiapp1day_{your_name}_{your_lucky_number}` so that you have your own copy of data.
 
 | Variable Name             | Value                                                                                                                                                                                                 |
 | ------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
