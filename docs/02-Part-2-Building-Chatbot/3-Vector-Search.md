@@ -13,11 +13,10 @@ You will also learn how to use the vector index to retrieve the relevant documen
 
 ## Setup the lab environment
 
-1. Navigate to the lab folder `~/labs/02-LAB-02/3-Vector-Search/start` within the repository.
+1. Navigate to the lab folder `~/labs/02-LAB-02/3-Vector-Search/start` in the `Terminal` window.
 
     ```bash
     cd  labs/02-LAB-02/3-Vector-Search/start
-    code .
     ```
 
     :::info
@@ -85,7 +84,7 @@ Vectorizing or embedding text is the process of converting text into a numerical
    }
    ```
 
-2. Now call the `generateEmbeddings` function with a sample text string to test the function. Add the following code in the `main` function after the `const db = dbClient.db(process.env.MONGODB_NAME);` line:
+2. Now call the `generateEmbeddings` function with a sample text string to test the function. Add the following code in the `main` function after the `const db = dbClient.db(dbname);` line:
 
    ```javascript
    console.log(await generateEmbeddings("Hello, world!"));
@@ -197,7 +196,7 @@ We have a lot of people doing the lab at the same time. Get in quick before rate
    }
    ```
 
-2. In the `main` function, beneath the `const db = dbClient.db(process.env.MONGODB_NAME);` line of code, add the following code to call the new `addCollectionContentVectorField` function on the `products` collection:
+2. In the `main` function, beneath the `const db = dbClient.db(dbname);` line of code, add the following code to call the new `addCollectionContentVectorField` function on the `products` collection:
 
    ```javascript
    await addCollectionContentVectorField(db, "products");
@@ -276,7 +275,7 @@ In this section, we will add the steps to retrieve the most relevant documents f
    }
    ```
 
-2. In the `main` function, beneath the `const db = dbClient.db(process.env.MONGODB_NAME);` line of code, add the following code to test the new `vectorSearch` function:
+2. In the `main` function, beneath the `const db = dbClient.db(dbname);` line of code, add the following code to test the new `vectorSearch` function:
 
    ```javascript
    //vector search for the top 3 most relevant products
@@ -359,7 +358,7 @@ In this section, a function is added that will use the vector search results to 
    }
    ```
 
-2. In the `main` function, beneath the `const db = dbClient.db(process.env.MONGODB_NAME);` line of code, add the following code to test the new `ragWithVectorsearch` function:
+2. In the `main` function, beneath the `const db = dbClient.db(dbname);` line of code, add the following code to test the new `ragWithVectorsearch` function:
 
    ```javascript
    //RAG with vector search for the top 3 most relevant products

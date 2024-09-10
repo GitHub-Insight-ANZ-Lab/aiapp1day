@@ -14,11 +14,10 @@ The product catalog data is shared in a CSV file. You will be writing a custom s
 
 ## Setup the lab environment
 
-1. Navigate to the lab folder `~/labs/02-LAB-02/2-Load-Data/start` within the repository.
+1. Open repo in `VS Code` and then open `Terminial` -> `New Terminal`. Navigate to the lab folder `~/labs/02-LAB-02/2-Load-Data/start` within the repository.
 
    ```bash
-   cd  labs/02-LAB-02/2-Load-Data/start
-   code .
+   cd labs/02-LAB-02/2-Load-Data/start
    ```
 
 :::info
@@ -117,14 +116,14 @@ The `product` data set is located in the `data\product.csv` file. It has the fol
 7. Execute the code again and compare the two JSON files once more. It appears that the description field is missing quotation marks in some parts still.
 
    :::note
-   Can you suggest a modification to the code that would preserve the quotation marks in the description field?
+   (Optional) Can you suggest a modification to the code that would preserve the quotation marks in the description field?
    :::
 
 ## Bulk load product data
 
 There are multiple options available for performing bulk operations in Cosmos DB. In this section, we will focus on using the `bulkWrite` method. The `bulkWrite` method allows you to execute multiple write operations in a single batch, including insert, update, and delete operations.
 
-1. Open the `import.js` file, and add the following code after the code block `const db = client.db(process.env.MONGODB_NAME);`.
+1. Open the `import.js` file, and add the following code after the code block `const db = client.db(dbname);`.
 
    This will read the `product.json` file and load the data into the `productRawData` variable. The database collection for `product` is also initialized. Note that MongoDB will create the collections if they do not already exist.
 

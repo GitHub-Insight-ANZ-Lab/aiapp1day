@@ -4,6 +4,8 @@ const { OpenAIClient, AzureKeyCredential } = require("@azure/openai");
 
 // set up the MongoDB client
 const dbClient = new MongoClient(process.env.MONGODB_CONNECTION_STRING);
+var dbname = process.env.MONGODB_Name;
+
 // set up the Azure OpenAI client
 const embeddingsDeploymentName = "embeddings";
 const aoaiClient = new OpenAIClient(
@@ -17,7 +19,10 @@ async function main() {
   try {
     await dbClient.connect();
     console.log("Connected to MongoDB");
-    const db = dbClient.db(process.env.MONGODB_NAME);
+    const db = dbClient.db(dbname);
+
+
+    
   } catch (err) {
     console.error(err);
   } finally {

@@ -4,11 +4,15 @@ const fs = require('fs');
 const path = require('path');
 
 async function main() {    
-    const client = new MongoClient(process.env.MONGODB_CONNECTION_STRING);
+    var dbname = process.env.MONGODB_Name;
+    var dbconn = process.env.MONGODB_CONNECTION_STRING;
+    
+    const client = new MongoClient(dbconn);
+
     try {
         await client.connect();
         console.log('Connected to MongoDB');
-        const db = client.db(process.env.MONGODB_NAME);
+        const db = client.db(dbname);
 
         
     } catch (err) {
