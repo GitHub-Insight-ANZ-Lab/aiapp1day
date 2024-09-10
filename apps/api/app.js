@@ -5,7 +5,7 @@ const BikeStoreAgent = require('./bikestore/agent');
 
 const app = express();
 app.use(express.json());
-// app.use(cors()); // enable all CORS requests
+// app.use(cors()); // hint:enable all CORS requests
 
 // This map is to store agents and their chat history for each session.
 // This is for demonstration only and should be hydrated by storing these
