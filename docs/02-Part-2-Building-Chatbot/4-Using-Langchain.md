@@ -12,7 +12,6 @@ Throughout this lab, notice how much more concise the code is compared to the pr
 
     ```bash
     cd  labs/02-LAB-02/4-Using-Langchain/start
-    code .
     ```
 
     :::info
@@ -69,7 +68,7 @@ The return value of a vector search in LangChain is a list of `Document` objects
    // set up the Azure Cosmos DB vector store using the initialized MongoDB client
    const azureCosmosDBConfig = {
      client: dbClient,
-     databaseName: process.env.MONGODB_NAME,
+     databaseName: dbname,
      collectionName: "products",
      indexName: "VectorSearchIndex",
      embeddingKey: "contentVector",
@@ -237,12 +236,12 @@ We'll also define a reusable RAG chain to control the flow and behavior of the c
    console.log(await ragLCELChain("What yellow products do you have?"));
    ```
 
-8. Save the `langchian-rag.js` file.
+8. Save the `langchain-rag.js` file.
 
 9. Run the application by executing the following command in the terminal window:
 
    ```bash
-   node langchian-rag.js
+   node langchain-rag.js
    ```
 
    ![The console output shows the response from the LLM based on the augmented prompt and returns the LLM response.](images/rag_chain_output.png "RAG chain output")
