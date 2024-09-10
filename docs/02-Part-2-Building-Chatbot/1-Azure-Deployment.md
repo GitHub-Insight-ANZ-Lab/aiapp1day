@@ -1,12 +1,17 @@
 # Azure Deployment Guide
 
-There are 3 options for the Azure Deployment:
+This Azure Deployment using Bicep step is optional. You can use shared keys and connection string. If you are interested to create all the resources for the labs yourself, please continue the steps on this page. Otherwise, you can go to next lab.
 
-- If you don't have Azure Subscription, you can use our shared lab resources.
-- If you have Azure Subscription (Owner or Contributor), you can deploy `all resources` and use them.
-- If you dont have access to Azure OpenAI service, you can deploy `App Service Only` and use the shared OpenAI service.
+- Option 1: If you don't have Azure Subscription, you can use our shared lab resources. Please skip this page.
+- Option 2: If you have Azure Subscription (Owner or Contributor & approved Azure OpenAI), you can deploy `all resources` and use them.
+- Option 3: Otherwise, you can deploy `App Service Only` and use the shared OpenAI service.
 
-## Option 1: Deploy All Resources
+
+## Option 1: Use shared lab resources
+
+Please continue to next lab. We will demostrate the Bicep deployment.
+
+## Option 2: Deploy All Resources
 
 This deployment will create all the resources required for the lab, including Azure OpenAI service, Azure Cosmos DB, and Azure App Services for the Chatbot Frontend and Backend.
 
@@ -63,7 +68,7 @@ Open a terminal window and log in to Azure using the following command:
 6. Go to `Resource Group`'s `Deployments` tab to check progress in the Azure Portal.
 
 
-## Option 2: Deploy App Service Only
+## Option 3: Deploy App Service Only
 
 This deployment will only create 2 web apps for the Chatbot Frontend and Backend.
 
