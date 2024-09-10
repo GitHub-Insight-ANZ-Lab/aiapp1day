@@ -1,0 +1,17 @@
+{
+    "name": "mongodb-nodejs-devguide-load-data",
+    "version": "1.0.0",
+    "description": "test",
+    "main": "index.js",
+    "scripts": {
+        "start": "node index.js"
+    },
+    "dependencies": {
+        "data": "^0.6.1",
+        "dotenv": "16.4.4",
+        "mongodb": "6.3.0",
+        "@azure/openai": "^1.0.0-beta.11"
+    },
+    "author": "Microsoft",
+    "license": "MIT"
+}

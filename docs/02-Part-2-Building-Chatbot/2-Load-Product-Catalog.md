@@ -110,7 +110,7 @@ The `product` data set is located in the `data\product.csv` file. It has the fol
 4. Open the generated `product.json` file and see if any format issues stands out?
    ![alt text](images/rag_load_data_image-1.png)
 
-5. Use the `Differ` feature in Visual Studio Code to compare `product.json` and `product-original.json` (the ideal format) for any discrepancies. The `price` field is a string rather than float.
+5. It seems `price` field is a string rather than float. The datatype is important, Lets correct it.
 
 6. To convert the price tag to a float in the JSON file, modify the code as follows:
 

@@ -3,16 +3,30 @@ title: "Lab Setup Instructions"
 slug: /lab-setup
 ---
 
-# Pre-requisites
+## Lab Environment
 
-## Tools
+### Option 1: GitHub Codespaces (Recommended)
+
+Install the following tools on your machine:
+
+- [Visual Studio Code](https://code.visualstudio.com/download)
+- [GitHub Account with Codespaces](https://github.com/)
+
+Our lab repo already have below tools configured. When you run the repo with GitHub Codespaces, they will be automatically installed.
+
+- [Node.js](https://nodejs.org/en/download/prebuilt-installer) (v20.17)
+- [Azure Cli (include Bicep)](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli)
+- [Git](https://git-scm.com/downloads)
+
+
+### Option 2: Local Computer
 
 Install the following tools on your machine:
 
 - [Visual Studio Code](https://code.visualstudio.com/download)
 - [Node.js](https://nodejs.org/en/download/prebuilt-installer) (v20.17)
-- [Azure Cli](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli) (Suggested)
-- [Git](https://git-scm.com/downloads) (Optional)
+- [Azure Cli (include Bicep)](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli)
+- [Git](https://git-scm.com/downloads)
 
 :::info
 If your device is restrictive, you can download `VS Code` / `Node.js` / `Azure Cli` zip package, then add `Node.js` & `Azure Cli\bin` folder path to env variable. Need to restart `VS Code`.
@@ -22,7 +36,7 @@ If your device is restrictive, you can download `VS Code` / `Node.js` / `Azure C
     ```
 :::
 
-## Windows Sandbox
+#### Windows Sandbox
 
 If you are using Windows, you can easily start up a Windows Sandbox to keep your local machine clean. Read more https://learn.microsoft.com/en-us/windows/security/application-security/application-isolation/windows-sandbox/windows-sandbox-overview
 
@@ -32,9 +46,15 @@ Enable-WindowsOptionalFeature -FeatureName "Containers-DisposableClientVM" -All 
 
 Once restarted, search `Windows Sandbox` in `Start` button.
 
-## Lab Resources
+## Lab Repo
 
-Clone [aiapp1day](https://github.com/GitHub-Insight-ANZ-Lab/aiapp1day) repository from GitHub. This repository contains the source code and guides for completing the labs.
+Visit our [aiapp1day](https://github.com/GitHub-Insight-ANZ-Lab/aiapp1day) repository in GitHub. This repository contains the source code and guides for completing the labs.
+
+### Option 1: GitHub Codespaces
+
+todo: add more
+
+### Option 2: Local Computer
 
 ```bash
 git clone https://github.com/GitHub-Insight-ANZ-Lab/aiapp1day.git
@@ -43,6 +63,8 @@ git clone https://github.com/GitHub-Insight-ANZ-Lab/aiapp1day.git
 :::info
 If you don't have git installed, you can download the repo as zip file from above page.
 :::
+
+### Structure
 
 The resources for the labs can be found in the following directories:
 
@@ -53,12 +75,14 @@ The resources for the labs can be found in the following directories:
 <!-- If you don't have git installed, you can download code as zip from https://github.com/GitHub-Insight-ANZ-Lab/aiapp1day
 ![alt text](images/gitrepo-zip.png) -->
 
-## Deployment
+## Lab Azure Resources
 
-The Azure Resources required for the labs have already been provisioned for you. The details of the Azure resources are provided in the table below. You will be required to use this information during the labs.
+The Azure Resources required for the labs have already been provisioned for you as shared resources. 
+
+The details of the Azure resources are provided in the table below. You will need this information during the labs.
 
 :::info
-If you have Azure Subscription already, we suggest you to deploy these resources to your own Azure subscription using the instructions and `bicep` provided in the `Azure Deployment Guide` page.
+If you have Azure Subscription, you can provision these resources by yourself using the instructions and `bicep` provided in the `Azure Deployment Guide` page. But, it is optional.
 :::
 
 ### Azure AI Proxy Playground
@@ -79,22 +103,42 @@ If you have Azure Subscription already, we suggest you to deploy these resources
 | AZURE_OPENAI_API_EMBEDDINGS_DEPLOYMENT_NAME | embeddings                                        |
 | AZURE_OPENAI_API_VERSION                    | 2023-09-01-preview                                |
 
+
+### Connection Test
+
+Lets do a connection test to access CosMos Db and OpenAI service.
+
+1. Navigate to the setup test folder `~/labs/01-Setup/` within the repository.
+
+    ```bash
+    npm install    
+    ```
+
+2. Test Connection to CosMos Db and OpenAI service. Run the following command in the terminal window to execute the script:
+
+   ```bash
+   node test.js
+   ```
+
+
+
 ### Azure Cosmos DB for MongoDB
 
-The Cosmos DB is used as vector store for the chatbot. During the labs, you will populate the database with sample data and create vector column. It is important to note that you are required to create a new database with a unique name on the shared Cosmos DB instance provided below.
+The Cosmos DB is used as vector store for the chatbot. During the labs, you will populate the database with sample data and create vector column. It is important to note that you are required to **create a new database with a unique name** in the shared Cosmos DB instance.
 
-The database name should be in the format `aiapp1day_{your_name}_{your_lucky_number}`.
+The database name could be in the format `aiapp1day_{your_name}_{your_lucky_number}` so that you have your own copy of data.
 
 | Variable Name             | Value                                                                                                                                                                                                 |
 | ------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | MONGODB_CONNECTION_STRING | mongodb+srv://aiapp1dayadmin:Aiapp1daypassword123@arg-syd-aiapp1day-mongo.mongocluster.cosmos.azure.com/?tls=true&authMechanism=SCRAM-SHA-256&retrywrites=false&maxIdleTimeMS=120000&tlsInsecure=true |
-| MONGODB_Name              | aiapp1day*\{your_name\}*\{your_lucky_number\}                                                                                                                                                         |
+| MONGODB_Name              | aiapp1day_\{your_name\}_\{your_lucky_number\}|
+| MONGODB_Name (for example)| aiapp1day_daniel_55|
 
 :::info
 Be aware, above API keys and connection details will be reset after the hackathon.
 :::
 
-## Sign up Azure Subscription
+## Azure Subscription
 
 ### Free Account with $200 credit
 
