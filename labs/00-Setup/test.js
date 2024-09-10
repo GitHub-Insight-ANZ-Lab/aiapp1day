@@ -8,17 +8,22 @@ const oaiClient = new OpenAIClient(
 );
 
 async function main() {
-    const client = new MongoClient(process.env.MONGODB_CONNECTION_STRING);
+    var dbname = process.env.MONGODB_Name;
+    var dbconn = process.env.MONGODB_CONNECTION_STRING;
+    console.log(dbname);
+    console.log(dbconn);
+
+    const client = new MongoClient(dbconn);
     try {
         await client.connect();
         console.log('Connected to Cosmos DB for MongoDB');
-        const db = client.db(process.env.MONGODB_NAME);
+        const db = client.db(dbname);
         await db.createCollection('test');
         console.log('Collection created: test');
 
-        await client.db('test').dropDatabase();
-        
         // clean up db
+        // await client.db('test').dropDatabase();
+        
         // const adminDb = client.db().admin();
         // const databases = await adminDb.listDatabases();
         // console.log('Databases:');
@@ -60,3 +65,4 @@ function cleanData(obj) {
 }
 
 main().catch(console.error);
+
