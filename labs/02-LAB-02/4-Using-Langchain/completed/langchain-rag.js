@@ -1,5 +1,14 @@
 require('dotenv').config();
 const { MongoClient } = require('mongodb');
+const { OpenAIEmbeddings, ChatOpenAI } = require("@langchain/openai");
+// To support the LangChain LCEL RAG chain
+const { PromptTemplate } = require("@langchain/core/prompts");
+const {
+    RunnableSequence,
+    RunnablePassthrough,
+} = require("@langchain/core/runnables");
+const { StringOutputParser } = require("@langchain/core/output_parsers");
+
 const { AzureCosmosDBVectorStore,
     AzureCosmosDBSimilarityType
 } = require("@langchain/community/vectorstores/azure_cosmosdb")
@@ -7,10 +16,12 @@ const { AzureCosmosDBVectorStore,
 
 // set up the MongoDB client
 const dbClient = new MongoClient(process.env.MONGODB_CONNECTION_STRING);
+var dbname = process.env.MONGODB_Name;
+
 // set up the Azure Cosmos DB vector store using the initialized MongoDB client
 const azureCosmosDBConfig = {
     client: dbClient,
-    databaseName: process.env.MONGODB_NAME,
+    databaseName: dbname,
     collectionName: "products",
     indexName: "VectorSearchIndex",
     embeddingKey: "contentVector",
@@ -18,14 +29,13 @@ const azureCosmosDBConfig = {
 }
 const vectorStore = new AzureCosmosDBVectorStore(new OpenAIEmbeddings(), azureCosmosDBConfig);
 // set up the OpenAI chat model
-
+const chatModel = new ChatOpenAI();
 async function main() {
     try {
         await dbClient.connect();
         console.log("Connected to MongoDB");
 
-        //console.log(await ragLCELChain("What yellow products do you have?"));
-        console.log(await ragLCELChain("What is the name of the product that has the SKU TI-R982?"));
+        console.log(await ragLCELChain("What yellow products do you have?"));
 
     } catch (err) {
         console.error(err);
@@ -35,13 +45,12 @@ async function main() {
     }
 }
 
-
 function formatDocuments(docs) {
-    // Prepares the product list for the system prompt.  
+    // Prepares the product list for the system prompt.
     let strDocs = "";
     for (let index = 0; index < docs.length; index++) {
         let doc = docs[index];
-        let docFormatted = { "_id": doc.pageContent };
+        let docFormatted = { _id: doc.pageContent };
         Object.assign(docFormatted, doc.metadata);
 
         // Build the product document without the contentVector and tags
@@ -53,7 +62,7 @@ function formatDocuments(docs) {
         }
 
         // Add the formatted product document to the list
-        strDocs += JSON.stringify(docFormatted, null, '\t');
+        strDocs += JSON.stringify(docFormatted, null, "\t");
 
         // Add a comma and newline after each item except the last
         if (index < docs.length - 1) {
@@ -64,31 +73,30 @@ function formatDocuments(docs) {
     strDocs += "\n\n";
     return strDocs;
 }
-
-async function ragLCELChain(question) { 
+async function ragLCELChain(question) {
     // A system prompt describes the responsibilities, instructions, and persona of the AI.
     // Note the addition of the templated variable/placeholder for the list of products and the incoming question.
     const systemPrompt = `
-        You are a helpful, fun and friendly sales assistant for Contoso Bike Store, a bicycle and bicycle accessories store. 
-        Your name is Cosmo.
-        You are designed to answer questions about the products that Contoso Bike Store sells.
-
-        Only answer questions related to the information provided in the list of products below that are represented
-        in JSON format.
-
-        If you are asked a question that is not in the list, respond with "I don't know."
-
-        Only answer questions related to Contoso Bike Store products, customers, and sales orders.
-
-        If a question is not related to Contoso Bike Store products, customers, or sales orders,
-        respond with "I only answer questions about Contoso Bike Store"
-
-        List of products:
-        {products}
-
-        Question:
-        {question}
-    `;
+          You are a helpful, fun and friendly sales assistant for Contoso Bike Store, a bicycle and bicycle accessories store. 
+          Your name is Cosmo.
+          You are designed to answer questions about the products that Contoso Bike Store sells.
+  
+          Only answer questions related to the information provided in the list of products below that are represented
+          in JSON format.
+  
+          If you are asked a question that is not in the list, respond with "I don't know."
+  
+          Only answer questions related to Contoso Bike Store products, customers, and sales orders.
+  
+          If a question is not related to Contoso Bike Store products, customers, or sales orders,
+          respond with "I only answer questions about Contoso Bike Store"
+  
+          List of products:
+          {products}
+  
+          Question:
+          {question}
+      `;
 
     // Use a retriever on the Cosmos DB vector store
     const retriever = vectorStore.asRetriever();
@@ -100,18 +108,16 @@ async function ragLCELChain(question) {
     // with the formatted list of products based on the documents retrieved from the vector store.
     // The RAG chain will then invoke the LLM with the populated prompt and the question.
     // The response from the LLM is then parsed as a string and returned.
-    const ragChain  = RunnableSequence.from([
+    const ragChain = RunnableSequence.from([
         {
             products: retriever.pipe(formatDocuments),
-            question: new RunnablePassthrough()
+            question: new RunnablePassthrough(),
         },
         prompt,
         chatModel,
-        new StringOutputParser()
+        new StringOutputParser(),
     ]);
 
     return await ragChain.invoke(question);
 }
-
-
 main().catch(console.error);

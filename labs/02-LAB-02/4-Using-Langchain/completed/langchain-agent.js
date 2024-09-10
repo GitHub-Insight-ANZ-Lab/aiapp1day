@@ -5,17 +5,26 @@ const { AzureCosmosDBVectorStore,
 } = require("@langchain/community/vectorstores/azure_cosmosdb")
 const { OpenAIEmbeddings, ChatOpenAI } = require("@langchain/openai")
 // To support the LangChain LCEL RAG chain
-const { PromptTemplate }  = require("@langchain/core/prompts")
+const { PromptTemplate } = require("@langchain/core/prompts")
 const { RunnableSequence, RunnablePassthrough } = require("@langchain/core/runnables")
 const { StringOutputParser } = require("@langchain/core/output_parsers")
+
 // For LangChain agent
 const { DynamicTool } = require("@langchain/core/tools");
 const { AgentExecutor } = require("langchain/agents");
-const { MessagesPlaceholder, ChatPromptTemplate } = require("@langchain/core/prompts");
-const { convertToOpenAIFunction } = require("@langchain/core/utils/function_calling");
-const { OpenAIFunctionsAgentOutputParser } = require("langchain/agents/openai/output_parser");
-const { formatToOpenAIFunctionMessages } = require("langchain/agents/format_scratchpad");
-
+const {
+    MessagesPlaceholder,
+    ChatPromptTemplate,
+} = require("@langchain/core/prompts");
+const {
+    convertToOpenAIFunction,
+} = require("@langchain/core/utils/function_calling");
+const {
+    OpenAIFunctionsAgentOutputParser,
+} = require("langchain/agents/openai/output_parser");
+const {
+    formatToOpenAIFunctionMessages,
+} = require("langchain/agents/format_scratchpad");
 
 // set up the MongoDB client
 const dbClient = new MongoClient(process.env.MONGODB_CONNECTION_STRING);
@@ -32,16 +41,16 @@ const vectorStore = new AzureCosmosDBVectorStore(new OpenAIEmbeddings(), azureCo
 // set up the OpenAI chat model
 const chatModel = new ChatOpenAI();
 
-
 async function main() {
     try {
         await dbClient.connect();
         console.log("Connected to MongoDB");
 
         const agentExecutor = await buildAgentExecutor();
-        // console.log(await executeAgent(agentExecutor, "What yellow products do you have?"));
-        console.log(await executeAgent(agentExecutor, "What is the name of the product that has the SKU TI-R982?"));
-        
+        console.log(
+            await executeAgent(agentExecutor, "What yellow products do you have?")
+        );
+
     } catch (err) {
         console.error(err);
     } finally {
@@ -80,7 +89,6 @@ function formatDocuments(docs) {
     return strDocs;
 }
 
-
 async function buildAgentExecutor() {
     // A system prompt describes the responsibilities, instructions, and persona of the AI.
     // Note the variable placeholders for the list of products and the incoming question are not included.
@@ -103,7 +111,7 @@ async function buildAgentExecutor() {
     // Create vector store retriever chain to retrieve documents and formats them as a string for the prompt.
     const retrieverChain = vectorStore.asRetriever().pipe(formatDocuments);
 
-    // Define tools for the agent can use, the description is important this is what the AI will 
+    // Define tools for the agent can use, the description is important this is what the AI will
     // use to decide which tool to use.
 
     // A tool that retrieves product information from Contoso Bike Store based on the user's question.
@@ -123,12 +131,12 @@ async function buildAgentExecutor() {
         func: async (input) => {
             const db = dbClient.db(dbname);
             const products = db.collection("products");
-            const doc = await products.findOne({ "sku": input });            
-            if (doc) {                
+            const doc = await products.findOne({ sku: input });
+            if (doc) {
                 //remove the contentVector property to save on tokens
                 delete doc.contentVector;
             }
-            return doc ? JSON.stringify(doc, null, '\t') : null;
+            return doc ? JSON.stringify(doc, null, "\t") : null;
         },
     });
 
@@ -145,25 +153,25 @@ async function buildAgentExecutor() {
     const prompt = ChatPromptTemplate.fromMessages([
         ["system", systemMessage],
         ["human", "{input}"],
-        new MessagesPlaceholder(variable_name="agent_scratchpad")
+        new MessagesPlaceholder((variable_name = "agent_scratchpad")),
     ]);
 
     // Define the agent and executor
     // An agent is a type of chain that reasons over the input prompt and has the ability
     // to decide which function(s) (tools) to use and parses the output of the functions.
-    const runnableAgent = RunnableSequence.from([  
-        {  
-            input: (i) => i.input,  
-            agent_scratchpad: (i) => formatToOpenAIFunctionMessages(i.steps),  
-        },  
-        prompt,  
-        modelWithFunctions,  
+    const runnableAgent = RunnableSequence.from([
+        {
+            input: (i) => i.input,
+            agent_scratchpad: (i) => formatToOpenAIFunctionMessages(i.steps),
+        },
+        prompt,
+        modelWithFunctions,
         new OpenAIFunctionsAgentOutputParser(),
     ]);
 
     // An agent executor can be thought of as a runtime, it orchestrates the actions of the agent
     // until completed. This can be the result of a single or multiple actions (one can feed into the next).
-    // Note: If you wish to see verbose output of the tool usage of the agent, 
+    // Note: If you wish to see verbose output of the tool usage of the agent,
     //       set returnIntermediateSteps to true
     const executor = AgentExecutor.fromAgentAndTools({
         agent: runnableAgent,
@@ -177,8 +185,8 @@ async function buildAgentExecutor() {
 // Helper function that executes the agent with user input and returns the string output
 async function executeAgent(agentExecutor, input) {
     // Invoke the agent with the user input
-    const result = await agentExecutor.invoke({input});
-    
+    const result = await agentExecutor.invoke({ input });
+
     // Output the intermediate steps of the agent if returnIntermediateSteps is set to true
     if (agentExecutor.returnIntermediateSteps) {
         console.log(JSON.stringify(result.intermediateSteps, null, 2));
@@ -186,5 +194,6 @@ async function executeAgent(agentExecutor, input) {
     // Return the final response from the agent
     return result.output;
 }
+
 
 main().catch(console.error);

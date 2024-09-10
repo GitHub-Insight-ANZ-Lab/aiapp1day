@@ -62,7 +62,7 @@ The return value of a vector search in LangChain is a list of `Document` objects
    const { OpenAIEmbeddings } = require("@langchain/openai");
    ```
 
-3. Directly beneath the line of code that sets up the MongoDB connection `const dbClient = new MongoClient(process.env.MONGODB_CONNECTION_STRING);`, add the following code to initialize the connection to the vector store that points to the `products` collection and associated index. The `OpenAIEmbeddings` uses the default values obtained from the environment variables to initialize.
+3. Directly beneath the line of code that sets up the MongoDB connection `const dbClient = new MongoClient(process.env.MONGODB_CONNECTION_STRING); var dbname = process.env.MONGODB_Name;`, add the following code to initialize the connection to the vector store that points to the `products` collection and associated index. The `OpenAIEmbeddings` uses the default values obtained from the environment variables to initialize.
 
    ```javascript
    // set up the Azure Cosmos DB vector store using the initialized MongoDB client
