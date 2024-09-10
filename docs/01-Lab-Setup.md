@@ -137,6 +137,8 @@ Lets do a connection test to access CosMos Db and OpenAI service.
 4. Last time, replace `<AZURE_OPENAI_API_KEY>` with `70563d5a57cc45999cdd80b9bf50ed4d`
 
     :::info
+    Make sure the `<` and `>` included in search & replace.
+    
     if you are deploying your own Azure resources, please update above shared keys and connection string with your own.
     :::
 

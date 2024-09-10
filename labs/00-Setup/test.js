@@ -17,7 +17,13 @@ async function main() {
         console.log('Collection created: test');
 
         await client.db('test').dropDatabase();
-        // await client.db('cosmic_works').dropDatabase();
+        
+        // clean up db
+        // const adminDb = client.db().admin();
+        // const databases = await adminDb.listDatabases();
+        // console.log('Databases:');
+        // databases.databases.forEach(db => console.log(` - ${db.name}`));
+        // await client.db('aiapp1day_daniel').dropDatabase();
 
     } catch (err) {
         console.error(err);
