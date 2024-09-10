@@ -4,9 +4,9 @@ Let's now deploy Chatbot FrontEnd and BackEnd to Azure App Service.
 
 ## Deploy Chatbot BackEnd API to Azure App Service
 
-1. Open `apps\api` folder in VS code as root of project.
+1. Open repo in VS code.
 
-2. Install `Azure App Service` extension in Vs Code
+2. Install `Azure App Service` extension in Vs Code. If you are using GitHub Codespaces, extension is already installed.
 
    ![alt text](images/deploy-image.png)
 
@@ -22,7 +22,7 @@ Let's now deploy Chatbot FrontEnd and BackEnd to Azure App Service.
 
    ![alt text](images/deploy-image-3.png)
 
-6. Select Browse in the dropdownlist and locate `apps\api` folder.
+6. Select Browse in the dropdownlist and locate `apps\api` folder and click ok.
 
    ![alt text](images/deploy-image-4.png)
 

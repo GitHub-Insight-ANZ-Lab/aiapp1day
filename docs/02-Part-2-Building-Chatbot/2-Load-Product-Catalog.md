@@ -246,7 +246,7 @@ The `Customer` and `Sales` data is in the `custSalesData.json` file. We will be 
 
 ## Browse the data in the Cosmos DB
 
-1. Install MongoDb extension in VS code : `MongoDB for VS code`
+1. Install MongoDb extension in VS code : `MongoDB for VS code`. If you are using GitHub Codespaces, extension is already installed.
 
    ![alt text](images/rag_load_data_image-6.png)
 
