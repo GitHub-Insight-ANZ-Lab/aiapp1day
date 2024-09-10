@@ -104,29 +104,12 @@ If you have Azure Subscription, you can provision these resources by yourself us
 | AZURE_OPENAI_API_VERSION                    | 2023-09-01-preview                                |
 
 
-### Connection Test
-
-Lets do a connection test to access CosMos Db and OpenAI service.
-
-1. Navigate to the setup test folder `~/labs/01-Setup/` within the repository.
-
-    ```bash
-    npm install    
-    ```
-
-2. Test Connection to CosMos Db and OpenAI service. Run the following command in the terminal window to execute the script:
-
-   ```bash
-   node test.js
-   ```
-
-
 
 ### Azure Cosmos DB for MongoDB
 
 The Cosmos DB is used as vector store for the chatbot. During the labs, you will populate the database with sample data and create vector column. It is important to note that you are required to **create a new database with a unique name** in the shared Cosmos DB instance.
 
-The database name could be in the format `aiapp1day_{your_name}_{your_lucky_number}` so that you have your own copy of data.
+The database name could be in the format `<MONGODB_Name>` so that you have your own copy of data.
 
 | Variable Name             | Value                                                                                                                                                                                                 |
 | ------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -137,6 +120,41 @@ The database name could be in the format `aiapp1day_{your_name}_{your_lucky_numb
 :::info
 Be aware, above API keys and connection details will be reset after the hackathon.
 :::
+
+
+## Lab Config & Connection Test
+
+Lets do a connection test to access CosMos Db and OpenAI service.
+
+1. Switch to VS Code `Search` tab, replace `<MONGODB_Name>` placeholder with your own database name. Search for `<MONGODB_Name>` and replace with `aiapp1day_xxxxx_xx` (for example: aiapp1day_daniel_66). Then click replace all. The placeholder string will be replaced in the whole repo so that you have a dedicated database on the shared Cosmos DB instance.
+        
+    ![alt text](images/setup.png)
+    
+2. Now again, replace `<MONGODB_CONNECTION_STRING>` with `mongodb+srv://aiapp1dayadmin:Aiapp1daypassword123@arg-syd-aiapp1day-mongo.mongocluster.cosmos.azure.com/?tls=true&authMechanism=SCRAM-SHA-256&retrywrites=false&maxIdleTimeMS=120000&tlsInsecure=true`
+
+3. One more time, replace `<AZURE_OPENAI_API_INSTANCE_NAME>` with `arg-syd-aiapp1day-openai`
+
+4. Last time, replace `<AZURE_OPENAI_API_KEY>` with `70563d5a57cc45999cdd80b9bf50ed4d`
+
+    :::info
+    if you are deploying your own Azure resources, please update above shared keys and connection string with your own.
+    :::
+
+5. Navigate to the setup test folder `~/labs/01-Setup/` within the repository.
+
+    ```bash
+    npm install    
+    ```
+6. Test Connection to CosMos Db and OpenAI service. Run the following command in the terminal window to execute the script:
+
+   ```bash
+   node test.js
+   ```
+
+7. If you see below message in the console, you are ready to go! otherwise, please `YELL for help`.
+
+    ![alt text](images/setup-test.png)
+
 
 ## Azure Subscription
 

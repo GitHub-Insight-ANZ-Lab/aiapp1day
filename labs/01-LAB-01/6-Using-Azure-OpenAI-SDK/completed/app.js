@@ -1,8 +1,8 @@
 const { OpenAIClient, AzureKeyCredential } = require("@azure/openai");
 
 const client = new OpenAIClient(
-    "https://arg-syd-aiapp1day-openai.openai.azure.com",
-    new AzureKeyCredential("70563d5a57cc45999cdd80b9bf50ed4d")
+    "https://<AZURE_OPENAI_API_INSTANCE_NAME>.openai.azure.com",
+    new AzureKeyCredential("<AZURE_OPENAI_API_KEY>")
 );
 
 // code block from earlier step
