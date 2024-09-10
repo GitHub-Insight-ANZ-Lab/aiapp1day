@@ -5,7 +5,7 @@
 	},
 	"waitFor": "onCreateCommand",
 	// "updateContentCommand": "python3 -m pip install -r requirements.txt",
-	// "postCreateCommand": "npm install && npx docusaurus start",
+	"postCreateCommand": "cd apps/api && npm install && cd .. && cd .. && cd apps/chatbot && npm install",
 	"customizations": {
 	  "codespaces": {
 		"openFiles": []
