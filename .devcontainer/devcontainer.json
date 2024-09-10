@@ -4,16 +4,16 @@
 	  "cpus": 4
 	},
 	"waitFor": "onCreateCommand",
-	"updateContentCommand": "python3 -m pip install -r requirements.txt",
-	"postCreateCommand": "npm install && npx docusaurus start",
+	// "updateContentCommand": "python3 -m pip install -r requirements.txt",
+	// "postCreateCommand": "npm install && npx docusaurus start",
 	"customizations": {
 	  "codespaces": {
 		"openFiles": []
 	  },
 	  "vscode": {
 		"extensions": [
-		  "ms-toolsai.jupyter",
-		  "ms-python.python"
+		  "mongodb.mongodb-vscode",
+		  "ms-azuretools.vscode-azureappservice"
 		]
 	  }
 	}
