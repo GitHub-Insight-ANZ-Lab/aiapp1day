@@ -18,7 +18,7 @@ async function main() {
         await client.connect();
         console.log('Connected to Cosmos DB for MongoDB');
         const db = client.db(dbname);
-        await db.createCollection('test');
+        await db.createCollection('products');
         console.log('Collection created: test');
 
         // clean up db
