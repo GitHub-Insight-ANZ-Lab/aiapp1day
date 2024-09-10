@@ -54,6 +54,10 @@ Visit our [aiapp1day](https://github.com/GitHub-Insight-ANZ-Lab/aiapp1day) repos
 
 todo: add more
 
+:::info
+Check if you can connect to Codespaces in VS Code. We will run a connection test `Lab Config & Connection Test` section.
+:::
+
 ### Option 2: Local Computer
 
 ```bash
@@ -124,7 +128,7 @@ Be aware, above API keys and connection details will be reset after the hackatho
 
 ## Lab Config & Connection Test
 
-Lets do a connection test to access CosMos Db and OpenAI service.
+Lets do a connection test to access CosMos Db and OpenAI service. If you are using `Codespaces`, make sure you are connected to the repo on `Codespaces`.
 
 1. Switch to VS Code `Search` tab, replace `<MONGODB_Name>` placeholder with your own database name. Search for `<MONGODB_Name>` and replace with `aiapp1day_xxxxx_xx` (for example: aiapp1day_daniel_66). Then click replace all. The placeholder string will be replaced in the whole repo so that you have a dedicated database on the shared Cosmos DB instance.
 
