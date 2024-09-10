@@ -5,7 +5,7 @@
 	},
 	"waitFor": "onCreateCommand",
 	// "updateContentCommand": "python3 -m pip install -r requirements.txt",
-	"postCreateCommand": "cd apps/api && npm install && cd .. && cd .. && cd apps/chatbot && npm install",
+	"postCreateCommand": "curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash && cd apps/api && npm install && cd .. && cd .. && cd apps/chatbot && npm install",
 	"customizations": {
 	  "codespaces": {
 		"openFiles": []
