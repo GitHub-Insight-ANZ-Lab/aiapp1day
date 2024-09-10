@@ -15,29 +15,20 @@ You will also learn how to use the vector index to retrieve the relevant documen
 
 1. Navigate to the lab folder `~/labs/02-LAB-02/3-Vector-Search/start` within the repository.
 
-```bash
-cd  labs/02-LAB-02/3-Vector-Search/start
-code .
-```
+    ```bash
+    cd  labs/02-LAB-02/3-Vector-Search/start
+    code .
+    ```
 
-:::info
-The `~/labs/02-LAB-02/3-Vector-Search/completed` folder contains the completed solution for this lab.
-:::
+    :::info
+    The `~/labs/02-LAB-02/3-Vector-Search/completed` folder contains the completed solution for this lab.
+    :::
 
-2. Open the `.env` file in the Visual Studio Code editor.
+2. Check `.env` file has correct configurations. Placeholder string should be all replaced in earlier `Lab Setup` step.
 
-3. Edit following settings in the `.env` file to replace `<openai-service-name>` with the name of the deployed OpenAI service, and `<azure_openai_api_key>` with the Azure OpenAI API key. Also update `MONGODB_CONNECTION_STRING` and `MONGODB_Name` with the actual values.
+3. In Visual Studio Code, open a terminal window and navigate to the lab folder `start`.
 
-   ```bash
-    MONGODB_CONNECTION_STRING=mongodb+srv://<user>:<password>@<db>.mongocluster.cosmos.azure.com/?tls=true&authMechanism=SCRAM-SHA-256&retrywrites=false&maxIdleTimeMS=120000
-    MONGODB_Name=aiapp1day_{your_name}_{your_lucky_number}
-    AZURE_OPENAI_API_INSTANCE_NAME=<azure-open-ai-endpoint>
-    AZURE_OPENAI_API_KEY=<azure-open-ai-access-key>
-   ```
-
-4. In Visual Studio Code, open a terminal window and navigate to the lab folder `start`.
-
-5. Install the required packages by running the following command in the terminal window:
+4. Install the required packages by running the following command in the terminal window:
 
    ```bash
    npm install

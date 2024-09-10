@@ -25,23 +25,11 @@ The product catalog data is shared in a CSV file. You will be writing a custom s
 The `~/labs/02-LAB-02/2-Load-Data/completed` folder contains the completed solution for this lab.
 :::
 
-2. In the lab folder, edit a `.env` file and set the following environment variables, replace `<MONGODB_CONNECTION_STRING>` with your Cosmos DB service connection string:
+2. Check `.env` file has correct configurations. Placeholder string should be all replaced in earlier `Lab Setup` step.
 
-   ```text
-   MONGODB_CONNECTION_STRING=mongodb+srv://<user>:<password>@<db>.mongocluster.cosmos.azure.com/?tls=true&authMechanism=SCRAM-SHA-256&retrywrites=false&maxIdleTimeMS=120000
-   ```
+3. In Visual Studio Code, open a terminal window and navigate to `start` folder.
 
-3. Choose a unique name for your CosmosDB database, modify `MONGODB_Name` in `.env` file. Everyone in the hackathon will share the same CosmosDB instance (unless you have deployed your own Azure resources)
-
-   ```text
-   MONGODB_Name = 'aiapp1day_daniel_55'
-
-   MONGODB_Name = 'aiapp1day_{your_name}_{your_lucky_number}'
-   ```
-
-4. In Visual Studio Code, open a terminal window and navigate to `start` folder.
-
-5. To install the required packages, execute the following command in the terminal window:
+4. To install the required packages, execute the following command in the terminal window:
 
    ```bash
    npm install

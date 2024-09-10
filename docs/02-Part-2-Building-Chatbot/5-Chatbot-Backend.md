@@ -10,19 +10,7 @@ When developing a backend api, it is often useful to run the application locally
 
 2. Open a **Terminal** window in VS Code (<kbd>CTRL</kbd>+<kbd>`</kbd>).
 
-3. Edit following settings in the `.env` file to replace `<openai-service-name>` with the name of the deployed OpenAI service, and `<azure_openai_api_key>` with the Azure OpenAI API key. Also update `MONGODB_CONNECTION_STRING` and `MONGODB_Name` with the actual values.
-
-   ```bash
-   AZURE_OPENAI_API_INSTANCE_NAME=<openai-service-name>
-   AZURE_OPENAI_API_KEY=<azure_openai_api_key>
-   AZURE_OPENAI_API_DEPLOYMENT_NAME=completions
-   AZURE_OPENAI_API_EMBEDDINGS_DEPLOYMENT_NAME=embeddings
-   AZURE_OPENAI_API_VERSION=2023-09-01-preview
-   ```
-
-   :::info
-   The Azure OpenAI service name is not the full endpoint. Only the service name is required. For example, if the endpoint is `https://myservicename.openai.azure.com/`, then the service name is `myservicename`.
-   :::
+3. Check `.env` file has correct configurations. Placeholder string should be all replaced in earlier `Lab Setup` step.
 
 ## Add LangChain Agent to Backend API
 

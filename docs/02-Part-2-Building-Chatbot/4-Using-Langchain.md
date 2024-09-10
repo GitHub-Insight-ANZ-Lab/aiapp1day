@@ -10,44 +10,34 @@ Throughout this lab, notice how much more concise the code is compared to the pr
 
 1. Navigate to the lab folder `~/labs/02-LAB-02/4-Using-Langchain/start` within the repository.
 
-```bash
-cd  labs/02-LAB-02/4-Using-Langchain/start
-code .
-```
+    ```bash
+    cd  labs/02-LAB-02/4-Using-Langchain/start
+    code .
+    ```
 
-:::info
-The `~/labs/02-LAB-02/4-Using-Langchain/completed` folder contains the completed solution for this lab.
-:::
+    :::info
+    The `~/labs/02-LAB-02/4-Using-Langchain/completed` folder contains the completed solution for this lab.
+    :::
 
-3. Edit following settings in the `.env` file to replace `<openai-service-name>` with the name of the deployed OpenAI service, and `<azure_openai_api_key>` with the Azure OpenAI API key. Also update `MONGODB_CONNECTION_STRING` and `MONGODB_Name` with the actual values.
-
-   ```bash
-   MONGODB_CONNECTION_STRING=<MONGODB_CONNECTION_STRING>
-   MONGODB_Name=aiapp1day_{your_name}_{your_lucky_number}
-   AZURE_OPENAI_API_INSTANCE_NAME=<openai-service-name>
-   AZURE_OPENAI_API_KEY=<azure_openai_api_key>
-   AZURE_OPENAI_API_DEPLOYMENT_NAME=completions
-   AZURE_OPENAI_API_EMBEDDINGS_DEPLOYMENT_NAME=embeddings
-   AZURE_OPENAI_API_VERSION=2023-09-01-preview
-   ```
+2. Check `.env` file has correct configurations. Placeholder string should be all replaced in earlier `Lab Setup` step.
 
    :::info
    The Azure OpenAI service name is not the full endpoint. Only the service name is required. For example, if the endpoint is `https://myservicename.openai.azure.com/`, then the service name is `myservicename`.
    :::
 
-4. In Visual Studio Code, open a terminal window and navigate to the lab folder `start`.
+3. In Visual Studio Code, open a terminal window and navigate to the lab folder `start`.
 
-5. Install the langchain packages by running the following command in the terminal window.
+4. Install the langchain packages by running the following command in the terminal window.
 
    ```bash
    npm install langchain@0.1.21 --save
    npm install @langchain/community@0.0.32 --save
    ```
 
-6. This will install the package and save it as a dependency in your project's `package.json` file.
+5. This will install the package and save it as a dependency in your project's `package.json` file.
    ![alt text](images/rag_chain_image.png)
 
-7. Install the required packages by running the following command in the terminal window:
+6. Install the required packages by running the following command in the terminal window:
 
    ```bash
    npm install
