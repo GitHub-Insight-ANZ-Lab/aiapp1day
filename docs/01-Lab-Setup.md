@@ -66,11 +66,21 @@ Follow the steps below to set up the lab environment using GitHub Codespaces:
    Enable-WindowsOptionalFeature -FeatureName "Containers-DisposableClientVM" -All -Online
    ```
 
-2. Clone the repository to your local machine using the following command:
+Once restarted, search `Windows Sandbox` in `Start` button.
 
-   ```bash
-   git clone https://github.com/GitHub-Insight-ANZ-Lab/aiapp1day.git
-   ```
+## Lab Repo
+
+Visit our [aiapp1day](https://github.com/GitHub-Insight-ANZ-Lab/aiapp1day) repository in GitHub. This repository contains the source code and guides for completing the labs.
+
+### Option 1: GitHub Codespaces
+
+todo: add more
+
+### Option 2: Local Computer
+
+```bash
+git clone https://github.com/GitHub-Insight-ANZ-Lab/aiapp1day.git
+```
 
 3. Navigate to the repository folder and open it in Visual Studio Code:
 
@@ -132,7 +142,9 @@ API keys and connection details will be reset after the lab session.
 
 Let us test the connection to the Azure services and the Cosmos DB instance.
 
-1. Switch to the VS Code `Search` tab and replace the `<MONGODB_Name>` placeholder with your own database name. Search for `<MONGODB_Name>` and replace it with `aiapp1day_xxxxx_xx` (for example: `aiapp1day_daniel_66`). Then click "Replace All". The placeholder string will be replaced throughout the entire repository, ensuring you have a dedicated database on the shared Cosmos DB instance.
+Lets do a connection test to access CosMos Db and OpenAI service.
+
+1. Switch to VS Code `Search` tab, replace `<MONGODB_Name>` placeholder with your own database name. Search for `<MONGODB_Name>` and replace with `aiapp1day_xxxxx_xx` (for example: aiapp1day_daniel_66). Then click replace all. The placeholder string will be replaced in the whole repo so that you have a dedicated database on the shared Cosmos DB instance.
 
    :::info
    Make sure the `<` and `>` included in search & replace.
