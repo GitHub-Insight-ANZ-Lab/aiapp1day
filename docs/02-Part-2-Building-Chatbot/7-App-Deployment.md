@@ -2,6 +2,10 @@
 
 Let's now deploy Chatbot FrontEnd and BackEnd to Azure App Service.
 
+:::info
+In order to deploy the Chatbot to Azure, you need to have 2 `App Services`. Go back to `Azure Deployment` step and follow `Option 2: Deploy App Service Only` to create resources if you skip the step earlier.
+:::
+
 ## Deploy Chatbot BackEnd API to Azure App Service
 
 1. Open repo in VS code.

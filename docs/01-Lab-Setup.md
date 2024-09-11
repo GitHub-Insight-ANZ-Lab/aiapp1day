@@ -47,40 +47,21 @@ Follow the steps below to set up the lab environment using GitHub Codespaces:
    - [Azure Cli (include Bicep)](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli)
    - [Git](https://git-scm.com/downloads)
 
+
    :::info
    If your device has restrictions, you can download the `VS Code`, `Node.js`, and `Azure CLI` zip packages. Then, add the `Node.js` and `Azure CLI\bin` folder paths to your environment variables. You will need to restart `VS Code` for the changes to take effect.
 
    ```bash
    set PATH=%PATH%;C:\your\path\here\;
    ```
-
    :::
 
-   #### Windows Sandbox
 
-   If you are using Windows, you can easily start up a Windows Sandbox to keep your local machine clean. Read more https://learn.microsoft.com/en-us/windows/security/application-security/application-isolation/windows-sandbox/windows-sandbox-overview
+2. Visit our [aiapp1day](https://github.com/GitHub-Insight-ANZ-Lab/aiapp1day) repository in GitHub. This repository contains the source code and guides for completing the labs.
 
-   Run the following command in PowerShell to enable Windows Sandbox feature:
-
-   ```powershell
-   Enable-WindowsOptionalFeature -FeatureName "Containers-DisposableClientVM" -All -Online
-   ```
-
-Once restarted, search `Windows Sandbox` in `Start` button.
-
-## Lab Repo
-
-Visit our [aiapp1day](https://github.com/GitHub-Insight-ANZ-Lab/aiapp1day) repository in GitHub. This repository contains the source code and guides for completing the labs.
-
-### Option 1: GitHub Codespaces
-
-todo: add more
-
-### Option 2: Local Computer
-
-```bash
-git clone https://github.com/GitHub-Insight-ANZ-Lab/aiapp1day.git
-```
+    ```bash
+    git clone https://github.com/GitHub-Insight-ANZ-Lab/aiapp1day.git
+    ```
 
 3. Navigate to the repository folder and open it in Visual Studio Code:
 
@@ -88,6 +69,19 @@ git clone https://github.com/GitHub-Insight-ANZ-Lab/aiapp1day.git
    cd aiapp1day
    code .
    ```
+
+#### Windows Sandbox
+
+If you are using Windows, you can easily start up a Windows Sandbox to keep your local machine clean. Read more https://learn.microsoft.com/en-us/windows/security/application-security/application-isolation/windows-sandbox/windows-sandbox-overview
+
+Run the following command in PowerShell to enable Windows Sandbox feature:
+
+```powershell
+Enable-WindowsOptionalFeature -FeatureName "Containers-DisposableClientVM" -All -Online
+```
+
+Once restarted, search `Windows Sandbox` in `Start` button.
+
 
 ## Azure Deployment
 

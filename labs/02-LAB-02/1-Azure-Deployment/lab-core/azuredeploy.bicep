@@ -80,17 +80,17 @@ var openAiSettings = {
       capacity: 60
     }
   }
-  // dalleModel: {
-  //   name: 'dall-e-3'
-  //   version: '3.0'
-  //   deployment: {
-  //     name: 'dalle3'
-  //   }
-  //   sku: {
-  //     name: 'Standard'
-  //     capacity: 1
-  //   }
-  // }
+  dalleModel: {
+    name: 'dall-e-3'
+    version: '3.0'
+    deployment: {
+      name: 'dalle3'
+    }
+    sku: {
+      name: 'Standard'
+      capacity: 1
+    }
+  }
 }
 
 var mongovCoreSettings = {
