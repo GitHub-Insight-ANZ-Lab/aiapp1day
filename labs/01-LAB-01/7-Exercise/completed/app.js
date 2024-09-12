@@ -64,10 +64,8 @@ async function main() {
 
   function applyToolCall({ function: call, id }) {
     if (call.name === "get_light_status") {
-      console.log(call.arguments);
       const { room_name } = JSON.parse(call.arguments);
       let status = "off";
-      console.log(room_name);
       if (room_name === "Living Room") {
         status = livinRoomLight;
       } else if (room_name === "Bedroom") {
