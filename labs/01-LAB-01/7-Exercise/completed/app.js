@@ -8,8 +8,8 @@ async function main() {
 
   //TODO: Replace the <azure-openai-service-endpoint> and <azure-open-ai-service-key> with your Azure OpenAI service endpoint and key
   const client = new OpenAIClient(
-    "<azure-openai-service-endpoint>",
-    new AzureKeyCredential("<azure-openai-service-key>")
+    "https://arg-syd-aiapp1day-openai.openai.azure.com",
+    new AzureKeyCredential("70563d5a57cc45999cdd80b9bf50ed4d")
   );
 
   const deploymentId = "completions";
@@ -64,13 +64,15 @@ async function main() {
 
   function applyToolCall({ function: call, id }) {
     if (call.name === "get_light_status") {
-      const { roomName } = JSON.parse(call.arguments);
+      console.log(call.arguments);
+      const { room_name } = JSON.parse(call.arguments);
       let status = "off";
-      if (roomName === "Living Room Light") {
+      console.log(room_name);
+      if (room_name === "Living Room") {
         status = livinRoomLight;
-      } else if (roomName === "Bedroom Light") {
+      } else if (room_name === "Bedroom") {
         status = bedroomLight;
-      } else if (roomName === "Kitchen Light") {
+      } else if (room_name === "Kitchen") {
         status = kitchenLight;
       }
 
@@ -80,12 +82,12 @@ async function main() {
         toolCallId: id,
       };
     } else if (call.name === "set_light_status") {
-      const { roomName, status } = JSON.parse(call.arguments);
-      if (roomName === "Living Room Light") {
+      const { room_name, status } = JSON.parse(call.arguments);
+      if (room_name === "Living Room") {
         livinRoomLight = status;
-      } else if (roomName === "Bedroom Light") {
+      } else if (room_name === "Bedroom") {
         bedroomLight = status;
-      } else if (roomName === "Kitchen Light") {
+      } else if (room_name === "Kitchen") {
         kitchenLight = status;
       }
 
