@@ -9,12 +9,7 @@ param location string = 'eastus'
 param name string = 'ai-${uniqueString(resourceGroup().id)}'
 
 @description('Specifies the SKU for the Azure App Service plan. Defaults to **B1**')
-@allowed([
-  'B1'
-  'S1'
-  'P0v3'
-])
-param appServiceSku string = 'B1'
+param appServiceSku string = 'S0'
 
 
 var appServiceSettings = {
