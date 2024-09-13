@@ -37,15 +37,17 @@ npm install @azure/openai@1.0.0-beta.11
 const { OpenAIClient, AzureKeyCredential } = require("@azure/openai");
 ```
 
-5. Create the Azure OpenAI client to call the Azure OpenAI Chat completion API. Replace `<azure-openai-service-endpoint>` with the Azure OpenAI service endpoint (e.g.: https://arg-syd-aiapp1day-openai.openai.azure.com), and `<azure-openai-service-key>` with the Azure OpenAI service key.
+5. Create the Azure OpenAI client to call the Azure OpenAI Chat completion API. Have a look at Azure OpenAI service endpoint (e.g.: https://arg-syd-aiapp1day-openai.openai.azure.com), and Azure OpenAI service key in the code below. Then copy below Javascript code into `app.js`.
 
-More information on the Azure OpenAI client methods can be found in the [@azure/openai package](https://learn.microsoft.com/en-us/javascript/api/%40azure/openai/?view=azure-node-preview) documentation.
+:::info
+More information on the Azure OpenAI client methods can be found in the [@azure/openai package](https://learn.microsoft.com/en-us/javascript/api/%40azure/openai/?view=azure-node-preview) documentation. 
+:::
 
 ```javascript
-const client = new OpenAIClient(
-  "<azure-openai-service-endpoint>",
-  new AzureKeyCredential("<azure-openai-service-key>")
-);
+  const client = new OpenAIClient(
+    "https://<AZURE_OPENAI_API_INSTANCE_NAME>.openai.azure.com/",
+    new AzureKeyCredential("<AZURE_OPENAI_API_KEY>")
+  );
 ```
 
 5. Once the Azure OpenAI client has been created, the next step is to call the `.getCompletions` method on the client to perform a chat completion.
@@ -78,7 +80,7 @@ Try the other examples in the next sections to see how you can interact with Azu
 
 ## System Message
 
-You can set the system message to provide context to the conversation. The system message can be set using the `role: "system"`.
+You can set the system message to provide context to the conversation. The system message can be set using the `role: "system"`. If you see an error saying `variable already exists or defined`, please replace the code in earlier step with new code block.
 
 ```javascript
 const chatResponse = client.getChatCompletions("completions", [
@@ -119,7 +121,7 @@ const chatResponse = client.getChatCompletions("completions", [
 
 You can call a function from the model to perform a specific task. The available functions are passed to the model. The model analyzes the conversation history and decides when and how to call the function. The model also extracts the required parameters for the function from the conversation history.
 
-In the following example, the model calls the `search_bike` function to retrieve bikes from the search index based on the location, company, and model of the bike.
+In the following example, the model calls the `search_bike` function to retrieve bikes from the search index based on the location, company, and model of the bike. 
 
 1. Add the function `searchBikeStore` in `app.js` file:
 

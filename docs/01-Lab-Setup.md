@@ -154,7 +154,7 @@ Let us test the connection to Cosmos DB instance and OpenAI service.
 
 5.  Replace `<AZURE_OPENAI_API_KEY>` with `70563d5a57cc45999cdd80b9bf50ed4d`
 
-6.  Navigate to the setup test folder `~/labs/01-Setup/` within the repository.
+6.  Navigate to the setup test folder `~/labs/00-Setup/` within the repository.
 
     ```bash
     npm install

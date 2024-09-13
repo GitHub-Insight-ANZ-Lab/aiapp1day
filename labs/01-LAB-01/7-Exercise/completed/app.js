@@ -6,10 +6,9 @@ async function main() {
   let bedroomLight = "off";
   let kitchenLight = "off";
 
-  //TODO: Replace the <azure-openai-service-endpoint> and <azure-open-ai-service-key> with your Azure OpenAI service endpoint and key
   const client = new OpenAIClient(
-    "https://arg-syd-aiapp1day-openai.openai.azure.com",
-    new AzureKeyCredential("70563d5a57cc45999cdd80b9bf50ed4d")
+    "https://<AZURE_OPENAI_API_INSTANCE_NAME>.openai.azure.com/",
+    new AzureKeyCredential("<AZURE_OPENAI_API_KEY>")
   );
 
   const deploymentId = "completions";
