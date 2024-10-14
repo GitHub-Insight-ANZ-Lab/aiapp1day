@@ -49,17 +49,24 @@ In order to deploy the Chatbot to Azure, you need to have 2 `App Services`. Go b
 
 ## Deploy Chatbot FrontEnd to Azure App Service
 
-1. Repeat above steps and deploy `apps\chatbot` folder
 
-2. Once completed, you can find chatbot app url in your Azure Portal under the `App Service`. for example, https://arg-syd-aiapp1day-chat.azurewebsites.net/
+1. Update frontend chatbot's `BACKEND_URI` in `apps\chatbot\.env` file. Replace the `BACKEND_URI` with the actual Azure App service url of backend from last step, similar to below.
 
-3. Open the chatbot url in your browser and try out the prompts.
+   ```
+   BACKEND_URI=https://arg-syd-aiapp1day-api.azurewebsites.net
+   ```
+
+2. Repeat above steps and deploy `apps\chatbot` folder
+
+3. Once completed, you can find chatbot app url in your Azure Portal under the `App Service`. for example, https://arg-syd-aiapp1day-chat.azurewebsites.net/
+
+4. Open the chatbot url in your browser and try out the prompts.
 
    :::info
    If you see an error in the chatbot, switch to `developer tools` in the browser. Check if you have the backend API url configured correctly.
    :::
 
-4. Now, you have deployed your chatbot to Azure! Congrat !!
+5. Now, you have deployed your chatbot to Azure! Congrat !!
 
    :::info
    Forget to mention, there would also be a CORS error. Please try and find the commented line that configures CORS in the API. :p
