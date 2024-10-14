@@ -46,6 +46,17 @@ When developing a backend api, it is often useful to run the application locally
 
    ![The Swagger UI displays for the locally running backend api](images/local_backend_swagger_ui.png "Local backend api Swagger UI")
 
+   :::info
+   If you are running the `codespaces` in web browser, please use the codespaces generated url. You shall see `Open in browser` button asking if you want to open the site in browser. If you missed the button, go to `PORTS` tab to find it.
+
+   The url would look similiar to: https://ominous-space-goldfish-v6vv749557wjfxj99-5000.app.github.dev/docs/
+
+   Additionally, please also make the `Visibility` of the site to `Public` as shown in below screenshot. This is to allow frontend to access the API backend later.
+
+   ![Codespaces Visibility](images/backend-codespaces-port.png)
+   :::
+
+
 4. Expand the **GET / Root** endpoint and select **Try it out**. Select **Execute** to send the request. The response should display a status of `ready`.
 
    ![The Swagger UI displays the GET / Root endpoint reponse that has a status of ready.](images/local_backend_swagger_ui_root_response.png "Local backend api Swagger UI Root response")
