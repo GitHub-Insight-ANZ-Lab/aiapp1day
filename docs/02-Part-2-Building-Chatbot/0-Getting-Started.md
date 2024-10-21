@@ -18,7 +18,7 @@ For this lab, you will be building a chatbot for a bicycle store that can answer
 
 ### Chatbot Demo
 
-https://arg-syd-aiapp1day-chat.azurewebsites.net/
+https://arg-syd-caiwest-chat.azurewebsites.net/
 
 ![alt text](images/chatbot-image.png)
 
