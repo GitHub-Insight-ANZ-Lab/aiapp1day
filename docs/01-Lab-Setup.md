@@ -125,7 +125,7 @@ You should remove the curly brackets `{}` and replace the placeholders with your
 | Variable Name              | Value                                                                                                                                                                                                 |
 | -------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | MONGODB_CONNECTION_STRING  | mongodb+srv://aiapp1dayadmin:Aiapp1daypassword123@arg-syd-caiwest-mongo.mongocluster.cosmos.azure.com/?tls=true&authMechanism=SCRAM-SHA-256&retrywrites=false&maxIdleTimeMS=120000 |
-| MONGODB_Name               | aiapp1day_{your_name}_{your_lucky_number\}                                                                                                                                                         |
+| MONGODB_Name               | aiapp1day_\{your_name\}_\{your_lucky_number\}                                                                                                                                                         |
 | MONGODB_Name (for example) | aiapp1day_daniel_55                                                                                                                                                                                   |
 
 :::info
