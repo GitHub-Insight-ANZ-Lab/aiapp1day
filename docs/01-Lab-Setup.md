@@ -148,11 +148,11 @@ Let us test the connection to Cosmos DB instance and OpenAI service.
 
     ![alt text](images/setup.png)
 
-3.  Replace `<MONGODB_CONNECTION_STRING>` with `mongodb+srv://aiapp1dayadmin:Aiapp1daypassword123@arg-syd-aiapp1day-mongo.mongocluster.cosmos.azure.com/?tls=true&authMechanism=SCRAM-SHA-256&retrywrites=false&maxIdleTimeMS=120000&tlsInsecure=true`
+3.  Replace `<MONGODB_CONNECTION_STRING>` with `mongodb+srv://aiapp1dayadmin:Aiapp1daypassword123@arg-syd-caiwest-mongo.mongocluster.cosmos.azure.com/?tls=true&authMechanism=SCRAM-SHA-256&retrywrites=false&maxIdleTimeMS=120000`
 
-4.  Replace `<AZURE_OPENAI_API_INSTANCE_NAME>` with `arg-syd-aiapp1day-openai`
+4.  Replace `<AZURE_OPENAI_API_INSTANCE_NAME>` with `arg-syd-caiwest-openai`
 
-5.  Replace `<AZURE_OPENAI_API_KEY>` with `70563d5a57cc45999cdd80b9bf50ed4d`
+5.  Replace `<AZURE_OPENAI_API_KEY>` with `0a65e27b57f24bd1bf82aeb231ba13cb`
 
 6.  Navigate to the setup test folder `~/labs/00-Setup/` within the repository.
 
