@@ -101,16 +101,16 @@ https://azure.microsoft.com/en-au/pricing/member-offers/credit-for-visual-studio
 
 | Description          | Value                                                  |
 | -------------------- | ------------------------------------------------------ |
-| AI Proxy Playground  | https://arg-syd-aiapp1day-playground.azurewebsites.net |
-| Azure OpenAI API Key | 70563d5a57cc45999cdd80b9bf50ed4d                       |
+| AI Proxy Playground  | https://arg-syd-caiwest-playground.azurewebsites.net |
+| Azure OpenAI API Key | 0a65e27b57f24bd1bf82aeb231ba13cb                       |
 
 ### Azure OpenAI Resource Configuration
 
 | Variable Name                               | Value                                             |
 | ------------------------------------------- | ------------------------------------------------- |
-| AZURE_OPENAI_API_INSTANCE_NAME              | arg-syd-aiapp1day-openai                          |
-| AZURE_OPENAI_API_ENDPOINT                   | https://arg-syd-aiapp1day-openai.openai.azure.com |
-| AZURE_OPENAI_API_KEY                        | 70563d5a57cc45999cdd80b9bf50ed4d                  |
+| AZURE_OPENAI_API_INSTANCE_NAME              | arg-syd-caiwest-openai                          |
+| AZURE_OPENAI_API_ENDPOINT                   | https://arg-syd-caiwest-openai.openai.azure.com/ |
+| AZURE_OPENAI_API_KEY                        | 0a65e27b57f24bd1bf82aeb231ba13cb                  |
 | AZURE_OPENAI_API_DEPLOYMENT_NAME            | completions                                       |
 | AZURE_OPENAI_API_EMBEDDINGS_DEPLOYMENT_NAME | embeddings                                        |
 | AZURE_OPENAI_API_VERSION                    | 2023-09-01-preview                                |
@@ -124,8 +124,8 @@ You should remove the curly brackets `{}` and replace the placeholders with your
 
 | Variable Name              | Value                                                                                                                                                                                                 |
 | -------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| MONGODB_CONNECTION_STRING  | mongodb+srv://aiapp1dayadmin:Aiapp1daypassword123@arg-syd-aiapp1day-mongo.mongocluster.cosmos.azure.com/?tls=true&authMechanism=SCRAM-SHA-256&retrywrites=false&maxIdleTimeMS=120000&tlsInsecure=true |
-| MONGODB_Name               | aiapp1day*\{your_name\}*\{your_lucky_number\}                                                                                                                                                         |
+| MONGODB_CONNECTION_STRING  | mongodb+srv://aiapp1dayadmin:Aiapp1daypassword123@arg-syd-caiwest-mongo.mongocluster.cosmos.azure.com/?tls=true&authMechanism=SCRAM-SHA-256&retrywrites=false&maxIdleTimeMS=120000 |
+| MONGODB_Name               | aiapp1day_{your_name}_{your_lucky_number\}                                                                                                                                                         |
 | MONGODB_Name (for example) | aiapp1day_daniel_55                                                                                                                                                                                   |
 
 :::info
