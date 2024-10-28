@@ -20,7 +20,7 @@ You will also learn how to use the vector index to retrieve the relevant documen
     ```
 
     :::info
-    The `~/labs/02-LAB-02/3-Vector-Search/completed` folder contains the completed solution for this lab.
+    The `~/labs/02-LAB-02/3-Vector-Search/completed` folder contains the completed solution for this lab. Please use `start` folder to carry out the exercise. You can compare your code with the files in `completed` folder if your code does not run correctly.
     :::
 
 2. Check `.env` file has correct configurations. Placeholder string should be all replaced in earlier `Lab Setup` step.
