@@ -3,6 +3,9 @@ title: "Lab Setup Instructions"
 slug: /lab-setup
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 ## Lab Environment
 
 ## Source Code Repository
@@ -18,8 +21,8 @@ The repository contains the following folders:
 
 ## Lab Setup
 
-### Option 1: GitHub Codespaces (Recommended)
-
+<Tabs>
+  <TabItem value="codespaces" label="GitHub Codespaces (Recommended)" default>
 Follow the steps below to set up the lab environment using GitHub Codespaces:
 
 1. **Create a GitHub Account**: If you don't have a GitHub account, you can create one [here](https://github.com/join).
@@ -30,16 +33,15 @@ Follow the steps below to set up the lab environment using GitHub Codespaces:
 
 4. The Codespace will take a few minutes to set up. It will install the following tools and dependencies for you:
 
-   - [Node.js](https://nodejs.org/en/download/prebuilt-installer) (v20.17)
-   - [Azure CLI](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli)
-   - [Git](https://git-scm.com/downloads)
+  - [Node.js](https://nodejs.org/en/download/prebuilt-installer) (v20.17)
+  - [Azure CLI](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli)
+  - [Git](https://git-scm.com/downloads)
 
 5. **Start Coding**: Once the Codespace is ready, you can start coding and follow the lab instructions directly within the browser-based VS Code environment. The changes you make in your Codespace are saved automatically. If you stop and restart your Codespace, your changes will persist.
 
 **Note** - You can also connect to your Codespace from your local VS Code editor by installing the [GitHub Codespaces extension](https://marketplace.visualstudio.com/items?itemName=GitHub.codespaces).
-
-### Option 2: Local Computer
-
+  </TabItem>
+  <TabItem value="local" label="Local Computer">
 1. Install the following tools on your machine:
 
    - [Visual Studio Code](https://code.visualstudio.com/download)
@@ -81,7 +83,8 @@ Enable-WindowsOptionalFeature -FeatureName "Containers-DisposableClientVM" -All 
 ```
 
 Once restarted, search `Windows Sandbox` in `Start` button.
-
+  </TabItem>
+</Tabs>
 
 ## Azure Deployment
 
@@ -138,7 +141,7 @@ Let us test the connection to Cosmos DB instance and OpenAI service.
 
 1.  Open VS Code and navigate to the `aiapp1day` repository folder. If you are using Codespaces, you should already be in the repository folder.
 
-2.  Switch to VS Code `Search` tab, replace `<MONGODB_Name>` placeholder with your own database name. Search for `<MONGODB_Name>` and replace with `aiapp1day_xxxxx_xx` (for example: aiapp1day_daniel_66). Then click replace all. The placeholder string will be replaced in the whole repo so that you have a dedicated database on the shared Cosmos DB instance.
+2.  Switch to VS Code `Search` tab, replace `<MONGODB_Name>` placeholder with your own database name. Search for `<MONGODB_Name>` and replace with `aiapp1day_xxxxx_xx` (for example: aiapp1day_daniel_66). Then click `Replace All` icon, there will be multiple items to be replaced. The placeholder string will be replaced in the whole repo so that you have a dedicated database on the shared Cosmos DB instance.
 
     :::info
     Make sure the `<` and `>` included in search & replace.

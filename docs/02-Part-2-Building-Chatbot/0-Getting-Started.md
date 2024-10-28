@@ -16,6 +16,13 @@ slug: /lab2-setup
 
 For this lab, you will be building a chatbot for a bicycle store that can answer queries about bicycles and accessories for you.
 
+The code exercises in this lab contain two folders:
+| Folder      | Purpose                                                                                             |
+|-------------|-----------------------------------------------------------------------------------------------------|
+| `start`     | Unmodified code that is ready for you to begin the exercise. Make your changes in this folder.      |
+| `completed` | Completed code for reference. Compare your changes with this folder when you complete the exercise. |
+
+
 ### Chatbot Demo
 
 https://arg-syd-caiwest-chat.azurewebsites.net/

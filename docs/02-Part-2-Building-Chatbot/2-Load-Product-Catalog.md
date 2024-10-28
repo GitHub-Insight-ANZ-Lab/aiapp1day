@@ -21,7 +21,7 @@ The product catalog data is shared in a CSV file. You will be writing a custom s
    ```
 
 :::info
-The `~/labs/02-LAB-02/2-Load-Data/completed` folder contains the completed solution for this lab.
+The `~/labs/02-LAB-02/2-Load-Data/completed` folder contains the completed solution for this lab. Please use `start` folder to carry out the exercise. You can compare your code with the files in `completed` folder if your code does not run correctly.
 :::
 
 2. Check `.env` file has correct configurations. Placeholder string should be all replaced in earlier `Lab Setup` step.
@@ -246,7 +246,7 @@ The `Customer` and `Sales` data is in the `custSalesData.json` file. We will be 
 
 ## Browse the data in the Cosmos DB
 
-1. Install MongoDb extension in VS code : `MongoDB for VS code`. If you are using GitHub Codespaces, extension is already installed.
+1. If you are using VS Code locally, please install MongoDb extension, search  `MongoDB for VS code` in `Extensions` tab. If you are using GitHub Codespaces, extension is already installed.
 
    ![alt text](images/rag_load_data_image-6.png)
 

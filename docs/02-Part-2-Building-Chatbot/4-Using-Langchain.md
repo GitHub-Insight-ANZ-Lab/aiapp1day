@@ -15,7 +15,7 @@ Throughout this lab, notice how much more concise the code is compared to the pr
     ```
 
     :::info
-    The `~/labs/02-LAB-02/4-Using-Langchain/completed` folder contains the completed solution for this lab.
+    The `~/labs/02-LAB-02/4-Using-Langchain/completed` folder contains the completed solution for this lab. Please use `start` folder to carry out the exercise. You can compare your code with the files in `completed` folder if your code does not run correctly.
     :::
 
 2. Check `.env` file has correct configurations. Placeholder string should be all replaced in earlier `Lab Setup` step.
