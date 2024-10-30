@@ -14,8 +14,7 @@
 		"extensions": [
 		  "mongodb.mongodb-vscode",
 		  "ms-azuretools.vscode-azureappservice",
-		  "ms-azuretools.vscode-bicep",
-		  "ms-vscode.powershell"
+		  "ms-azuretools.vscode-bicep"
 		]
 	  }
 	}
