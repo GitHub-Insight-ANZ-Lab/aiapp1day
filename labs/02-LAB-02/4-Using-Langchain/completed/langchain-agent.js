@@ -28,10 +28,12 @@ const {
 
 // set up the MongoDB client
 const dbClient = new MongoClient(process.env.MONGODB_CONNECTION_STRING);
+var dbname = process.env.MONGODB_Name;
+
 // set up the Azure Cosmos DB vector store using the initialized MongoDB client
 const azureCosmosDBConfig = {
     client: dbClient,
-    databaseName: process.env.MONGODB_NAME,
+    databaseName: dbname,
     collectionName: "products",
     indexName: "VectorSearchIndex",
     embeddingKey: "contentVector",
