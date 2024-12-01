@@ -112,8 +112,7 @@ https://azure.microsoft.com/en-au/pricing/member-offers/credit-for-visual-studio
 | Variable Name                               | Value                                             |
 | ------------------------------------------- | ------------------------------------------------- |
 | AZURE_OPENAI_API_INSTANCE_NAME              | arg-syd-caiwest-openai                          |
-| AZURE_OPENAI_API_ENDPOINT                   | https://arg-syd-aiapp1day-openai
-.openai.azure.com/ |
+| AZURE_OPENAI_API_ENDPOINT                   | https://arg-syd-aiapp1day-openai.openai.azure.com/ |
 | AZURE_OPENAI_API_KEY                        | 0f73b2e1cba543ce8c9518712a5b1efc                  |
 | AZURE_OPENAI_API_DEPLOYMENT_NAME            | completions                                       |
 | AZURE_OPENAI_API_EMBEDDINGS_DEPLOYMENT_NAME | embeddings                                        |
@@ -142,7 +141,7 @@ Let us test the connection to Cosmos DB instance and OpenAI service.
 
 1.  Open VS Code and navigate to the `aiapp1day` repository folder. If you are using Codespaces, you should already be in the repository folder.
 
-2.  Switch to VS Code `Search` tab, replace `<MONGODB_Name>` placeholder with your own database name. Search for `<MONGODB_Name>` and replace with `aiapp1day_xxxxx_xx` (for example: aiapp1day_daniel_66). Then click `Replace All` icon, there will be multiple items to be replaced. The placeholder string will be replaced in the whole repo so that you have a dedicated database on the shared Cosmos DB instance.
+2.  Switch to VS Code `Search` tab, replace `aiapp1day_demo` placeholder with your own database name. Search for `aiapp1day_demo` and replace with `aiapp1day_xxxxx_xx` (for example: aiapp1day_daniel_66). Then click `Replace All` icon, there will be multiple items to be replaced. The placeholder string will be replaced in the whole repo so that you have a dedicated database on the shared Cosmos DB instance.
 
     :::info
     Make sure the `<` and `>` included in search & replace.
@@ -152,11 +151,11 @@ Let us test the connection to Cosmos DB instance and OpenAI service.
 
     ![alt text](images/setup.png)
 
-3.  Replace `<MONGODB_CONNECTION_STRING>` with `mongodb+srv://aiapp1dayadmin:Aiapp1daypassword123@arg-syd-caiwest-mongo.mongocluster.cosmos.azure.com/?tls=true&authMechanism=SCRAM-SHA-256&retrywrites=false&maxIdleTimeMS=120000`
+3.  Replace `mongodb+srv://aiapp1dayadmin:Aiapp1daypassword123@arg-syd-aiapp1day-mongo.mongocluster.cosmos.azure.com/?tls=true&authMechanism=SCRAM-SHA-256&retrywrites=false&maxIdleTimeMS=120000&tlsInsecure=true` with `mongodb+srv://aiapp1dayadmin:Aiapp1daypassword123@arg-syd-caiwest-mongo.mongocluster.cosmos.azure.com/?tls=true&authMechanism=SCRAM-SHA-256&retrywrites=false&maxIdleTimeMS=120000`
 
-4.  Replace `<AZURE_OPENAI_API_INSTANCE_NAME>` with `arg-syd-caiwest-openai`
+4.  Replace `arg-syd-aiapp1day-openai` with `arg-syd-caiwest-openai`
 
-5.  Replace `<AZURE_OPENAI_API_KEY>` with `0f73b2e1cba543ce8c9518712a5b1efc`
+5.  Replace `0f73b2e1cba543ce8c9518712a5b1efc` with `0f73b2e1cba543ce8c9518712a5b1efc`
 
 6.  Navigate to the setup test folder `~/labs/00-Setup/` within the repository.
 
