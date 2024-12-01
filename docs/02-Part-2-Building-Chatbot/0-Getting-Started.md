@@ -25,7 +25,7 @@ The code exercises in this lab contain two folders:
 
 ### Chatbot Demo
 
-https://arg-syd-caiwest-chat.azurewebsites.net/
+https://arg-syd-aiapp1day-chat.azurewebsites.net/
 
 ![alt text](images/chatbot-image.png)
 
