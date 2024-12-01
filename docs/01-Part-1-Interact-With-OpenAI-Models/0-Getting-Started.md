@@ -13,7 +13,7 @@ slug: /lab1-setup
 
 For this lab you are using a custom playground build on-top of the Azure OpenAI Service. In this playground you will have the opportunity to play with the prompts and learn how to interact with OpenAI Models.
 
-AI Proxy Playground: https://arg-syd-caiwest-playground.azurewebsites.net
+AI Proxy Playground: https://arg-syd-aiapp1day-playground.azurewebsites.net
 
 In the later modules, you will also be interacting with the Azure OpenAI Service using the Azure SDK.
 
