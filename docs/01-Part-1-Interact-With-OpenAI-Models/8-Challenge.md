@@ -19,7 +19,7 @@ Create a simple Node.js application that prints the response from the chatbot to
 
 Hint: Use [chat tools]('https://learn.microsoft.com/en-us/javascript/api/overview/azure/openai-readme?view=azure-node-preview#use-chat-tools') to turn on and off the lights in your home.
 
-The completed code is available in the `~/labs/01-Lab-01/7-Exercise` folder.
+The completed code is available in the `labs/01-Lab-01/8-Exercise` folder.
 
 Open terminal window in VS code, and run below command to start the application.
 
