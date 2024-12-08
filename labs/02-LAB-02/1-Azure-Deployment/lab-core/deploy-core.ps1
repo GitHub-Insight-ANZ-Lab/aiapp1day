@@ -15,4 +15,6 @@ az deployment group create --resource-group {your_rg_name} --template-file ./azu
 # Deploy resources using the Bicep template and parameters file
 az deployment group create --resource-group {your_rg_name} --template-file ./azuredeploy.bicep --parameters ./azuredeploy.parameters.json
 
+# Deploy GraphRag
+az deployment group create --resource-group {your_rg_name} --template-file ./azuredeploy-graphrag.bicep --parameters ./azuredeploy-graphrag.parameters.json
 

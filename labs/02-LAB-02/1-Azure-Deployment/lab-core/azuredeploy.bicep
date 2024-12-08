@@ -66,7 +66,7 @@ var openAiSettings = {
     }
     sku: {
       name: 'Standard'
-      capacity: 60
+      capacity: 300
     }
   }
   embeddingsModel: {
@@ -77,7 +77,7 @@ var openAiSettings = {
     }
     sku: {
       name: 'Standard'
-      capacity: 60
+      capacity: 300
     }
   }
   dalleModel: {
