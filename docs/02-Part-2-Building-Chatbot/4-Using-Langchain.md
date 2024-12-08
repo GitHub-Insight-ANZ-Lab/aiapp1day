@@ -343,9 +343,27 @@ In this scenario, an agent will be equipped with two tools, one that uses a retr
        },
      });
 
+    const productFeedbackTool = new DynamicTool({
+        name: "product_feedback_lookup_tool",
+        description: `Searches Contoso Bike Store feedback based on the question.
+                    Returns the product name, sku and feedback in text format.
+                    If the product is not found, returns null.`,
+        func: async (input) => {
+            const url = `${graphRagAPI}/query/global`;
+            const requestBody = {
+                index_name: "bike",
+                query: `whats the top 2 products based on:  ${input}?`,
+                community_level: 1
+            };
+            
+            const response = await axios.post(url, requestBody, {});
+            return response.data.result;
+        },
+    });
+
      // Generate OpenAI function metadata to provide to the LLM
      // The LLM will use this metadata to decide which tool to use based on the description.
-     const tools = [productsRetrieverTool, productLookupTool];
+     const tools = [productsRetrieverTool, productLookupTool, productFeedbackTool];
      const modelWithFunctions = chatModel.bind({
        functions: tools.map((tool) => convertToOpenAIFunction(tool)),
      });
@@ -440,7 +458,7 @@ In this scenario, an agent will be equipped with two tools, one that uses a retr
 Please think about the difference between `langchain-rag.js` and `langchain-agent.js`. Which one do you think is better?
 :::
 
-12. Experiment with additional questions of your own.
+12. Experiment with additional questions of your own. For example, change the question in the `executeAgent` function to `What's the top 2 Tire based on feedback?`. It will use `productFeedbackTool` to invoike API call to Graph RAG endpoint.
 
 ## Summary
 

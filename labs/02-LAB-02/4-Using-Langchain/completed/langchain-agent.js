@@ -1,4 +1,5 @@
 require('dotenv').config();
+const axios = require('axios');
 const { MongoClient } = require('mongodb');
 const { AzureCosmosDBVectorStore,
     AzureCosmosDBSimilarityType
@@ -29,6 +30,7 @@ const {
 // set up the MongoDB client
 const dbClient = new MongoClient(process.env.MONGODB_CONNECTION_STRING);
 var dbname = process.env.MONGODB_Name;
+var graphRagAPI = process.env.GRAPH_RAG_API;
 
 // set up the Azure Cosmos DB vector store using the initialized MongoDB client
 const azureCosmosDBConfig = {
@@ -52,7 +54,6 @@ async function main() {
         console.log(
             await executeAgent(agentExecutor, "What yellow products do you have?")
         );
-
     } catch (err) {
         console.error(err);
     } finally {
@@ -142,9 +143,27 @@ async function buildAgentExecutor() {
         },
     });
 
+    const productFeedbackTool = new DynamicTool({
+        name: "product_feedback_lookup_tool",
+        description: `Searches Contoso Bike Store feedback based on the question.
+                    Returns the product name, sku and feedback in text format.
+                    If the product is not found, returns null.`,
+        func: async (input) => {
+            const url = `${graphRagAPI}/query/global`;
+            const requestBody = {
+                index_name: "bike",
+                query: `whats the top 2 products based on:  ${input}?`,
+                community_level: 1
+            };
+            
+            const response = await axios.post(url, requestBody, {});
+            return response.data.result;
+        },
+    });
+
     // Generate OpenAI function metadata to provide to the LLM
     // The LLM will use this metadata to decide which tool to use based on the description.
-    const tools = [productsRetrieverTool, productLookupTool];
+    const tools = [productsRetrieverTool, productLookupTool, productFeedbackTool];
     const modelWithFunctions = chatModel.bind({
         functions: tools.map((tool) => convertToOpenAIFunction(tool)),
     });
