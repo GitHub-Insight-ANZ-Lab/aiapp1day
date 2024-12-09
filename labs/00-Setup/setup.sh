@@ -29,7 +29,8 @@ echo "Searching for .env and .js files..."
 find /workspaces/aiapp1day/ -type f \( -name "*.env" -o -name "*.js" \) -not -path "*/node_modules/*" | while read -r file; do
     echo "Processing: $file"
     for search in "${!replacements[@]}"; do
-        replace="${replacements[$search]}"
+        # replace="${replacements[$search]}"
+        replace=$(echo "${replacements[$search]}" | sed 's/&/\\&/g')
         sed -i "s|${search}|${replace}|g" "$file"
     done
 done
