@@ -7,7 +7,7 @@ In the previous lab, we configured and hosted the backend API code locally. The 
 1. The frontend chatbot app is located in `apps/chatbot`. update backend url in `.env` file. While the code for the SPA web application is outside the scope of this dev guide. It's worth noting that the Web App is configured with the URL for the Backend API in `.env`.
 
    :::info
-   If you are running the `codespaces` in web browser, please replace the `BACKEND_URI` with the actual `codespaces` url of backend, similar to below.
+   If you are running the `codespaces` in web browser, please replace the `BACKEND_URI` with the actual `codespaces` url of backend, similar to below. Make sure no trailing slash in URL.
 
    ```
    BACKEND_URI=https://ominous-space-goldfish-v6vv749557wjfxj99-5000.app.github.dev
