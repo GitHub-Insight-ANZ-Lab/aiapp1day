@@ -117,6 +117,7 @@ https://azure.microsoft.com/en-au/pricing/member-offers/credit-for-visual-studio
 | AZURE_OPENAI_API_DEPLOYMENT_NAME            | completions                                       |
 | AZURE_OPENAI_API_EMBEDDINGS_DEPLOYMENT_NAME | embeddings                                        |
 | AZURE_OPENAI_API_VERSION                    | 2023-09-01-preview                                |
+| GRAPH_RAG_API                               | https://arg-syd-aiapp1day-ca--miqityv.niceisland-66754352.eastus.azurecontainerapps.io |
 
 ### Azure Cosmos DB for MongoDB
 
@@ -141,34 +142,58 @@ Let us test the connection to Cosmos DB instance and OpenAI service.
 
 1.  Open VS Code and navigate to the `aiapp1day` repository folder. If you are using Codespaces, you should already be in the repository folder.
 
-2.  Switch to VS Code `Search` tab, replace `<MONGODB_Name>` placeholder with your own database name. Search for `<MONGODB_Name>` and replace with `aiapp1day_xxxxx_xx` (for example: aiapp1day_daniel_66). Then click `Replace All` icon, there will be multiple items to be replaced. The placeholder string will be replaced in the whole repo so that you have a dedicated database on the shared Cosmos DB instance.
+2.  Navigate to the setup folder `~/labs/00-Setup/` within the repository. Go to `Terminal` window in VS Code.
+    ```bash
+    cd labs/00-Setup/
+    ```
+
+3.  Open `setup.sh`, let's update `<MONGODB_Name>` setting with your own database name. Replace `add_value` with `aiapp1day_xxxxx_xx` (for example: aiapp1day_daniel_66).
+
+    ![edit setting](images/edit-settings.png)
 
     :::info
-    Make sure the `<` and `>` included in search & replace.
-
     if you are deploying your own Azure resources, please update above shared keys and connection string with your own.
     :::
 
+4.  Update `<MONGODB_CONNECTION_STRING>` with `mongodb+srv://aiapp1dayadmin:Aiapp1daypassword123@arg-syd-aiapp1day-mongo.mongocluster.cosmos.azure.com/?tls=true&authMechanism=SCRAM-SHA-256&retrywrites=false&maxIdleTimeMS=120000`
+
+5.  Update `<AZURE_OPENAI_API_INSTANCE_NAME>` with `arg-syd-aiapp1day-openai`
+
+6.  Update `<AZURE_OPENAI_API_KEY>` with `0f73b2e1cba543ce8c9518712a5b1efc`
+
+7.  Update `<GRAPH_RAG_API>` with `https://arg-syd-aiapp1day-ca--miqityv.niceisland-66754352.eastus.azurecontainerapps.io`
+
+8.  Go to terminal windows and run below bash command to replace all variables in the repo.
+
+    ```bash
+    chmod +x setup.sh
+    ./setup.sh
+    ```
+
+    :::info
+    If you have issue running above script, you can also carry out variable replacement manually. 
+    
+    Switch to VS Code `Search` tab, replace `<MONGODB_Name>` placeholder with your own database name. 
+    
+    Search for `<MONGODB_Name>` and replace with `aiapp1day_xxxxx_xx` (for example: aiapp1day_daniel_66). 
+    
+    Then click `Replace All` icon, there will be multiple items to be replaced. The placeholder string will be replaced in the whole repo so that you have a dedicated database on the shared Cosmos DB instance.
+
     ![alt text](images/setup.png)
+    :::
 
-3.  Replace `<MONGODB_CONNECTION_STRING>` with `mongodb+srv://aiapp1dayadmin:Aiapp1daypassword123@arg-syd-aiapp1day-mongo.mongocluster.cosmos.azure.com/?tls=true&authMechanism=SCRAM-SHA-256&retrywrites=false&maxIdleTimeMS=120000`
-
-4.  Replace `<AZURE_OPENAI_API_INSTANCE_NAME>` with `arg-syd-aiapp1day-openai`
-
-5.  Replace `<AZURE_OPENAI_API_KEY>` with `0f73b2e1cba543ce8c9518712a5b1efc`
-
-6.  Navigate to the setup test folder `~/labs/00-Setup/` within the repository.
+9.  Install node packages for test program.
 
     ```bash
     npm install
     ```
 
-7.  Test Connection to CosMos Db and OpenAI service. Run the following command in the terminal window to execute the script:
+10.  Test Connection to CosMos Db and OpenAI service. Run the following command in the terminal window to execute the script:
 
     ```bash
     node test.js
     ```
 
-8.  If you see below message in the console, you are ready to go! otherwise, please `YELL for help`.
+11.  If you see below message in the console, you are ready to go! otherwise, please `YELL for help`.
 
     ![alt text](images/setup-test.png)
