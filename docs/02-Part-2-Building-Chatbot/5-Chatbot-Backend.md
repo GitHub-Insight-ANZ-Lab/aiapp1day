@@ -20,7 +20,7 @@ When developing a backend api, it is often useful to run the application locally
 
    ![alt text](images/chatbot-frontend-image-1.png)
 
-3. Copy `agent.js` into `apps/api/bikestore/agent.js` to enable the backend to connect to both CosmosDb and OpenAI service.
+3. The `agent.js` is used in `apps/api/bikestore/agent.js` to enable the backend to connect to both CosmosDb and OpenAI service.
 
 4. Take your time and have a look at these files:
    - `apps\api\app.js` configures node.js app
