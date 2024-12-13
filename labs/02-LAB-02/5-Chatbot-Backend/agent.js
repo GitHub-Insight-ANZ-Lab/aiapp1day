@@ -11,8 +11,11 @@ const { convertToOpenAIFunction } = require("@langchain/core/utils/function_call
 const { ChatOpenAI, OpenAIEmbeddings } = require("@langchain/openai");
 const { AzureCosmosDBVectorStore } = require("@langchain/community/vectorstores/azure_cosmosdb");
 
+var dbname = process.env.MONGODB_Name;
+
 class ContosoBikeStoreAgent {
     constructor() {
+        
         // set up the MongoDB client
         this.dbClient = new MongoClient(process.env.MONGODB_CONNECTION_STRING);
         // set up the Azure Cosmos DB vector store
@@ -33,7 +36,8 @@ class ContosoBikeStoreAgent {
             azureOpenAIApiKey: process.env.AZURE_OPENAI_API_KEY,
             azureOpenAIApiVersion: process.env.AZURE_OPENAI_API_VERSION,
             azureOpenAIApiInstanceName: process.env.AZURE_OPENAI_API_INSTANCE_NAME,
-            azureOpenAIApiDeploymentName: process.env.AZURE_OPENAI_API_DEPLOYMENT_NAME
+            azureOpenAIApiDeploymentName: process.env.AZURE_OPENAI_API_DEPLOYMENT_NAME,
+            verbose: true,
         });
 
         // initialize the chat history
@@ -91,6 +95,8 @@ class ContosoBikeStoreAgent {
             
             If a question is not related to Contoso Bike Store products, customers, or sales orders,
             respond with "I only answer questions about Contoso Bike Store"          
+
+            NEVER MAKE UP AN ANSWER.
         `;
         // Create vector store retriever chain to retrieve documents and formats them as a string for the prompt.
         const retrieverChain = this.vectorStore.asRetriever().pipe(this.formatDocuments);
@@ -113,13 +119,19 @@ class ContosoBikeStoreAgent {
                     Returns the product information in JSON format.
                     If the product is not found, returns null.`,
             func: async (input) => {
-                const db = this.dbClient.db(process.env.MONGODB_NAME);
+                
+                console.log(`productLookupTool input: ${input}`);
+                
+                const db = this.dbClient.db(dbname);
                 const products = db.collection("products");
                 const doc = await products.findOne({ "sku": input });
                 if (doc) {
                     //remove the contentVector property to save on tokens
                     delete doc.contentVector;
                 }
+                
+                console.log(`productLookupTool doc: ${doc}`);
+
                 return doc ? JSON.stringify(doc, null, '\t') : null;
             },
         });
@@ -162,7 +174,8 @@ class ContosoBikeStoreAgent {
         const executor = AgentExecutor.fromAgentAndTools({
             agent: runnableAgent,
             tools,
-            //returnIntermediateSteps: true
+            returnIntermediateSteps: true,
+            verbose: true,
         });
 
         return executor;

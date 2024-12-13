@@ -146,17 +146,13 @@ There are multiple options available for performing bulk operations in Cosmos DB
    );
    ```
 
-2. You may run the upload script multiple times, which will result in duplicate data. To avoid having duplicate data, add the following code to delete any existing products before loading the new data:
+2. You may run the upload script multiple times, which will result in duplicate data. To avoid having duplicate data, below code deletes any existing products before loading the new data. Then load the product data into the collection using the `bulkWrite` method.
 
    ```javascript
    // Delete any existing products
    console.log("Deleting existing products");
    await productCollection.deleteMany({});
-   ```
 
-3. Append the following code to the previous code block to load the product data into the collection using the `bulkWrite` method:
-
-   ```javascript
    var result = await productCollection.bulkWrite(
      productData.map((product) => ({
        insertOne: {
@@ -167,9 +163,9 @@ There are multiple options available for performing bulk operations in Cosmos DB
    console.log(`${result.insertedCount} products inserted`);
    ```
 
-4. Save the `import.js` file.
+3. Save the `import.js` file.
 
-5. Run the application by executing the following command in the terminal window:
+4. Run the application by executing the following command in the terminal window:
 
    ```bash
    node import.js
@@ -204,7 +200,7 @@ The `Customer` and `Sales` data is in the `custSalesData.json` file. We will be 
    );
    ```
 
-2. Add the following code to split the `custSalesData` into `customer` and `sales` data:
+2. The following code firstly splits the `custSalesData` into `customer` and `sales` data, then loads the customer data into the collection using the `insertMany` method. Finally load the sales data into the collection using the `insertMany` method.
 
    ```javascript
    console.log("Split customer and sales data");
@@ -214,29 +210,21 @@ The `Customer` and `Sales` data is in the `custSalesData.json` file. We will be 
    const salesData = custSalesData.filter(
      (sales) => sales["type"] === "salesOrder"
    );
-   ```
-
-3. Add the following code to load the customer data into the collection using the `insertMany` method:
-
-   ```javascript
+   
    console.log("Loading customer data");
    await customerCollection.deleteMany({});
    result = await customerCollection.insertMany(customerData);
    console.log(`${result.insertedCount} customers inserted`);
-   ```
-
-4. Add the following code to load the sales data into the collection using the `insertMany` method:
-
-   ```javascript
+   
    console.log("Loading sales data");
    await salesCollection.deleteMany({});
    result = await salesCollection.insertMany(salesData);
    console.log(`${result.insertedCount} sales inserted`);
    ```
 
-5. Save the `import.js` file.
+3. Save the `import.js` file.
 
-6. Run the application by executing the following command in the terminal window:
+4. Run the application by executing the following command in the terminal window:
 
    ```bash
    node import.js

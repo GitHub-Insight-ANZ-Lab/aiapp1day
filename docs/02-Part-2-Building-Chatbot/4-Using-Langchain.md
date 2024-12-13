@@ -118,7 +118,7 @@ In this section, we'll implement the RAG pattern using LangChain. In LangChain, 
 
 We'll also define a reusable RAG chain to control the flow and behavior of the call into the LLM. This chain is defined using the LCEL syntax (LangChain Expression Language).
 
-1. Open the `langchian-rag.js` file in the Visual Studio Code editor.
+1. Open the `langchain-rag.js` file in the Visual Studio Code editor.
 
 2. Directly preceding the final line of code in this file (where the main function is called), add the `formatDocuments` function that will be used to format the `Document` objects into a JSON string that will be used in the prompt for the LLM. The code is documented inline.
 
@@ -159,7 +159,7 @@ We'll also define a reusable RAG chain to control the flow and behavior of the c
    const { OpenAIEmbeddings, ChatOpenAI } = require("@langchain/openai");
    ```
 
-4. Directly beneath the line of code that was just modified in the previous step, add the following:
+4. Directly beneath the line of code that was just modified in the previous step, add the following code to import and initialize an Azure OpenAI chat model. 
 
    ```javascript
    // To support the LangChain LCEL RAG chain
@@ -169,16 +169,12 @@ We'll also define a reusable RAG chain to control the flow and behavior of the c
      RunnablePassthrough,
    } = require("@langchain/core/runnables");
    const { StringOutputParser } = require("@langchain/core/output_parsers");
-   ```
-
-5. Immediately before the `async function main()` function, add the following code to initialize an Azure OpenAI chat model.
-
-   ```javascript
+   
    // set up the OpenAI chat model
    const chatModel = new ChatOpenAI();
    ```
 
-6. Before the last line of code in the file (that calls the main function), add the following function that creates a reusable LangChain RAG chain. The code is documented inline.
+5. Before the last line of code in the file (that calls the main function), add the following function that creates a reusable LangChain RAG chain. The code is documented inline.
 
    ```javascript
    async function ragLCELChain(question) {
@@ -230,15 +226,15 @@ We'll also define a reusable RAG chain to control the flow and behavior of the c
    }
    ```
 
-7. In the `main` function, directly beneath the line of code `console.log('Connected to MongoDB');`, add the following code that will call the `ragLCELChain` function to perform a vector search using the `vectorStore` object and output the results.
+6. In the `main` function, directly beneath the line of code `console.log('Connected to MongoDB');`, add the following code that will call the `ragLCELChain` function to perform a vector search using the `vectorStore` object and output the results.
 
    ```javascript
    console.log(await ragLCELChain("What yellow products do you have?"));
    ```
 
-8. Save the `langchain-rag.js` file.
+7. Save the `langchain-rag.js` file.
 
-9. Run the application by executing the following command in the terminal window:
+8. Run the application by executing the following command in the terminal window:
 
    ```bash
    node langchain-rag.js
@@ -246,7 +242,7 @@ We'll also define a reusable RAG chain to control the flow and behavior of the c
 
    ![The console output shows the response from the LLM based on the augmented prompt and returns the LLM response.](images/rag_chain_output.png "RAG chain output")
 
-10. Lets now try a different question.
+9. Lets now try a different question.
 
 ```javascript
 console.log(
@@ -266,7 +262,7 @@ In this section, we'll implement a LangChain agent that will be used to interact
 
 In this scenario, an agent will be equipped with two tools, one that uses a retriever chain from the vector store, and another that will perform a MongoDB lookup based on a SKU value. The reason the SKU lookup tool is introduced is because the vector store is built for semantic search. Some fields, such as the `_id` or `sku` fields do not have semantic meaning and therefore a direct lookup is more appropriate.
 
-1. Open the `langchian-agent.js` file in the Visual Studio Code editor.
+1. Open the `langchain-agent.js` file in the Visual Studio Code editor.
 
 2. Immediately after the `const { StringOutputParser } = require("@langchain/core/output_parsers");` line of code, add the following dependencies to support the creation of the LangChain agent:
 

@@ -46,15 +46,11 @@ You will also learn how to use the vector index to retrieve the relevant documen
 
 3. Open the `embedding.js` file in the Visual Studio Code editor.
 
-4. Add the following code to import the Azure OpenAI client and Azure Key Credential classes at the top of the file:
+4. Add the following code to import the Azure OpenAI client and Azure Key Credential classes at the top of the file below `const { MongoClient } = require('mongodb');` line. The code block alse creates an instance of the Azure OpenAI client afer the imports.
 
    ```javascript
    const { OpenAIClient, AzureKeyCredential } = require("@azure/openai");
-   ```
 
-5. Add the following code to create an instance of the Azure OpenAI client afer the imports:
-
-   ```javascript
    // set up the Azure OpenAI client
    const embeddingsDeploymentName = "embeddings";
    const completionsDeploymentName = "completions";
@@ -196,10 +192,12 @@ We have a lot of people doing the lab at the same time. Get in quick before rate
    }
    ```
 
-2. In the `main` function, beneath the `const db = dbClient.db(dbname);` line of code, add the following code to call the new `addCollectionContentVectorField` function on the `products` collection:
+2. In the `main` function, beneath the `const db = dbClient.db(dbname);` line of code, add the following code to call the new `addCollectionContentVectorField` function on the `products` collection. We do the same for creating the vector embeddings for the `customers` and `sales` collections.
 
    ```javascript
    await addCollectionContentVectorField(db, "products");
+   await addCollectionContentVectorField(db, "customers");
+   await addCollectionContentVectorField(db, "sales");
    ```
 
 3. Save the `vectorize.js` file.
@@ -220,13 +218,6 @@ We have a lot of people doing the lab at the same time. Get in quick before rate
 
    ![alt text](images/rag_with_vector_search_image-5.png)
 
-7. Repeat the steps 2 to 4 to create the vector embeddings for the `customers` and `sales` collections. Modify the collection name in the
-   `addCollectionContentVectorField` function call. You have to update your vectors by running the script again if there are any changes in the documents.
-
-   ```javascript
-   await addCollectionContentVectorField(db, "customers");
-   await addCollectionContentVectorField(db, "sales");
-   ```
 
 ## Use vector search
 
