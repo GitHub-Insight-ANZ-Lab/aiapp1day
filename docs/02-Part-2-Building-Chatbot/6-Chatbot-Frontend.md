@@ -43,7 +43,7 @@ In the previous lab, we configured and hosted the backend API code locally. The 
 
 2. These example questions are:
 
-   - What was the price of the product with sku `FR-R92B-58`?
+   - What was the price of the product with sku `BK-T79U-46`?
    - What is the SKU of HL Road Frame - Black?
    - What is HL Road Frame?
 
