@@ -3,7 +3,7 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "name": { 
-            "value": "arg-syd-{your_name}"
+            "value": "arg-syd-aiapp1day"
         },
         "location": { 
             "value": "eastus"
