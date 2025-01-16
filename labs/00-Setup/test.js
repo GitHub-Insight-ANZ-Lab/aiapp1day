@@ -2,9 +2,11 @@ require('dotenv').config();
 const { MongoClient } = require('mongodb');
 const { OpenAIClient, AzureKeyCredential } = require("@azure/openai");
 
+const openai_instance = process.env.AZURE_OPENAI_API_INSTANCE_NAME;
+const openai_key = process.env.AZURE_OPENAI_API_KEY;
 const oaiClient = new OpenAIClient(
-    "https://<AZURE_OPENAI_API_INSTANCE_NAME>.openai.azure.com",
-    new AzureKeyCredential("<AZURE_OPENAI_API_KEY>")
+    `https://${openai_instance}.openai.azure.com`,
+    new AzureKeyCredential(openai_key)
 );
 
 async function main() {
