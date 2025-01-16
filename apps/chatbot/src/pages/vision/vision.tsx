@@ -88,7 +88,7 @@ const Page = () => {
 
             {selectedImage && (
                 <div>
-                    <h4>Your Lego Brick</h4>
+                    <h4>Your Photo</h4>
                     <p>
                         <img
                             width={"400px"}
@@ -96,23 +96,12 @@ const Page = () => {
                         />
                     </p>
 
-                    <h4>Describe The Brick</h4>
+                    <h4>Describe </h4>
                     <p>
                         <button onClick={() => execImageDescApi()}>Describe This Brick</button><br />
                     </p>
                     <p>
                         {imageDesc}
-                    </p>
-
-                    <h4>Find Similar Lego Brick</h4>
-                    <p>
-                        <button onClick={() => execImageMatchApi()}>Find Similar Brick</button><br />
-                    </p>
-                    <p>
-                        <img height={"400px"} src={imageUrl} />
-                    </p>
-                    <p>
-                        {imageText}
                     </p>
                 </div>
             )}

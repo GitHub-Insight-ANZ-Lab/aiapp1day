@@ -15,16 +15,25 @@ const Layout = () => {
                     <nav>
                         <ul className={styles.headerNavList}>
                             <li className={styles.headerNavLeftMargin}>
-                                <a href="/" >Chat</a>
+                                <a href="/design" >Design</a>
                             </li>
                             <li>
-                                <a href="/Image" >Image</a>
+                                <a href="/translation" >Translation</a>
                             </li>
                             <li>
-                                <a href="/Translate" >Translate</a>
+                                <a href="/vision" >Vision</a>
                             </li>
                             <li>
-                                <a href="/Vision" >Vision</a>
+                                <a href="/speech" >Speech</a>
+                            </li>
+                            <li>
+                                <a href="/seo" >SEO</a>
+                            </li>
+                            <li>
+                                <a href="/automation" >Automation</a>
+                            </li>
+                            <li>
+                                <a href="/search" >Search</a>
                             </li>
                         </ul>
                     </nav>

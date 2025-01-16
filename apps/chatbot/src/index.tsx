@@ -9,9 +9,13 @@ import "./index.css";
 
 import Layout from "./pages/layout/Layout";
 import Chat from "./pages/chat/Chat";
-import Vision from "./pages/vision/vision";
-import Image from "./pages/image/Image";
-import Translate from "./pages/translate/translate";
+import Design from "./pages/design/Design";
+import Translation from "./pages/translation/Translation";
+import Vision from "./pages/vision/Vision";
+import Speech from "./pages/speech/Speech";
+import Seo from "./pages/seo/Seo";
+import Search from "./pages/search/Search";
+import Automation from "./pages/automation/Automation";
 
 var layout;
 
@@ -26,9 +30,13 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
         <Route path="/" element={<Layout />}>
           <Route index element={<Chat />} />
           <Route path="/chat" element={<Chat />} />
-          <Route path="/image" element={<Image />} />
+          <Route path="/design" element={<Design />} />
+          <Route path="/translation" element={<Translation />} />
           <Route path="/vision" element={<Vision />} />
-          <Route path="/translate" element={<Translate />} />
+          <Route path="/speech" element={<Speech />} />
+          <Route path="/seo" element={<Seo />} />
+          <Route path="/search" element={<Search />} />
+          <Route path="/automation" element={<Automation />} />
         </Route>
       </Routes>
     </Router>
