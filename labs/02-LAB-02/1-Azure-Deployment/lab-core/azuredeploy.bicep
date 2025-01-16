@@ -215,6 +215,7 @@ resource openAiDalleModelDeployment 'Microsoft.CognitiveServices/accounts/deploy
   name: openAiSettings.dalleModel.deployment.name
   dependsOn: [
     openAiEmbeddingsModelDeployment
+    openAiCompletionsModelDeployment
   ]
   sku: {
     name: openAiSettings.dalleModel.sku.name
