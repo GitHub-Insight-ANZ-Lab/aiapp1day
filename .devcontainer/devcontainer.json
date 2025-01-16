@@ -14,7 +14,9 @@
 		"extensions": [
 		  "mongodb.mongodb-vscode",
 		  "ms-azuretools.vscode-azureappservice",
-		  "ms-azuretools.vscode-bicep"
+		  "ms-azuretools.vscode-bicep",
+		  "github.copilot-chat",
+		  "github.copilot"
 		]
 	  }
 	}
