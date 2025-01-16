@@ -1,19 +1,33 @@
 ---
-title: "Homework"
-slug: /homework1
+title: "Challenge 3: Vision"
 ---
 
-## Challenge #6 Enhancing the Returns Experience
+## Vision for Product Image Processing
 
-Goal: (session 1, medium value)
+### Goal
+
 Provide a seamless and efficient returns experience that meets customer expectations while ensuring operational accuracy.
 
-Challenge: 
+### Challenge
+
 Leverage AI for product image processing to simplify and improve the returns process, including 4o vision capabilities for analyzing and verifying returned products.
 
-Note: use 4o api call with a base64 image, the gpt model will describe the content of the image. I will create a new page on chatbot with a file selection. Participant needs to figure out how to attach image to the call.
+### Tips
 
+Create a new function to ask LLM to understand and extract information from image or photo. 
 
+There is a `Vision` page on chatbot, the page have an image upload button, and a button to invoke AI Service and get back a vision response.
+
+Complete the `visionApi` function to send a prompt with a uploaded image and receive an response that anlysis the features on the photo. the gpt model will describe the content of the image.
+
+- Invoke GPT-4o using OpenAIClient using `image_url` attribute
+- GTP-4o's details are on the setup page
+- Inspect the response payload of the call
+- Retrieve the response and display on the page
+
+### Answer
+
+```
 export async function visionApi(prompt: string[]): Promise<Completions> {
     const options = {
         api_version: "2024-08-01-preview"
@@ -32,4 +46,4 @@ export async function visionApi(prompt: string[]): Promise<Completions> {
       });
       return result.choices[0].message.content;
 }
-
+```

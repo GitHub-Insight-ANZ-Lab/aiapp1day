@@ -30,10 +30,10 @@ const Layout = () => {
                                 <a href="/seo" >SEO</a>
                             </li>
                             <li>
-                                <a href="/automation" >Automation</a>
+                                <a href="/search" >Search</a>
                             </li>
                             <li>
-                                <a href="/search" >Search</a>
+                                <a href="/automation" >Automation</a>
                             </li>
                         </ul>
                     </nav>

@@ -37,7 +37,7 @@ const Page = () => {
             <h2>Translation</h2>
             <p></p>
             <p>
-                <input type="text" placeholder="describe an image (e.g. lego block in rainbow color)" onChange={updateText} />
+                <input type="text" placeholder="describe an image ()" onChange={updateText} />
                 <button onClick={() => execImageCreateApi()}>Translate</button><br />
                 {
                     (promiseInProgress === true) ?
