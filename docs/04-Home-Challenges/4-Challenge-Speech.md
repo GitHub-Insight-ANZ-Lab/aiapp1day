@@ -6,12 +6,13 @@ title: "Challenge 4: Speech"
 
 ### Goal
 
-Increase operational efficiency and reduce manual workload through targeted automation solutions.
+Improves accessibility, reduces wait times, and ensures consistent communication across the store. By streamlining operations and enhancing convenience,
 
 ### Challenge
 
-POTENTIAL TO ASK, THROUGH TEXT OR VOICE, QUESTIONS ON METRICS OR PERFORMANCE
-RELEVANT TO A ROLE
+Implementing text-to-speech (TTS) to enhance customer experience and efficiency by enabling self-service options. Shoppers can use TTS-powered kiosks for product information, store navigation, and promotional updates without staff assistance
+
+![Challenge](images/challenge-4.png)
 
 ### Tips
 

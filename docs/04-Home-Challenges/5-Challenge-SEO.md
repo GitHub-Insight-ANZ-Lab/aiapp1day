@@ -12,6 +12,8 @@ Boost website traffic and search engine rankings with AI-generated content tailo
 
 Automate the creation of SEO-optimized content, including keywords, titles, and meta tags, to enhance digital visibility.
 
+![Challenge](images/challenge-5.png)
+
 ### Tips
 
 Write a function to read a web page and convert html to text and summariese it

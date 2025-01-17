@@ -12,6 +12,8 @@ Derive actionable insights from customer reviews to refine product offerings and
 
 Utilize external product reviews to enhance product quality by analyzing sentiment and summarizing key feedback with GPT-4o sentiment detection and feedback summarization.
 
+![Challenge](images/challenge-2.png)
+
 ### Tips
 
 Create function that will take in a non-english customer review and translate it to English. 

@@ -12,6 +12,8 @@ Provide a seamless and efficient returns experience that meets customer expectat
 
 Leverage AI for product image processing to simplify and improve the returns process, including 4o vision capabilities for analyzing and verifying returned products.
 
+![Challenge](images/challenge-3.png)
+
 ### Tips
 
 Create a new function to ask LLM to understand and extract information from image or photo. 

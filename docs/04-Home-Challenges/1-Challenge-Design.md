@@ -12,6 +12,8 @@ Develop visually appealing designs that align with brand values while maintainin
 
 Enhance product design creativity by leveraging AI-powered tools like DALL-E to create innovative artwork and ensure content safety.
 
+![Challenge](images/challenge-1.png)
+
 ### Tips
 
 Invoke dall-e model to create an cretivity product design based on product team's description. 
