@@ -1,3 +1,34 @@
+---
+title: "Challenge 3: Vision"
+---
+
+## Vision for Product Image Processing
+
+### Goal
+
+Provide a seamless and efficient returns experience that meets customer expectations while ensuring operational accuracy.
+
+### Challenge
+
+Leverage AI for product image processing to simplify and improve the returns process, including 4o vision capabilities for analyzing and verifying returned products.
+
+### Tips
+
+Create a new function to ask LLM to understand and extract information from image or photo. 
+
+There is a `Vision` page on chatbot, the page have an image upload button, and a button to invoke AI Service and get back a vision response.
+
+Complete the `visionApi` function to send a prompt with a uploaded image and receive an response that anlysis the features on the photo. the gpt model will describe the content of the image.
+
+- Invoke GPT-4o using OpenAIClient using `image_url` attribute
+- GTP-4o's details are on the setup page
+- Inspect the response payload of the call
+- Retrieve the response and display on the page
+
+### Answer
+
+```
+
 import React, { useState } from "react";
 import { trackPromise } from "react-promise-tracker";
 import { usePromiseTracker } from "react-promise-tracker";
@@ -23,8 +54,43 @@ const Page = () => {
     }
 
     async function visionApi(text, image): Promise<string> {
-        // todo
-        return "";
+        var messages =
+            [
+                { "role": "system", "content": "You are a helpful assistant." },
+                {
+                    "role": "user", "content": [
+                        {
+                            "type": "text",
+                            "text": text
+                        },
+                        {
+                            "type": "image_url",
+                            "imageUrl": {
+                                "url": `${image}`
+                            }
+                        }
+                    ]
+                }
+            ];
+
+        const options = {
+            api_version: "2024-08-01-preview"
+        };
+
+        var openai_url = "https://arg-syd-aiapp1day-openai.openai.azure.com";
+        var openai_key = "e4e18d6e8fc44398b8571c9ba419bf84";
+        const client = new OpenAIClient(
+            openai_url,
+            new AzureKeyCredential(openai_key),
+            options
+        );
+        // ?api-version=2023-12-01-preview
+        const deploymentName = 'gpt4o';
+        const result = await client.getChatCompletions(deploymentName, messages, {
+            maxTokens: 200,
+            temperature: 0.25
+        });
+        return result.choices[0]?.message?.content ?? '';
     }
 
     function getBase64(event) {
@@ -90,3 +156,5 @@ const Page = () => {
 };
 
 export default Page;
+
+```

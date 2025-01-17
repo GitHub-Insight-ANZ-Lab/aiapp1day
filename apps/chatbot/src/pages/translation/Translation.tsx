@@ -20,26 +20,8 @@ const Page = () => {
     }
 
     async function translationApi(text: string): Promise<string> {
-
-        const translation_url = `https://api.cognitive.microsofttranslator.com/translate?api-version=3.0&to=fr&from=en`;
-        const translation_key = "7b61f16e4fbc4e58924a35da0a403937";
-
-        const body =
-            [{
-                "text": `${text}`
-            }];
-
-        const response = await fetch(translation_url, {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-                "Ocp-Apim-Subscription-Region": "eastus",
-                "Ocp-Apim-Subscription-Key": translation_key,
-            },
-            body: JSON.stringify(body),
-        });
-        const data = await response.json();
-        return data[0].translations[0].text;
+        // todo
+        return "";
     }
 
     const updateText = (e: React.ChangeEvent<HTMLInputElement>) => {

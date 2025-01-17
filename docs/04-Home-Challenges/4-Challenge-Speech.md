@@ -1,3 +1,34 @@
+---
+title: "Challenge 4: Speech"
+---
+
+## Text-to-Speech for Self-service
+
+### Goal
+
+Increase operational efficiency and reduce manual workload through targeted automation solutions.
+
+### Challenge
+
+POTENTIAL TO ASK, THROUGH TEXT OR VOICE, QUESTIONS ON METRICS OR PERFORMANCE
+RELEVANT TO A ROLE
+
+### Tips
+
+Invoke Azure Speech service to read out text content (text to speech).
+
+There is a `Voice` page on chatbot, the page have an input textbox for description, and a button to invoke AI Service and get back voice output.
+
+Complete the `voiceApi` function to send a text and receive a voice.
+
+- Invoke Speech service using Speech SDK
+- Connect voice output to browser
+- Play the voice in the browser
+
+### Answer
+
+```
+
 import React, { useState, useEffect } from "react";
 import { trackPromise } from "react-promise-tracker";
 import { usePromiseTracker } from "react-promise-tracker";
@@ -37,8 +68,20 @@ const Page = () => {
     }
 
     async function speechApi(text: string): Promise<string> {
-        // todo
-        return "";
+        await synthesizer.current.speakTextAsync(
+            text,
+            result => {
+                synthesizer.close();
+                const { audioData } = result;
+                // return stream from memory
+                const bufferStream = new PassThrough();
+                bufferStream.end(Buffer.from(audioData));
+                resolve(bufferStream);
+            },
+            error => {
+                synthesizer.close();
+                reject(error);
+            });
     }
 
     const updateText = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -64,3 +107,5 @@ const Page = () => {
 };
 
 export default Page;
+
+```

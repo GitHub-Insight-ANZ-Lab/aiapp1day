@@ -21,42 +21,8 @@ const Page = () => {
     }
 
     async function seoApi(url): Promise<string> {
-        const response = await fetch(url);
-        const html = await response.text();
-        console.log(html);
-
-        var messages =
-            [
-                { "role": "system", "content": "You are a helpful assistant that generate json data based on received xml. output must be json. actually generate the json, don't show me how." },
-                {
-                    "role": "user", "content": [
-                        {
-                            "type": "text",
-                            "text": "Analyse the provided html and summarise it as a json object containing the following fields  : seoKey, seoTitle, seoDescription. \r\n HTML content is here \r\n" + html
-                        }
-                    ]
-                }
-            ];
-        console.log(messages);
-
-        const options = {
-            api_version: "2024-08-01-preview"
-        };
-
-        var openai_url = "https://arg-syd-aiapp1day-openai.openai.azure.com";
-        var openai_key = "e4e18d6e8fc44398b8571c9ba419bf84";
-        const client = new OpenAIClient(
-            openai_url,
-            new AzureKeyCredential(openai_key),
-            options
-        );
-        // ?api-version=2023-12-01-preview
-        const deploymentName = 'gpt4o';
-        const result = await client.getChatCompletions(deploymentName, messages, {
-            maxTokens: 200,
-            temperature: 0.25
-        });
-        return result.choices[0]?.message?.content ?? '';
+        // todo
+        return "";
     }
 
     const updateText = (e: React.ChangeEvent<HTMLInputElement>) => {
