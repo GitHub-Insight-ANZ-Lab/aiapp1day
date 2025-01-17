@@ -17,9 +17,9 @@ RELEVANT TO A ROLE
 
 Invoke Azure Speech service to read out text content (text to speech).
 
-There is a `Voice` page on chatbot, the page have an input textbox for description, and a button to invoke AI Service and get back voice output.
+There is a `Speech` page (`apps\chatbot\pages\speech\Speech.tsx`) on chatbot, the page have an input textbox for description, and a button to invoke AI Service and get back voice output.
 
-Complete the `voiceApi` function to send a text and receive a voice.
+Complete the `speechApi` function to send a text and receive a voice.
 
 - Invoke Speech service using Speech SDK
 - Connect voice output to browser

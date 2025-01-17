@@ -16,9 +16,9 @@ Utilize external product reviews to enhance product quality by analyzing sentime
 
 Create function that will take in a non-english customer review and translate it to English. 
 
-There is a `Translation` page on chatbot, the page have an input textbox for user review, and a button to invoke AI Service and get back translated review.
+There is a `Translation` page (`apps\chatbot\pages\translation\Translation.tsx`) on chatbot, the page have an input textbox for user review, and a button to invoke AI Service and get back translated review.
 
-Complete the `translateApi` function to send a customer review in non-english and receive its english translation.
+Complete the `translationApi` function to send a customer review in non-english and receive its english translation.
 
 - Invoke Azure translation service using restful call
 - Translation service's details are on the setup page

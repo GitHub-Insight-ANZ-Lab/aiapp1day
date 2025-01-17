@@ -16,7 +16,7 @@ Automate the creation of SEO-optimized content, including keywords, titles, and 
 
 Write a function to read a web page and convert html to text and summariese it
 
-There is a `SEO` page on chatbot, the page have an input textbox for url, and a button to invoke AI Service and get back a generated SEO content.
+There is a `SEO` page (`apps\chatbot\pages\seo\Seo.tsx`) on chatbot, the page have an input textbox for url, and a button to invoke AI Service and get back a generated SEO content.
 
 Complete the `seoApi` function to send a website url and receive an SEO json.
 

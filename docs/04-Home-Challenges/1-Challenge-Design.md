@@ -16,7 +16,7 @@ Enhance product design creativity by leveraging AI-powered tools like DALL-E to 
 
 Invoke dall-e model to create an cretivity product design based on product team's description. 
 
-There is a `Image` page on chatbot, the page have an input textbox for description, and a button to invoke AI Service and get back a generated image.
+There is a `Design` page (`apps\chatbot\pages\design\Design.tsx`) on chatbot, the page have an input textbox for description, and a button to invoke AI Service and get back a generated image.
 
 Complete the `dalleApi` function to send a prompt and receive an generated image.
 

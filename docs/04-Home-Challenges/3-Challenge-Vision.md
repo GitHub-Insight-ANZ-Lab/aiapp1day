@@ -16,7 +16,7 @@ Leverage AI for product image processing to simplify and improve the returns pro
 
 Create a new function to ask LLM to understand and extract information from image or photo. 
 
-There is a `Vision` page on chatbot, the page have an image upload button, and a button to invoke AI Service and get back a vision response.
+There is a `Vision` page (`apps\chatbot\pages\vision\Vision.tsx`) on chatbot, the page have an image upload button, and a button to invoke AI Service and get back a vision response.
 
 Complete the `visionApi` function to send a prompt with a uploaded image and receive an response that anlysis the features on the photo. the gpt model will describe the content of the image.
 
