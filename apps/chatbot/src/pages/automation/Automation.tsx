@@ -1,9 +1,6 @@
 import React, { useState } from "react";
 import { trackPromise } from "react-promise-tracker";
 import { usePromiseTracker } from "react-promise-tracker";
-import {
-    dalleApi
-} from "../../api";
 
 const Page = () => {
 
@@ -14,7 +11,7 @@ const Page = () => {
     async function execImageCreateApi() {
         if (imageDalleText != null) {
             trackPromise(
-                dalleApi(imageDalleText)
+                // dalleApi(imageDalleText);
             ).then((response) => {
 
                 // console.log(response);

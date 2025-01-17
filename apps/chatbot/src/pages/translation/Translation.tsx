@@ -1,44 +1,58 @@
 import React, { useState } from "react";
 import { trackPromise } from "react-promise-tracker";
 import { usePromiseTracker } from "react-promise-tracker";
-import {
-    dalleApi
-} from "../../api";
 
 const Page = () => {
 
     const { promiseInProgress } = usePromiseTracker();
-    const [imageDalleText, setImageDalleText] = useState<string>();
-    const [imageDalleUrl, setImageDalleUrl] = useState<string>("");
+    const [orginalText, setOriginalText] = useState<string>();
+    const [translatedText, setTranslatedText] = useState<string>("");
 
-    async function execImageCreateApi() {
-        if (imageDalleText != null) {
+    async function process() {
+        if (orginalText != null) {
             trackPromise(
-                dalleApi(imageDalleText)
-            ).then((response) => {
-
-                // console.log(response);
-                setImageDalleUrl(response);
-                // setImageDesc(response);   
+                translationApi(orginalText)
+            ).then((res) => {
+                setTranslatedText(res);
             }
-
             )
         }
     }
 
-    const updateText = (e: React.ChangeEvent<HTMLInputElement>) => {
-        setImageDalleText(e.target.value);
-        // console.log('edit->' + task)
-    };
+    async function translationApi(text: string): Promise<string> {
 
+        const translation_url = `https://api.cognitive.microsofttranslator.com/translate?api-version=3.0&to=fr&from=en`;
+        const translation_key = "7b61f16e4fbc4e58924a35da0a403937";
+
+        const body =
+            [{
+                "text": `${text}`
+            }];
+
+        const response = await fetch(translation_url, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                "Ocp-Apim-Subscription-Region": "eastus",
+                "Ocp-Apim-Subscription-Key": translation_key,
+            },
+            body: JSON.stringify(body),
+        });
+        const data = await response.json();
+        return data[0].translations[0].text;
+    }
+
+    const updateText = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setOriginalText(e.target.value);
+    };
 
     return (
         <div className="pageContainer">
             <h2>Translation</h2>
             <p></p>
             <p>
-                <input type="text" placeholder="describe an image ()" onChange={updateText} />
-                <button onClick={() => execImageCreateApi()}>Translate</button><br />
+                <input type="text" placeholder="(enter review in original language)" onChange={updateText} />
+                <button onClick={() => process()}>Translate</button><br />
                 {
                     (promiseInProgress === true) ?
                         <span>Loading...</span>
@@ -47,7 +61,7 @@ const Page = () => {
                 }
             </p>
             <p>
-                <img height={"550px"} src={imageDalleUrl} />
+                {translatedText}
             </p>
         </div>
     );
