@@ -1,11 +1,7 @@
 import React, { useState } from "react";
 import { trackPromise } from "react-promise-tracker";
 import { usePromiseTracker } from "react-promise-tracker";
-import {
-    imageApi,
-    visionApi,
-    dalleApi
-} from "../../api";
+
 
 const Page = () => {
     
@@ -22,11 +18,11 @@ const Page = () => {
 
     async function execImageMatchApi() {
         if (selectedImage != null) {
-            const response = await imageApi(selectedImage);
-            const json = await response.json()
-            console.log(bloburl);
-            setImageUrl(bloburl + json.message[0].image_file);
-            setImageText(json.message[0].description);
+            // const response = await imageApi(selectedImage);
+            // const json = await response.json()
+            // console.log(bloburl);
+            // setImageUrl(bloburl + json.message[0].image_file);
+            // setImageText(json.message[0].description);
         }
     }
 
