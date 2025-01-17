@@ -1,5 +1,6 @@
 import { ChatAppResponse, ChatAppResponseOrError, ChatAppRequest, Config } from "./models";
 import { BACKEND_URI } from "./BACKEND_URI";
+import { OpenAIClient, OpenAIClientOptions, AzureKeyCredential, Completions} from '@azure/openai';
 
 function getHeaders(): Record<string, string> {
     var headers: Record<string, string> = {
@@ -21,3 +22,4 @@ export async function chatApi(request: ChatAppRequest): Promise<Response> {
 export function getCitationFilePath(citation: string): string {
     return `${BACKEND_URI}/content/${citation}`;
 }
+
