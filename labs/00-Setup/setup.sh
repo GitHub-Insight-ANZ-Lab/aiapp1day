@@ -11,9 +11,9 @@ declare -A replacements=(
     ["<GRAPH_RAG_API>"]="add_value"
     # see examples below
     # ["<MONGODB_Name>"]="aiapp1day_daniel_66"
-    # ["<MONGODB_CONNECTION_STRING>"]="mongodb+srv://aiapp1dayadmin:Aiapp1daypassword123@arg-syd-aiapp1day-mongo.mongocluster.cosmos.azure.com/?tls=true&authMechanism=SCRAM-SHA-256&retrywrites=false&maxIdleTimeMS=120000"
+    # ["<MONGODB_CONNECTION_STRING>"]="mongodb+srv://aiapp1dayadmin:Aiapp1daypassword123@arg-syd-aiapp1day-mongo.global.mongocluster.cosmos.azure.com/?tls=true&authMechanism=SCRAM-SHA-256&retrywrites=false&maxIdleTimeMS=120000"
     # ["<AZURE_OPENAI_API_INSTANCE_NAME>"]="arg-syd-aiapp1day-openai"
-    # ["<AZURE_OPENAI_API_KEY>"]="0f73b2e1cba543ce8c9518712a5b1efc"
+    # ["<AZURE_OPENAI_API_KEY>"]="e4e18d6e8fc44398b8571c9ba419bf84"
     # ["<GRAPH_RAG_API>"]="https://arg-syd-aiapp1day-ca--miqityv.niceisland-66754352.eastus.azurecontainerapps.io"
 )
 

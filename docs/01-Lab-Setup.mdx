@@ -105,7 +105,7 @@ https://azure.microsoft.com/en-au/pricing/member-offers/credit-for-visual-studio
 | Description          | Value                                                  |
 | -------------------- | ------------------------------------------------------ |
 | AI Proxy Playground  | https://arg-syd-aiapp1day-playground.azurewebsites.net |
-| Azure OpenAI API Key | 0f73b2e1cba543ce8c9518712a5b1efc                       |
+| Azure OpenAI API Key | e4e18d6e8fc44398b8571c9ba419bf84                       |
 
 ### Azure OpenAI Resource Configuration
 
@@ -113,7 +113,7 @@ https://azure.microsoft.com/en-au/pricing/member-offers/credit-for-visual-studio
 | ------------------------------------------- | ------------------------------------------------- |
 | AZURE_OPENAI_API_INSTANCE_NAME              | arg-syd-aiapp1day-openai                          |
 | AZURE_OPENAI_API_ENDPOINT                   | https://arg-syd-aiapp1day-openai.openai.azure.com/ |
-| AZURE_OPENAI_API_KEY                        | 0f73b2e1cba543ce8c9518712a5b1efc                  |
+| AZURE_OPENAI_API_KEY                        | e4e18d6e8fc44398b8571c9ba419bf84                  |
 | AZURE_OPENAI_API_DEPLOYMENT_NAME            | completions                                       |
 | AZURE_OPENAI_API_EMBEDDINGS_DEPLOYMENT_NAME | embeddings                                        |
 | AZURE_OPENAI_API_VERSION                    | 2023-09-01-preview                                |
@@ -128,13 +128,22 @@ You should remove the curly brackets `{}` and replace the placeholders with your
 
 | Variable Name              | Value                                                                                                                                                                                                 |
 | -------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| MONGODB_CONNECTION_STRING  | mongodb+srv://aiapp1dayadmin:Aiapp1daypassword123@arg-syd-aiapp1day-mongo.mongocluster.cosmos.azure.com/?tls=true&authMechanism=SCRAM-SHA-256&retrywrites=false&maxIdleTimeMS=120000 |
+| MONGODB_CONNECTION_STRING  | mongodb+srv://aiapp1dayadmin:Aiapp1daypassword123@arg-syd-aiapp1day-mongo.global.mongocluster.cosmos.azure.com/?tls=true&authMechanism=SCRAM-SHA-256&retrywrites=false&maxIdleTimeMS=120000 |
 | MONGODB_Name               | aiapp1day_\{your_name\}_\{your_lucky_number\}                                                                                                                                                         |
 | MONGODB_Name (for example) | aiapp1day_daniel_55                                                                                                                                                                                   |
 
 :::info
 API keys and connection details will be reset after the lab session.
 :::
+
+### Azure AI Resource Configuration
+
+| Resource Name              | Endpoint | Key |
+| ------------- | ------------- | ------------- |
+| Computer Vision | https://arg-syd-aiapp1day-cv.cognitiveservices.azure.com/ | 06956a58a9cb41a28df2de73c35ff47a |
+| Translator Service | https://api.cognitive.microsofttranslator.com/ | 7b61f16e4fbc4e58924a35da0a403937 |
+| Speech Service | https://eastus.api.cognitive.microsoft.com/ | 1b9037fa9c8b40c8b8056ba69f74ca57 |
+
 
 ## Configure the Lab Environment & Verify Connection
 
@@ -155,11 +164,11 @@ Let us test the connection to Cosmos DB instance and OpenAI service.
     if you are deploying your own Azure resources, please update above shared keys and connection string with your own.
     :::
 
-4.  Update `<MONGODB_CONNECTION_STRING>` with `mongodb+srv://aiapp1dayadmin:Aiapp1daypassword123@arg-syd-aiapp1day-mongo.mongocluster.cosmos.azure.com/?tls=true&authMechanism=SCRAM-SHA-256&retrywrites=false&maxIdleTimeMS=120000`
+4.  Update `<MONGODB_CONNECTION_STRING>` with `mongodb+srv://aiapp1dayadmin:Aiapp1daypassword123@arg-syd-aiapp1day-mongo.global.mongocluster.cosmos.azure.com/?tls=true&authMechanism=SCRAM-SHA-256&retrywrites=false&maxIdleTimeMS=120000`
 
 5.  Update `<AZURE_OPENAI_API_INSTANCE_NAME>` with `arg-syd-aiapp1day-openai`
 
-6.  Update `<AZURE_OPENAI_API_KEY>` with `0f73b2e1cba543ce8c9518712a5b1efc`
+6.  Update `<AZURE_OPENAI_API_KEY>` with `e4e18d6e8fc44398b8571c9ba419bf84`
 
 7.  Update `<GRAPH_RAG_API>` with `https://arg-syd-aiapp1day-ca--miqityv.niceisland-66754352.eastus.azurecontainerapps.io`
 

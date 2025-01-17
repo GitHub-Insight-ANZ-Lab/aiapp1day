@@ -58,6 +58,17 @@ var openAiSettings = {
   sku: openAiSku
   maxConversationTokens: '100'
   maxCompletionTokens: '500'
+  gptModel: {
+    name: 'gpt-4o'
+    version: '2024-05-13'
+    deployment: {
+      name: 'gpt4o'
+    }
+    sku: {
+      name: 'Standard'
+      capacity: 300
+    }
+  }
   completionsModel: {
     name: 'gpt-4o'
     version: '2024-05-13'
@@ -190,11 +201,31 @@ resource openAiEmbeddingsModelDeployment 'Microsoft.CognitiveServices/accounts/d
   }
 }
 
+resource openAiGpt4oModelDeployment 'Microsoft.CognitiveServices/accounts/deployments@2023-05-01' = {
+  parent: openAiAccount
+  name: openAiSettings.gptModel.deployment.name
+  dependsOn: [
+    openAiEmbeddingsModelDeployment
+  ]
+  sku: {
+    name: openAiSettings.gptModel.sku.name
+    capacity: openAiSettings.gptModel.sku.capacity
+  }
+  properties: {
+    model: {
+      format: 'OpenAI'
+      name: openAiSettings.gptModel.name
+      version: openAiSettings.gptModel.version
+    }    
+  }
+}
+
 resource openAiCompletionsModelDeployment 'Microsoft.CognitiveServices/accounts/deployments@2023-05-01' = {
   parent: openAiAccount
   name: openAiSettings.completionsModel.deployment.name
   dependsOn: [
     openAiEmbeddingsModelDeployment
+    openAiGpt4oModelDeployment
   ]
   sku: {
     name: openAiSettings.completionsModel.sku.name
@@ -215,6 +246,8 @@ resource openAiDalleModelDeployment 'Microsoft.CognitiveServices/accounts/deploy
   name: openAiSettings.dalleModel.deployment.name
   dependsOn: [
     openAiEmbeddingsModelDeployment
+    openAiCompletionsModelDeployment
+    openAiGpt4oModelDeployment
   ]
   sku: {
     name: openAiSettings.dalleModel.sku.name
@@ -343,3 +376,48 @@ resource appServiceWebSettingsChat 'Microsoft.Web/sites/config@2022-03-01' = {
   }
 }
 
+/* *************************************************************** */
+/* Azure AI Service */
+/* *************************************************************** */
+
+resource computerVision 'Microsoft.CognitiveServices/accounts@2023-05-01' = {
+  name: '${name}-cv'
+  location: location
+  kind: 'ComputerVision'
+  properties: {
+    customSubDomainName: '${name}-cv'
+    publicNetworkAccess: 'Enabled'
+  }
+  sku: {
+    name: 'S1'
+  }
+}
+
+
+resource speechService 'Microsoft.CognitiveServices/accounts@2021-04-30' = {
+  name: '${name}-speech'
+  location: location
+  kind: 'SpeechServices'
+  sku: {
+    name: 'S0'
+  }
+  properties: {
+    apiProperties: {
+      qnaRuntimeEndpoint: 'https://{speechServiceName}.api.cognitive.microsoft.com'
+    }
+  }
+}
+
+resource translatorService 'Microsoft.CognitiveServices/accounts@2021-04-30' = {
+  name: '${name}-translator'
+  location: location
+  kind: 'TextTranslation'
+  sku: {
+    name: 'S1'
+  }
+  properties: {
+    apiProperties: {
+      qnaRuntimeEndpoint: 'https://{translatorServiceName}.api.cognitive.microsoft.com'
+    }
+  }
+}
