@@ -55,7 +55,7 @@ const Page = () => {
 
     async function translationApi(text: string): Promise<string> {
 
-        const translation_url = `https://api.cognitive.microsofttranslator.com/translate?api-version=3.0&to=fr&from=en`;
+        const translation_url = `https://api.cognitive.microsofttranslator.com/translate?api-version=3.0&to=en&from=fr`;
         const translation_key = "7b61f16e4fbc4e58924a35da0a403937";
 
         const body =
