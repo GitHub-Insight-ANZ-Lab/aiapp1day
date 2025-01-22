@@ -38,7 +38,7 @@ The `Home Automation` challege provides a good fundation of this challenge. You 
       let kitchenLight = "off";
 
       const client = new OpenAIClient(
-        "https://<AZURE_OPENAI_API_INSTANCE_NAME>.openai.azure.com/",
+        "https://arg-syd-aiapp1day-openai.openai.azure.com/",
         new AzureKeyCredential("<API_KEY>")
       );
 
