@@ -2,4 +2,11 @@
 title: "Problem Statement"
 ---
 
-Design innovative AI solutions using Azure AI services and related GenAI technologies and techniques to elevate Kmart’s product design, operational excellence, commercial outcomes and customer-focused initiatives. 
+Design Innovative AI Solutions using Azure AI services and GenAI technologies and techniques to elevate:
+
+- product design​
+- operational excellence​
+- commercial outcomes ​
+- customer-focused initiatives.​
+
+Focus on improving product design, streamlining operations, enhancing customer interactions, and automating processes to drive efficiency and deliver greater value.​

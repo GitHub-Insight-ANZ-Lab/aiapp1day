@@ -6,11 +6,11 @@ title: "Challenge 4: Speech"
 
 ### Goal
 
-Improves accessibility, reduces wait times, and ensures consistent communication across the store. By streamlining operations and enhancing convenience,
+Enhance accessibility and ensure seamless communication across the store while providing a more natural and engaging store experience.​
 
 ### Challenge
 
-Implementing text-to-speech (TTS) to enhance customer experience and efficiency by enabling self-service options. Shoppers can use TTS-powered kiosks for product information, store navigation, and promotional updates without staff assistance
+Implement text-to-speech (TTS) to improve store efficiency and self-service capabilities. Shoppers can receive product information, navigate the store, and stay updated on promotions through a more human-like and interactive experience - reducing reliance on staff while maintaining a personalized touch.
 
 ![Challenge](images/challenge-4.png)
 
@@ -26,87 +26,99 @@ Complete the `speechApi` function to send a text and receive a voice.
 - Connect voice output to browser
 - Play the voice in the browser
 
-### Answer
+### Solution
 
-```
+<details>
 
-import React, { useState, useEffect } from "react";
-import { trackPromise } from "react-promise-tracker";
-import { usePromiseTracker } from "react-promise-tracker";
-import * as sdk from 'microsoft-cognitiveservices-speech-sdk';
+    <summary>Code snippet for above challenge</summary>
+
+    <details>
+
+    <summary>Don't Look! Have you tried to solve it yourself?</summary>
+
+    ```
+
+    import React, { useState, useEffect } from "react";
+    import { trackPromise } from "react-promise-tracker";
+    import { usePromiseTracker } from "react-promise-tracker";
+    import * as sdk from 'microsoft-cognitiveservices-speech-sdk';
 
 
-const Page = () => {
+    const Page = () => {
 
-    const { promiseInProgress } = usePromiseTracker();
-    const [speechText, setSpeechText] = useState<string>();
-    const synthesizer = React.useRef(null);
-    const speechConfig = React.useRef(null);
+        const { promiseInProgress } = usePromiseTracker();
+        const [speechText, setSpeechText] = useState<string>();
+        const synthesizer = React.useRef(null);
+        const speechConfig = React.useRef(null);
 
-    useEffect(() => {
-        const speech_key = '44044fcc5f2d44b19c9b97be6161883c';
-        speechConfig.current = sdk.SpeechConfig.fromSubscription(
-            speech_key,
-            'eastus'
-        );
-        speechConfig.current.speechRecognitionLanguage = 'en-US';
-        // speechConfig.current.speechSynthesisOutputFormat = 5;
-        synthesizer.current = new sdk.SpeechSynthesizer(
-            speechConfig.current
-        );
+        useEffect(() => {
+            const speech_key = '44044fcc5f2d44b19c9b97be6161883c';
+            speechConfig.current = sdk.SpeechConfig.fromSubscription(
+                speech_key,
+                'eastus'
+            );
+            speechConfig.current.speechRecognitionLanguage = 'en-US';
+            // speechConfig.current.speechSynthesisOutputFormat = 5;
+            synthesizer.current = new sdk.SpeechSynthesizer(
+                speechConfig.current
+            );
 
-    }, []);
+        }, []);
 
-    async function process() {
-        if (speechText != null) {
-            trackPromise(
-                speechApi(speechText)
-            ).then((res) => {
-                setTranslatedText(res);
+        async function process() {
+            if (speechText != null) {
+                trackPromise(
+                    speechApi(speechText)
+                ).then((res) => {
+                    setTranslatedText(res);
+                }
+                )
             }
-            )
         }
-    }
 
-    async function speechApi(text: string): Promise<string> {
-        await synthesizer.current.speakTextAsync(
-            text,
-            result => {
-                synthesizer.close();
-                const { audioData } = result;
-                // return stream from memory
-                const bufferStream = new PassThrough();
-                bufferStream.end(Buffer.from(audioData));
-                resolve(bufferStream);
-            },
-            error => {
-                synthesizer.close();
-                reject(error);
-            });
-    }
+        async function speechApi(text: string): Promise<string> {
+            await synthesizer.current.speakTextAsync(
+                text,
+                result => {
+                    synthesizer.close();
+                    const { audioData } = result;
+                    // return stream from memory
+                    const bufferStream = new PassThrough();
+                    bufferStream.end(Buffer.from(audioData));
+                    resolve(bufferStream);
+                },
+                error => {
+                    synthesizer.close();
+                    reject(error);
+                });
+        }
 
-    const updateText = (e: React.ChangeEvent<HTMLInputElement>) => {
-        setSpeechText(e.target.value);
+        const updateText = (e: React.ChangeEvent<HTMLInputElement>) => {
+            setSpeechText(e.target.value);
+        };
+
+        return (
+            <div className="pageContainer">
+                <h2>Speech</h2>
+                <p></p>
+                <p>
+                    <input type="text" placeholder="(enter some text to be read aloud)" onChange={updateText} />
+                    <button onClick={() => process()}>Read</button><br />
+                    {
+                        (promiseInProgress === true) ?
+                            <span>Loading...</span>
+                            :
+                            null
+                    }
+                </p>
+            </div>
+        );
     };
 
-    return (
-        <div className="pageContainer">
-            <h2>Speech</h2>
-            <p></p>
-            <p>
-                <input type="text" placeholder="(enter some text to be read aloud)" onChange={updateText} />
-                <button onClick={() => process()}>Read</button><br />
-                {
-                    (promiseInProgress === true) ?
-                        <span>Loading...</span>
-                        :
-                        null
-                }
-            </p>
-        </div>
-    );
-};
+    export default Page;
 
-export default Page;
+    ```
 
-```
+    </details>
+
+</details>

@@ -2,15 +2,15 @@
 title: "Challenge 2: Translation"
 ---
 
-## Multilingual Review
+## Multilingual Use Review
 
 ### Goal
 
-Derive actionable insights from customer reviews to refine product offerings and address quality issues.
+Extract meaningful and actionable insights from multilingual customer reviews to enhance product offerings and address quality concerns effectively.​
 
 ### Challenge
 
-Utilize external product reviews to enhance product quality by analyzing sentiment and summarizing key feedback with GPT-4o sentiment detection and feedback summarization.
+Leverage translation services and the GPT-4o model to interpret customer feedback across various languages, enabling efficient summarization and in-depth analysis for data-driven decision-making.​
 
 ![Challenge](images/challenge-2.png)
 
@@ -27,80 +27,90 @@ Complete the `translationApi` function to send a customer review in non-english 
 - Inspest the response payload of the the call
 - Retrieve translated review and display on the page
 
+### Solution
 
-### Answer
+<details>
 
-```
+    <summary>Code snippet for above challenge</summary>
 
-import React, { useState } from "react";
-import { trackPromise } from "react-promise-tracker";
-import { usePromiseTracker } from "react-promise-tracker";
+    <details>
 
-const Page = () => {
+    <summary>Don't Look! Have you tried to solve it yourself?</summary>
 
-    const { promiseInProgress } = usePromiseTracker();
-    const [orginalText, setOriginalText] = useState<string>();
-    const [translatedText, setTranslatedText] = useState<string>("");
+    ```
+    import React, { useState } from "react";
+    import { trackPromise } from "react-promise-tracker";
+    import { usePromiseTracker } from "react-promise-tracker";
 
-    async function process() {
-        if (orginalText != null) {
-            trackPromise(
-                translationApi(orginalText)
-            ).then((res) => {
-                setTranslatedText(res);
+    const Page = () => {
+
+        const { promiseInProgress } = usePromiseTracker();
+        const [orginalText, setOriginalText] = useState<string>();
+        const [translatedText, setTranslatedText] = useState<string>("");
+
+        async function process() {
+            if (orginalText != null) {
+                trackPromise(
+                    translationApi(orginalText)
+                ).then((res) => {
+                    setTranslatedText(res);
+                }
+                )
             }
-            )
         }
-    }
 
-    async function translationApi(text: string): Promise<string> {
+        async function translationApi(text: string): Promise<string> {
 
-        const translation_url = `https://api.cognitive.microsofttranslator.com/translate?api-version=3.0&to=en&from=fr`;
-        const translation_key = "7b61f16e4fbc4e58924a35da0a403937";
+            const translation_url = `https://api.cognitive.microsofttranslator.com/translate?api-version=3.0&to=en&from=fr`;
+            const translation_key = "7b61f16e4fbc4e58924a35da0a403937";
 
-        const body =
-            [{
-                "text": `${text}`
-            }];
+            const body =
+                [{
+                    "text": `${text}`
+                }];
 
-        const response = await fetch(translation_url, {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-                "Ocp-Apim-Subscription-Region": "eastus",
-                "Ocp-Apim-Subscription-Key": translation_key,
-            },
-            body: JSON.stringify(body),
-        });
-        const data = await response.json();
-        return data[0].translations[0].text;
-    }
+            const response = await fetch(translation_url, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    "Ocp-Apim-Subscription-Region": "eastus",
+                    "Ocp-Apim-Subscription-Key": translation_key,
+                },
+                body: JSON.stringify(body),
+            });
+            const data = await response.json();
+            return data[0].translations[0].text;
+        }
 
-    const updateText = (e: React.ChangeEvent<HTMLInputElement>) => {
-        setOriginalText(e.target.value);
+        const updateText = (e: React.ChangeEvent<HTMLInputElement>) => {
+            setOriginalText(e.target.value);
+        };
+
+        return (
+            <div className="pageContainer">
+                <h2>Translation</h2>
+                <p></p>
+                <p>
+                    <input type="text" placeholder="(enter review in original language)" onChange={updateText} />
+                    <button onClick={() => process()}>Translate</button><br />
+                    {
+                        (promiseInProgress === true) ?
+                            <span>Loading...</span>
+                            :
+                            null
+                    }
+                </p>
+                <p>
+                    {translatedText}
+                </p>
+            </div>
+        );
     };
 
-    return (
-        <div className="pageContainer">
-            <h2>Translation</h2>
-            <p></p>
-            <p>
-                <input type="text" placeholder="(enter review in original language)" onChange={updateText} />
-                <button onClick={() => process()}>Translate</button><br />
-                {
-                    (promiseInProgress === true) ?
-                        <span>Loading...</span>
-                        :
-                        null
-                }
-            </p>
-            <p>
-                {translatedText}
-            </p>
-        </div>
-    );
-};
+    export default Page;
 
-export default Page;
+    ```
+    
+    </details>
 
-```
+</details>
