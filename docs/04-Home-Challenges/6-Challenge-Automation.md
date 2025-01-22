@@ -39,7 +39,7 @@ The `Home Automation` challege provides a good fundation of this challenge. You 
 
       const client = new OpenAIClient(
         "https://<AZURE_OPENAI_API_INSTANCE_NAME>.openai.azure.com/",
-        new AzureKeyCredential("<AZURE_OPENAI_API_KEY>")
+        new AzureKeyCredential("<API_KEY>")
       );
 
       const deploymentId = "completions";

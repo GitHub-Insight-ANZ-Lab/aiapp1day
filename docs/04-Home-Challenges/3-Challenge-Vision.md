@@ -88,7 +88,7 @@ Complete the `visionApi` function to send a prompt with a uploaded image and rec
             };
 
             var openai_url = "https://arg-syd-aiapp1day-openai.openai.azure.com";
-            var openai_key = "e4e18d6e8fc44398b8571c9ba419bf84";
+            var openai_key = "<API_KEY>";
             const client = new OpenAIClient(
                 openai_url,
                 new AzureKeyCredential(openai_key),

@@ -52,7 +52,7 @@ Complete the `speechApi` function to send a text and receive a voice.
         const speechConfig = React.useRef(null);
 
         useEffect(() => {
-            const speech_key = '44044fcc5f2d44b19c9b97be6161883c';
+            const speech_key = '<API_KEY>';
             speechConfig.current = sdk.SpeechConfig.fromSubscription(
                 speech_key,
                 'eastus'
