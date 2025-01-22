@@ -16,11 +16,11 @@ Leveraging GPT-4o's vision capabilities for accurate analysis and verification o
 
 ### Tips
 
-Create a new function to ask LLM to understand and extract information from image or photo. 
+Design function to ask LLM to understand and extract information from image or photo.
 
-There is a `Vision` page (`apps\chatbot\pages\vision\Vision.tsx`) on chatbot, the page have an image upload button, and a button to invoke AI Service and get back a vision response.
+There is a `Vision` page (`apps\chatbot\pages\vision\Vision.tsx`) on chatbot. The page have an image upload button, and a button to invoke AI Service and get back a vision response.
 
-Complete the `visionApi` function to send a prompt with a uploaded image and receive an response that anlysis the features on the photo. the gpt model will describe the content of the image.
+Complete the `visionApi` function to send a prompt with a uploaded image, then receive a response that anlyze certain features on the photo. The GPT model will describe the content of the image.
 
 - Invoke GPT-4o using OpenAIClient using `image_url` attribute
 - GTP-4o's details are on the setup page

@@ -16,15 +16,15 @@ Elevate product design creativity by harnessing the power of DALL-e model to gen
 
 ### Tips
 
-Invoke dall-e model to create an cretivity product design based on product team's description. 
+Invoke dall-e model to create a cretivity product design based on product team's description.
 
-There is a `Design` page (`apps\chatbot\pages\design\Design.tsx`) on chatbot, the page have an input textbox for description, and a button to invoke AI Service and get back a generated image.
+There is a `Design` page (`apps\chatbot\pages\design\Design.tsx`) on chatbot. The page have an input textbox for description, and a button to call AI Service and get back a generated image.
 
-Complete the `dalleApi` function to send a prompt and receive an generated image.
+Complete the `dalleApi` function to send a prompt and receive a generated image.
 
-- Invoke dall-e details using OpenAIClient
+- Invoke dall-e endpoint using OpenAIClient
 - Dall-e model's details are on the setup page
-- Inspect the response payload of the call
+- Inspect and understand the response payload of the call
 - Retrieve the generated image and display on the page
 
 ### Solution
