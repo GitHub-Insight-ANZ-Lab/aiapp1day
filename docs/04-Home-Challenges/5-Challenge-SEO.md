@@ -16,11 +16,11 @@ Automate the retrieval and creation of SEO-optimized content, incorporating rele
 
 ### Tips
 
-Write a function to read a web page and convert html to text and summariese it
+Develop a function to read a web page and convert html to text and summarise it.
 
-There is a `SEO` page (`apps\chatbot\pages\seo\Seo.tsx`) on chatbot, the page have an input textbox for url, and a button to invoke AI Service and get back a generated SEO content.
+There is a `SEO` page (`apps\chatbot\pages\seo\Seo.tsx`) on chatbot. The page have an input textbox for a url, and a button to invoke AI Service and get back a generated SEO content.
 
-Complete the `seoApi` function to send a website url and receive an SEO json.
+Complete the `seoApi` function to send a website url and receive a SEO json.
 
 - Use `axios` to retrieve html for a website
 - Extract useful content from the html

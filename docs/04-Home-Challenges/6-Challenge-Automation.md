@@ -14,9 +14,9 @@ Leverage LLM function-calling mechanisms to automate repetitive in-store tasks, 
 
 ### Tips
 
-Create a intelligent program to carry out one manual process in store that could be replaced by an AI powered program.
+Create a intelligent solution to carry out one manual process in store that could be replaced by an AI powered program.
 
-The `Home Automation` challege provides a good fundation of this challenge. You can start with the existing code and find an new idea that might help with automating store operations. 
+The `Home Automation` challege provides a good fundation of this challenge. You can start with the existing code and find an new idea that might help with automating store operations. Be creative!
 
 ### Solution
 
