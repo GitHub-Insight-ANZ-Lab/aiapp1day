@@ -14,11 +14,11 @@ Elevate product design creativity by harnessing the power of DALL-e model to gen
 
 ![Challenge](images/challenge-1.png)
 
-### Tips
+### Details
 
-Invoke dall-e model to create a cretivity product design based on product team's description.
+Use Dall-e model to create cretivity product design based on user's description.
 
-There is a `Design` page (`apps\chatbot\pages\design\Design.tsx`) on chatbot. The page have an input textbox for description, and a button to call AI Service and get back a generated image.
+There is a `Design` page (`apps\chatbot\pages\design\Design.tsx`) on chatbot. The page has an input textbox for description, and a button to call AI Service and get back a generated image.
 
 Complete the `dalleApi` function to send a prompt and receive a generated image.
 
@@ -27,15 +27,29 @@ Complete the `dalleApi` function to send a prompt and receive a generated image.
 - Inspect and understand the response payload of the call
 - Retrieve the generated image and display on the page
 
-### Solution
+
+   :::info
+   
+   More things to think about
+
+   - Secure the API key
+   - Handle exception from Content Safety
+   - Integrate the feature as a part of Chatbot
+
+   :::
+
+
+### Basic Solution
+
 
 <details>
-
     <summary>Code snippet for above challenge</summary>
-
     <details>
-
     <summary>Don't Look! Have you tried to solve it yourself?</summary>
+    <details>
+    <summary>Your solution will be better than our sample answer!</summary>
+
+    The basic solution is provided below. Feel free to expand on it to make it more interesting!
 
     ```
 
@@ -116,6 +130,7 @@ Complete the `dalleApi` function to send a prompt and receive a generated image.
 
     ```
     
+    </details>
     </details>
 
 </details>

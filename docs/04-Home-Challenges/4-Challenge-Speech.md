@@ -10,7 +10,7 @@ Enhance accessibility and ensure seamless communication across the store while p
 
 ### Challenge
 
-Implement text-to-speech (TTS) to improve store efficiency and self-service capabilities. Shoppers can receive product information, navigate the store, and stay updated on promotions through a more human-like and interactive experience - reducing reliance on staff while maintaining a personalized touch.
+Implement text-to-speech (TTS) to improve efficiency and self-service capabilities. Shoppers can receive product information, navigate the store, and stay updated on promotions through a more human-like and interactive experience - reducing reliance on staff while maintaining a personalized touch.
 
 ![Challenge](images/challenge-4.png)
 
@@ -18,7 +18,7 @@ Implement text-to-speech (TTS) to improve store efficiency and self-service capa
 
 Invoke Azure Speech service to read out text content in voice (text to speech).
 
-There is a `Speech` page (`apps\chatbot\pages\speech\Speech.tsx`) on chatbot. The page have an input textbox for text block, and a button to invoke AI Service and play voice output.
+There is a `Speech` page (`apps\chatbot\pages\speech\Speech.tsx`) on chatbot. The page has an input textbox for text content, and a button to invoke AI Service and play voice output.
 
 Complete the `speechApi` function to send a text and receive a voice response.
 
@@ -26,15 +26,26 @@ Complete the `speechApi` function to send a text and receive a voice response.
 - Connect voice output to browser
 - Play the voice in the browser
 
-### Solution
+   :::info
+   
+   More things to think about
+
+   - Implement speech to text to allow voice input
+   - Integrate the feature as a part of Chatbot
+
+   :::
+
+### Basic Solution
+
 
 <details>
-
     <summary>Code snippet for above challenge</summary>
-
     <details>
-
     <summary>Don't Look! Have you tried to solve it yourself?</summary>
+    <details>
+    <summary>Your solution will be better than our sample answer!</summary>
+
+    The basic solution is provided below. Feel free to expand on it to make it more interesting!
 
     ```
 
@@ -119,6 +130,7 @@ Complete the `speechApi` function to send a text and receive a voice response.
 
     ```
 
+    </details>
     </details>
 
 </details>

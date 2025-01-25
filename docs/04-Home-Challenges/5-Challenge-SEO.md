@@ -16,28 +16,38 @@ Automate the retrieval and creation of SEO-optimized content, incorporating rele
 
 ### Tips
 
-Develop a function to read a web page and convert html to text and summarise it.
+Develop a feature to download a specific web page, convert html to text and summarise it.
 
-There is a `SEO` page (`apps\chatbot\pages\seo\Seo.tsx`) on chatbot. The page have an input textbox for a url, and a button to invoke AI Service and get back a generated SEO content.
+There is a `SEO` page (`apps\chatbot\pages\seo\Seo.tsx`) on chatbot. The page has an input textbox for a url, and a button to invoke AI Service and get back a generated SEO content. use `http://localhost:4000/product.html` for testing.
 
-Complete the `seoApi` function to send a website url and receive a SEO json.
+Complete the `seoApi` function to send a website url and receive a structured json containing various SEO fields.
 
-- Use `axios` to retrieve html for a website
+- Use `axios` to retrieve html for a web page
 - Extract useful content from the html
-- Define a few key SEO attribute you would like the LLM to summarise or generate
-- Invoke LLM to get a structured JSON payload back for SEO
+- Define a few SEO attribute and specify how you would like to summarise
+- Invoke LLM to get a structured JSON payload back
 - Display the json on the page
 
-### Solution
+   :::info
+   
+   More things to think about
+
+   - Use system prompt or multi-turn conversation to improve SEO output
+   - Improve the SEO output fields based on Google search's optimisation rules
+
+   :::
+
+### Basic Solution
+
 
 <details>
-
     <summary>Code snippet for above challenge</summary>
-
     <details>
-
     <summary>Don't Look! Have you tried to solve it yourself?</summary>
+    <details>
+    <summary>Your solution will be better than our sample answer!</summary>
 
+    The basic solution is provided below. Feel free to expand on it to make it more interesting!
     ```
 
     import React, { useState } from "react";
@@ -131,6 +141,7 @@ Complete the `seoApi` function to send a website url and receive a SEO json.
 
     ```
 
+    </details>
     </details>
 
 </details>

@@ -6,28 +6,38 @@ title: "Challenge 6: Automation"
 
 ### Goal
 
-Enhance operational efficiency and minimize manual workload by implementing automation solutions that optimize store manual processes.​
+Improve operational efficiency and minimize manual workload by implementing automation solutions that can assist with store manual processes.​
 
 ### Challenge
 
-Leverage LLM function-calling mechanisms to automate repetitive in-store tasks, improving accuracy, reducing labor-intensive efforts, and streamlining overall operations for increased productivity.​
+Leverage LLM function-calling mechanisms to automate repetitive in-store tasks, improving accuracy, reducing labor-intensive efforts, and streamlining overall operations to achieve increased productivity.​
 
 ### Tips
 
-Create a intelligent solution to carry out one manual process in store that could be replaced by an AI powered program.
+Create a task automation feature to replace one current manual store process. Be creative!
 
-The `Home Automation` challege provides a good fundation of this challenge. You can start with the existing code and find an new idea that might help with automating store operations. Be creative!
+The `Home Automation` challege provides a good fundation of this challenge. You can start with its code and find a new idea that might help with any store operations.
 
-### Solution
+   :::info
+   
+   More things to think about
+
+   - Consider using Sementic Kernal framework
+   - Best way to trigger the automation workflow (time trigger or events)
+
+   :::
+
+### Basic Solution
 
 <details>
-
     <summary>Code snippet for above challenge</summary>
-
     <details>
-
     <summary>Don't Look! Have you tried to solve it yourself?</summary>
+    <details>
+    <summary>Your solution will be better than our sample answer!</summary>
 
+    The basic solution is provided below. Feel free to expand on it to make it more interesting!
+    
     ```
     const { OpenAIClient, AzureKeyCredential } = require("@azure/openai");
     const prompt = require("prompt-sync")({ sigint: true });
@@ -179,5 +189,5 @@ The `Home Automation` challege provides a good fundation of this challenge. You 
     ```
 
     </details>
-
+    </details>
 </details>
