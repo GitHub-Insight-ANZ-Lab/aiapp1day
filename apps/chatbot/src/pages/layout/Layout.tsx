@@ -14,19 +14,27 @@ const Layout = () => {
                     </Link>
                     <nav>
                         <ul className={styles.headerNavList}>
-                            
-                            {/* <li className={styles.headerNavLeftMargin}>
-                                <a href="https://github.com/cosmosdb" target={"_blank"} title="Github repository link">
-                                    <img
-                                        src={github}
-                                        alt="Github logo"
-                                        aria-label="Link to github repository"
-                                        width="20px"
-                                        height="20px"
-                                        className={styles.githubLogo}
-                                    />
-                                </a>
+                            <li className={styles.headerNavLeftMargin}>
+                                <a href="/design" >Design</a>
+                            </li>
+                            <li>
+                                <a href="/translation" >Translation</a>
+                            </li>
+                            <li>
+                                <a href="/vision" >Vision</a>
+                            </li>
+                            <li>
+                                <a href="/speech" >Speech</a>
+                            </li>
+                            <li>
+                                <a href="/seo" >SEO</a>
+                            </li>
+                            {/* <li>
+                                <a href="/search" >Search</a>
                             </li> */}
+                            <li>
+                                <a href="/automation" >Automation</a>
+                            </li>
                         </ul>
                     </nav>
                     <h4 className={styles.headerRightText}>AI App in 1 Day</h4>
