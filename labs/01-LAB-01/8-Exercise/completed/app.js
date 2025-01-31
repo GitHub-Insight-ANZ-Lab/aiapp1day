@@ -7,8 +7,8 @@ async function main() {
   let kitchenLight = "off";
 
   const client = new OpenAIClient(
-    "https://<AZURE_OPENAI_API_INSTANCE_NAME>.openai.azure.com/",
-    new AzureKeyCredential("<AZURE_OPENAI_API_KEY>")
+    "https://add_value.openai.azure.com/",
+    new AzureKeyCredential("add_value")
   );
 
   const deploymentId = "completions";
