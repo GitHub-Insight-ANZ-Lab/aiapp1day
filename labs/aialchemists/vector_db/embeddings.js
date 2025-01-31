@@ -5,6 +5,7 @@ const { OpenAIClient, AzureKeyCredential } = require("@azure/openai");
 // set up the Azure OpenAI client
 const embeddingsDeploymentName = "embeddings";
 const completionsDeploymentName = "completions";
+
 const aoaiClient = new OpenAIClient(
     "https://" +
     process.env.AZURE_OPENAI_API_INSTANCE_NAME +
