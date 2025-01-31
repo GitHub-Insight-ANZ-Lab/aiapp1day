@@ -11,6 +11,48 @@ async function extractFullTextFromPDF(filePath) {
     return text;
 }
 
+function extractHeadingsAndContent(text) {
+    const lines = text.split('\n');
+    const jsonData = [];
+    let currentHeading = null;
+    let currentContent = '';
+    const maxTokens = 8000;
+
+    lines.forEach((line) => {
+        // Check if the line is a heading (uppercase or title case) preceded by digits
+        const headingPattern = /^[0-9.]*\s*([A-Z][A-Z\s]*|[A-Z][a-z]+(?: [A-Z][a-z]+)*)$/;
+        const match = line.trim().match(headingPattern);
+        if (match) {
+            if (currentHeading) {
+                addContentToJsonData(jsonData, currentHeading, currentContent, maxTokens);
+            }
+            currentHeading = match[1].replace(/\s+/g, '_');
+            currentContent = '';
+        } else if (currentHeading) {
+            currentContent += ' ' + line.trim();
+        }
+    });
+
+    if (currentHeading) {
+        addContentToJsonData(jsonData, currentHeading, currentContent, maxTokens);
+    }
+
+    return jsonData;
+}
+
+function addContentToJsonData(jsonData, heading, content, maxTokens) {
+    const tokens = content.split(/\s+/);
+    let part = 1;
+    while (tokens.length > 0) {
+        const chunk = tokens.splice(0, maxTokens).join(' ');
+        const key = part === 1 ? heading : `${heading}_${part}`;
+        const obj = {};
+        obj[key] = chunk;
+        jsonData.push(obj);
+        part++;
+    }
+}
+
 async function processAllPdfsInFolder(folderPath) {
     const files = fs.readdirSync(folderPath);
 
@@ -22,9 +64,7 @@ async function processAllPdfsInFolder(folderPath) {
         if (extname === '.pdf') {
             try {
                 const fullText = await extractFullTextFromPDF(filePath);
-                const jsonData = {
-                    "POS system manual": fullText
-                };
+                const jsonData = extractHeadingsAndContent(fullText);
                 const jsonOutputPath = path.join(folderPath, `${path.basename(file, extname)}.json`);
                 fs.writeFileSync(jsonOutputPath, JSON.stringify(jsonData, null, 2));
                 console.log(`Successfully converted ${filePath} to ${jsonOutputPath}`);

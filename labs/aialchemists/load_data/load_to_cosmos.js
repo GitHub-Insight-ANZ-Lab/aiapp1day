@@ -12,8 +12,8 @@ async function loadToCosmos() {
     let manualData;
     try {
         manualData = JSON.parse(manualRawData);
-        if (typeof manualData !== 'object' || Array.isArray(manualData)) {
-            throw new Error('Parsed JSON data is not an object');
+        if (!Array.isArray(manualData)) {
+            throw new Error('Parsed JSON data is not an array');
         }
     } catch (error) {
         console.error('Error parsing JSON data:', error);
@@ -34,20 +34,13 @@ async function loadToCosmos() {
         await manualCollection.deleteMany({});
 
         // Insert new data
-        const result = await manualCollection.insertOne(manualData);
-        console.log(`Inserted document with _id: ${result.insertedId}`);
+        const result = await manualCollection.insertMany(manualData);
+        console.log(`Inserted ${result.insertedCount} documents into the manuals collection`);
+    } catch (err) {
+        console.error('Error inserting documents:', err);
     } finally {
         await client.close();
     }
-}
-
-// Define the cleanData function (if needed)
-function cleanData(product) {
-    // Example cleaning process
-    return {
-        name: product.name.trim(),
-        content: product.content.trim()
-    };
 }
 
 // Run the function
