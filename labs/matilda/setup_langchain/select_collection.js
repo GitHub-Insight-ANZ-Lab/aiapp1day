@@ -16,7 +16,7 @@ async function routeQuestion(question) {
         - transactions: for store transactions including purchases and sales
         - training_topics: for mandatory training information for employees
         - store_tasks: for store processes and steps to follow for tasks
-        - asile_location: for locating the asile in the store map 
+        - asile_location: for giving hints from the collection, near which place we can find the aisle 
         
         give one word answer as collection name for this
     `;

@@ -52,14 +52,26 @@ async function buildAgentExecutor(vectorStore) {
 
         You are designed to answer questions about the POS system documentation,product information including price, stock, and aisle location, store transactions including purchases and sales, mandatory training sessions for employees,store processes and steps to follow for tasks.
 
-        If you don't know the answer to a question, respond with "I don't know."
-        
-        Only answer questions related to kmart retail stores, documentation regarding POS system, products and their attributes and locations, transactions for sales, refund and other, training topics and store processes.
+        I have 5 collections basically , i'll describe those collections below and what kind of data they hold
 
-        Return the answer as consize and to the point, until specifically asked to elaborate on the details.
-        
-        If a question is not related to kmart retail stores,  documentation regarding POS system, products and their attributes and locations, transactions for sales, refund and other, training topics and store processes,
-        respond with "I only answer questions about kmart retail stores"
+        1. documents - collection describes the user manual of working with a POS system
+        2. products - collection contains infromation about these fields [Store_Id,Store_name,Product ID,Product Name,Department,Category,Price,Stock Availability,Aisle Location,Store-Specific Notes
+        ]
+        3. transactions - collection contining information about store transactions , consiting of fields as [Store_Id,Store_name,Product ID,Product Name,Department,Category,Price,Stock Availability,Aisle Location,Store-Specific Notes
+        ]
+        4.  training_topics - collection containing information about mandatory training information employee has to complete after joining the store , inclues fields as [Store_Id,Store_name,Training Topic,Key Learning Points,YouTube Link,Documentation Link]
+        5.  store_tasks - collection containing information about different store processes and what all steps to follow for a particular process, includes fields like [Store_Id,Store_name,Task ID,Task Name,Step 1,Step 2,Step 3,Step 4
+        ]
+        6. aisle_locations: Gives instructions on where you can find the aisle in the store, includes fields as [Aisle No,Location in Store,Nearby Sections,Distance from Entrance (m),Special Notes]
+
+        Based on the question, give me relevant information related to the question.
+
+        Make the answer consize, more human speech like and to the point. Elaborate only when asked to tell in detail.
+
+        If asked any questions about transactions on a particular day, or any aggregate value of the transactions, sales , profit or purchase, calculate according to the question and tell the answer, after the answer do mention that displayed numerical information is close to 99.9% accurate, however its best to consult with valid sales reports.
+
+        If asked about any other information outside of the above points describe, respectfully decline.
+
     `;
 
     const retrieverChain = vectorStore.asRetriever().pipe(formatDocuments);
@@ -142,7 +154,7 @@ async function main() {
     try {
         await connectToDatabase();
 
-        const question = "Where can I find asile 7 in store ?";
+        const question = "My POS system screen is froze, what do i do now ?";
         const collectionName = await routeQuestion(question);
         console.log('Collection for the question:', collectionName);
 
