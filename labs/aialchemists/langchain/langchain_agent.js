@@ -130,7 +130,7 @@ async function buildAgentExecutor() {
                     If the answer is not found, returns null.`,
         func: async (input) => {
             const db = dbClient.db(dbname);
-            const answers = db.collection("answers");
+            const answers = db.collection("manuals");
             const doc = await answers.findOne({ sku: input });
             if (doc) {
                 //remove the contentVector property to save on tokens
