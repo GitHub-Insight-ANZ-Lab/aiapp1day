@@ -1,0 +1,142 @@
+[
+  {
+    "Aisle No": "1",
+    "Location in Store": "Entrance Area",
+    "Nearby Sections": "Promotional Displays",
+    "Distance from Entrance (m)": "5",
+    "Special Notes\r": "High foot traffic, seasonal deals\r"
+  },
+  {
+    "Aisle No": "2",
+    "Location in Store": "Front Left",
+    "Nearby Sections": "Grocery",
+    "Distance from Entrance (m)": "10",
+    "Special Notes\r": "Close to checkout for impulse buys\r"
+  },
+  {
+    "Aisle No": "3",
+    "Location in Store": "Front Center",
+    "Nearby Sections": "Fresh Produce",
+    "Distance from Entrance (m)": "12",
+    "Special Notes\r": "Open space, regularly restocked\r"
+  },
+  {
+    "Aisle No": "4",
+    "Location in Store": "Front Right",
+    "Nearby Sections": "Bakery & Dairy",
+    "Distance from Entrance (m)": "15",
+    "Special Notes\r": "Refrigerated section nearby\r"
+  },
+  {
+    "Aisle No": "5",
+    "Location in Store": "Middle Left",
+    "Nearby Sections": "Frozen Foods",
+    "Distance from Entrance (m)": "20",
+    "Special Notes\r": "Requires frequent temperature checks\r"
+  },
+  {
+    "Aisle No": "6",
+    "Location in Store": "Middle Center",
+    "Nearby Sections": "Household Essentials",
+    "Distance from Entrance (m)": "25",
+    "Special Notes\r": "Cleaning & home care items\r"
+  },
+  {
+    "Aisle No": "7",
+    "Location in Store": "Middle Right",
+    "Nearby Sections": "Kitchenware",
+    "Distance from Entrance (m)": "30",
+    "Special Notes\r": "Fragile section, handle with care\r"
+  },
+  {
+    "Aisle No": "8",
+    "Location in Store": "Back Left",
+    "Nearby Sections": "Electronics",
+    "Distance from Entrance (m)": "35",
+    "Special Notes\r": "High-security area, staff required\r"
+  },
+  {
+    "Aisle No": "9",
+    "Location in Store": "Back Center",
+    "Nearby Sections": "Tech Accessories",
+    "Distance from Entrance (m)": "38",
+    "Special Notes\r": "Locked cabinets for high-value items\r"
+  },
+  {
+    "Aisle No": "10",
+    "Location in Store": "Back Right",
+    "Nearby Sections": "Men's Clothing",
+    "Distance from Entrance (m)": "40",
+    "Special Notes\r": "Clothing trial rooms nearby\r"
+  },
+  {
+    "Aisle No": "11",
+    "Location in Store": "Rear Left",
+    "Nearby Sections": "Women's Clothing",
+    "Distance from Entrance (m)": "45",
+    "Special Notes\r": "Seasonal collections displayed\r"
+  },
+  {
+    "Aisle No": "12",
+    "Location in Store": "Rear Center",
+    "Nearby Sections": "Kids' Clothing",
+    "Distance from Entrance (m)": "50",
+    "Special Notes\r": "Family shopping area\r"
+  },
+  {
+    "Aisle No": "13",
+    "Location in Store": "Rear Right",
+    "Nearby Sections": "Footwear",
+    "Distance from Entrance (m)": "55",
+    "Special Notes\r": "Shoe fitting benches available\r"
+  },
+  {
+    "Aisle No": "14",
+    "Location in Store": "Side Left",
+    "Nearby Sections": "Sports & Fitness",
+    "Distance from Entrance (m)": "60",
+    "Special Notes\r": "Gym equipment, fitness gear\r"
+  },
+  {
+    "Aisle No": "15",
+    "Location in Store": "Side Center",
+    "Nearby Sections": "Toys & Games",
+    "Distance from Entrance (m)": "65",
+    "Special Notes\r": "Popular among families & kids\r"
+  },
+  {
+    "Aisle No": "16",
+    "Location in Store": "Side Right",
+    "Nearby Sections": "Books & Stationery",
+    "Distance from Entrance (m)": "70",
+    "Special Notes\r": "Quiet area, reading zone nearby\r"
+  },
+  {
+    "Aisle No": "17",
+    "Location in Store": "Checkout Zone",
+    "Nearby Sections": "Pharmacy & Health",
+    "Distance from Entrance (m)": "75",
+    "Special Notes\r": "Last-minute essential items\r"
+  },
+  {
+    "Aisle No": "18",
+    "Location in Store": "Customer Service Desk",
+    "Nearby Sections": "Returns & Inquiries",
+    "Distance from Entrance (m)": "78",
+    "Special Notes\r": "Assistance available for customers\r"
+  },
+  {
+    "Aisle No": "19",
+    "Location in Store": "Exit Area",
+    "Nearby Sections": "Clearance Section",
+    "Distance from Entrance (m)": "80",
+    "Special Notes\r": "Discounts, end-of-season sales\r"
+  },
+  {
+    "Aisle No": "20",
+    "Location in Store": "Storage & Backroom",
+    "Nearby Sections": "Staff Only",
+    "Distance from Entrance (m)": "N/A",
+    "Special Notes\r": "Not accessible to customers"
+  }
+]
