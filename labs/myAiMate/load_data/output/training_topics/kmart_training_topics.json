@@ -1,0 +1,82 @@
+[
+  {
+    "Store_Id": "1144",
+    "Store_name": "NEW IN TOWN",
+    "Training Topic": "Cash Register Training",
+    "Key Learning Points": "Scanning items, handling payments, processing discounts",
+    "YouTube Link": "https://www.youtube.com/watch?v=example1",
+    "Documentation Link": "https://www.example.com/cash-register-training"
+  },
+  {
+    "Store_Id": "1144",
+    "Store_name": "NEW IN TOWN",
+    "Training Topic": "Inventory Management",
+    "Key Learning Points": "Stock checks, restocking procedures, tracking shrinkage",
+    "YouTube Link": "https://www.youtube.com/watch?v=example2",
+    "Documentation Link": "https://www.example.com/inventory-management"
+  },
+  {
+    "Store_Id": "1144",
+    "Store_name": "NEW IN TOWN",
+    "Training Topic": "Customer Service",
+    "Key Learning Points": "Handling complaints, upselling, loyalty program details",
+    "YouTube Link": "https://www.youtube.com/watch?v=example3",
+    "Documentation Link": "https://www.example.com/customer-service"
+  },
+  {
+    "Store_Id": "1144",
+    "Store_name": "NEW IN TOWN",
+    "Training Topic": "Loss Prevention",
+    "Key Learning Points": "Identifying theft, using security systems, reporting incidents",
+    "YouTube Link": "https://www.youtube.com/watch?v=example4",
+    "Documentation Link": "https://www.example.com/loss-prevention"
+  },
+  {
+    "Store_Id": "1144",
+    "Store_name": "NEW IN TOWN",
+    "Training Topic": "Store Opening & Closing",
+    "Key Learning Points": "Unlocking/locking procedures, system startup/shutdown, security checks",
+    "YouTube Link": "https://www.youtube.com/watch?v=example5",
+    "Documentation Link": "https://www.example.com/store-opening-closing"
+  },
+  {
+    "Store_Id": "1144",
+    "Store_name": "NEW IN TOWN",
+    "Training Topic": "Product Returns & Exchanges",
+    "Key Learning Points": "Processing returns, verifying product condition, updating inventory",
+    "YouTube Link": "https://www.youtube.com/watch?v=example6",
+    "Documentation Link": "https://www.example.com/returns-exchanges"
+  },
+  {
+    "Store_Id": "1144",
+    "Store_name": "NEW IN TOWN",
+    "Training Topic": "Online Order Fulfillment",
+    "Key Learning Points": "Picking orders, packaging, marking orders ready for pickup",
+    "YouTube Link": "https://www.youtube.com/watch?v=example7",
+    "Documentation Link": "https://www.example.com/online-order-fulfillment"
+  },
+  {
+    "Store_Id": "1144",
+    "Store_name": "NEW IN TOWN",
+    "Training Topic": "Shelf Stocking & Labeling",
+    "Key Learning Points": "Proper shelf stocking, labeling items, checking expiry dates",
+    "YouTube Link": "https://www.youtube.com/watch?v=example8",
+    "Documentation Link": "https://www.example.com/shelf-stocking-labeling"
+  },
+  {
+    "Store_Id": "1144",
+    "Store_name": "NEW IN TOWN",
+    "Training Topic": "Handling Promotions",
+    "Key Learning Points": "Setting up promotional displays, applying discounts, managing signage",
+    "YouTube Link": "https://www.youtube.com/watch?v=example9",
+    "Documentation Link": "https://www.example.com/handling-promotions"
+  },
+  {
+    "Store_Id": "1144",
+    "Store_name": "NEW IN TOWN",
+    "Training Topic": "Emergency Procedures",
+    "Key Learning Points": "Evacuation protocols, first aid basics, reporting emergencies",
+    "YouTube Link": "https://www.youtube.com/watch?v=example10",
+    "Documentation Link": "https://www.example.com/emergency-procedures"
+  }
+]
