@@ -3,8 +3,8 @@ import { Example } from "./Example";
 import styles from "./Example.module.css";
 
 const DEFAULT_EXAMPLES: string[] = [
-    "What is POS?",
-    "How do I log into the POS system?",
+    "Should I get a supervisor’s approval before proceeding?",
+    "How do I check if the product was originally purchased from our store?",
     "What are the main features of POS?"
 ];
 

@@ -4,6 +4,7 @@ import { SparkleFilled } from "@fluentui/react-icons";
 import readNDJSONStream from "ndjson-readablestream";
 
 import styles from "./Chat.module.css";
+import myChatLogo from './assets/metilda.webp';
 
 import {
     chatApi,
@@ -21,6 +22,7 @@ import { ExampleList } from "../../components/Example";
 import { UserChatMessage } from "../../components/UserChatMessage";
 import { ClearChatButton } from "../../components/ClearChatButton";
 import { VectorSettings } from "../../components/VectorSettings";
+// import SpeechRecognitionComponent from "../../components/SpeechRecognition/SpeechRecognition"; // Import the SpeechRecognitionComponent
 //import { useMsal } from "@azure/msal-react";
 
 const Chat = () => {
@@ -77,16 +79,6 @@ const Chat = () => {
                 const parsedResponse: ChatAppResponse = await response.json();
                 setAnswers([...answers, [question, parsedResponse]]);
             }
-            // if (shouldStream) {
-            //     const parsedResponse: ChatAppResponse = await handleAsyncRequest(question, answers, setAnswers, response.body);
-            //     setAnswers([...answers, [question, parsedResponse]]);
-            // } else {
-            //     const parsedResponse: ChatAppResponseOrError = await response.json();
-            //     if (response.status > 299 || !response.ok) {
-            //         throw Error(parsedResponse.error || "Unknown error");
-            //     }
-            //     setAnswers([...answers, [question, parsedResponse as ChatAppResponse]]);
-            // }
         } catch (e) {
             console.error(`Chat Error: ${e}`);
             setError(e);
@@ -105,10 +97,6 @@ const Chat = () => {
     };
 
     useEffect(() => chatMessageStreamEnd.current?.scrollIntoView({ behavior: "smooth" }), [isLoading]);
-    //useEffect(() => chatMessageStreamEnd.current?.scrollIntoView({ behavior: "auto" }), [streamedAnswers]);
-    // useEffect(() => {
-    //     getConfig();
-    // }, []);
 
     const onPromptTemplateChange = (_ev?: React.FormEvent<HTMLInputElement | HTMLTextAreaElement>, newValue?: string) => {
         setPromptTemplate(newValue || "");
@@ -151,14 +139,13 @@ const Chat = () => {
     };
 
     const onShowCitation = (citation: string, index: number) => {
-        // if (activeCitation === citation && activeAnalysisPanelTab === AnalysisPanelTabs.CitationTab && selectedAnswer === index) {
-        //     setActiveAnalysisPanelTab(undefined);
-        // } else {
-            setActiveCitation(citation);
-        //    setActiveAnalysisPanelTab(AnalysisPanelTabs.CitationTab);
-        //}
-
+        setActiveCitation(citation);
         setSelectedAnswer(index);
+    };
+
+    const handleSpeechResult = (text: string) => {
+        console.log("Recognized text:", text); // Log the recognized text
+        makeApiRequest(text); // Make the API request with the recognized text
     };
 
     return (
@@ -170,32 +157,23 @@ const Chat = () => {
                 <div className={styles.chatContainer}>
                     {!lastQuestionRef.current ? (
                         <div className={styles.chatEmptyState}>
-                            <SparkleFilled fontSize={"120px"} primaryFill={"rgba(115, 118, 225, 1)"} aria-hidden="true" aria-label="Chat logo" />
-                            <h1 className={styles.chatEmptyStateTitle}>Chat with your data</h1>
-                            <h2 className={styles.chatEmptyStateSubtitle}>Ask anything or try an example</h2>
+                            {/* <SparkleFilled fontSize={"120px"} primaryFill={"rgba(115, 118, 225, 1)"} aria-hidden="true" aria-label="Chat logo" /> */}
+                            <img 
+                                src={myChatLogo} 
+                                alt="Chat logo" 
+                                style={{ 
+                                    width: '120px', 
+                                    height: '120px', 
+                                    borderRadius: '50%', // This makes the image circular
+                                    objectFit: 'cover' // Ensures the image covers the entire area without distortion
+                                }}  // Adjust size as needed
+                            />
+                            <h1 className={styles.chatEmptyStateTitle}>Matilda</h1>
+                            <h2 className={styles.chatEmptyStateSubtitle}>How can I assist you today? If you have any questions or need help with something specific, feel free to ask me!</h2>
                             <ExampleList onExampleClicked={onExampleClicked} useGPT4V={useGPT4V} />
                         </div>
                     ) : (
                         <div className={styles.chatMessageStream}>
-                            {/* {isStreaming &&
-                                streamedAnswers.map((streamedAnswer, index) => (
-                                    <div key={index}>
-                                        <UserChatMessage message={streamedAnswer[0]} />
-                                        <div className={styles.chatMessageGpt}>
-                                            <Answer
-                                                isStreaming={true}
-                                                key={index}
-                                                answer={streamedAnswer[1]}
-                                                isSelected={false}
-                                                onCitationClicked={c => onShowCitation(c, index)}
-                                                onThoughtProcessClicked={() => onToggleTab(AnalysisPanelTabs.ThoughtProcessTab, index)}
-                                                onSupportingContentClicked={() => onToggleTab(AnalysisPanelTabs.SupportingContentTab, index)}
-                                                onFollowupQuestionClicked={q => makeApiRequest(q)}
-                                                showFollowupQuestions={useSuggestFollowupQuestions && answers.length - 1 === index}
-                                            />
-                                        </div>
-                                    </div>
-                                ))} */}
                             {!isStreaming &&
                                 answers.map((answer, index) => (
                                     <div key={index}>
@@ -238,10 +216,14 @@ const Chat = () => {
                     <div className={styles.chatInput}>
                         <QuestionInput
                             clearOnSend
-                            placeholder="Type a new question (e.g. what is product BK-T79U-46?)"
+                            placeholder="Ask me anything.."
                             disabled={isLoading}
                             onSend={question => makeApiRequest(question)}
                         />
+                        {/* <SpeechRecognitionComponent 
+                            onResult={handleSpeechResult} 
+                            makeApiRequest={makeApiRequest} // Pass the API request function
+                        /> */}
                     </div>
                 </div>
 

@@ -3,4 +3,31 @@
     align-items: center;
     gap: 6px;
     cursor: pointer;
+    padding: 10px 20px; /* Add padding for better spacing */
+    /* background: linear-gradient(135deg); Gradient background for a modern look */
+    border-radius: 8px; /* Rounded edges */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: transform 0.2s, box-shadow 0.2s; /* Smooth transition for hover effect */
+}
+
+.container:hover {
+    transform: translateY(-3px); /* Slightly lift the button on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 12px 40px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+.container:active {
+    transform: translateY(-1px); /* Slightly depress the button on active */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.2); /* Slightly reduced shadow on active */
+}
+
+.icon {
+    color: #ffffff; /* White color for the icon */
+    font-size: 16px; /* Adjust icon size */
+}
+
+.text {
+    color: #ffffff; /* White color for the text */
+    font-family: 'Montserrat', sans-serif; /* Apply the Montserrat font */
+    font-size: 14px; /* Adjust text size */
+    font-weight: bold; /* Bold text */
 }

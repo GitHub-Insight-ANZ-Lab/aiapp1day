@@ -7,6 +7,7 @@ import styles from "./Answer.module.css";
 import { ChatAppResponse, getCitationFilePath } from "../../api";
 import { parseAnswerToHtml } from "./AnswerParser";
 import { AnswerIcon } from "./AnswerIcon";
+import myChatLogo from './assets/metilda.webp';
 
 interface Props {
     answer: ChatAppResponse;
