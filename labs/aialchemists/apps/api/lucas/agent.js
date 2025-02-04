@@ -118,7 +118,7 @@ class POSStoreAgent {
                 console.log(`answerLookupTool input: ${input}`);
                 
                 const db = this.dbClient.db(dbname);
-                const answers = db.collection("answers");
+                const answers = db.collection("manuals");
                 const doc = await answers.findOne({ "sku": input });
                 if (doc) {
                     //remove the contentVector property to save on tokens

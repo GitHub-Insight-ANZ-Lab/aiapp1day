@@ -1,0 +1,1001 @@
+Store_Id,Store_name,Product ID,Product Name,Department,Category,Price,Stock Availability,Aisle Location,Store-Specific Notes
+1144,NEW IN TOWN,1001,Fitbit Smartwatch,APPLIANCES,Electronics,1883,Yes (11 units),Aisle 9,Online order available
+1144,NEW IN TOWN,2001,Nike Running Shoes,SHOES,Footwear,86,Yes (88 units),Aisle 8,Limited to 1 per customer
+1144,NEW IN TOWN,1002,Apple iPhone 15,APPLIANCES,Electronics,768,Yes (58 units),Aisle 11,Limited to 2 per customer
+1144,NEW IN TOWN,2002,Under Armour Trainers,SHOES,Footwear,182,Yes (51 units),Aisle 10,Buy 1 Get 1 50% Off
+1144,NEW IN TOWN,1003,Bose Sound System,APPLIANCES,Electronics,1682,No (Restocking in 2 days),Aisle 5,Online order available
+1144,NEW IN TOWN,2003,Vans Skate Shoes,SHOES,Footwear,119,No (Restocking in 2 days),Aisle 8,Buy 1 Get 1 50% Off
+1144,NEW IN TOWN,1004,Sony 55-inch TV,APPLIANCES,Electronics,2946,No (Restocking in 2 days),Aisle 11,
+1144,NEW IN TOWN,2004,Adidas Sneakers,SHOES,Footwear,215,No (Restocking in 2 days),Aisle 8,Buy 1 Get 1 50% Off
+1144,NEW IN TOWN,1005,Fitbit Smartwatch,APPLIANCES,Electronics,1281,No (Restocking in 2 days),Aisle 12,Online order available
+1144,NEW IN TOWN,2005,Nike Running Shoes,SHOES,Footwear,121,Yes (34 units),Aisle 1,Alternative: Adidas available
+1144,NEW IN TOWN,1006,Panasonic Microwave,APPLIANCES,Electronics,2766,Yes (96 units),Aisle 10,10% discount for members
+1144,NEW IN TOWN,2006,Under Armour Trainers,SHOES,Footwear,185,No (Restocking in 2 days),Aisle 7,
+1144,NEW IN TOWN,1007,Samsung Galaxy S23,APPLIANCES,Electronics,123,No (Restocking in 2 days),Aisle 14,Limited to 2 per customer
+1144,NEW IN TOWN,2007,Nike Running Shoes,SHOES,Footwear,151,No (Restocking in 2 days),Aisle 14,Alternative: Adidas available
+1144,NEW IN TOWN,1008,Apple MacBook Air,APPLIANCES,Electronics,2566,Yes (89 units),Aisle 6,Online order available
+1144,NEW IN TOWN,2008,Vans Skate Shoes,SHOES,Footwear,203,Yes (57 units),Aisle 7,Limited to 1 per customer
+1144,NEW IN TOWN,1009,Bose Sound System,APPLIANCES,Electronics,152,Yes (39 units),Aisle 15,Online order available
+1144,NEW IN TOWN,2009,Reebok Walking Shoes,SHOES,Footwear,296,Yes (61 units),Aisle 8,Limited to 1 per customer
+1144,NEW IN TOWN,1010,Fitbit Smartwatch,APPLIANCES,Electronics,237,Yes (64 units),Aisle 17,10% discount for members
+1144,NEW IN TOWN,2010,Skechers Casual Shoes,SHOES,Footwear,242,Yes (64 units),Aisle 9,Buy 1 Get 1 50% Off
+1144,NEW IN TOWN,1011,Dyson Vacuum Cleaner,APPLIANCES,Electronics,1806,No (Restocking in 2 days),Aisle 2,Online order available
+1144,NEW IN TOWN,2011,New Balance Joggers,SHOES,Footwear,240,No (Restocking in 2 days),Aisle 3,Limited to 1 per customer
+1144,NEW IN TOWN,1012,Panasonic Microwave,APPLIANCES,Electronics,585,Yes (44 units),Aisle 19,Limited to 2 per customer
+1144,NEW IN TOWN,2012,Asics Trail Shoes,SHOES,Footwear,179,No (Restocking in 2 days),Aisle 15,
+1144,NEW IN TOWN,1013,Samsung Galaxy S23,APPLIANCES,Electronics,1994,No (Restocking in 2 days),Aisle 10,10% discount for members
+1144,NEW IN TOWN,2013,Adidas Sneakers,SHOES,Footwear,157,No (Restocking in 2 days),Aisle 5,Alternative: Adidas available
+1144,NEW IN TOWN,1014,LG Refrigerator,APPLIANCES,Electronics,2375,No (Restocking in 2 days),Aisle 12,10% discount for members
+1144,NEW IN TOWN,2014,Converse Chuck Taylor,SHOES,Footwear,175,Yes (57 units),Aisle 20,Alternative: Adidas available
+1144,NEW IN TOWN,1015,Fitbit Smartwatch,APPLIANCES,Electronics,1602,Yes (42 units),Aisle 18,Limited to 2 per customer
+1144,NEW IN TOWN,2015,Under Armour Trainers,SHOES,Footwear,276,Yes (37 units),Aisle 14,
+1144,NEW IN TOWN,1016,LG Refrigerator,APPLIANCES,Electronics,2760,Yes (46 units),Aisle 15,10% discount for members
+1144,NEW IN TOWN,2016,Under Armour Trainers,SHOES,Footwear,224,Yes (78 units),Aisle 18,Buy 1 Get 1 50% Off
+1144,NEW IN TOWN,1017,Samsung Galaxy S23,APPLIANCES,Electronics,2975,Yes (68 units),Aisle 10,10% discount for members
+1144,NEW IN TOWN,2017,Reebok Walking Shoes,SHOES,Footwear,154,No (Restocking in 2 days),Aisle 4,Buy 1 Get 1 50% Off
+1144,NEW IN TOWN,1018,Apple MacBook Air,APPLIANCES,Electronics,2660,Yes (15 units),Aisle 16,
+1144,NEW IN TOWN,2018,Converse Chuck Taylor,SHOES,Footwear,269,Yes (71 units),Aisle 8,Alternative: Adidas available
+1144,NEW IN TOWN,1019,LG Refrigerator,APPLIANCES,Electronics,2752,Yes (67 units),Aisle 8,Online order available
+1144,NEW IN TOWN,2019,Asics Trail Shoes,SHOES,Footwear,298,No (Restocking in 2 days),Aisle 3,Buy 1 Get 1 50% Off
+1144,NEW IN TOWN,1020,Breville Coffee Machine,APPLIANCES,Electronics,121,Yes (64 units),Aisle 17,Limited to 2 per customer
+1144,NEW IN TOWN,2020,Adidas Sneakers,SHOES,Footwear,74,No (Restocking in 2 days),Aisle 1,Buy 1 Get 1 50% Off
+1144,NEW IN TOWN,1021,Apple iPhone 15,APPLIANCES,Electronics,885,Yes (91 units),Aisle 7,Limited to 2 per customer
+1144,NEW IN TOWN,2021,Asics Trail Shoes,SHOES,Footwear,141,No (Restocking in 2 days),Aisle 18,Buy 1 Get 1 50% Off
+1144,NEW IN TOWN,1022,Apple iPhone 15,APPLIANCES,Electronics,2761,No (Restocking in 2 days),Aisle 13,Online order available
+1144,NEW IN TOWN,2022,Adidas Sneakers,SHOES,Footwear,265,No (Restocking in 2 days),Aisle 9,Alternative: Adidas available
+1144,NEW IN TOWN,1023,Fitbit Smartwatch,APPLIANCES,Electronics,2680,Yes (47 units),Aisle 20,
+1144,NEW IN TOWN,2023,Asics Trail Shoes,SHOES,Footwear,152,Yes (14 units),Aisle 3,Buy 1 Get 1 50% Off
+1144,NEW IN TOWN,1024,Sony 55-inch TV,APPLIANCES,Electronics,1000,No (Restocking in 2 days),Aisle 11,Online order available
+1144,NEW IN TOWN,2024,Skechers Casual Shoes,SHOES,Footwear,245,Yes (48 units),Aisle 4,
+1144,NEW IN TOWN,1025,Breville Coffee Machine,APPLIANCES,Electronics,559,Yes (28 units),Aisle 12,Limited to 2 per customer
+1144,NEW IN TOWN,2025,Asics Trail Shoes,SHOES,Footwear,160,Yes (53 units),Aisle 15,Buy 1 Get 1 50% Off
+1144,NEW IN TOWN,1026,Fitbit Smartwatch,APPLIANCES,Electronics,1922,Yes (83 units),Aisle 9,Online order available
+1144,NEW IN TOWN,2026,Asics Trail Shoes,SHOES,Footwear,261,Yes (92 units),Aisle 16,Limited to 1 per customer
+1144,NEW IN TOWN,1027,Bose Sound System,APPLIANCES,Electronics,2784,No (Restocking in 2 days),Aisle 3,10% discount for members
+1144,NEW IN TOWN,2027,Adidas Sneakers,SHOES,Footwear,232,Yes (95 units),Aisle 18,Buy 1 Get 1 50% Off
+1144,NEW IN TOWN,1028,Apple MacBook Air,APPLIANCES,Electronics,2769,No (Restocking in 2 days),Aisle 18,Online order available
+1144,NEW IN TOWN,2028,Skechers Casual Shoes,SHOES,Footwear,81,No (Restocking in 2 days),Aisle 15,Buy 1 Get 1 50% Off
+1144,NEW IN TOWN,1029,Panasonic Microwave,APPLIANCES,Electronics,1980,No (Restocking in 2 days),Aisle 10,
+1144,NEW IN TOWN,2029,Puma Sports Shoes,SHOES,Footwear,193,No (Restocking in 2 days),Aisle 10,
+1144,NEW IN TOWN,1030,Apple MacBook Air,APPLIANCES,Electronics,453,Yes (29 units),Aisle 16,Limited to 2 per customer
+1144,NEW IN TOWN,2030,Asics Trail Shoes,SHOES,Footwear,234,Yes (24 units),Aisle 8,Buy 1 Get 1 50% Off
+1144,NEW IN TOWN,1031,Bose Sound System,APPLIANCES,Electronics,179,Yes (68 units),Aisle 13,Online order available
+1144,NEW IN TOWN,2031,Vans Skate Shoes,SHOES,Footwear,242,Yes (10 units),Aisle 16,Buy 1 Get 1 50% Off
+1144,NEW IN TOWN,1032,Dyson Vacuum Cleaner,APPLIANCES,Electronics,2751,No (Restocking in 2 days),Aisle 5,Online order available
+1144,NEW IN TOWN,2032,Reebok Walking Shoes,SHOES,Footwear,280,Yes (30 units),Aisle 8,Alternative: Adidas available
+1144,NEW IN TOWN,1033,Panasonic Microwave,APPLIANCES,Electronics,1359,Yes (15 units),Aisle 17,Limited to 2 per customer
+1144,NEW IN TOWN,2033,Asics Trail Shoes,SHOES,Footwear,211,Yes (74 units),Aisle 6,Limited to 1 per customer
+1144,NEW IN TOWN,1034,Breville Coffee Machine,APPLIANCES,Electronics,1383,No (Restocking in 2 days),Aisle 12,
+1144,NEW IN TOWN,2034,Converse Chuck Taylor,SHOES,Footwear,113,No (Restocking in 2 days),Aisle 7,Limited to 1 per customer
+1144,NEW IN TOWN,1035,Breville Coffee Machine,APPLIANCES,Electronics,2522,No (Restocking in 2 days),Aisle 2,Online order available
+1144,NEW IN TOWN,2035,New Balance Joggers,SHOES,Footwear,232,Yes (56 units),Aisle 17,
+1144,NEW IN TOWN,1036,Bose Sound System,APPLIANCES,Electronics,281,No (Restocking in 2 days),Aisle 4,10% discount for members
+1144,NEW IN TOWN,2036,Vans Skate Shoes,SHOES,Footwear,289,No (Restocking in 2 days),Aisle 6,Buy 1 Get 1 50% Off
+1144,NEW IN TOWN,1037,Samsung Galaxy S23,APPLIANCES,Electronics,905,Yes (92 units),Aisle 11,
+1144,NEW IN TOWN,2037,Puma Sports Shoes,SHOES,Footwear,51,Yes (81 units),Aisle 7,Alternative: Adidas available
+1144,NEW IN TOWN,1038,Breville Coffee Machine,APPLIANCES,Electronics,1913,No (Restocking in 2 days),Aisle 18,Online order available
+1144,NEW IN TOWN,2038,Under Armour Trainers,SHOES,Footwear,123,No (Restocking in 2 days),Aisle 11,Limited to 1 per customer
+1144,NEW IN TOWN,1039,Sony 55-inch TV,APPLIANCES,Electronics,2103,No (Restocking in 2 days),Aisle 3,Limited to 2 per customer
+1144,NEW IN TOWN,2039,Puma Sports Shoes,SHOES,Footwear,104,No (Restocking in 2 days),Aisle 14,
+1144,NEW IN TOWN,1040,Bose Sound System,APPLIANCES,Electronics,257,No (Restocking in 2 days),Aisle 10,Limited to 2 per customer
+1144,NEW IN TOWN,2040,Reebok Walking Shoes,SHOES,Footwear,190,Yes (77 units),Aisle 7,
+1144,NEW IN TOWN,1041,Breville Coffee Machine,APPLIANCES,Electronics,1815,No (Restocking in 2 days),Aisle 5,Online order available
+1144,NEW IN TOWN,2041,Asics Trail Shoes,SHOES,Footwear,114,Yes (90 units),Aisle 5,Limited to 1 per customer
+1144,NEW IN TOWN,1042,Sony 55-inch TV,APPLIANCES,Electronics,321,Yes (22 units),Aisle 19,
+1144,NEW IN TOWN,2042,Adidas Sneakers,SHOES,Footwear,86,No (Restocking in 2 days),Aisle 7,
+1144,NEW IN TOWN,1043,Apple MacBook Air,APPLIANCES,Electronics,1679,No (Restocking in 2 days),Aisle 9,10% discount for members
+1144,NEW IN TOWN,2043,Nike Running Shoes,SHOES,Footwear,202,No (Restocking in 2 days),Aisle 16,Buy 1 Get 1 50% Off
+1144,NEW IN TOWN,1044,Apple MacBook Air,APPLIANCES,Electronics,1884,Yes (96 units),Aisle 19,
+1144,NEW IN TOWN,2044,Adidas Sneakers,SHOES,Footwear,236,No (Restocking in 2 days),Aisle 19,Limited to 1 per customer
+1144,NEW IN TOWN,1045,Samsung Galaxy S23,APPLIANCES,Electronics,328,No (Restocking in 2 days),Aisle 19,10% discount for members
+1144,NEW IN TOWN,2045,Skechers Casual Shoes,SHOES,Footwear,125,No (Restocking in 2 days),Aisle 18,
+1144,NEW IN TOWN,1046,Apple iPhone 15,APPLIANCES,Electronics,1507,Yes (100 units),Aisle 15,Limited to 2 per customer
+1144,NEW IN TOWN,2046,New Balance Joggers,SHOES,Footwear,256,No (Restocking in 2 days),Aisle 13,Alternative: Adidas available
+1144,NEW IN TOWN,1047,Panasonic Microwave,APPLIANCES,Electronics,222,No (Restocking in 2 days),Aisle 17,10% discount for members
+1144,NEW IN TOWN,2047,Converse Chuck Taylor,SHOES,Footwear,71,Yes (70 units),Aisle 19,Buy 1 Get 1 50% Off
+1144,NEW IN TOWN,1048,LG Refrigerator,APPLIANCES,Electronics,2472,No (Restocking in 2 days),Aisle 20,Online order available
+1144,NEW IN TOWN,2048,Converse Chuck Taylor,SHOES,Footwear,147,Yes (23 units),Aisle 19,Alternative: Adidas available
+1144,NEW IN TOWN,1049,Bose Sound System,APPLIANCES,Electronics,1603,No (Restocking in 2 days),Aisle 16,Limited to 2 per customer
+1144,NEW IN TOWN,2049,Under Armour Trainers,SHOES,Footwear,250,No (Restocking in 2 days),Aisle 1,Limited to 1 per customer
+1144,NEW IN TOWN,1050,Fitbit Smartwatch,APPLIANCES,Electronics,1585,Yes (93 units),Aisle 2,Limited to 2 per customer
+1144,NEW IN TOWN,2050,Adidas Sneakers,SHOES,Footwear,72,Yes (29 units),Aisle 20,Limited to 1 per customer
+1144,NEW IN TOWN,1051,Apple MacBook Air,APPLIANCES,Electronics,761,Yes (79 units),Aisle 15,
+1144,NEW IN TOWN,2051,Adidas Sneakers,SHOES,Footwear,213,No (Restocking in 2 days),Aisle 18,Alternative: Adidas available
+1144,NEW IN TOWN,1052,LG Refrigerator,APPLIANCES,Electronics,2624,Yes (24 units),Aisle 4,10% discount for members
+1144,NEW IN TOWN,2052,Reebok Walking Shoes,SHOES,Footwear,169,No (Restocking in 2 days),Aisle 13,Alternative: Adidas available
+1144,NEW IN TOWN,1053,Apple iPhone 15,APPLIANCES,Electronics,718,Yes (37 units),Aisle 20,Online order available
+1144,NEW IN TOWN,2053,Reebok Walking Shoes,SHOES,Footwear,221,Yes (46 units),Aisle 14,
+1144,NEW IN TOWN,1054,Sony 55-inch TV,APPLIANCES,Electronics,2902,No (Restocking in 2 days),Aisle 7,Limited to 2 per customer
+1144,NEW IN TOWN,2054,Puma Sports Shoes,SHOES,Footwear,282,No (Restocking in 2 days),Aisle 6,Buy 1 Get 1 50% Off
+1144,NEW IN TOWN,1055,Samsung Galaxy S23,APPLIANCES,Electronics,1480,Yes (79 units),Aisle 10,
+1144,NEW IN TOWN,2055,Under Armour Trainers,SHOES,Footwear,164,No (Restocking in 2 days),Aisle 6,Buy 1 Get 1 50% Off
+1144,NEW IN TOWN,1056,Apple iPhone 15,APPLIANCES,Electronics,2377,Yes (51 units),Aisle 3,Limited to 2 per customer
+1144,NEW IN TOWN,2056,Converse Chuck Taylor,SHOES,Footwear,113,No (Restocking in 2 days),Aisle 19,
+1144,NEW IN TOWN,1057,Panasonic Microwave,APPLIANCES,Electronics,1362,No (Restocking in 2 days),Aisle 18,10% discount for members
+1144,NEW IN TOWN,2057,Nike Running Shoes,SHOES,Footwear,234,No (Restocking in 2 days),Aisle 8,Limited to 1 per customer
+1144,NEW IN TOWN,1058,Sony 55-inch TV,APPLIANCES,Electronics,1344,No (Restocking in 2 days),Aisle 18,Limited to 2 per customer
+1144,NEW IN TOWN,2058,Converse Chuck Taylor,SHOES,Footwear,265,Yes (19 units),Aisle 5,Buy 1 Get 1 50% Off
+1144,NEW IN TOWN,1059,Panasonic Microwave,APPLIANCES,Electronics,2762,No (Restocking in 2 days),Aisle 6,Limited to 2 per customer
+1144,NEW IN TOWN,2059,Under Armour Trainers,SHOES,Footwear,196,Yes (64 units),Aisle 15,Alternative: Adidas available
+1144,NEW IN TOWN,1060,Apple MacBook Air,APPLIANCES,Electronics,2231,Yes (52 units),Aisle 9,Online order available
+1144,NEW IN TOWN,2060,Nike Running Shoes,SHOES,Footwear,134,No (Restocking in 2 days),Aisle 4,Alternative: Adidas available
+1144,NEW IN TOWN,1061,Samsung Galaxy S23,APPLIANCES,Electronics,1430,Yes (60 units),Aisle 10,Online order available
+1144,NEW IN TOWN,2061,Vans Skate Shoes,SHOES,Footwear,148,No (Restocking in 2 days),Aisle 18,
+1144,NEW IN TOWN,1062,Panasonic Microwave,APPLIANCES,Electronics,2122,No (Restocking in 2 days),Aisle 10,Limited to 2 per customer
+1144,NEW IN TOWN,2062,Under Armour Trainers,SHOES,Footwear,54,Yes (26 units),Aisle 16,Limited to 1 per customer
+1144,NEW IN TOWN,1063,Fitbit Smartwatch,APPLIANCES,Electronics,961,Yes (51 units),Aisle 17,Online order available
+1144,NEW IN TOWN,2063,Adidas Sneakers,SHOES,Footwear,158,No (Restocking in 2 days),Aisle 11,Limited to 1 per customer
+1144,NEW IN TOWN,1064,Apple MacBook Air,APPLIANCES,Electronics,1747,No (Restocking in 2 days),Aisle 10,
+1144,NEW IN TOWN,2064,Under Armour Trainers,SHOES,Footwear,52,Yes (53 units),Aisle 15,Limited to 1 per customer
+1144,NEW IN TOWN,1065,Apple iPhone 15,APPLIANCES,Electronics,2695,Yes (48 units),Aisle 19,Online order available
+1144,NEW IN TOWN,2065,Puma Sports Shoes,SHOES,Footwear,190,Yes (71 units),Aisle 12,Limited to 1 per customer
+1144,NEW IN TOWN,1066,Dyson Vacuum Cleaner,APPLIANCES,Electronics,2612,No (Restocking in 2 days),Aisle 17,Limited to 2 per customer
+1144,NEW IN TOWN,2066,Nike Running Shoes,SHOES,Footwear,235,Yes (25 units),Aisle 1,Buy 1 Get 1 50% Off
+1144,NEW IN TOWN,1067,Fitbit Smartwatch,APPLIANCES,Electronics,2374,Yes (63 units),Aisle 17,Limited to 2 per customer
+1144,NEW IN TOWN,2067,Asics Trail Shoes,SHOES,Footwear,203,No (Restocking in 2 days),Aisle 4,Buy 1 Get 1 50% Off
+1144,NEW IN TOWN,1068,Sony 55-inch TV,APPLIANCES,Electronics,473,No (Restocking in 2 days),Aisle 13,10% discount for members
+1144,NEW IN TOWN,2068,Skechers Casual Shoes,SHOES,Footwear,152,Yes (65 units),Aisle 6,Alternative: Adidas available
+1144,NEW IN TOWN,1069,Apple MacBook Air,APPLIANCES,Electronics,2968,Yes (17 units),Aisle 6,Online order available
+1144,NEW IN TOWN,2069,Nike Running Shoes,SHOES,Footwear,218,Yes (54 units),Aisle 9,Limited to 1 per customer
+1144,NEW IN TOWN,1070,Apple MacBook Air,APPLIANCES,Electronics,514,Yes (46 units),Aisle 9,Limited to 2 per customer
+1144,NEW IN TOWN,2070,Under Armour Trainers,SHOES,Footwear,52,Yes (66 units),Aisle 6,Alternative: Adidas available
+1144,NEW IN TOWN,1071,Apple iPhone 15,APPLIANCES,Electronics,2894,No (Restocking in 2 days),Aisle 16,
+1144,NEW IN TOWN,2071,Skechers Casual Shoes,SHOES,Footwear,133,Yes (77 units),Aisle 17,
+1144,NEW IN TOWN,1072,Apple MacBook Air,APPLIANCES,Electronics,175,Yes (55 units),Aisle 10,Online order available
+1144,NEW IN TOWN,2072,Nike Running Shoes,SHOES,Footwear,79,No (Restocking in 2 days),Aisle 10,Buy 1 Get 1 50% Off
+1144,NEW IN TOWN,1073,Breville Coffee Machine,APPLIANCES,Electronics,2136,No (Restocking in 2 days),Aisle 11,Limited to 2 per customer
+1144,NEW IN TOWN,2073,Under Armour Trainers,SHOES,Footwear,153,Yes (33 units),Aisle 9,Buy 1 Get 1 50% Off
+1144,NEW IN TOWN,1074,Bose Sound System,APPLIANCES,Electronics,2787,Yes (47 units),Aisle 10,Online order available
+1144,NEW IN TOWN,2074,Under Armour Trainers,SHOES,Footwear,79,Yes (44 units),Aisle 11,Alternative: Adidas available
+1144,NEW IN TOWN,1075,Apple MacBook Air,APPLIANCES,Electronics,876,Yes (93 units),Aisle 11,Limited to 2 per customer
+1144,NEW IN TOWN,2075,Skechers Casual Shoes,SHOES,Footwear,187,Yes (64 units),Aisle 14,Limited to 1 per customer
+1144,NEW IN TOWN,1076,Panasonic Microwave,APPLIANCES,Electronics,2274,No (Restocking in 2 days),Aisle 20,10% discount for members
+1144,NEW IN TOWN,2076,Converse Chuck Taylor,SHOES,Footwear,69,No (Restocking in 2 days),Aisle 5,Limited to 1 per customer
+1144,NEW IN TOWN,1077,Apple MacBook Air,APPLIANCES,Electronics,1350,No (Restocking in 2 days),Aisle 5,Online order available
+1144,NEW IN TOWN,2077,New Balance Joggers,SHOES,Footwear,192,No (Restocking in 2 days),Aisle 3,Alternative: Adidas available
+1144,NEW IN TOWN,1078,Bose Sound System,APPLIANCES,Electronics,1680,Yes (67 units),Aisle 20,Limited to 2 per customer
+1144,NEW IN TOWN,2078,New Balance Joggers,SHOES,Footwear,71,No (Restocking in 2 days),Aisle 17,Buy 1 Get 1 50% Off
+1144,NEW IN TOWN,1079,Apple MacBook Air,APPLIANCES,Electronics,1606,Yes (60 units),Aisle 15,Online order available
+1144,NEW IN TOWN,2079,Nike Running Shoes,SHOES,Footwear,115,Yes (62 units),Aisle 2,
+1144,NEW IN TOWN,1080,LG Refrigerator,APPLIANCES,Electronics,1714,No (Restocking in 2 days),Aisle 16,10% discount for members
+1144,NEW IN TOWN,2080,Vans Skate Shoes,SHOES,Footwear,118,No (Restocking in 2 days),Aisle 7,Buy 1 Get 1 50% Off
+1144,NEW IN TOWN,1081,Apple iPhone 15,APPLIANCES,Electronics,1690,No (Restocking in 2 days),Aisle 19,10% discount for members
+1144,NEW IN TOWN,2081,Under Armour Trainers,SHOES,Footwear,267,No (Restocking in 2 days),Aisle 2,Buy 1 Get 1 50% Off
+1144,NEW IN TOWN,1082,Apple iPhone 15,APPLIANCES,Electronics,910,No (Restocking in 2 days),Aisle 9,10% discount for members
+1144,NEW IN TOWN,2082,Reebok Walking Shoes,SHOES,Footwear,271,No (Restocking in 2 days),Aisle 2,Buy 1 Get 1 50% Off
+1144,NEW IN TOWN,1083,Bose Sound System,APPLIANCES,Electronics,2819,Yes (71 units),Aisle 8,
+1144,NEW IN TOWN,2083,Skechers Casual Shoes,SHOES,Footwear,155,Yes (99 units),Aisle 4,Alternative: Adidas available
+1144,NEW IN TOWN,1084,Samsung Galaxy S23,APPLIANCES,Electronics,2638,No (Restocking in 2 days),Aisle 12,10% discount for members
+1144,NEW IN TOWN,2084,Reebok Walking Shoes,SHOES,Footwear,188,Yes (30 units),Aisle 14,Alternative: Adidas available
+1144,NEW IN TOWN,1085,Panasonic Microwave,APPLIANCES,Electronics,1017,Yes (87 units),Aisle 17,Online order available
+1144,NEW IN TOWN,2085,Asics Trail Shoes,SHOES,Footwear,89,No (Restocking in 2 days),Aisle 20,Buy 1 Get 1 50% Off
+1144,NEW IN TOWN,1086,Apple iPhone 15,APPLIANCES,Electronics,1463,Yes (17 units),Aisle 19,
+1144,NEW IN TOWN,2086,Adidas Sneakers,SHOES,Footwear,232,Yes (15 units),Aisle 14,Buy 1 Get 1 50% Off
+1144,NEW IN TOWN,1087,Apple iPhone 15,APPLIANCES,Electronics,708,No (Restocking in 2 days),Aisle 17,10% discount for members
+1144,NEW IN TOWN,2087,Converse Chuck Taylor,SHOES,Footwear,145,Yes (87 units),Aisle 15,Buy 1 Get 1 50% Off
+1144,NEW IN TOWN,1088,Fitbit Smartwatch,APPLIANCES,Electronics,2188,Yes (54 units),Aisle 6,Online order available
+1144,NEW IN TOWN,2088,New Balance Joggers,SHOES,Footwear,87,Yes (69 units),Aisle 2,Limited to 1 per customer
+1144,NEW IN TOWN,1089,Sony 55-inch TV,APPLIANCES,Electronics,1604,No (Restocking in 2 days),Aisle 7,Online order available
+1144,NEW IN TOWN,2089,Converse Chuck Taylor,SHOES,Footwear,270,No (Restocking in 2 days),Aisle 5,Alternative: Adidas available
+1144,NEW IN TOWN,1090,LG Refrigerator,APPLIANCES,Electronics,495,Yes (55 units),Aisle 20,10% discount for members
+1144,NEW IN TOWN,2090,Converse Chuck Taylor,SHOES,Footwear,245,No (Restocking in 2 days),Aisle 3,Limited to 1 per customer
+1144,NEW IN TOWN,1091,Sony 55-inch TV,APPLIANCES,Electronics,2113,Yes (31 units),Aisle 16,
+1144,NEW IN TOWN,2091,Nike Running Shoes,SHOES,Footwear,258,Yes (41 units),Aisle 17,Buy 1 Get 1 50% Off
+1144,NEW IN TOWN,1092,Dyson Vacuum Cleaner,APPLIANCES,Electronics,433,Yes (63 units),Aisle 5,Online order available
+1144,NEW IN TOWN,2092,Vans Skate Shoes,SHOES,Footwear,116,No (Restocking in 2 days),Aisle 16,Buy 1 Get 1 50% Off
+1144,NEW IN TOWN,1093,Sony 55-inch TV,APPLIANCES,Electronics,1377,Yes (10 units),Aisle 9,
+1144,NEW IN TOWN,2093,Reebok Walking Shoes,SHOES,Footwear,96,Yes (97 units),Aisle 15,
+1144,NEW IN TOWN,1094,Apple iPhone 15,APPLIANCES,Electronics,1317,Yes (52 units),Aisle 8,Online order available
+1144,NEW IN TOWN,2094,Puma Sports Shoes,SHOES,Footwear,84,Yes (42 units),Aisle 7,
+1144,NEW IN TOWN,1095,Sony 55-inch TV,APPLIANCES,Electronics,1689,No (Restocking in 2 days),Aisle 9,
+1144,NEW IN TOWN,2095,Nike Running Shoes,SHOES,Footwear,141,No (Restocking in 2 days),Aisle 13,Limited to 1 per customer
+1144,NEW IN TOWN,1096,Apple iPhone 15,APPLIANCES,Electronics,2732,No (Restocking in 2 days),Aisle 11,Online order available
+1144,NEW IN TOWN,2096,Puma Sports Shoes,SHOES,Footwear,219,Yes (43 units),Aisle 10,Alternative: Adidas available
+1144,NEW IN TOWN,1097,Samsung Galaxy S23,APPLIANCES,Electronics,1898,Yes (15 units),Aisle 19,
+1144,NEW IN TOWN,2097,Puma Sports Shoes,SHOES,Footwear,57,No (Restocking in 2 days),Aisle 1,
+1144,NEW IN TOWN,1098,LG Refrigerator,APPLIANCES,Electronics,1519,No (Restocking in 2 days),Aisle 3,Limited to 2 per customer
+1144,NEW IN TOWN,2098,Puma Sports Shoes,SHOES,Footwear,141,Yes (31 units),Aisle 2,Alternative: Adidas available
+1144,NEW IN TOWN,1099,Apple iPhone 15,APPLIANCES,Electronics,1923,Yes (83 units),Aisle 18,
+1144,NEW IN TOWN,2099,Puma Sports Shoes,SHOES,Footwear,211,No (Restocking in 2 days),Aisle 3,Buy 1 Get 1 50% Off
+1144,NEW IN TOWN,1100,Apple iPhone 15,APPLIANCES,Electronics,2094,Yes (76 units),Aisle 5,Online order available
+1144,NEW IN TOWN,2100,Asics Trail Shoes,SHOES,Footwear,232,No (Restocking in 2 days),Aisle 5,
+1144,NEW IN TOWN,1101,Panasonic Microwave,APPLIANCES,Electronics,2370,No (Restocking in 2 days),Aisle 3,10% discount for members
+1144,NEW IN TOWN,2101,Asics Trail Shoes,SHOES,Footwear,119,No (Restocking in 2 days),Aisle 5,
+1144,NEW IN TOWN,1102,Fitbit Smartwatch,APPLIANCES,Electronics,2873,Yes (27 units),Aisle 6,10% discount for members
+1144,NEW IN TOWN,2102,Puma Sports Shoes,SHOES,Footwear,288,No (Restocking in 2 days),Aisle 13,Limited to 1 per customer
+1144,NEW IN TOWN,1103,Dyson Vacuum Cleaner,APPLIANCES,Electronics,1975,Yes (89 units),Aisle 15,
+1144,NEW IN TOWN,2103,Under Armour Trainers,SHOES,Footwear,84,No (Restocking in 2 days),Aisle 16,
+1144,NEW IN TOWN,1104,Samsung Galaxy S23,APPLIANCES,Electronics,1368,Yes (21 units),Aisle 17,Limited to 2 per customer
+1144,NEW IN TOWN,2104,Converse Chuck Taylor,SHOES,Footwear,102,No (Restocking in 2 days),Aisle 17,Buy 1 Get 1 50% Off
+1144,NEW IN TOWN,1105,LG Refrigerator,APPLIANCES,Electronics,2974,No (Restocking in 2 days),Aisle 15,Limited to 2 per customer
+1144,NEW IN TOWN,2105,Adidas Sneakers,SHOES,Footwear,247,No (Restocking in 2 days),Aisle 20,Buy 1 Get 1 50% Off
+1144,NEW IN TOWN,1106,LG Refrigerator,APPLIANCES,Electronics,2399,Yes (55 units),Aisle 11,Online order available
+1144,NEW IN TOWN,2106,Nike Running Shoes,SHOES,Footwear,66,No (Restocking in 2 days),Aisle 14,Alternative: Adidas available
+1144,NEW IN TOWN,1107,Apple iPhone 15,APPLIANCES,Electronics,868,Yes (49 units),Aisle 3,Online order available
+1144,NEW IN TOWN,2107,Under Armour Trainers,SHOES,Footwear,134,Yes (11 units),Aisle 14,Buy 1 Get 1 50% Off
+1144,NEW IN TOWN,1108,Bose Sound System,APPLIANCES,Electronics,2497,No (Restocking in 2 days),Aisle 5,Limited to 2 per customer
+1144,NEW IN TOWN,2108,Puma Sports Shoes,SHOES,Footwear,189,No (Restocking in 2 days),Aisle 13,Limited to 1 per customer
+1144,NEW IN TOWN,1109,LG Refrigerator,APPLIANCES,Electronics,1151,No (Restocking in 2 days),Aisle 18,Online order available
+1144,NEW IN TOWN,2109,Converse Chuck Taylor,SHOES,Footwear,187,No (Restocking in 2 days),Aisle 6,Alternative: Adidas available
+1144,NEW IN TOWN,1110,Samsung Galaxy S23,APPLIANCES,Electronics,911,Yes (30 units),Aisle 14,Limited to 2 per customer
+1144,NEW IN TOWN,2110,Puma Sports Shoes,SHOES,Footwear,102,Yes (48 units),Aisle 7,
+1144,NEW IN TOWN,1111,Apple MacBook Air,APPLIANCES,Electronics,1730,No (Restocking in 2 days),Aisle 19,
+1144,NEW IN TOWN,2111,Under Armour Trainers,SHOES,Footwear,169,No (Restocking in 2 days),Aisle 8,Buy 1 Get 1 50% Off
+1144,NEW IN TOWN,1112,Apple iPhone 15,APPLIANCES,Electronics,1119,No (Restocking in 2 days),Aisle 15,
+1144,NEW IN TOWN,2112,Puma Sports Shoes,SHOES,Footwear,261,Yes (58 units),Aisle 14,Buy 1 Get 1 50% Off
+1144,NEW IN TOWN,1113,Panasonic Microwave,APPLIANCES,Electronics,1950,No (Restocking in 2 days),Aisle 11,
+1144,NEW IN TOWN,2113,Nike Running Shoes,SHOES,Footwear,276,No (Restocking in 2 days),Aisle 6,Buy 1 Get 1 50% Off
+1144,NEW IN TOWN,1114,Sony 55-inch TV,APPLIANCES,Electronics,1428,No (Restocking in 2 days),Aisle 1,Online order available
+1144,NEW IN TOWN,2114,Asics Trail Shoes,SHOES,Footwear,213,No (Restocking in 2 days),Aisle 10,
+1144,NEW IN TOWN,1115,Panasonic Microwave,APPLIANCES,Electronics,606,No (Restocking in 2 days),Aisle 11,
+1144,NEW IN TOWN,2115,Nike Running Shoes,SHOES,Footwear,245,No (Restocking in 2 days),Aisle 2,Alternative: Adidas available
+1144,NEW IN TOWN,1116,Breville Coffee Machine,APPLIANCES,Electronics,467,No (Restocking in 2 days),Aisle 19,Limited to 2 per customer
+1144,NEW IN TOWN,2116,Under Armour Trainers,SHOES,Footwear,178,Yes (75 units),Aisle 15,
+1144,NEW IN TOWN,1117,Apple iPhone 15,APPLIANCES,Electronics,452,No (Restocking in 2 days),Aisle 18,
+1144,NEW IN TOWN,2117,Adidas Sneakers,SHOES,Footwear,175,No (Restocking in 2 days),Aisle 16,Limited to 1 per customer
+1144,NEW IN TOWN,1118,LG Refrigerator,APPLIANCES,Electronics,2061,Yes (34 units),Aisle 5,10% discount for members
+1144,NEW IN TOWN,2118,Converse Chuck Taylor,SHOES,Footwear,243,No (Restocking in 2 days),Aisle 3,Limited to 1 per customer
+1144,NEW IN TOWN,1119,Samsung Galaxy S23,APPLIANCES,Electronics,799,Yes (68 units),Aisle 14,
+1144,NEW IN TOWN,2119,Skechers Casual Shoes,SHOES,Footwear,181,Yes (45 units),Aisle 12,Limited to 1 per customer
+1144,NEW IN TOWN,1120,Panasonic Microwave,APPLIANCES,Electronics,1459,No (Restocking in 2 days),Aisle 18,10% discount for members
+1144,NEW IN TOWN,2120,New Balance Joggers,SHOES,Footwear,238,No (Restocking in 2 days),Aisle 13,Limited to 1 per customer
+1144,NEW IN TOWN,1121,Panasonic Microwave,APPLIANCES,Electronics,851,Yes (97 units),Aisle 2,Limited to 2 per customer
+1144,NEW IN TOWN,2121,Reebok Walking Shoes,SHOES,Footwear,56,No (Restocking in 2 days),Aisle 16,
+1144,NEW IN TOWN,1122,Samsung Galaxy S23,APPLIANCES,Electronics,1931,No (Restocking in 2 days),Aisle 11,Limited to 2 per customer
+1144,NEW IN TOWN,2122,Under Armour Trainers,SHOES,Footwear,186,No (Restocking in 2 days),Aisle 15,
+1144,NEW IN TOWN,1123,Breville Coffee Machine,APPLIANCES,Electronics,907,No (Restocking in 2 days),Aisle 3,Online order available
+1144,NEW IN TOWN,2123,New Balance Joggers,SHOES,Footwear,245,Yes (79 units),Aisle 16,Limited to 1 per customer
+1144,NEW IN TOWN,1124,Panasonic Microwave,APPLIANCES,Electronics,1655,Yes (71 units),Aisle 13,10% discount for members
+1144,NEW IN TOWN,2124,Skechers Casual Shoes,SHOES,Footwear,248,Yes (23 units),Aisle 10,Alternative: Adidas available
+1144,NEW IN TOWN,1125,Samsung Galaxy S23,APPLIANCES,Electronics,276,No (Restocking in 2 days),Aisle 10,Limited to 2 per customer
+1144,NEW IN TOWN,2125,Skechers Casual Shoes,SHOES,Footwear,155,No (Restocking in 2 days),Aisle 2,
+1144,NEW IN TOWN,1126,LG Refrigerator,APPLIANCES,Electronics,2181,Yes (85 units),Aisle 13,Limited to 2 per customer
+1144,NEW IN TOWN,2126,Nike Running Shoes,SHOES,Footwear,192,No (Restocking in 2 days),Aisle 14,
+1144,NEW IN TOWN,1127,Fitbit Smartwatch,APPLIANCES,Electronics,364,No (Restocking in 2 days),Aisle 12,10% discount for members
+1144,NEW IN TOWN,2127,Reebok Walking Shoes,SHOES,Footwear,267,Yes (18 units),Aisle 5,
+1144,NEW IN TOWN,1128,Apple iPhone 15,APPLIANCES,Electronics,1625,No (Restocking in 2 days),Aisle 3,Limited to 2 per customer
+1144,NEW IN TOWN,2128,Vans Skate Shoes,SHOES,Footwear,138,No (Restocking in 2 days),Aisle 4,Alternative: Adidas available
+1144,NEW IN TOWN,1129,LG Refrigerator,APPLIANCES,Electronics,721,Yes (60 units),Aisle 9,Limited to 2 per customer
+1144,NEW IN TOWN,2129,Nike Running Shoes,SHOES,Footwear,269,No (Restocking in 2 days),Aisle 16,Alternative: Adidas available
+1144,NEW IN TOWN,1130,Samsung Galaxy S23,APPLIANCES,Electronics,2041,Yes (56 units),Aisle 19,Limited to 2 per customer
+1144,NEW IN TOWN,2130,Puma Sports Shoes,SHOES,Footwear,181,Yes (13 units),Aisle 20,Limited to 1 per customer
+1144,NEW IN TOWN,1131,Apple iPhone 15,APPLIANCES,Electronics,2158,Yes (28 units),Aisle 12,Online order available
+1144,NEW IN TOWN,2131,Adidas Sneakers,SHOES,Footwear,238,No (Restocking in 2 days),Aisle 2,Alternative: Adidas available
+1144,NEW IN TOWN,1132,Dyson Vacuum Cleaner,APPLIANCES,Electronics,1819,No (Restocking in 2 days),Aisle 14,Online order available
+1144,NEW IN TOWN,2132,Nike Running Shoes,SHOES,Footwear,290,No (Restocking in 2 days),Aisle 12,Buy 1 Get 1 50% Off
+1144,NEW IN TOWN,1133,Apple MacBook Air,APPLIANCES,Electronics,2489,Yes (75 units),Aisle 16,Online order available
+1144,NEW IN TOWN,2133,New Balance Joggers,SHOES,Footwear,162,Yes (63 units),Aisle 13,
+1144,NEW IN TOWN,1134,Panasonic Microwave,APPLIANCES,Electronics,2031,Yes (36 units),Aisle 20,Online order available
+1144,NEW IN TOWN,2134,Reebok Walking Shoes,SHOES,Footwear,282,Yes (31 units),Aisle 5,Alternative: Adidas available
+1144,NEW IN TOWN,1135,Fitbit Smartwatch,APPLIANCES,Electronics,932,Yes (71 units),Aisle 9,10% discount for members
+1144,NEW IN TOWN,2135,Nike Running Shoes,SHOES,Footwear,268,Yes (63 units),Aisle 3,Buy 1 Get 1 50% Off
+1144,NEW IN TOWN,1136,Dyson Vacuum Cleaner,APPLIANCES,Electronics,1433,No (Restocking in 2 days),Aisle 9,
+1144,NEW IN TOWN,2136,Nike Running Shoes,SHOES,Footwear,135,Yes (34 units),Aisle 18,
+1144,NEW IN TOWN,1137,Apple iPhone 15,APPLIANCES,Electronics,1366,Yes (79 units),Aisle 15,10% discount for members
+1144,NEW IN TOWN,2137,New Balance Joggers,SHOES,Footwear,101,No (Restocking in 2 days),Aisle 5,
+1144,NEW IN TOWN,1138,Breville Coffee Machine,APPLIANCES,Electronics,1159,No (Restocking in 2 days),Aisle 15,
+1144,NEW IN TOWN,2138,Nike Running Shoes,SHOES,Footwear,151,Yes (97 units),Aisle 19,Alternative: Adidas available
+1144,NEW IN TOWN,1139,Fitbit Smartwatch,APPLIANCES,Electronics,1669,No (Restocking in 2 days),Aisle 17,
+1144,NEW IN TOWN,2139,Under Armour Trainers,SHOES,Footwear,98,No (Restocking in 2 days),Aisle 10,Limited to 1 per customer
+1144,NEW IN TOWN,1140,Apple MacBook Air,APPLIANCES,Electronics,1496,Yes (53 units),Aisle 7,
+1144,NEW IN TOWN,2140,Adidas Sneakers,SHOES,Footwear,162,No (Restocking in 2 days),Aisle 9,Limited to 1 per customer
+1144,NEW IN TOWN,1141,Breville Coffee Machine,APPLIANCES,Electronics,1824,Yes (93 units),Aisle 5,Limited to 2 per customer
+1144,NEW IN TOWN,2141,Under Armour Trainers,SHOES,Footwear,161,Yes (36 units),Aisle 15,
+1144,NEW IN TOWN,1142,Dyson Vacuum Cleaner,APPLIANCES,Electronics,2600,Yes (36 units),Aisle 20,10% discount for members
+1144,NEW IN TOWN,2142,Under Armour Trainers,SHOES,Footwear,210,No (Restocking in 2 days),Aisle 9,Buy 1 Get 1 50% Off
+1144,NEW IN TOWN,1143,Samsung Galaxy S23,APPLIANCES,Electronics,2298,No (Restocking in 2 days),Aisle 15,Limited to 2 per customer
+1144,NEW IN TOWN,2143,Converse Chuck Taylor,SHOES,Footwear,168,Yes (26 units),Aisle 6,Limited to 1 per customer
+1144,NEW IN TOWN,1144,LG Refrigerator,APPLIANCES,Electronics,2670,No (Restocking in 2 days),Aisle 13,Online order available
+1144,NEW IN TOWN,2144,New Balance Joggers,SHOES,Footwear,257,No (Restocking in 2 days),Aisle 4,Buy 1 Get 1 50% Off
+1144,NEW IN TOWN,1145,Panasonic Microwave,APPLIANCES,Electronics,1695,Yes (56 units),Aisle 7,Limited to 2 per customer
+1144,NEW IN TOWN,2145,Puma Sports Shoes,SHOES,Footwear,212,No (Restocking in 2 days),Aisle 3,
+1144,NEW IN TOWN,1146,Dyson Vacuum Cleaner,APPLIANCES,Electronics,2435,Yes (65 units),Aisle 1,Online order available
+1144,NEW IN TOWN,2146,Reebok Walking Shoes,SHOES,Footwear,231,Yes (92 units),Aisle 11,Buy 1 Get 1 50% Off
+1144,NEW IN TOWN,1147,Sony 55-inch TV,APPLIANCES,Electronics,448,Yes (22 units),Aisle 1,Limited to 2 per customer
+1144,NEW IN TOWN,2147,Skechers Casual Shoes,SHOES,Footwear,166,No (Restocking in 2 days),Aisle 2,
+1144,NEW IN TOWN,1148,LG Refrigerator,APPLIANCES,Electronics,775,No (Restocking in 2 days),Aisle 5,
+1144,NEW IN TOWN,2148,Under Armour Trainers,SHOES,Footwear,201,No (Restocking in 2 days),Aisle 12,
+1144,NEW IN TOWN,1149,Panasonic Microwave,APPLIANCES,Electronics,1487,No (Restocking in 2 days),Aisle 2,10% discount for members
+1144,NEW IN TOWN,2149,Converse Chuck Taylor,SHOES,Footwear,170,Yes (14 units),Aisle 3,Buy 1 Get 1 50% Off
+1144,NEW IN TOWN,1150,Sony 55-inch TV,APPLIANCES,Electronics,1615,No (Restocking in 2 days),Aisle 13,
+1144,NEW IN TOWN,2150,Adidas Sneakers,SHOES,Footwear,100,No (Restocking in 2 days),Aisle 3,Buy 1 Get 1 50% Off
+1144,NEW IN TOWN,1151,Panasonic Microwave,APPLIANCES,Electronics,2668,Yes (12 units),Aisle 17,10% discount for members
+1144,NEW IN TOWN,2151,Vans Skate Shoes,SHOES,Footwear,218,No (Restocking in 2 days),Aisle 2,Alternative: Adidas available
+1144,NEW IN TOWN,1152,Bose Sound System,APPLIANCES,Electronics,2492,No (Restocking in 2 days),Aisle 15,Limited to 2 per customer
+1144,NEW IN TOWN,2152,Converse Chuck Taylor,SHOES,Footwear,171,No (Restocking in 2 days),Aisle 17,Alternative: Adidas available
+1144,NEW IN TOWN,1153,Fitbit Smartwatch,APPLIANCES,Electronics,2839,No (Restocking in 2 days),Aisle 9,
+1144,NEW IN TOWN,2153,Puma Sports Shoes,SHOES,Footwear,226,Yes (48 units),Aisle 14,Limited to 1 per customer
+1144,NEW IN TOWN,1154,Dyson Vacuum Cleaner,APPLIANCES,Electronics,2324,Yes (21 units),Aisle 12,Online order available
+1144,NEW IN TOWN,2154,Puma Sports Shoes,SHOES,Footwear,95,Yes (53 units),Aisle 9,
+1144,NEW IN TOWN,1155,Sony 55-inch TV,APPLIANCES,Electronics,1537,Yes (19 units),Aisle 9,Limited to 2 per customer
+1144,NEW IN TOWN,2155,Puma Sports Shoes,SHOES,Footwear,295,No (Restocking in 2 days),Aisle 4,
+1144,NEW IN TOWN,1156,Sony 55-inch TV,APPLIANCES,Electronics,2786,Yes (37 units),Aisle 15,Online order available
+1144,NEW IN TOWN,2156,Adidas Sneakers,SHOES,Footwear,91,Yes (57 units),Aisle 8,Limited to 1 per customer
+1144,NEW IN TOWN,1157,Bose Sound System,APPLIANCES,Electronics,137,No (Restocking in 2 days),Aisle 9,
+1144,NEW IN TOWN,2157,Under Armour Trainers,SHOES,Footwear,279,No (Restocking in 2 days),Aisle 17,
+1144,NEW IN TOWN,1158,LG Refrigerator,APPLIANCES,Electronics,754,Yes (65 units),Aisle 12,
+1144,NEW IN TOWN,2158,Skechers Casual Shoes,SHOES,Footwear,107,No (Restocking in 2 days),Aisle 2,Limited to 1 per customer
+1144,NEW IN TOWN,1159,Dyson Vacuum Cleaner,APPLIANCES,Electronics,886,No (Restocking in 2 days),Aisle 3,Limited to 2 per customer
+1144,NEW IN TOWN,2159,Under Armour Trainers,SHOES,Footwear,144,No (Restocking in 2 days),Aisle 2,Alternative: Adidas available
+1144,NEW IN TOWN,1160,Dyson Vacuum Cleaner,APPLIANCES,Electronics,588,No (Restocking in 2 days),Aisle 2,10% discount for members
+1144,NEW IN TOWN,2160,Under Armour Trainers,SHOES,Footwear,134,No (Restocking in 2 days),Aisle 17,Limited to 1 per customer
+1144,NEW IN TOWN,1161,Fitbit Smartwatch,APPLIANCES,Electronics,1508,No (Restocking in 2 days),Aisle 4,
+1144,NEW IN TOWN,2161,New Balance Joggers,SHOES,Footwear,292,Yes (67 units),Aisle 16,
+1144,NEW IN TOWN,1162,Apple MacBook Air,APPLIANCES,Electronics,742,No (Restocking in 2 days),Aisle 18,10% discount for members
+1144,NEW IN TOWN,2162,Reebok Walking Shoes,SHOES,Footwear,157,No (Restocking in 2 days),Aisle 2,Buy 1 Get 1 50% Off
+1144,NEW IN TOWN,1163,Sony 55-inch TV,APPLIANCES,Electronics,2268,No (Restocking in 2 days),Aisle 10,10% discount for members
+1144,NEW IN TOWN,2163,Skechers Casual Shoes,SHOES,Footwear,105,No (Restocking in 2 days),Aisle 4,Limited to 1 per customer
+1144,NEW IN TOWN,1164,Samsung Galaxy S23,APPLIANCES,Electronics,1447,Yes (65 units),Aisle 2,Online order available
+1144,NEW IN TOWN,2164,Asics Trail Shoes,SHOES,Footwear,273,No (Restocking in 2 days),Aisle 19,Buy 1 Get 1 50% Off
+1144,NEW IN TOWN,1165,Sony 55-inch TV,APPLIANCES,Electronics,803,Yes (94 units),Aisle 18,Online order available
+1144,NEW IN TOWN,2165,Vans Skate Shoes,SHOES,Footwear,199,Yes (53 units),Aisle 3,Alternative: Adidas available
+1144,NEW IN TOWN,1166,Apple iPhone 15,APPLIANCES,Electronics,1161,Yes (47 units),Aisle 1,
+1144,NEW IN TOWN,2166,Reebok Walking Shoes,SHOES,Footwear,222,No (Restocking in 2 days),Aisle 18,Limited to 1 per customer
+1144,NEW IN TOWN,1167,Samsung Galaxy S23,APPLIANCES,Electronics,1506,No (Restocking in 2 days),Aisle 17,10% discount for members
+1144,NEW IN TOWN,2167,Skechers Casual Shoes,SHOES,Footwear,55,Yes (34 units),Aisle 3,Alternative: Adidas available
+1144,NEW IN TOWN,1168,LG Refrigerator,APPLIANCES,Electronics,1078,Yes (64 units),Aisle 17,Limited to 2 per customer
+1144,NEW IN TOWN,2168,Asics Trail Shoes,SHOES,Footwear,92,Yes (66 units),Aisle 9,Alternative: Adidas available
+1144,NEW IN TOWN,1169,Breville Coffee Machine,APPLIANCES,Electronics,2138,Yes (80 units),Aisle 11,Limited to 2 per customer
+1144,NEW IN TOWN,2169,Asics Trail Shoes,SHOES,Footwear,211,No (Restocking in 2 days),Aisle 2,Alternative: Adidas available
+1144,NEW IN TOWN,1170,Apple iPhone 15,APPLIANCES,Electronics,2718,No (Restocking in 2 days),Aisle 6,10% discount for members
+1144,NEW IN TOWN,2170,New Balance Joggers,SHOES,Footwear,150,Yes (39 units),Aisle 3,Alternative: Adidas available
+1144,NEW IN TOWN,1171,LG Refrigerator,APPLIANCES,Electronics,2184,No (Restocking in 2 days),Aisle 19,
+1144,NEW IN TOWN,2171,New Balance Joggers,SHOES,Footwear,52,No (Restocking in 2 days),Aisle 13,Alternative: Adidas available
+1144,NEW IN TOWN,1172,Panasonic Microwave,APPLIANCES,Electronics,1633,Yes (28 units),Aisle 10,Online order available
+1144,NEW IN TOWN,2172,Reebok Walking Shoes,SHOES,Footwear,285,No (Restocking in 2 days),Aisle 2,Alternative: Adidas available
+1144,NEW IN TOWN,1173,Samsung Galaxy S23,APPLIANCES,Electronics,1430,Yes (35 units),Aisle 8,Limited to 2 per customer
+1144,NEW IN TOWN,2173,Vans Skate Shoes,SHOES,Footwear,128,No (Restocking in 2 days),Aisle 19,Limited to 1 per customer
+1144,NEW IN TOWN,1174,Samsung Galaxy S23,APPLIANCES,Electronics,1431,No (Restocking in 2 days),Aisle 20,Limited to 2 per customer
+1144,NEW IN TOWN,2174,Nike Running Shoes,SHOES,Footwear,145,Yes (87 units),Aisle 20,Alternative: Adidas available
+1144,NEW IN TOWN,1175,Apple iPhone 15,APPLIANCES,Electronics,1853,No (Restocking in 2 days),Aisle 4,Online order available
+1144,NEW IN TOWN,2175,Reebok Walking Shoes,SHOES,Footwear,192,No (Restocking in 2 days),Aisle 5,Buy 1 Get 1 50% Off
+1144,NEW IN TOWN,1176,Panasonic Microwave,APPLIANCES,Electronics,2176,Yes (20 units),Aisle 4,
+1144,NEW IN TOWN,2176,Converse Chuck Taylor,SHOES,Footwear,285,No (Restocking in 2 days),Aisle 18,Buy 1 Get 1 50% Off
+1144,NEW IN TOWN,1177,Breville Coffee Machine,APPLIANCES,Electronics,2916,Yes (26 units),Aisle 18,10% discount for members
+1144,NEW IN TOWN,2177,Adidas Sneakers,SHOES,Footwear,141,No (Restocking in 2 days),Aisle 12,
+1144,NEW IN TOWN,1178,Samsung Galaxy S23,APPLIANCES,Electronics,2647,Yes (42 units),Aisle 10,Online order available
+1144,NEW IN TOWN,2178,Puma Sports Shoes,SHOES,Footwear,54,Yes (33 units),Aisle 19,Limited to 1 per customer
+1144,NEW IN TOWN,1179,Panasonic Microwave,APPLIANCES,Electronics,772,Yes (24 units),Aisle 2,Online order available
+1144,NEW IN TOWN,2179,Asics Trail Shoes,SHOES,Footwear,55,No (Restocking in 2 days),Aisle 18,Buy 1 Get 1 50% Off
+1144,NEW IN TOWN,1180,Dyson Vacuum Cleaner,APPLIANCES,Electronics,514,No (Restocking in 2 days),Aisle 17,Online order available
+1144,NEW IN TOWN,2180,Vans Skate Shoes,SHOES,Footwear,122,No (Restocking in 2 days),Aisle 19,Buy 1 Get 1 50% Off
+1144,NEW IN TOWN,1181,LG Refrigerator,APPLIANCES,Electronics,1698,No (Restocking in 2 days),Aisle 11,Limited to 2 per customer
+1144,NEW IN TOWN,2181,Nike Running Shoes,SHOES,Footwear,112,No (Restocking in 2 days),Aisle 8,
+1144,NEW IN TOWN,1182,Fitbit Smartwatch,APPLIANCES,Electronics,2797,Yes (14 units),Aisle 18,Online order available
+1144,NEW IN TOWN,2182,Skechers Casual Shoes,SHOES,Footwear,186,Yes (27 units),Aisle 10,Alternative: Adidas available
+1144,NEW IN TOWN,1183,LG Refrigerator,APPLIANCES,Electronics,2795,No (Restocking in 2 days),Aisle 1,10% discount for members
+1144,NEW IN TOWN,2183,Under Armour Trainers,SHOES,Footwear,219,Yes (52 units),Aisle 10,Limited to 1 per customer
+1144,NEW IN TOWN,1184,Sony 55-inch TV,APPLIANCES,Electronics,2464,Yes (80 units),Aisle 7,Online order available
+1144,NEW IN TOWN,2184,New Balance Joggers,SHOES,Footwear,111,Yes (85 units),Aisle 3,
+1144,NEW IN TOWN,1185,Dyson Vacuum Cleaner,APPLIANCES,Electronics,2855,Yes (79 units),Aisle 3,Limited to 2 per customer
+1144,NEW IN TOWN,2185,Reebok Walking Shoes,SHOES,Footwear,99,No (Restocking in 2 days),Aisle 1,Alternative: Adidas available
+1144,NEW IN TOWN,1186,Samsung Galaxy S23,APPLIANCES,Electronics,1542,No (Restocking in 2 days),Aisle 5,Limited to 2 per customer
+1144,NEW IN TOWN,2186,Nike Running Shoes,SHOES,Footwear,124,Yes (50 units),Aisle 4,Buy 1 Get 1 50% Off
+1144,NEW IN TOWN,1187,Breville Coffee Machine,APPLIANCES,Electronics,966,No (Restocking in 2 days),Aisle 5,10% discount for members
+1144,NEW IN TOWN,2187,Adidas Sneakers,SHOES,Footwear,130,Yes (78 units),Aisle 14,Limited to 1 per customer
+1144,NEW IN TOWN,1188,Bose Sound System,APPLIANCES,Electronics,160,No (Restocking in 2 days),Aisle 2,Online order available
+1144,NEW IN TOWN,2188,Nike Running Shoes,SHOES,Footwear,280,Yes (11 units),Aisle 10,Buy 1 Get 1 50% Off
+1144,NEW IN TOWN,1189,Bose Sound System,APPLIANCES,Electronics,2221,Yes (68 units),Aisle 17,
+1144,NEW IN TOWN,2189,Converse Chuck Taylor,SHOES,Footwear,260,No (Restocking in 2 days),Aisle 6,
+1144,NEW IN TOWN,1190,Breville Coffee Machine,APPLIANCES,Electronics,1182,Yes (97 units),Aisle 9,Online order available
+1144,NEW IN TOWN,2190,Skechers Casual Shoes,SHOES,Footwear,252,Yes (42 units),Aisle 5,
+1144,NEW IN TOWN,1191,Breville Coffee Machine,APPLIANCES,Electronics,427,Yes (21 units),Aisle 8,Online order available
+1144,NEW IN TOWN,2191,Vans Skate Shoes,SHOES,Footwear,51,No (Restocking in 2 days),Aisle 15,Buy 1 Get 1 50% Off
+1144,NEW IN TOWN,1192,Panasonic Microwave,APPLIANCES,Electronics,2517,Yes (63 units),Aisle 12,
+1144,NEW IN TOWN,2192,Reebok Walking Shoes,SHOES,Footwear,99,Yes (68 units),Aisle 3,Limited to 1 per customer
+1144,NEW IN TOWN,1193,Dyson Vacuum Cleaner,APPLIANCES,Electronics,101,Yes (72 units),Aisle 6,Limited to 2 per customer
+1144,NEW IN TOWN,2193,Reebok Walking Shoes,SHOES,Footwear,55,No (Restocking in 2 days),Aisle 7,Alternative: Adidas available
+1144,NEW IN TOWN,1194,Apple MacBook Air,APPLIANCES,Electronics,2284,No (Restocking in 2 days),Aisle 8,10% discount for members
+1144,NEW IN TOWN,2194,Asics Trail Shoes,SHOES,Footwear,145,No (Restocking in 2 days),Aisle 9,Limited to 1 per customer
+1144,NEW IN TOWN,1195,Sony 55-inch TV,APPLIANCES,Electronics,1336,Yes (91 units),Aisle 2,
+1144,NEW IN TOWN,2195,New Balance Joggers,SHOES,Footwear,263,Yes (45 units),Aisle 2,Buy 1 Get 1 50% Off
+1144,NEW IN TOWN,1196,Sony 55-inch TV,APPLIANCES,Electronics,2335,Yes (24 units),Aisle 10,Limited to 2 per customer
+1144,NEW IN TOWN,2196,Skechers Casual Shoes,SHOES,Footwear,127,Yes (28 units),Aisle 12,
+1144,NEW IN TOWN,1197,Dyson Vacuum Cleaner,APPLIANCES,Electronics,2000,Yes (67 units),Aisle 17,Online order available
+1144,NEW IN TOWN,2197,Puma Sports Shoes,SHOES,Footwear,94,No (Restocking in 2 days),Aisle 9,Buy 1 Get 1 50% Off
+1144,NEW IN TOWN,1198,Sony 55-inch TV,APPLIANCES,Electronics,918,No (Restocking in 2 days),Aisle 6,Online order available
+1144,NEW IN TOWN,2198,Reebok Walking Shoes,SHOES,Footwear,116,Yes (25 units),Aisle 1,Limited to 1 per customer
+1144,NEW IN TOWN,1199,Panasonic Microwave,APPLIANCES,Electronics,890,Yes (78 units),Aisle 14,Limited to 2 per customer
+1144,NEW IN TOWN,2199,Adidas Sneakers,SHOES,Footwear,284,No (Restocking in 2 days),Aisle 5,Buy 1 Get 1 50% Off
+1144,NEW IN TOWN,1200,Apple iPhone 15,APPLIANCES,Electronics,2760,Yes (36 units),Aisle 12,10% discount for members
+1144,NEW IN TOWN,2200,Under Armour Trainers,SHOES,Footwear,211,No (Restocking in 2 days),Aisle 7,
+1144,NEW IN TOWN,1201,Apple MacBook Air,APPLIANCES,Electronics,1329,No (Restocking in 2 days),Aisle 5,Online order available
+1144,NEW IN TOWN,2201,Nike Running Shoes,SHOES,Footwear,165,No (Restocking in 2 days),Aisle 12,Limited to 1 per customer
+1144,NEW IN TOWN,1202,Panasonic Microwave,APPLIANCES,Electronics,428,No (Restocking in 2 days),Aisle 7,Online order available
+1144,NEW IN TOWN,2202,Under Armour Trainers,SHOES,Footwear,95,No (Restocking in 2 days),Aisle 20,Buy 1 Get 1 50% Off
+1144,NEW IN TOWN,1203,Apple iPhone 15,APPLIANCES,Electronics,309,Yes (86 units),Aisle 10,10% discount for members
+1144,NEW IN TOWN,2203,Puma Sports Shoes,SHOES,Footwear,284,Yes (28 units),Aisle 8,Alternative: Adidas available
+1144,NEW IN TOWN,1204,Panasonic Microwave,APPLIANCES,Electronics,744,No (Restocking in 2 days),Aisle 13,
+1144,NEW IN TOWN,2204,Puma Sports Shoes,SHOES,Footwear,148,No (Restocking in 2 days),Aisle 9,
+1144,NEW IN TOWN,1205,Panasonic Microwave,APPLIANCES,Electronics,2980,No (Restocking in 2 days),Aisle 18,
+1144,NEW IN TOWN,2205,Puma Sports Shoes,SHOES,Footwear,232,Yes (95 units),Aisle 18,
+1144,NEW IN TOWN,1206,Samsung Galaxy S23,APPLIANCES,Electronics,2053,No (Restocking in 2 days),Aisle 15,10% discount for members
+1144,NEW IN TOWN,2206,Skechers Casual Shoes,SHOES,Footwear,73,Yes (66 units),Aisle 20,Buy 1 Get 1 50% Off
+1144,NEW IN TOWN,1207,Apple iPhone 15,APPLIANCES,Electronics,2159,No (Restocking in 2 days),Aisle 8,Limited to 2 per customer
+1144,NEW IN TOWN,2207,Under Armour Trainers,SHOES,Footwear,175,No (Restocking in 2 days),Aisle 8,
+1144,NEW IN TOWN,1208,Panasonic Microwave,APPLIANCES,Electronics,1896,No (Restocking in 2 days),Aisle 4,
+1144,NEW IN TOWN,2208,Adidas Sneakers,SHOES,Footwear,195,Yes (57 units),Aisle 8,
+1144,NEW IN TOWN,1209,Apple MacBook Air,APPLIANCES,Electronics,1534,No (Restocking in 2 days),Aisle 16,Limited to 2 per customer
+1144,NEW IN TOWN,2209,Skechers Casual Shoes,SHOES,Footwear,85,Yes (79 units),Aisle 15,Alternative: Adidas available
+1144,NEW IN TOWN,1210,LG Refrigerator,APPLIANCES,Electronics,798,No (Restocking in 2 days),Aisle 4,Online order available
+1144,NEW IN TOWN,2210,Vans Skate Shoes,SHOES,Footwear,176,Yes (10 units),Aisle 11,
+1144,NEW IN TOWN,1211,Fitbit Smartwatch,APPLIANCES,Electronics,1551,Yes (87 units),Aisle 9,10% discount for members
+1144,NEW IN TOWN,2211,Vans Skate Shoes,SHOES,Footwear,299,No (Restocking in 2 days),Aisle 19,Alternative: Adidas available
+1144,NEW IN TOWN,1212,Apple MacBook Air,APPLIANCES,Electronics,1515,No (Restocking in 2 days),Aisle 18,
+1144,NEW IN TOWN,2212,Nike Running Shoes,SHOES,Footwear,177,No (Restocking in 2 days),Aisle 10,Alternative: Adidas available
+1144,NEW IN TOWN,1213,Apple MacBook Air,APPLIANCES,Electronics,2708,No (Restocking in 2 days),Aisle 14,Limited to 2 per customer
+1144,NEW IN TOWN,2213,Adidas Sneakers,SHOES,Footwear,228,No (Restocking in 2 days),Aisle 10,Alternative: Adidas available
+1144,NEW IN TOWN,1214,LG Refrigerator,APPLIANCES,Electronics,2957,No (Restocking in 2 days),Aisle 18,Limited to 2 per customer
+1144,NEW IN TOWN,2214,Asics Trail Shoes,SHOES,Footwear,96,Yes (64 units),Aisle 9,
+1144,NEW IN TOWN,1215,Bose Sound System,APPLIANCES,Electronics,2842,Yes (77 units),Aisle 19,Limited to 2 per customer
+1144,NEW IN TOWN,2215,Puma Sports Shoes,SHOES,Footwear,234,Yes (71 units),Aisle 17,Limited to 1 per customer
+1144,NEW IN TOWN,1216,Apple MacBook Air,APPLIANCES,Electronics,1367,No (Restocking in 2 days),Aisle 4,Limited to 2 per customer
+1144,NEW IN TOWN,2216,Asics Trail Shoes,SHOES,Footwear,217,Yes (96 units),Aisle 4,Buy 1 Get 1 50% Off
+1144,NEW IN TOWN,1217,Samsung Galaxy S23,APPLIANCES,Electronics,2639,No (Restocking in 2 days),Aisle 2,Online order available
+1144,NEW IN TOWN,2217,Nike Running Shoes,SHOES,Footwear,147,No (Restocking in 2 days),Aisle 17,
+1144,NEW IN TOWN,1218,Panasonic Microwave,APPLIANCES,Electronics,496,Yes (96 units),Aisle 1,
+1144,NEW IN TOWN,2218,Under Armour Trainers,SHOES,Footwear,211,Yes (44 units),Aisle 8,Alternative: Adidas available
+1144,NEW IN TOWN,1219,Panasonic Microwave,APPLIANCES,Electronics,424,No (Restocking in 2 days),Aisle 12,
+1144,NEW IN TOWN,2219,Asics Trail Shoes,SHOES,Footwear,59,Yes (27 units),Aisle 12,Alternative: Adidas available
+1144,NEW IN TOWN,1220,Sony 55-inch TV,APPLIANCES,Electronics,758,No (Restocking in 2 days),Aisle 6,Limited to 2 per customer
+1144,NEW IN TOWN,2220,Vans Skate Shoes,SHOES,Footwear,125,Yes (64 units),Aisle 4,
+1144,NEW IN TOWN,1221,Sony 55-inch TV,APPLIANCES,Electronics,468,Yes (39 units),Aisle 18,10% discount for members
+1144,NEW IN TOWN,2221,Puma Sports Shoes,SHOES,Footwear,194,No (Restocking in 2 days),Aisle 15,
+1144,NEW IN TOWN,1222,Fitbit Smartwatch,APPLIANCES,Electronics,597,No (Restocking in 2 days),Aisle 3,Online order available
+1144,NEW IN TOWN,2222,Skechers Casual Shoes,SHOES,Footwear,57,Yes (84 units),Aisle 5,Alternative: Adidas available
+1144,NEW IN TOWN,1223,Sony 55-inch TV,APPLIANCES,Electronics,2297,No (Restocking in 2 days),Aisle 7,10% discount for members
+1144,NEW IN TOWN,2223,New Balance Joggers,SHOES,Footwear,223,No (Restocking in 2 days),Aisle 7,Alternative: Adidas available
+1144,NEW IN TOWN,1224,Apple iPhone 15,APPLIANCES,Electronics,511,No (Restocking in 2 days),Aisle 16,Online order available
+1144,NEW IN TOWN,2224,Vans Skate Shoes,SHOES,Footwear,260,No (Restocking in 2 days),Aisle 14,Buy 1 Get 1 50% Off
+1144,NEW IN TOWN,1225,Samsung Galaxy S23,APPLIANCES,Electronics,198,Yes (53 units),Aisle 20,Limited to 2 per customer
+1144,NEW IN TOWN,2225,Under Armour Trainers,SHOES,Footwear,164,No (Restocking in 2 days),Aisle 13,Alternative: Adidas available
+1144,NEW IN TOWN,1226,Fitbit Smartwatch,APPLIANCES,Electronics,165,Yes (28 units),Aisle 2,Limited to 2 per customer
+1144,NEW IN TOWN,2226,Converse Chuck Taylor,SHOES,Footwear,170,No (Restocking in 2 days),Aisle 2,Buy 1 Get 1 50% Off
+1144,NEW IN TOWN,1227,Apple iPhone 15,APPLIANCES,Electronics,1209,No (Restocking in 2 days),Aisle 1,Online order available
+1144,NEW IN TOWN,2227,New Balance Joggers,SHOES,Footwear,258,No (Restocking in 2 days),Aisle 19,Buy 1 Get 1 50% Off
+1144,NEW IN TOWN,1228,Breville Coffee Machine,APPLIANCES,Electronics,362,Yes (49 units),Aisle 12,
+1144,NEW IN TOWN,2228,Asics Trail Shoes,SHOES,Footwear,92,No (Restocking in 2 days),Aisle 4,Buy 1 Get 1 50% Off
+1144,NEW IN TOWN,1229,Apple MacBook Air,APPLIANCES,Electronics,836,No (Restocking in 2 days),Aisle 17,Limited to 2 per customer
+1144,NEW IN TOWN,2229,Adidas Sneakers,SHOES,Footwear,243,Yes (94 units),Aisle 7,
+1144,NEW IN TOWN,1230,Bose Sound System,APPLIANCES,Electronics,2853,Yes (98 units),Aisle 16,10% discount for members
+1144,NEW IN TOWN,2230,New Balance Joggers,SHOES,Footwear,241,No (Restocking in 2 days),Aisle 1,Buy 1 Get 1 50% Off
+1144,NEW IN TOWN,1231,Fitbit Smartwatch,APPLIANCES,Electronics,2905,Yes (66 units),Aisle 1,Online order available
+1144,NEW IN TOWN,2231,New Balance Joggers,SHOES,Footwear,190,Yes (15 units),Aisle 5,Limited to 1 per customer
+1144,NEW IN TOWN,1232,Breville Coffee Machine,APPLIANCES,Electronics,659,Yes (41 units),Aisle 14,
+1144,NEW IN TOWN,2232,Skechers Casual Shoes,SHOES,Footwear,298,Yes (15 units),Aisle 11,Limited to 1 per customer
+1144,NEW IN TOWN,1233,Breville Coffee Machine,APPLIANCES,Electronics,2495,No (Restocking in 2 days),Aisle 15,10% discount for members
+1144,NEW IN TOWN,2233,Converse Chuck Taylor,SHOES,Footwear,185,Yes (34 units),Aisle 20,
+1144,NEW IN TOWN,1234,Bose Sound System,APPLIANCES,Electronics,1693,No (Restocking in 2 days),Aisle 2,Online order available
+1144,NEW IN TOWN,2234,Asics Trail Shoes,SHOES,Footwear,168,No (Restocking in 2 days),Aisle 16,Alternative: Adidas available
+1144,NEW IN TOWN,1235,Bose Sound System,APPLIANCES,Electronics,2827,No (Restocking in 2 days),Aisle 20,
+1144,NEW IN TOWN,2235,Converse Chuck Taylor,SHOES,Footwear,221,Yes (81 units),Aisle 8,Alternative: Adidas available
+1144,NEW IN TOWN,1236,Samsung Galaxy S23,APPLIANCES,Electronics,2330,Yes (84 units),Aisle 15,Online order available
+1144,NEW IN TOWN,2236,Puma Sports Shoes,SHOES,Footwear,299,Yes (76 units),Aisle 16,
+1144,NEW IN TOWN,1237,Panasonic Microwave,APPLIANCES,Electronics,1352,No (Restocking in 2 days),Aisle 19,10% discount for members
+1144,NEW IN TOWN,2237,Reebok Walking Shoes,SHOES,Footwear,294,No (Restocking in 2 days),Aisle 3,Limited to 1 per customer
+1144,NEW IN TOWN,1238,Apple iPhone 15,APPLIANCES,Electronics,2476,Yes (25 units),Aisle 12,
+1144,NEW IN TOWN,2238,New Balance Joggers,SHOES,Footwear,223,No (Restocking in 2 days),Aisle 5,Buy 1 Get 1 50% Off
+1144,NEW IN TOWN,1239,LG Refrigerator,APPLIANCES,Electronics,602,Yes (88 units),Aisle 6,Limited to 2 per customer
+1144,NEW IN TOWN,2239,Reebok Walking Shoes,SHOES,Footwear,231,No (Restocking in 2 days),Aisle 20,
+1144,NEW IN TOWN,1240,Sony 55-inch TV,APPLIANCES,Electronics,2037,Yes (63 units),Aisle 2,Online order available
+1144,NEW IN TOWN,2240,Adidas Sneakers,SHOES,Footwear,64,No (Restocking in 2 days),Aisle 10,
+1144,NEW IN TOWN,1241,Apple MacBook Air,APPLIANCES,Electronics,2273,Yes (29 units),Aisle 2,
+1144,NEW IN TOWN,2241,Puma Sports Shoes,SHOES,Footwear,184,Yes (25 units),Aisle 15,Limited to 1 per customer
+1144,NEW IN TOWN,1242,Breville Coffee Machine,APPLIANCES,Electronics,1193,Yes (36 units),Aisle 18,10% discount for members
+1144,NEW IN TOWN,2242,Asics Trail Shoes,SHOES,Footwear,240,Yes (90 units),Aisle 18,Buy 1 Get 1 50% Off
+1144,NEW IN TOWN,1243,Breville Coffee Machine,APPLIANCES,Electronics,796,Yes (88 units),Aisle 17,Limited to 2 per customer
+1144,NEW IN TOWN,2243,Reebok Walking Shoes,SHOES,Footwear,251,No (Restocking in 2 days),Aisle 6,
+1144,NEW IN TOWN,1244,Panasonic Microwave,APPLIANCES,Electronics,249,No (Restocking in 2 days),Aisle 8,
+1144,NEW IN TOWN,2244,Skechers Casual Shoes,SHOES,Footwear,278,No (Restocking in 2 days),Aisle 3,
+1144,NEW IN TOWN,1245,Samsung Galaxy S23,APPLIANCES,Electronics,373,No (Restocking in 2 days),Aisle 13,Online order available
+1144,NEW IN TOWN,2245,Nike Running Shoes,SHOES,Footwear,255,No (Restocking in 2 days),Aisle 18,Buy 1 Get 1 50% Off
+1144,NEW IN TOWN,1246,LG Refrigerator,APPLIANCES,Electronics,2882,Yes (51 units),Aisle 13,10% discount for members
+1144,NEW IN TOWN,2246,Nike Running Shoes,SHOES,Footwear,156,No (Restocking in 2 days),Aisle 17,
+1144,NEW IN TOWN,1247,Fitbit Smartwatch,APPLIANCES,Electronics,2576,Yes (25 units),Aisle 20,Limited to 2 per customer
+1144,NEW IN TOWN,2247,Nike Running Shoes,SHOES,Footwear,99,Yes (30 units),Aisle 7,Alternative: Adidas available
+1144,NEW IN TOWN,1248,Dyson Vacuum Cleaner,APPLIANCES,Electronics,688,Yes (60 units),Aisle 17,Online order available
+1144,NEW IN TOWN,2248,New Balance Joggers,SHOES,Footwear,203,No (Restocking in 2 days),Aisle 3,Limited to 1 per customer
+1144,NEW IN TOWN,1249,Apple MacBook Air,APPLIANCES,Electronics,1800,No (Restocking in 2 days),Aisle 8,10% discount for members
+1144,NEW IN TOWN,2249,Nike Running Shoes,SHOES,Footwear,149,Yes (59 units),Aisle 10,Limited to 1 per customer
+1144,NEW IN TOWN,1250,LG Refrigerator,APPLIANCES,Electronics,2913,No (Restocking in 2 days),Aisle 19,Limited to 2 per customer
+1144,NEW IN TOWN,2250,Nike Running Shoes,SHOES,Footwear,108,No (Restocking in 2 days),Aisle 4,Limited to 1 per customer
+1144,NEW IN TOWN,1251,Apple MacBook Air,APPLIANCES,Electronics,1090,Yes (68 units),Aisle 14,Online order available
+1144,NEW IN TOWN,2251,Converse Chuck Taylor,SHOES,Footwear,49,No (Restocking in 2 days),Aisle 4,Buy 1 Get 1 50% Off
+1144,NEW IN TOWN,1252,Breville Coffee Machine,APPLIANCES,Electronics,2330,No (Restocking in 2 days),Aisle 9,
+1144,NEW IN TOWN,2252,Under Armour Trainers,SHOES,Footwear,102,Yes (58 units),Aisle 11,Limited to 1 per customer
+1144,NEW IN TOWN,1253,Fitbit Smartwatch,APPLIANCES,Electronics,916,No (Restocking in 2 days),Aisle 8,Limited to 2 per customer
+1144,NEW IN TOWN,2253,Vans Skate Shoes,SHOES,Footwear,274,Yes (91 units),Aisle 17,Alternative: Adidas available
+1144,NEW IN TOWN,1254,Panasonic Microwave,APPLIANCES,Electronics,1506,Yes (18 units),Aisle 13,Online order available
+1144,NEW IN TOWN,2254,Adidas Sneakers,SHOES,Footwear,135,Yes (83 units),Aisle 10,Alternative: Adidas available
+1144,NEW IN TOWN,1255,LG Refrigerator,APPLIANCES,Electronics,1049,No (Restocking in 2 days),Aisle 16,Online order available
+1144,NEW IN TOWN,2255,Nike Running Shoes,SHOES,Footwear,196,Yes (84 units),Aisle 1,Limited to 1 per customer
+1144,NEW IN TOWN,1256,Sony 55-inch TV,APPLIANCES,Electronics,1155,Yes (29 units),Aisle 11,
+1144,NEW IN TOWN,2256,New Balance Joggers,SHOES,Footwear,298,No (Restocking in 2 days),Aisle 15,Buy 1 Get 1 50% Off
+1144,NEW IN TOWN,1257,Bose Sound System,APPLIANCES,Electronics,1213,Yes (77 units),Aisle 10,10% discount for members
+1144,NEW IN TOWN,2257,Skechers Casual Shoes,SHOES,Footwear,128,Yes (95 units),Aisle 8,Alternative: Adidas available
+1144,NEW IN TOWN,1258,Samsung Galaxy S23,APPLIANCES,Electronics,155,Yes (25 units),Aisle 17,
+1144,NEW IN TOWN,2258,Adidas Sneakers,SHOES,Footwear,90,Yes (17 units),Aisle 11,Alternative: Adidas available
+1144,NEW IN TOWN,1259,Panasonic Microwave,APPLIANCES,Electronics,2782,Yes (36 units),Aisle 9,10% discount for members
+1144,NEW IN TOWN,2259,Asics Trail Shoes,SHOES,Footwear,177,Yes (79 units),Aisle 6,Buy 1 Get 1 50% Off
+1144,NEW IN TOWN,1260,Fitbit Smartwatch,APPLIANCES,Electronics,2086,Yes (68 units),Aisle 6,
+1144,NEW IN TOWN,2260,Under Armour Trainers,SHOES,Footwear,90,No (Restocking in 2 days),Aisle 20,
+1144,NEW IN TOWN,1261,Sony 55-inch TV,APPLIANCES,Electronics,2058,Yes (16 units),Aisle 11,
+1144,NEW IN TOWN,2261,Adidas Sneakers,SHOES,Footwear,287,Yes (70 units),Aisle 1,Limited to 1 per customer
+1144,NEW IN TOWN,1262,Dyson Vacuum Cleaner,APPLIANCES,Electronics,1523,No (Restocking in 2 days),Aisle 1,Limited to 2 per customer
+1144,NEW IN TOWN,2262,Converse Chuck Taylor,SHOES,Footwear,291,Yes (41 units),Aisle 1,Alternative: Adidas available
+1144,NEW IN TOWN,1263,Bose Sound System,APPLIANCES,Electronics,1533,Yes (14 units),Aisle 6,Online order available
+1144,NEW IN TOWN,2263,New Balance Joggers,SHOES,Footwear,154,Yes (65 units),Aisle 20,Buy 1 Get 1 50% Off
+1144,NEW IN TOWN,1264,Sony 55-inch TV,APPLIANCES,Electronics,782,No (Restocking in 2 days),Aisle 6,Online order available
+1144,NEW IN TOWN,2264,Vans Skate Shoes,SHOES,Footwear,138,Yes (30 units),Aisle 11,Buy 1 Get 1 50% Off
+1144,NEW IN TOWN,1265,Samsung Galaxy S23,APPLIANCES,Electronics,1649,Yes (84 units),Aisle 5,
+1144,NEW IN TOWN,2265,Vans Skate Shoes,SHOES,Footwear,243,No (Restocking in 2 days),Aisle 11,Alternative: Adidas available
+1144,NEW IN TOWN,1266,Bose Sound System,APPLIANCES,Electronics,1348,Yes (90 units),Aisle 8,Limited to 2 per customer
+1144,NEW IN TOWN,2266,Puma Sports Shoes,SHOES,Footwear,292,Yes (96 units),Aisle 16,Buy 1 Get 1 50% Off
+1144,NEW IN TOWN,1267,Dyson Vacuum Cleaner,APPLIANCES,Electronics,2316,No (Restocking in 2 days),Aisle 16,
+1144,NEW IN TOWN,2267,Skechers Casual Shoes,SHOES,Footwear,206,No (Restocking in 2 days),Aisle 2,
+1144,NEW IN TOWN,1268,LG Refrigerator,APPLIANCES,Electronics,2755,Yes (54 units),Aisle 13,Limited to 2 per customer
+1144,NEW IN TOWN,2268,Puma Sports Shoes,SHOES,Footwear,207,No (Restocking in 2 days),Aisle 18,Limited to 1 per customer
+1144,NEW IN TOWN,1269,Breville Coffee Machine,APPLIANCES,Electronics,1156,Yes (99 units),Aisle 10,Online order available
+1144,NEW IN TOWN,2269,Skechers Casual Shoes,SHOES,Footwear,242,Yes (79 units),Aisle 19,
+1144,NEW IN TOWN,1270,Breville Coffee Machine,APPLIANCES,Electronics,2741,Yes (86 units),Aisle 1,
+1144,NEW IN TOWN,2270,Asics Trail Shoes,SHOES,Footwear,144,Yes (36 units),Aisle 10,Buy 1 Get 1 50% Off
+1144,NEW IN TOWN,1271,Bose Sound System,APPLIANCES,Electronics,120,No (Restocking in 2 days),Aisle 19,10% discount for members
+1144,NEW IN TOWN,2271,Asics Trail Shoes,SHOES,Footwear,235,Yes (91 units),Aisle 9,
+1144,NEW IN TOWN,1272,Samsung Galaxy S23,APPLIANCES,Electronics,2104,No (Restocking in 2 days),Aisle 18,Online order available
+1144,NEW IN TOWN,2272,Adidas Sneakers,SHOES,Footwear,80,No (Restocking in 2 days),Aisle 11,Limited to 1 per customer
+1144,NEW IN TOWN,1273,Bose Sound System,APPLIANCES,Electronics,2086,Yes (46 units),Aisle 7,Online order available
+1144,NEW IN TOWN,2273,New Balance Joggers,SHOES,Footwear,232,No (Restocking in 2 days),Aisle 20,Limited to 1 per customer
+1144,NEW IN TOWN,1274,Apple iPhone 15,APPLIANCES,Electronics,1049,No (Restocking in 2 days),Aisle 4,Online order available
+1144,NEW IN TOWN,2274,Converse Chuck Taylor,SHOES,Footwear,49,Yes (56 units),Aisle 20,
+1144,NEW IN TOWN,1275,Dyson Vacuum Cleaner,APPLIANCES,Electronics,2763,No (Restocking in 2 days),Aisle 7,Online order available
+1144,NEW IN TOWN,2275,Skechers Casual Shoes,SHOES,Footwear,285,Yes (33 units),Aisle 6,Limited to 1 per customer
+1144,NEW IN TOWN,1276,Apple iPhone 15,APPLIANCES,Electronics,918,Yes (93 units),Aisle 10,
+1144,NEW IN TOWN,2276,Adidas Sneakers,SHOES,Footwear,275,No (Restocking in 2 days),Aisle 12,Alternative: Adidas available
+1144,NEW IN TOWN,1277,Apple iPhone 15,APPLIANCES,Electronics,1695,No (Restocking in 2 days),Aisle 13,
+1144,NEW IN TOWN,2277,Converse Chuck Taylor,SHOES,Footwear,242,No (Restocking in 2 days),Aisle 1,
+1144,NEW IN TOWN,1278,LG Refrigerator,APPLIANCES,Electronics,2515,Yes (78 units),Aisle 5,Online order available
+1144,NEW IN TOWN,2278,Adidas Sneakers,SHOES,Footwear,217,Yes (50 units),Aisle 17,Buy 1 Get 1 50% Off
+1144,NEW IN TOWN,1279,Samsung Galaxy S23,APPLIANCES,Electronics,114,Yes (91 units),Aisle 4,10% discount for members
+1144,NEW IN TOWN,2279,New Balance Joggers,SHOES,Footwear,111,No (Restocking in 2 days),Aisle 19,
+1144,NEW IN TOWN,1280,Breville Coffee Machine,APPLIANCES,Electronics,227,Yes (74 units),Aisle 8,Limited to 2 per customer
+1144,NEW IN TOWN,2280,Asics Trail Shoes,SHOES,Footwear,90,No (Restocking in 2 days),Aisle 4,Limited to 1 per customer
+1144,NEW IN TOWN,1281,Samsung Galaxy S23,APPLIANCES,Electronics,2106,Yes (77 units),Aisle 12,Limited to 2 per customer
+1144,NEW IN TOWN,2281,Skechers Casual Shoes,SHOES,Footwear,57,Yes (81 units),Aisle 6,
+1144,NEW IN TOWN,1282,LG Refrigerator,APPLIANCES,Electronics,2965,No (Restocking in 2 days),Aisle 14,Limited to 2 per customer
+1144,NEW IN TOWN,2282,Converse Chuck Taylor,SHOES,Footwear,81,No (Restocking in 2 days),Aisle 1,Alternative: Adidas available
+1144,NEW IN TOWN,1283,Dyson Vacuum Cleaner,APPLIANCES,Electronics,1595,No (Restocking in 2 days),Aisle 12,Online order available
+1144,NEW IN TOWN,2283,Converse Chuck Taylor,SHOES,Footwear,188,Yes (42 units),Aisle 6,
+1144,NEW IN TOWN,1284,Samsung Galaxy S23,APPLIANCES,Electronics,1134,No (Restocking in 2 days),Aisle 1,Online order available
+1144,NEW IN TOWN,2284,Asics Trail Shoes,SHOES,Footwear,171,No (Restocking in 2 days),Aisle 5,Alternative: Adidas available
+1144,NEW IN TOWN,1285,Fitbit Smartwatch,APPLIANCES,Electronics,1704,Yes (97 units),Aisle 9,
+1144,NEW IN TOWN,2285,Asics Trail Shoes,SHOES,Footwear,56,Yes (40 units),Aisle 13,Limited to 1 per customer
+1144,NEW IN TOWN,1286,Bose Sound System,APPLIANCES,Electronics,883,No (Restocking in 2 days),Aisle 4,10% discount for members
+1144,NEW IN TOWN,2286,Asics Trail Shoes,SHOES,Footwear,176,Yes (53 units),Aisle 20,Alternative: Adidas available
+1144,NEW IN TOWN,1287,Apple MacBook Air,APPLIANCES,Electronics,1267,No (Restocking in 2 days),Aisle 10,10% discount for members
+1144,NEW IN TOWN,2287,Vans Skate Shoes,SHOES,Footwear,187,No (Restocking in 2 days),Aisle 12,Limited to 1 per customer
+1144,NEW IN TOWN,1288,Apple MacBook Air,APPLIANCES,Electronics,2317,Yes (39 units),Aisle 12,
+1144,NEW IN TOWN,2288,Adidas Sneakers,SHOES,Footwear,134,No (Restocking in 2 days),Aisle 8,
+1144,NEW IN TOWN,1289,Fitbit Smartwatch,APPLIANCES,Electronics,2430,Yes (33 units),Aisle 19,
+1144,NEW IN TOWN,2289,Adidas Sneakers,SHOES,Footwear,80,Yes (58 units),Aisle 18,
+1144,NEW IN TOWN,1290,Apple MacBook Air,APPLIANCES,Electronics,221,No (Restocking in 2 days),Aisle 12,Online order available
+1144,NEW IN TOWN,2290,Under Armour Trainers,SHOES,Footwear,230,Yes (47 units),Aisle 7,
+1144,NEW IN TOWN,1291,Panasonic Microwave,APPLIANCES,Electronics,732,No (Restocking in 2 days),Aisle 2,Online order available
+1144,NEW IN TOWN,2291,Reebok Walking Shoes,SHOES,Footwear,138,No (Restocking in 2 days),Aisle 19,Alternative: Adidas available
+1144,NEW IN TOWN,1292,Samsung Galaxy S23,APPLIANCES,Electronics,1098,Yes (41 units),Aisle 9,10% discount for members
+1144,NEW IN TOWN,2292,Under Armour Trainers,SHOES,Footwear,83,No (Restocking in 2 days),Aisle 6,Alternative: Adidas available
+1144,NEW IN TOWN,1293,Bose Sound System,APPLIANCES,Electronics,687,No (Restocking in 2 days),Aisle 3,
+1144,NEW IN TOWN,2293,Vans Skate Shoes,SHOES,Footwear,85,No (Restocking in 2 days),Aisle 20,Limited to 1 per customer
+1144,NEW IN TOWN,1294,Sony 55-inch TV,APPLIANCES,Electronics,1354,No (Restocking in 2 days),Aisle 13,
+1144,NEW IN TOWN,2294,Reebok Walking Shoes,SHOES,Footwear,82,No (Restocking in 2 days),Aisle 14,Buy 1 Get 1 50% Off
+1144,NEW IN TOWN,1295,Apple MacBook Air,APPLIANCES,Electronics,1518,No (Restocking in 2 days),Aisle 8,Limited to 2 per customer
+1144,NEW IN TOWN,2295,Vans Skate Shoes,SHOES,Footwear,156,No (Restocking in 2 days),Aisle 7,Buy 1 Get 1 50% Off
+1144,NEW IN TOWN,1296,LG Refrigerator,APPLIANCES,Electronics,592,Yes (22 units),Aisle 3,Online order available
+1144,NEW IN TOWN,2296,Reebok Walking Shoes,SHOES,Footwear,225,No (Restocking in 2 days),Aisle 11,Limited to 1 per customer
+1144,NEW IN TOWN,1297,Fitbit Smartwatch,APPLIANCES,Electronics,2285,No (Restocking in 2 days),Aisle 1,10% discount for members
+1144,NEW IN TOWN,2297,Adidas Sneakers,SHOES,Footwear,233,No (Restocking in 2 days),Aisle 8,
+1144,NEW IN TOWN,1298,LG Refrigerator,APPLIANCES,Electronics,2901,No (Restocking in 2 days),Aisle 9,10% discount for members
+1144,NEW IN TOWN,2298,Puma Sports Shoes,SHOES,Footwear,148,No (Restocking in 2 days),Aisle 6,Limited to 1 per customer
+1144,NEW IN TOWN,1299,Breville Coffee Machine,APPLIANCES,Electronics,2786,No (Restocking in 2 days),Aisle 19,
+1144,NEW IN TOWN,2299,Puma Sports Shoes,SHOES,Footwear,102,Yes (53 units),Aisle 5,Limited to 1 per customer
+1144,NEW IN TOWN,1300,Samsung Galaxy S23,APPLIANCES,Electronics,1954,No (Restocking in 2 days),Aisle 4,10% discount for members
+1144,NEW IN TOWN,2300,New Balance Joggers,SHOES,Footwear,253,Yes (49 units),Aisle 7,
+1144,NEW IN TOWN,1301,Samsung Galaxy S23,APPLIANCES,Electronics,2059,No (Restocking in 2 days),Aisle 17,Limited to 2 per customer
+1144,NEW IN TOWN,2301,Converse Chuck Taylor,SHOES,Footwear,72,No (Restocking in 2 days),Aisle 13,Alternative: Adidas available
+1144,NEW IN TOWN,1302,Samsung Galaxy S23,APPLIANCES,Electronics,2664,No (Restocking in 2 days),Aisle 20,
+1144,NEW IN TOWN,2302,Skechers Casual Shoes,SHOES,Footwear,235,No (Restocking in 2 days),Aisle 20,Limited to 1 per customer
+1144,NEW IN TOWN,1303,LG Refrigerator,APPLIANCES,Electronics,2103,Yes (36 units),Aisle 3,10% discount for members
+1144,NEW IN TOWN,2303,Nike Running Shoes,SHOES,Footwear,123,Yes (69 units),Aisle 19,Alternative: Adidas available
+1144,NEW IN TOWN,1304,Breville Coffee Machine,APPLIANCES,Electronics,1450,No (Restocking in 2 days),Aisle 4,10% discount for members
+1144,NEW IN TOWN,2304,Reebok Walking Shoes,SHOES,Footwear,268,Yes (45 units),Aisle 15,Limited to 1 per customer
+1144,NEW IN TOWN,1305,Fitbit Smartwatch,APPLIANCES,Electronics,2681,No (Restocking in 2 days),Aisle 19,Online order available
+1144,NEW IN TOWN,2305,Vans Skate Shoes,SHOES,Footwear,204,No (Restocking in 2 days),Aisle 2,
+1144,NEW IN TOWN,1306,Sony 55-inch TV,APPLIANCES,Electronics,2211,No (Restocking in 2 days),Aisle 4,Online order available
+1144,NEW IN TOWN,2306,Skechers Casual Shoes,SHOES,Footwear,283,No (Restocking in 2 days),Aisle 18,
+1144,NEW IN TOWN,1307,LG Refrigerator,APPLIANCES,Electronics,880,No (Restocking in 2 days),Aisle 1,Online order available
+1144,NEW IN TOWN,2307,Converse Chuck Taylor,SHOES,Footwear,208,Yes (16 units),Aisle 17,
+1144,NEW IN TOWN,1308,Breville Coffee Machine,APPLIANCES,Electronics,2131,No (Restocking in 2 days),Aisle 19,Limited to 2 per customer
+1144,NEW IN TOWN,2308,New Balance Joggers,SHOES,Footwear,151,No (Restocking in 2 days),Aisle 6,Buy 1 Get 1 50% Off
+1144,NEW IN TOWN,1309,Bose Sound System,APPLIANCES,Electronics,2904,Yes (84 units),Aisle 17,Online order available
+1144,NEW IN TOWN,2309,Nike Running Shoes,SHOES,Footwear,146,Yes (96 units),Aisle 15,
+1144,NEW IN TOWN,1310,Apple iPhone 15,APPLIANCES,Electronics,867,No (Restocking in 2 days),Aisle 17,10% discount for members
+1144,NEW IN TOWN,2310,Vans Skate Shoes,SHOES,Footwear,73,Yes (91 units),Aisle 6,Buy 1 Get 1 50% Off
+1144,NEW IN TOWN,1311,Breville Coffee Machine,APPLIANCES,Electronics,2420,No (Restocking in 2 days),Aisle 10,
+1144,NEW IN TOWN,2311,Asics Trail Shoes,SHOES,Footwear,225,No (Restocking in 2 days),Aisle 2,Buy 1 Get 1 50% Off
+1144,NEW IN TOWN,1312,Apple MacBook Air,APPLIANCES,Electronics,803,Yes (23 units),Aisle 16,Online order available
+1144,NEW IN TOWN,2312,Reebok Walking Shoes,SHOES,Footwear,171,No (Restocking in 2 days),Aisle 2,Buy 1 Get 1 50% Off
+1144,NEW IN TOWN,1313,Apple MacBook Air,APPLIANCES,Electronics,892,No (Restocking in 2 days),Aisle 15,Online order available
+1144,NEW IN TOWN,2313,Converse Chuck Taylor,SHOES,Footwear,234,No (Restocking in 2 days),Aisle 17,
+1144,NEW IN TOWN,1314,LG Refrigerator,APPLIANCES,Electronics,2182,No (Restocking in 2 days),Aisle 4,Limited to 2 per customer
+1144,NEW IN TOWN,2314,Vans Skate Shoes,SHOES,Footwear,184,No (Restocking in 2 days),Aisle 8,Alternative: Adidas available
+1144,NEW IN TOWN,1315,Apple MacBook Air,APPLIANCES,Electronics,2481,Yes (90 units),Aisle 11,Limited to 2 per customer
+1144,NEW IN TOWN,2315,Adidas Sneakers,SHOES,Footwear,258,No (Restocking in 2 days),Aisle 9,Limited to 1 per customer
+1144,NEW IN TOWN,1316,Panasonic Microwave,APPLIANCES,Electronics,1605,No (Restocking in 2 days),Aisle 16,Limited to 2 per customer
+1144,NEW IN TOWN,2316,New Balance Joggers,SHOES,Footwear,137,Yes (68 units),Aisle 12,Limited to 1 per customer
+1144,NEW IN TOWN,1317,Apple MacBook Air,APPLIANCES,Electronics,1032,Yes (79 units),Aisle 7,10% discount for members
+1144,NEW IN TOWN,2317,New Balance Joggers,SHOES,Footwear,165,No (Restocking in 2 days),Aisle 9,Limited to 1 per customer
+1144,NEW IN TOWN,1318,Apple MacBook Air,APPLIANCES,Electronics,688,Yes (38 units),Aisle 5,10% discount for members
+1144,NEW IN TOWN,2318,Reebok Walking Shoes,SHOES,Footwear,87,No (Restocking in 2 days),Aisle 2,Buy 1 Get 1 50% Off
+1144,NEW IN TOWN,1319,LG Refrigerator,APPLIANCES,Electronics,1356,Yes (19 units),Aisle 15,Online order available
+1144,NEW IN TOWN,2319,Vans Skate Shoes,SHOES,Footwear,249,No (Restocking in 2 days),Aisle 8,Buy 1 Get 1 50% Off
+1144,NEW IN TOWN,1320,Dyson Vacuum Cleaner,APPLIANCES,Electronics,682,No (Restocking in 2 days),Aisle 17,Limited to 2 per customer
+1144,NEW IN TOWN,2320,Puma Sports Shoes,SHOES,Footwear,193,Yes (44 units),Aisle 2,
+1144,NEW IN TOWN,1321,Bose Sound System,APPLIANCES,Electronics,1373,Yes (41 units),Aisle 11,Online order available
+1144,NEW IN TOWN,2321,New Balance Joggers,SHOES,Footwear,267,Yes (43 units),Aisle 11,Limited to 1 per customer
+1144,NEW IN TOWN,1322,Apple iPhone 15,APPLIANCES,Electronics,1639,No (Restocking in 2 days),Aisle 18,10% discount for members
+1144,NEW IN TOWN,2322,New Balance Joggers,SHOES,Footwear,258,Yes (71 units),Aisle 9,Limited to 1 per customer
+1144,NEW IN TOWN,1323,Breville Coffee Machine,APPLIANCES,Electronics,940,Yes (38 units),Aisle 3,Limited to 2 per customer
+1144,NEW IN TOWN,2323,Asics Trail Shoes,SHOES,Footwear,139,Yes (43 units),Aisle 8,Limited to 1 per customer
+1144,NEW IN TOWN,1324,Bose Sound System,APPLIANCES,Electronics,549,Yes (28 units),Aisle 17,Limited to 2 per customer
+1144,NEW IN TOWN,2324,Adidas Sneakers,SHOES,Footwear,100,No (Restocking in 2 days),Aisle 5,
+1144,NEW IN TOWN,1325,Sony 55-inch TV,APPLIANCES,Electronics,662,No (Restocking in 2 days),Aisle 6,Limited to 2 per customer
+1144,NEW IN TOWN,2325,Nike Running Shoes,SHOES,Footwear,170,No (Restocking in 2 days),Aisle 12,Limited to 1 per customer
+1144,NEW IN TOWN,1326,Samsung Galaxy S23,APPLIANCES,Electronics,2170,Yes (51 units),Aisle 20,Online order available
+1144,NEW IN TOWN,2326,New Balance Joggers,SHOES,Footwear,195,Yes (41 units),Aisle 8,Buy 1 Get 1 50% Off
+1144,NEW IN TOWN,1327,Samsung Galaxy S23,APPLIANCES,Electronics,1232,Yes (82 units),Aisle 6,Limited to 2 per customer
+1144,NEW IN TOWN,2327,Reebok Walking Shoes,SHOES,Footwear,224,No (Restocking in 2 days),Aisle 19,Alternative: Adidas available
+1144,NEW IN TOWN,1328,Dyson Vacuum Cleaner,APPLIANCES,Electronics,2723,Yes (14 units),Aisle 10,10% discount for members
+1144,NEW IN TOWN,2328,Skechers Casual Shoes,SHOES,Footwear,51,Yes (46 units),Aisle 11,Buy 1 Get 1 50% Off
+1144,NEW IN TOWN,1329,Bose Sound System,APPLIANCES,Electronics,2334,No (Restocking in 2 days),Aisle 2,Online order available
+1144,NEW IN TOWN,2329,Nike Running Shoes,SHOES,Footwear,126,No (Restocking in 2 days),Aisle 4,Alternative: Adidas available
+1144,NEW IN TOWN,1330,LG Refrigerator,APPLIANCES,Electronics,2061,No (Restocking in 2 days),Aisle 3,Online order available
+1144,NEW IN TOWN,2330,Asics Trail Shoes,SHOES,Footwear,267,Yes (34 units),Aisle 8,Alternative: Adidas available
+1144,NEW IN TOWN,1331,Panasonic Microwave,APPLIANCES,Electronics,721,Yes (95 units),Aisle 16,
+1144,NEW IN TOWN,2331,Under Armour Trainers,SHOES,Footwear,136,Yes (42 units),Aisle 14,Alternative: Adidas available
+1144,NEW IN TOWN,1332,Bose Sound System,APPLIANCES,Electronics,1029,Yes (33 units),Aisle 10,10% discount for members
+1144,NEW IN TOWN,2332,Nike Running Shoes,SHOES,Footwear,58,No (Restocking in 2 days),Aisle 4,Limited to 1 per customer
+1144,NEW IN TOWN,1333,Panasonic Microwave,APPLIANCES,Electronics,882,No (Restocking in 2 days),Aisle 1,Limited to 2 per customer
+1144,NEW IN TOWN,2333,Converse Chuck Taylor,SHOES,Footwear,272,No (Restocking in 2 days),Aisle 15,Buy 1 Get 1 50% Off
+1144,NEW IN TOWN,1334,Panasonic Microwave,APPLIANCES,Electronics,739,Yes (84 units),Aisle 2,10% discount for members
+1144,NEW IN TOWN,2334,New Balance Joggers,SHOES,Footwear,57,No (Restocking in 2 days),Aisle 19,Limited to 1 per customer
+1144,NEW IN TOWN,1335,Samsung Galaxy S23,APPLIANCES,Electronics,805,Yes (89 units),Aisle 19,Limited to 2 per customer
+1144,NEW IN TOWN,2335,Under Armour Trainers,SHOES,Footwear,67,No (Restocking in 2 days),Aisle 9,Limited to 1 per customer
+1144,NEW IN TOWN,1336,Apple MacBook Air,APPLIANCES,Electronics,2735,No (Restocking in 2 days),Aisle 10,Limited to 2 per customer
+1144,NEW IN TOWN,2336,Vans Skate Shoes,SHOES,Footwear,135,No (Restocking in 2 days),Aisle 15,Buy 1 Get 1 50% Off
+1144,NEW IN TOWN,1337,Fitbit Smartwatch,APPLIANCES,Electronics,465,Yes (91 units),Aisle 4,Limited to 2 per customer
+1144,NEW IN TOWN,2337,Converse Chuck Taylor,SHOES,Footwear,164,No (Restocking in 2 days),Aisle 13,Limited to 1 per customer
+1144,NEW IN TOWN,1338,Panasonic Microwave,APPLIANCES,Electronics,905,No (Restocking in 2 days),Aisle 17,Limited to 2 per customer
+1144,NEW IN TOWN,2338,Converse Chuck Taylor,SHOES,Footwear,98,No (Restocking in 2 days),Aisle 19,Buy 1 Get 1 50% Off
+1144,NEW IN TOWN,1339,Samsung Galaxy S23,APPLIANCES,Electronics,1353,No (Restocking in 2 days),Aisle 18,Online order available
+1144,NEW IN TOWN,2339,New Balance Joggers,SHOES,Footwear,202,Yes (60 units),Aisle 20,
+1144,NEW IN TOWN,1340,LG Refrigerator,APPLIANCES,Electronics,171,No (Restocking in 2 days),Aisle 20,10% discount for members
+1144,NEW IN TOWN,2340,Adidas Sneakers,SHOES,Footwear,82,Yes (19 units),Aisle 10,Buy 1 Get 1 50% Off
+1144,NEW IN TOWN,1341,Dyson Vacuum Cleaner,APPLIANCES,Electronics,724,No (Restocking in 2 days),Aisle 19,Limited to 2 per customer
+1144,NEW IN TOWN,2341,Converse Chuck Taylor,SHOES,Footwear,178,Yes (88 units),Aisle 15,Buy 1 Get 1 50% Off
+1144,NEW IN TOWN,1342,Apple iPhone 15,APPLIANCES,Electronics,692,No (Restocking in 2 days),Aisle 1,
+1144,NEW IN TOWN,2342,New Balance Joggers,SHOES,Footwear,247,Yes (54 units),Aisle 7,Buy 1 Get 1 50% Off
+1144,NEW IN TOWN,1343,Sony 55-inch TV,APPLIANCES,Electronics,1545,No (Restocking in 2 days),Aisle 9,10% discount for members
+1144,NEW IN TOWN,2343,New Balance Joggers,SHOES,Footwear,232,Yes (17 units),Aisle 15,Limited to 1 per customer
+1144,NEW IN TOWN,1344,Panasonic Microwave,APPLIANCES,Electronics,2358,No (Restocking in 2 days),Aisle 10,10% discount for members
+1144,NEW IN TOWN,2344,Skechers Casual Shoes,SHOES,Footwear,170,Yes (83 units),Aisle 16,
+1144,NEW IN TOWN,1345,Samsung Galaxy S23,APPLIANCES,Electronics,2257,Yes (50 units),Aisle 8,Limited to 2 per customer
+1144,NEW IN TOWN,2345,Converse Chuck Taylor,SHOES,Footwear,96,Yes (65 units),Aisle 10,Alternative: Adidas available
+1144,NEW IN TOWN,1346,Fitbit Smartwatch,APPLIANCES,Electronics,279,No (Restocking in 2 days),Aisle 8,Online order available
+1144,NEW IN TOWN,2346,Under Armour Trainers,SHOES,Footwear,162,No (Restocking in 2 days),Aisle 3,
+1144,NEW IN TOWN,1347,Samsung Galaxy S23,APPLIANCES,Electronics,2613,No (Restocking in 2 days),Aisle 19,Online order available
+1144,NEW IN TOWN,2347,Puma Sports Shoes,SHOES,Footwear,202,No (Restocking in 2 days),Aisle 19,Buy 1 Get 1 50% Off
+1144,NEW IN TOWN,1348,Panasonic Microwave,APPLIANCES,Electronics,1509,No (Restocking in 2 days),Aisle 9,10% discount for members
+1144,NEW IN TOWN,2348,Converse Chuck Taylor,SHOES,Footwear,247,Yes (67 units),Aisle 7,Buy 1 Get 1 50% Off
+1144,NEW IN TOWN,1349,LG Refrigerator,APPLIANCES,Electronics,1122,Yes (87 units),Aisle 12,Online order available
+1144,NEW IN TOWN,2349,Adidas Sneakers,SHOES,Footwear,172,No (Restocking in 2 days),Aisle 4,Buy 1 Get 1 50% Off
+1144,NEW IN TOWN,1350,Apple MacBook Air,APPLIANCES,Electronics,978,Yes (93 units),Aisle 10,10% discount for members
+1144,NEW IN TOWN,2350,Converse Chuck Taylor,SHOES,Footwear,221,Yes (16 units),Aisle 2,Buy 1 Get 1 50% Off
+1144,NEW IN TOWN,1351,Breville Coffee Machine,APPLIANCES,Electronics,2151,No (Restocking in 2 days),Aisle 14,
+1144,NEW IN TOWN,2351,New Balance Joggers,SHOES,Footwear,99,No (Restocking in 2 days),Aisle 1,
+1144,NEW IN TOWN,1352,Bose Sound System,APPLIANCES,Electronics,2627,Yes (92 units),Aisle 16,Limited to 2 per customer
+1144,NEW IN TOWN,2352,Vans Skate Shoes,SHOES,Footwear,242,Yes (64 units),Aisle 14,Limited to 1 per customer
+1144,NEW IN TOWN,1353,Panasonic Microwave,APPLIANCES,Electronics,379,Yes (92 units),Aisle 6,10% discount for members
+1144,NEW IN TOWN,2353,New Balance Joggers,SHOES,Footwear,118,Yes (37 units),Aisle 13,Limited to 1 per customer
+1144,NEW IN TOWN,1354,Fitbit Smartwatch,APPLIANCES,Electronics,358,Yes (52 units),Aisle 10,Limited to 2 per customer
+1144,NEW IN TOWN,2354,Under Armour Trainers,SHOES,Footwear,128,Yes (91 units),Aisle 10,Alternative: Adidas available
+1144,NEW IN TOWN,1355,Apple iPhone 15,APPLIANCES,Electronics,2897,Yes (29 units),Aisle 18,Limited to 2 per customer
+1144,NEW IN TOWN,2355,Converse Chuck Taylor,SHOES,Footwear,232,Yes (24 units),Aisle 19,Limited to 1 per customer
+1144,NEW IN TOWN,1356,Apple MacBook Air,APPLIANCES,Electronics,1296,Yes (56 units),Aisle 7,10% discount for members
+1144,NEW IN TOWN,2356,Puma Sports Shoes,SHOES,Footwear,194,No (Restocking in 2 days),Aisle 1,Buy 1 Get 1 50% Off
+1144,NEW IN TOWN,1357,Samsung Galaxy S23,APPLIANCES,Electronics,534,Yes (70 units),Aisle 5,Limited to 2 per customer
+1144,NEW IN TOWN,2357,Reebok Walking Shoes,SHOES,Footwear,84,Yes (87 units),Aisle 13,Buy 1 Get 1 50% Off
+1144,NEW IN TOWN,1358,Fitbit Smartwatch,APPLIANCES,Electronics,2125,Yes (78 units),Aisle 2,Online order available
+1144,NEW IN TOWN,2358,Vans Skate Shoes,SHOES,Footwear,176,Yes (31 units),Aisle 2,Limited to 1 per customer
+1144,NEW IN TOWN,1359,LG Refrigerator,APPLIANCES,Electronics,2471,Yes (62 units),Aisle 11,10% discount for members
+1144,NEW IN TOWN,2359,New Balance Joggers,SHOES,Footwear,222,Yes (98 units),Aisle 9,Alternative: Adidas available
+1144,NEW IN TOWN,1360,Fitbit Smartwatch,APPLIANCES,Electronics,1151,No (Restocking in 2 days),Aisle 1,10% discount for members
+1144,NEW IN TOWN,2360,Asics Trail Shoes,SHOES,Footwear,269,Yes (94 units),Aisle 14,Buy 1 Get 1 50% Off
+1144,NEW IN TOWN,1361,Apple MacBook Air,APPLIANCES,Electronics,2340,No (Restocking in 2 days),Aisle 2,Online order available
+1144,NEW IN TOWN,2361,Asics Trail Shoes,SHOES,Footwear,153,No (Restocking in 2 days),Aisle 17,Buy 1 Get 1 50% Off
+1144,NEW IN TOWN,1362,Bose Sound System,APPLIANCES,Electronics,2294,Yes (38 units),Aisle 6,
+1144,NEW IN TOWN,2362,Adidas Sneakers,SHOES,Footwear,253,No (Restocking in 2 days),Aisle 16,Buy 1 Get 1 50% Off
+1144,NEW IN TOWN,1363,Dyson Vacuum Cleaner,APPLIANCES,Electronics,2597,Yes (17 units),Aisle 1,
+1144,NEW IN TOWN,2363,Under Armour Trainers,SHOES,Footwear,107,Yes (81 units),Aisle 6,
+1144,NEW IN TOWN,1364,Apple iPhone 15,APPLIANCES,Electronics,781,No (Restocking in 2 days),Aisle 20,
+1144,NEW IN TOWN,2364,Reebok Walking Shoes,SHOES,Footwear,255,No (Restocking in 2 days),Aisle 9,Limited to 1 per customer
+1144,NEW IN TOWN,1365,Samsung Galaxy S23,APPLIANCES,Electronics,443,Yes (81 units),Aisle 16,10% discount for members
+1144,NEW IN TOWN,2365,Nike Running Shoes,SHOES,Footwear,183,Yes (46 units),Aisle 14,
+1144,NEW IN TOWN,1366,Panasonic Microwave,APPLIANCES,Electronics,1388,Yes (44 units),Aisle 11,Limited to 2 per customer
+1144,NEW IN TOWN,2366,Asics Trail Shoes,SHOES,Footwear,190,No (Restocking in 2 days),Aisle 6,Alternative: Adidas available
+1144,NEW IN TOWN,1367,Breville Coffee Machine,APPLIANCES,Electronics,122,Yes (22 units),Aisle 2,Limited to 2 per customer
+1144,NEW IN TOWN,2367,Converse Chuck Taylor,SHOES,Footwear,105,Yes (97 units),Aisle 19,Buy 1 Get 1 50% Off
+1144,NEW IN TOWN,1368,Panasonic Microwave,APPLIANCES,Electronics,2249,Yes (80 units),Aisle 4,10% discount for members
+1144,NEW IN TOWN,2368,Converse Chuck Taylor,SHOES,Footwear,262,No (Restocking in 2 days),Aisle 1,Limited to 1 per customer
+1144,NEW IN TOWN,1369,Breville Coffee Machine,APPLIANCES,Electronics,1584,No (Restocking in 2 days),Aisle 9,Online order available
+1144,NEW IN TOWN,2369,Reebok Walking Shoes,SHOES,Footwear,165,Yes (67 units),Aisle 2,Limited to 1 per customer
+1144,NEW IN TOWN,1370,Apple iPhone 15,APPLIANCES,Electronics,705,No (Restocking in 2 days),Aisle 10,
+1144,NEW IN TOWN,2370,Nike Running Shoes,SHOES,Footwear,83,No (Restocking in 2 days),Aisle 17,Limited to 1 per customer
+1144,NEW IN TOWN,1371,Breville Coffee Machine,APPLIANCES,Electronics,566,Yes (95 units),Aisle 12,Limited to 2 per customer
+1144,NEW IN TOWN,2371,Reebok Walking Shoes,SHOES,Footwear,177,No (Restocking in 2 days),Aisle 1,Alternative: Adidas available
+1144,NEW IN TOWN,1372,Dyson Vacuum Cleaner,APPLIANCES,Electronics,574,No (Restocking in 2 days),Aisle 12,
+1144,NEW IN TOWN,2372,New Balance Joggers,SHOES,Footwear,232,No (Restocking in 2 days),Aisle 19,Buy 1 Get 1 50% Off
+1144,NEW IN TOWN,1373,Apple iPhone 15,APPLIANCES,Electronics,2965,Yes (19 units),Aisle 14,Limited to 2 per customer
+1144,NEW IN TOWN,2373,Under Armour Trainers,SHOES,Footwear,197,Yes (65 units),Aisle 18,Alternative: Adidas available
+1144,NEW IN TOWN,1374,Apple iPhone 15,APPLIANCES,Electronics,2000,No (Restocking in 2 days),Aisle 1,Limited to 2 per customer
+1144,NEW IN TOWN,2374,Skechers Casual Shoes,SHOES,Footwear,238,No (Restocking in 2 days),Aisle 6,Limited to 1 per customer
+1144,NEW IN TOWN,1375,Samsung Galaxy S23,APPLIANCES,Electronics,179,No (Restocking in 2 days),Aisle 5,Limited to 2 per customer
+1144,NEW IN TOWN,2375,Puma Sports Shoes,SHOES,Footwear,67,No (Restocking in 2 days),Aisle 7,Limited to 1 per customer
+1144,NEW IN TOWN,1376,Bose Sound System,APPLIANCES,Electronics,963,No (Restocking in 2 days),Aisle 4,10% discount for members
+1144,NEW IN TOWN,2376,Puma Sports Shoes,SHOES,Footwear,142,Yes (94 units),Aisle 20,Limited to 1 per customer
+1144,NEW IN TOWN,1377,Samsung Galaxy S23,APPLIANCES,Electronics,1133,Yes (76 units),Aisle 18,Limited to 2 per customer
+1144,NEW IN TOWN,2377,Asics Trail Shoes,SHOES,Footwear,112,No (Restocking in 2 days),Aisle 19,Buy 1 Get 1 50% Off
+1144,NEW IN TOWN,1378,Bose Sound System,APPLIANCES,Electronics,2822,Yes (45 units),Aisle 5,Limited to 2 per customer
+1144,NEW IN TOWN,2378,Nike Running Shoes,SHOES,Footwear,243,No (Restocking in 2 days),Aisle 3,Limited to 1 per customer
+1144,NEW IN TOWN,1379,Sony 55-inch TV,APPLIANCES,Electronics,1317,No (Restocking in 2 days),Aisle 16,
+1144,NEW IN TOWN,2379,Vans Skate Shoes,SHOES,Footwear,264,Yes (48 units),Aisle 15,Alternative: Adidas available
+1144,NEW IN TOWN,1380,Breville Coffee Machine,APPLIANCES,Electronics,2707,No (Restocking in 2 days),Aisle 19,Limited to 2 per customer
+1144,NEW IN TOWN,2380,Under Armour Trainers,SHOES,Footwear,56,Yes (19 units),Aisle 18,
+1144,NEW IN TOWN,1381,Sony 55-inch TV,APPLIANCES,Electronics,914,Yes (30 units),Aisle 1,Limited to 2 per customer
+1144,NEW IN TOWN,2381,Converse Chuck Taylor,SHOES,Footwear,59,No (Restocking in 2 days),Aisle 3,Buy 1 Get 1 50% Off
+1144,NEW IN TOWN,1382,Dyson Vacuum Cleaner,APPLIANCES,Electronics,597,Yes (56 units),Aisle 16,Limited to 2 per customer
+1144,NEW IN TOWN,2382,Puma Sports Shoes,SHOES,Footwear,253,Yes (79 units),Aisle 15,Alternative: Adidas available
+1144,NEW IN TOWN,1383,Apple MacBook Air,APPLIANCES,Electronics,1887,No (Restocking in 2 days),Aisle 9,10% discount for members
+1144,NEW IN TOWN,2383,Puma Sports Shoes,SHOES,Footwear,175,No (Restocking in 2 days),Aisle 12,
+1144,NEW IN TOWN,1384,LG Refrigerator,APPLIANCES,Electronics,2583,Yes (12 units),Aisle 11,Limited to 2 per customer
+1144,NEW IN TOWN,2384,Nike Running Shoes,SHOES,Footwear,137,No (Restocking in 2 days),Aisle 8,
+1144,NEW IN TOWN,1385,Fitbit Smartwatch,APPLIANCES,Electronics,839,No (Restocking in 2 days),Aisle 2,10% discount for members
+1144,NEW IN TOWN,2385,Puma Sports Shoes,SHOES,Footwear,124,Yes (43 units),Aisle 3,Alternative: Adidas available
+1144,NEW IN TOWN,1386,Bose Sound System,APPLIANCES,Electronics,1679,No (Restocking in 2 days),Aisle 1,Limited to 2 per customer
+1144,NEW IN TOWN,2386,Converse Chuck Taylor,SHOES,Footwear,153,Yes (76 units),Aisle 5,Buy 1 Get 1 50% Off
+1144,NEW IN TOWN,1387,Bose Sound System,APPLIANCES,Electronics,324,No (Restocking in 2 days),Aisle 19,
+1144,NEW IN TOWN,2387,Vans Skate Shoes,SHOES,Footwear,116,Yes (58 units),Aisle 16,Buy 1 Get 1 50% Off
+1144,NEW IN TOWN,1388,Breville Coffee Machine,APPLIANCES,Electronics,928,Yes (84 units),Aisle 3,10% discount for members
+1144,NEW IN TOWN,2388,Adidas Sneakers,SHOES,Footwear,67,Yes (76 units),Aisle 12,Limited to 1 per customer
+1144,NEW IN TOWN,1389,Apple MacBook Air,APPLIANCES,Electronics,1372,No (Restocking in 2 days),Aisle 5,Limited to 2 per customer
+1144,NEW IN TOWN,2389,Skechers Casual Shoes,SHOES,Footwear,152,Yes (58 units),Aisle 19,Alternative: Adidas available
+1144,NEW IN TOWN,1390,Fitbit Smartwatch,APPLIANCES,Electronics,2170,Yes (34 units),Aisle 4,Limited to 2 per customer
+1144,NEW IN TOWN,2390,Converse Chuck Taylor,SHOES,Footwear,228,No (Restocking in 2 days),Aisle 5,Limited to 1 per customer
+1144,NEW IN TOWN,1391,Breville Coffee Machine,APPLIANCES,Electronics,2817,Yes (38 units),Aisle 6,Limited to 2 per customer
+1144,NEW IN TOWN,2391,Puma Sports Shoes,SHOES,Footwear,206,No (Restocking in 2 days),Aisle 7,Limited to 1 per customer
+1144,NEW IN TOWN,1392,Fitbit Smartwatch,APPLIANCES,Electronics,2104,Yes (92 units),Aisle 1,10% discount for members
+1144,NEW IN TOWN,2392,Asics Trail Shoes,SHOES,Footwear,90,Yes (32 units),Aisle 18,Buy 1 Get 1 50% Off
+1144,NEW IN TOWN,1393,Apple iPhone 15,APPLIANCES,Electronics,2769,Yes (89 units),Aisle 8,10% discount for members
+1144,NEW IN TOWN,2393,Reebok Walking Shoes,SHOES,Footwear,276,Yes (65 units),Aisle 19,
+1144,NEW IN TOWN,1394,Breville Coffee Machine,APPLIANCES,Electronics,2871,Yes (99 units),Aisle 18,10% discount for members
+1144,NEW IN TOWN,2394,Nike Running Shoes,SHOES,Footwear,187,No (Restocking in 2 days),Aisle 15,Buy 1 Get 1 50% Off
+1144,NEW IN TOWN,1395,LG Refrigerator,APPLIANCES,Electronics,2087,Yes (11 units),Aisle 11,10% discount for members
+1144,NEW IN TOWN,2395,Vans Skate Shoes,SHOES,Footwear,130,No (Restocking in 2 days),Aisle 6,Buy 1 Get 1 50% Off
+1144,NEW IN TOWN,1396,Samsung Galaxy S23,APPLIANCES,Electronics,1331,No (Restocking in 2 days),Aisle 3,10% discount for members
+1144,NEW IN TOWN,2396,Adidas Sneakers,SHOES,Footwear,155,Yes (86 units),Aisle 17,Alternative: Adidas available
+1144,NEW IN TOWN,1397,Fitbit Smartwatch,APPLIANCES,Electronics,236,Yes (54 units),Aisle 19,10% discount for members
+1144,NEW IN TOWN,2397,Adidas Sneakers,SHOES,Footwear,148,Yes (40 units),Aisle 12,Limited to 1 per customer
+1144,NEW IN TOWN,1398,Breville Coffee Machine,APPLIANCES,Electronics,1637,No (Restocking in 2 days),Aisle 16,
+1144,NEW IN TOWN,2398,New Balance Joggers,SHOES,Footwear,139,Yes (18 units),Aisle 3,Buy 1 Get 1 50% Off
+1144,NEW IN TOWN,1399,LG Refrigerator,APPLIANCES,Electronics,607,Yes (47 units),Aisle 19,Limited to 2 per customer
+1144,NEW IN TOWN,2399,New Balance Joggers,SHOES,Footwear,52,Yes (43 units),Aisle 16,Limited to 1 per customer
+1144,NEW IN TOWN,1400,LG Refrigerator,APPLIANCES,Electronics,349,Yes (54 units),Aisle 13,
+1144,NEW IN TOWN,2400,Under Armour Trainers,SHOES,Footwear,223,Yes (92 units),Aisle 20,Buy 1 Get 1 50% Off
+1144,NEW IN TOWN,1401,Dyson Vacuum Cleaner,APPLIANCES,Electronics,2602,No (Restocking in 2 days),Aisle 16,
+1144,NEW IN TOWN,2401,Reebok Walking Shoes,SHOES,Footwear,236,Yes (11 units),Aisle 3,Limited to 1 per customer
+1144,NEW IN TOWN,1402,Sony 55-inch TV,APPLIANCES,Electronics,2585,No (Restocking in 2 days),Aisle 10,Limited to 2 per customer
+1144,NEW IN TOWN,2402,Converse Chuck Taylor,SHOES,Footwear,182,No (Restocking in 2 days),Aisle 8,
+1144,NEW IN TOWN,1403,Apple iPhone 15,APPLIANCES,Electronics,1347,No (Restocking in 2 days),Aisle 18,Limited to 2 per customer
+1144,NEW IN TOWN,2403,Nike Running Shoes,SHOES,Footwear,224,No (Restocking in 2 days),Aisle 20,Alternative: Adidas available
+1144,NEW IN TOWN,1404,Apple iPhone 15,APPLIANCES,Electronics,2783,No (Restocking in 2 days),Aisle 18,Limited to 2 per customer
+1144,NEW IN TOWN,2404,Under Armour Trainers,SHOES,Footwear,278,Yes (42 units),Aisle 19,Limited to 1 per customer
+1144,NEW IN TOWN,1405,Bose Sound System,APPLIANCES,Electronics,2542,No (Restocking in 2 days),Aisle 8,Online order available
+1144,NEW IN TOWN,2405,Asics Trail Shoes,SHOES,Footwear,210,Yes (98 units),Aisle 10,Alternative: Adidas available
+1144,NEW IN TOWN,1406,Breville Coffee Machine,APPLIANCES,Electronics,1232,No (Restocking in 2 days),Aisle 6,Online order available
+1144,NEW IN TOWN,2406,Reebok Walking Shoes,SHOES,Footwear,82,No (Restocking in 2 days),Aisle 9,
+1144,NEW IN TOWN,1407,Dyson Vacuum Cleaner,APPLIANCES,Electronics,2919,No (Restocking in 2 days),Aisle 5,Online order available
+1144,NEW IN TOWN,2407,Converse Chuck Taylor,SHOES,Footwear,270,No (Restocking in 2 days),Aisle 20,Buy 1 Get 1 50% Off
+1144,NEW IN TOWN,1408,Bose Sound System,APPLIANCES,Electronics,811,No (Restocking in 2 days),Aisle 6,
+1144,NEW IN TOWN,2408,Vans Skate Shoes,SHOES,Footwear,104,No (Restocking in 2 days),Aisle 20,Limited to 1 per customer
+1144,NEW IN TOWN,1409,Panasonic Microwave,APPLIANCES,Electronics,2341,Yes (67 units),Aisle 8,10% discount for members
+1144,NEW IN TOWN,2409,Under Armour Trainers,SHOES,Footwear,80,Yes (23 units),Aisle 13,Buy 1 Get 1 50% Off
+1144,NEW IN TOWN,1410,Sony 55-inch TV,APPLIANCES,Electronics,2620,No (Restocking in 2 days),Aisle 19,10% discount for members
+1144,NEW IN TOWN,2410,Nike Running Shoes,SHOES,Footwear,254,Yes (75 units),Aisle 19,Alternative: Adidas available
+1144,NEW IN TOWN,1411,LG Refrigerator,APPLIANCES,Electronics,570,Yes (87 units),Aisle 5,Limited to 2 per customer
+1144,NEW IN TOWN,2411,Nike Running Shoes,SHOES,Footwear,95,No (Restocking in 2 days),Aisle 17,Buy 1 Get 1 50% Off
+1144,NEW IN TOWN,1412,Breville Coffee Machine,APPLIANCES,Electronics,1678,Yes (71 units),Aisle 1,Limited to 2 per customer
+1144,NEW IN TOWN,2412,Adidas Sneakers,SHOES,Footwear,75,No (Restocking in 2 days),Aisle 6,Buy 1 Get 1 50% Off
+1144,NEW IN TOWN,1413,Dyson Vacuum Cleaner,APPLIANCES,Electronics,118,No (Restocking in 2 days),Aisle 17,10% discount for members
+1144,NEW IN TOWN,2413,Skechers Casual Shoes,SHOES,Footwear,73,No (Restocking in 2 days),Aisle 1,Buy 1 Get 1 50% Off
+1144,NEW IN TOWN,1414,Panasonic Microwave,APPLIANCES,Electronics,2201,No (Restocking in 2 days),Aisle 14,
+1144,NEW IN TOWN,2414,Asics Trail Shoes,SHOES,Footwear,255,No (Restocking in 2 days),Aisle 3,Buy 1 Get 1 50% Off
+1144,NEW IN TOWN,1415,Apple MacBook Air,APPLIANCES,Electronics,805,No (Restocking in 2 days),Aisle 12,
+1144,NEW IN TOWN,2415,Adidas Sneakers,SHOES,Footwear,281,Yes (22 units),Aisle 1,Alternative: Adidas available
+1144,NEW IN TOWN,1416,LG Refrigerator,APPLIANCES,Electronics,410,No (Restocking in 2 days),Aisle 8,Online order available
+1144,NEW IN TOWN,2416,Asics Trail Shoes,SHOES,Footwear,174,Yes (67 units),Aisle 11,Limited to 1 per customer
+1144,NEW IN TOWN,1417,Fitbit Smartwatch,APPLIANCES,Electronics,216,No (Restocking in 2 days),Aisle 13,Online order available
+1144,NEW IN TOWN,2417,Under Armour Trainers,SHOES,Footwear,185,Yes (56 units),Aisle 16,Limited to 1 per customer
+1144,NEW IN TOWN,1418,Samsung Galaxy S23,APPLIANCES,Electronics,2813,Yes (80 units),Aisle 9,10% discount for members
+1144,NEW IN TOWN,2418,Reebok Walking Shoes,SHOES,Footwear,179,No (Restocking in 2 days),Aisle 20,Alternative: Adidas available
+1144,NEW IN TOWN,1419,Samsung Galaxy S23,APPLIANCES,Electronics,1519,No (Restocking in 2 days),Aisle 1,10% discount for members
+1144,NEW IN TOWN,2419,Skechers Casual Shoes,SHOES,Footwear,292,No (Restocking in 2 days),Aisle 8,
+1144,NEW IN TOWN,1420,Dyson Vacuum Cleaner,APPLIANCES,Electronics,531,Yes (86 units),Aisle 18,10% discount for members
+1144,NEW IN TOWN,2420,Skechers Casual Shoes,SHOES,Footwear,263,Yes (86 units),Aisle 11,Limited to 1 per customer
+1144,NEW IN TOWN,1421,Panasonic Microwave,APPLIANCES,Electronics,247,No (Restocking in 2 days),Aisle 4,Limited to 2 per customer
+1144,NEW IN TOWN,2421,Asics Trail Shoes,SHOES,Footwear,281,No (Restocking in 2 days),Aisle 14,Buy 1 Get 1 50% Off
+1144,NEW IN TOWN,1422,Apple iPhone 15,APPLIANCES,Electronics,557,Yes (95 units),Aisle 3,10% discount for members
+1144,NEW IN TOWN,2422,Converse Chuck Taylor,SHOES,Footwear,291,No (Restocking in 2 days),Aisle 15,
+1144,NEW IN TOWN,1423,Sony 55-inch TV,APPLIANCES,Electronics,1398,No (Restocking in 2 days),Aisle 4,Limited to 2 per customer
+1144,NEW IN TOWN,2423,Skechers Casual Shoes,SHOES,Footwear,164,Yes (61 units),Aisle 5,Buy 1 Get 1 50% Off
+1144,NEW IN TOWN,1424,Fitbit Smartwatch,APPLIANCES,Electronics,2053,No (Restocking in 2 days),Aisle 19,
+1144,NEW IN TOWN,2424,Asics Trail Shoes,SHOES,Footwear,149,Yes (59 units),Aisle 13,
+1144,NEW IN TOWN,1425,Apple MacBook Air,APPLIANCES,Electronics,2883,No (Restocking in 2 days),Aisle 1,Online order available
+1144,NEW IN TOWN,2425,Reebok Walking Shoes,SHOES,Footwear,129,Yes (45 units),Aisle 20,Limited to 1 per customer
+1144,NEW IN TOWN,1426,Apple iPhone 15,APPLIANCES,Electronics,2038,Yes (87 units),Aisle 6,Online order available
+1144,NEW IN TOWN,2426,Asics Trail Shoes,SHOES,Footwear,156,No (Restocking in 2 days),Aisle 16,
+1144,NEW IN TOWN,1427,Dyson Vacuum Cleaner,APPLIANCES,Electronics,2134,No (Restocking in 2 days),Aisle 11,10% discount for members
+1144,NEW IN TOWN,2427,Asics Trail Shoes,SHOES,Footwear,200,No (Restocking in 2 days),Aisle 3,
+1144,NEW IN TOWN,1428,Sony 55-inch TV,APPLIANCES,Electronics,632,No (Restocking in 2 days),Aisle 12,
+1144,NEW IN TOWN,2428,Converse Chuck Taylor,SHOES,Footwear,257,No (Restocking in 2 days),Aisle 9,
+1144,NEW IN TOWN,1429,Fitbit Smartwatch,APPLIANCES,Electronics,1574,Yes (80 units),Aisle 2,Online order available
+1144,NEW IN TOWN,2429,Nike Running Shoes,SHOES,Footwear,86,Yes (57 units),Aisle 17,Alternative: Adidas available
+1144,NEW IN TOWN,1430,Dyson Vacuum Cleaner,APPLIANCES,Electronics,562,Yes (97 units),Aisle 15,Limited to 2 per customer
+1144,NEW IN TOWN,2430,Skechers Casual Shoes,SHOES,Footwear,98,Yes (60 units),Aisle 11,Limited to 1 per customer
+1144,NEW IN TOWN,1431,Samsung Galaxy S23,APPLIANCES,Electronics,273,Yes (69 units),Aisle 5,Online order available
+1144,NEW IN TOWN,2431,Asics Trail Shoes,SHOES,Footwear,264,No (Restocking in 2 days),Aisle 9,
+1144,NEW IN TOWN,1432,Panasonic Microwave,APPLIANCES,Electronics,2610,No (Restocking in 2 days),Aisle 9,Online order available
+1144,NEW IN TOWN,2432,Skechers Casual Shoes,SHOES,Footwear,255,No (Restocking in 2 days),Aisle 7,Limited to 1 per customer
+1144,NEW IN TOWN,1433,Panasonic Microwave,APPLIANCES,Electronics,1920,No (Restocking in 2 days),Aisle 11,
+1144,NEW IN TOWN,2433,Asics Trail Shoes,SHOES,Footwear,158,No (Restocking in 2 days),Aisle 18,Alternative: Adidas available
+1144,NEW IN TOWN,1434,Breville Coffee Machine,APPLIANCES,Electronics,934,Yes (58 units),Aisle 2,10% discount for members
+1144,NEW IN TOWN,2434,Converse Chuck Taylor,SHOES,Footwear,263,No (Restocking in 2 days),Aisle 8,
+1144,NEW IN TOWN,1435,Fitbit Smartwatch,APPLIANCES,Electronics,2582,Yes (58 units),Aisle 6,10% discount for members
+1144,NEW IN TOWN,2435,Puma Sports Shoes,SHOES,Footwear,221,Yes (40 units),Aisle 20,
+1144,NEW IN TOWN,1436,Apple MacBook Air,APPLIANCES,Electronics,1198,Yes (89 units),Aisle 3,Online order available
+1144,NEW IN TOWN,2436,Nike Running Shoes,SHOES,Footwear,70,No (Restocking in 2 days),Aisle 15,Limited to 1 per customer
+1144,NEW IN TOWN,1437,Apple iPhone 15,APPLIANCES,Electronics,248,Yes (17 units),Aisle 15,
+1144,NEW IN TOWN,2437,New Balance Joggers,SHOES,Footwear,75,Yes (15 units),Aisle 8,Buy 1 Get 1 50% Off
+1144,NEW IN TOWN,1438,Fitbit Smartwatch,APPLIANCES,Electronics,911,No (Restocking in 2 days),Aisle 7,Online order available
+1144,NEW IN TOWN,2438,Reebok Walking Shoes,SHOES,Footwear,163,Yes (13 units),Aisle 16,Buy 1 Get 1 50% Off
+1144,NEW IN TOWN,1439,Panasonic Microwave,APPLIANCES,Electronics,2724,Yes (83 units),Aisle 5,10% discount for members
+1144,NEW IN TOWN,2439,New Balance Joggers,SHOES,Footwear,83,No (Restocking in 2 days),Aisle 9,Buy 1 Get 1 50% Off
+1144,NEW IN TOWN,1440,Panasonic Microwave,APPLIANCES,Electronics,1608,Yes (81 units),Aisle 15,Online order available
+1144,NEW IN TOWN,2440,Reebok Walking Shoes,SHOES,Footwear,123,No (Restocking in 2 days),Aisle 6,
+1144,NEW IN TOWN,1441,Dyson Vacuum Cleaner,APPLIANCES,Electronics,207,No (Restocking in 2 days),Aisle 11,10% discount for members
+1144,NEW IN TOWN,2441,Reebok Walking Shoes,SHOES,Footwear,275,No (Restocking in 2 days),Aisle 7,Limited to 1 per customer
+1144,NEW IN TOWN,1442,Sony 55-inch TV,APPLIANCES,Electronics,905,Yes (26 units),Aisle 6,
+1144,NEW IN TOWN,2442,Adidas Sneakers,SHOES,Footwear,199,Yes (59 units),Aisle 9,Alternative: Adidas available
+1144,NEW IN TOWN,1443,Breville Coffee Machine,APPLIANCES,Electronics,2406,Yes (71 units),Aisle 15,
+1144,NEW IN TOWN,2443,Asics Trail Shoes,SHOES,Footwear,192,No (Restocking in 2 days),Aisle 8,Buy 1 Get 1 50% Off
+1144,NEW IN TOWN,1444,Breville Coffee Machine,APPLIANCES,Electronics,725,No (Restocking in 2 days),Aisle 17,Online order available
+1144,NEW IN TOWN,2444,New Balance Joggers,SHOES,Footwear,50,Yes (86 units),Aisle 7,
+1144,NEW IN TOWN,1445,Fitbit Smartwatch,APPLIANCES,Electronics,2518,Yes (63 units),Aisle 20,
+1144,NEW IN TOWN,2445,Nike Running Shoes,SHOES,Footwear,231,Yes (86 units),Aisle 18,Limited to 1 per customer
+1144,NEW IN TOWN,1446,Breville Coffee Machine,APPLIANCES,Electronics,1822,No (Restocking in 2 days),Aisle 7,
+1144,NEW IN TOWN,2446,Nike Running Shoes,SHOES,Footwear,230,Yes (85 units),Aisle 11,Buy 1 Get 1 50% Off
+1144,NEW IN TOWN,1447,Dyson Vacuum Cleaner,APPLIANCES,Electronics,2502,Yes (35 units),Aisle 3,
+1144,NEW IN TOWN,2447,Nike Running Shoes,SHOES,Footwear,74,Yes (84 units),Aisle 14,Alternative: Adidas available
+1144,NEW IN TOWN,1448,Dyson Vacuum Cleaner,APPLIANCES,Electronics,823,No (Restocking in 2 days),Aisle 12,Online order available
+1144,NEW IN TOWN,2448,New Balance Joggers,SHOES,Footwear,172,No (Restocking in 2 days),Aisle 8,Buy 1 Get 1 50% Off
+1144,NEW IN TOWN,1449,Samsung Galaxy S23,APPLIANCES,Electronics,2048,Yes (79 units),Aisle 11,
+1144,NEW IN TOWN,2449,Reebok Walking Shoes,SHOES,Footwear,139,Yes (47 units),Aisle 14,Alternative: Adidas available
+1144,NEW IN TOWN,1450,Apple iPhone 15,APPLIANCES,Electronics,2826,Yes (73 units),Aisle 10,Online order available
+1144,NEW IN TOWN,2450,New Balance Joggers,SHOES,Footwear,96,No (Restocking in 2 days),Aisle 13,
+1144,NEW IN TOWN,1451,Bose Sound System,APPLIANCES,Electronics,523,Yes (75 units),Aisle 17,Online order available
+1144,NEW IN TOWN,2451,Vans Skate Shoes,SHOES,Footwear,183,Yes (50 units),Aisle 4,
+1144,NEW IN TOWN,1452,Panasonic Microwave,APPLIANCES,Electronics,1431,No (Restocking in 2 days),Aisle 1,Online order available
+1144,NEW IN TOWN,2452,Converse Chuck Taylor,SHOES,Footwear,174,No (Restocking in 2 days),Aisle 7,Buy 1 Get 1 50% Off
+1144,NEW IN TOWN,1453,Samsung Galaxy S23,APPLIANCES,Electronics,1227,Yes (39 units),Aisle 13,10% discount for members
+1144,NEW IN TOWN,2453,Under Armour Trainers,SHOES,Footwear,205,Yes (69 units),Aisle 10,Limited to 1 per customer
+1144,NEW IN TOWN,1454,Bose Sound System,APPLIANCES,Electronics,1328,No (Restocking in 2 days),Aisle 11,Online order available
+1144,NEW IN TOWN,2454,Puma Sports Shoes,SHOES,Footwear,226,Yes (46 units),Aisle 9,
+1144,NEW IN TOWN,1455,Apple MacBook Air,APPLIANCES,Electronics,2135,No (Restocking in 2 days),Aisle 5,10% discount for members
+1144,NEW IN TOWN,2455,Reebok Walking Shoes,SHOES,Footwear,234,No (Restocking in 2 days),Aisle 8,Alternative: Adidas available
+1144,NEW IN TOWN,1456,Bose Sound System,APPLIANCES,Electronics,2093,No (Restocking in 2 days),Aisle 20,10% discount for members
+1144,NEW IN TOWN,2456,Reebok Walking Shoes,SHOES,Footwear,172,Yes (15 units),Aisle 1,
+1144,NEW IN TOWN,1457,Dyson Vacuum Cleaner,APPLIANCES,Electronics,411,Yes (28 units),Aisle 10,Limited to 2 per customer
+1144,NEW IN TOWN,2457,Skechers Casual Shoes,SHOES,Footwear,168,Yes (71 units),Aisle 16,
+1144,NEW IN TOWN,1458,Panasonic Microwave,APPLIANCES,Electronics,156,No (Restocking in 2 days),Aisle 1,Limited to 2 per customer
+1144,NEW IN TOWN,2458,Puma Sports Shoes,SHOES,Footwear,228,No (Restocking in 2 days),Aisle 8,Limited to 1 per customer
+1144,NEW IN TOWN,1459,Bose Sound System,APPLIANCES,Electronics,1379,No (Restocking in 2 days),Aisle 18,Limited to 2 per customer
+1144,NEW IN TOWN,2459,Puma Sports Shoes,SHOES,Footwear,97,No (Restocking in 2 days),Aisle 17,
+1144,NEW IN TOWN,1460,Dyson Vacuum Cleaner,APPLIANCES,Electronics,1415,Yes (49 units),Aisle 19,Online order available
+1144,NEW IN TOWN,2460,Under Armour Trainers,SHOES,Footwear,68,No (Restocking in 2 days),Aisle 3,Alternative: Adidas available
+1144,NEW IN TOWN,1461,Sony 55-inch TV,APPLIANCES,Electronics,1184,No (Restocking in 2 days),Aisle 10,
+1144,NEW IN TOWN,2461,Converse Chuck Taylor,SHOES,Footwear,96,Yes (64 units),Aisle 1,Buy 1 Get 1 50% Off
+1144,NEW IN TOWN,1462,Dyson Vacuum Cleaner,APPLIANCES,Electronics,2423,No (Restocking in 2 days),Aisle 9,Limited to 2 per customer
+1144,NEW IN TOWN,2462,Vans Skate Shoes,SHOES,Footwear,263,No (Restocking in 2 days),Aisle 6,
+1144,NEW IN TOWN,1463,LG Refrigerator,APPLIANCES,Electronics,2011,Yes (99 units),Aisle 16,
+1144,NEW IN TOWN,2463,Converse Chuck Taylor,SHOES,Footwear,255,Yes (74 units),Aisle 20,Alternative: Adidas available
+1144,NEW IN TOWN,1464,Dyson Vacuum Cleaner,APPLIANCES,Electronics,2505,No (Restocking in 2 days),Aisle 4,Limited to 2 per customer
+1144,NEW IN TOWN,2464,Vans Skate Shoes,SHOES,Footwear,103,Yes (94 units),Aisle 12,Alternative: Adidas available
+1144,NEW IN TOWN,1465,Fitbit Smartwatch,APPLIANCES,Electronics,2551,Yes (16 units),Aisle 4,Online order available
+1144,NEW IN TOWN,2465,Adidas Sneakers,SHOES,Footwear,152,Yes (85 units),Aisle 17,
+1144,NEW IN TOWN,1466,Sony 55-inch TV,APPLIANCES,Electronics,2862,No (Restocking in 2 days),Aisle 2,10% discount for members
+1144,NEW IN TOWN,2466,Skechers Casual Shoes,SHOES,Footwear,257,No (Restocking in 2 days),Aisle 18,Limited to 1 per customer
+1144,NEW IN TOWN,1467,Dyson Vacuum Cleaner,APPLIANCES,Electronics,857,No (Restocking in 2 days),Aisle 5,10% discount for members
+1144,NEW IN TOWN,2467,Adidas Sneakers,SHOES,Footwear,241,Yes (85 units),Aisle 20,Alternative: Adidas available
+1144,NEW IN TOWN,1468,Sony 55-inch TV,APPLIANCES,Electronics,2061,No (Restocking in 2 days),Aisle 6,
+1144,NEW IN TOWN,2468,Under Armour Trainers,SHOES,Footwear,87,Yes (50 units),Aisle 2,
+1144,NEW IN TOWN,1469,Bose Sound System,APPLIANCES,Electronics,1260,No (Restocking in 2 days),Aisle 6,Online order available
+1144,NEW IN TOWN,2469,Vans Skate Shoes,SHOES,Footwear,94,Yes (95 units),Aisle 5,
+1144,NEW IN TOWN,1470,Fitbit Smartwatch,APPLIANCES,Electronics,104,Yes (83 units),Aisle 20,10% discount for members
+1144,NEW IN TOWN,2470,Puma Sports Shoes,SHOES,Footwear,159,Yes (53 units),Aisle 3,Buy 1 Get 1 50% Off
+1144,NEW IN TOWN,1471,Apple iPhone 15,APPLIANCES,Electronics,730,No (Restocking in 2 days),Aisle 18,Online order available
+1144,NEW IN TOWN,2471,Converse Chuck Taylor,SHOES,Footwear,253,No (Restocking in 2 days),Aisle 16,
+1144,NEW IN TOWN,1472,Sony 55-inch TV,APPLIANCES,Electronics,758,No (Restocking in 2 days),Aisle 11,Limited to 2 per customer
+1144,NEW IN TOWN,2472,Under Armour Trainers,SHOES,Footwear,265,Yes (17 units),Aisle 8,Alternative: Adidas available
+1144,NEW IN TOWN,1473,Fitbit Smartwatch,APPLIANCES,Electronics,593,Yes (90 units),Aisle 8,Limited to 2 per customer
+1144,NEW IN TOWN,2473,New Balance Joggers,SHOES,Footwear,118,Yes (23 units),Aisle 6,Limited to 1 per customer
+1144,NEW IN TOWN,1474,LG Refrigerator,APPLIANCES,Electronics,1069,No (Restocking in 2 days),Aisle 18,
+1144,NEW IN TOWN,2474,Nike Running Shoes,SHOES,Footwear,87,Yes (69 units),Aisle 20,Buy 1 Get 1 50% Off
+1144,NEW IN TOWN,1475,Bose Sound System,APPLIANCES,Electronics,1637,No (Restocking in 2 days),Aisle 4,
+1144,NEW IN TOWN,2475,Puma Sports Shoes,SHOES,Footwear,251,Yes (28 units),Aisle 12,Alternative: Adidas available
+1144,NEW IN TOWN,1476,Bose Sound System,APPLIANCES,Electronics,2254,Yes (90 units),Aisle 15,Online order available
+1144,NEW IN TOWN,2476,Under Armour Trainers,SHOES,Footwear,235,Yes (100 units),Aisle 11,Buy 1 Get 1 50% Off
+1144,NEW IN TOWN,1477,Bose Sound System,APPLIANCES,Electronics,2843,Yes (40 units),Aisle 9,Online order available
+1144,NEW IN TOWN,2477,Converse Chuck Taylor,SHOES,Footwear,125,No (Restocking in 2 days),Aisle 9,Limited to 1 per customer
+1144,NEW IN TOWN,1478,Bose Sound System,APPLIANCES,Electronics,506,Yes (39 units),Aisle 14,Limited to 2 per customer
+1144,NEW IN TOWN,2478,Reebok Walking Shoes,SHOES,Footwear,106,No (Restocking in 2 days),Aisle 7,Alternative: Adidas available
+1144,NEW IN TOWN,1479,Apple MacBook Air,APPLIANCES,Electronics,2428,No (Restocking in 2 days),Aisle 16,Online order available
+1144,NEW IN TOWN,2479,New Balance Joggers,SHOES,Footwear,286,Yes (53 units),Aisle 4,
+1144,NEW IN TOWN,1480,Dyson Vacuum Cleaner,APPLIANCES,Electronics,418,No (Restocking in 2 days),Aisle 12,
+1144,NEW IN TOWN,2480,Asics Trail Shoes,SHOES,Footwear,176,Yes (14 units),Aisle 6,Limited to 1 per customer
+1144,NEW IN TOWN,1481,Samsung Galaxy S23,APPLIANCES,Electronics,2851,No (Restocking in 2 days),Aisle 3,10% discount for members
+1144,NEW IN TOWN,2481,New Balance Joggers,SHOES,Footwear,299,Yes (77 units),Aisle 6,Buy 1 Get 1 50% Off
+1144,NEW IN TOWN,1482,Panasonic Microwave,APPLIANCES,Electronics,836,Yes (64 units),Aisle 1,Online order available
+1144,NEW IN TOWN,2482,Nike Running Shoes,SHOES,Footwear,72,No (Restocking in 2 days),Aisle 5,Buy 1 Get 1 50% Off
+1144,NEW IN TOWN,1483,Apple iPhone 15,APPLIANCES,Electronics,323,No (Restocking in 2 days),Aisle 12,Online order available
+1144,NEW IN TOWN,2483,Under Armour Trainers,SHOES,Footwear,287,No (Restocking in 2 days),Aisle 16,
+1144,NEW IN TOWN,1484,Bose Sound System,APPLIANCES,Electronics,2334,Yes (39 units),Aisle 19,
+1144,NEW IN TOWN,2484,Skechers Casual Shoes,SHOES,Footwear,109,Yes (12 units),Aisle 13,
+1144,NEW IN TOWN,1485,Samsung Galaxy S23,APPLIANCES,Electronics,2753,Yes (90 units),Aisle 19,10% discount for members
+1144,NEW IN TOWN,2485,Vans Skate Shoes,SHOES,Footwear,271,No (Restocking in 2 days),Aisle 13,Buy 1 Get 1 50% Off
+1144,NEW IN TOWN,1486,Sony 55-inch TV,APPLIANCES,Electronics,1107,Yes (17 units),Aisle 8,10% discount for members
+1144,NEW IN TOWN,2486,Puma Sports Shoes,SHOES,Footwear,154,No (Restocking in 2 days),Aisle 13,Buy 1 Get 1 50% Off
+1144,NEW IN TOWN,1487,Apple iPhone 15,APPLIANCES,Electronics,342,No (Restocking in 2 days),Aisle 7,10% discount for members
+1144,NEW IN TOWN,2487,Asics Trail Shoes,SHOES,Footwear,281,No (Restocking in 2 days),Aisle 12,Buy 1 Get 1 50% Off
+1144,NEW IN TOWN,1488,Panasonic Microwave,APPLIANCES,Electronics,1305,Yes (89 units),Aisle 6,Online order available
+1144,NEW IN TOWN,2488,Under Armour Trainers,SHOES,Footwear,140,Yes (64 units),Aisle 9,
+1144,NEW IN TOWN,1489,Breville Coffee Machine,APPLIANCES,Electronics,361,No (Restocking in 2 days),Aisle 5,Online order available
+1144,NEW IN TOWN,2489,New Balance Joggers,SHOES,Footwear,51,Yes (97 units),Aisle 2,
+1144,NEW IN TOWN,1490,Fitbit Smartwatch,APPLIANCES,Electronics,683,Yes (95 units),Aisle 15,10% discount for members
+1144,NEW IN TOWN,2490,Puma Sports Shoes,SHOES,Footwear,148,Yes (60 units),Aisle 7,Limited to 1 per customer
+1144,NEW IN TOWN,1491,Sony 55-inch TV,APPLIANCES,Electronics,2929,No (Restocking in 2 days),Aisle 7,10% discount for members
+1144,NEW IN TOWN,2491,Converse Chuck Taylor,SHOES,Footwear,190,Yes (73 units),Aisle 8,
+1144,NEW IN TOWN,1492,Fitbit Smartwatch,APPLIANCES,Electronics,879,No (Restocking in 2 days),Aisle 20,
+1144,NEW IN TOWN,2492,Adidas Sneakers,SHOES,Footwear,239,No (Restocking in 2 days),Aisle 13,Buy 1 Get 1 50% Off
+1144,NEW IN TOWN,1493,Fitbit Smartwatch,APPLIANCES,Electronics,868,No (Restocking in 2 days),Aisle 6,
+1144,NEW IN TOWN,2493,Converse Chuck Taylor,SHOES,Footwear,255,Yes (71 units),Aisle 3,Alternative: Adidas available
+1144,NEW IN TOWN,1494,LG Refrigerator,APPLIANCES,Electronics,1390,No (Restocking in 2 days),Aisle 11,10% discount for members
+1144,NEW IN TOWN,2494,New Balance Joggers,SHOES,Footwear,173,No (Restocking in 2 days),Aisle 17,Alternative: Adidas available
+1144,NEW IN TOWN,1495,Samsung Galaxy S23,APPLIANCES,Electronics,2529,No (Restocking in 2 days),Aisle 16,10% discount for members
+1144,NEW IN TOWN,2495,Reebok Walking Shoes,SHOES,Footwear,163,No (Restocking in 2 days),Aisle 13,Buy 1 Get 1 50% Off
+1144,NEW IN TOWN,1496,Apple iPhone 15,APPLIANCES,Electronics,2312,No (Restocking in 2 days),Aisle 14,
+1144,NEW IN TOWN,2496,Adidas Sneakers,SHOES,Footwear,140,Yes (43 units),Aisle 11,
+1144,NEW IN TOWN,1497,Apple iPhone 15,APPLIANCES,Electronics,1153,Yes (81 units),Aisle 17,10% discount for members
+1144,NEW IN TOWN,2497,Asics Trail Shoes,SHOES,Footwear,122,No (Restocking in 2 days),Aisle 8,Alternative: Adidas available
+1144,NEW IN TOWN,1498,Panasonic Microwave,APPLIANCES,Electronics,2282,Yes (63 units),Aisle 13,10% discount for members
+1144,NEW IN TOWN,2498,Adidas Sneakers,SHOES,Footwear,287,No (Restocking in 2 days),Aisle 18,Buy 1 Get 1 50% Off
+1144,NEW IN TOWN,1499,Breville Coffee Machine,APPLIANCES,Electronics,1226,No (Restocking in 2 days),Aisle 18,
+1144,NEW IN TOWN,2499,Skechers Casual Shoes,SHOES,Footwear,283,Yes (19 units),Aisle 15,Buy 1 Get 1 50% Off
+1144,NEW IN TOWN,1500,Dyson Vacuum Cleaner,APPLIANCES,Electronics,2869,Yes (48 units),Aisle 14,10% discount for members
+1144,NEW IN TOWN,2500,Converse Chuck Taylor,SHOES,Footwear,199,No (Restocking in 2 days),Aisle 3,Alternative: Adidas available
