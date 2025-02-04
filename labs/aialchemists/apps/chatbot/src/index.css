@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
 * {
     box-sizing: border-box;
 }
@@ -7,23 +9,12 @@ body {
     height: 100%;
     margin: 0;
     padding: 0;
+    font-family: 'Montserrat', sans-serif; /* Apply the Montserrat font */
+    background-image: url('/workspaces/aiapp1day/labs/aialchemists/apps/chatbot/src/pages/chat/assets/kmart.png'); /* Set the background image */
+    color: #333; /* Darker text color for better contrast */
 }
 
 html {
-    background: #f2f2f2;
-
-    font-family:
-        "Segoe UI",
-        -apple-system,
-        BlinkMacSystemFont,
-        "Roboto",
-        "Oxygen",
-        "Ubuntu",
-        "Cantarell",
-        "Fira Sans",
-        "Droid Sans",
-        "Helvetica Neue",
-        sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -36,4 +27,33 @@ html {
     margin: 40px;
     padding: 20px;
     background-color: white;
+    border-radius: 16px; /* Rounded edges for a modern look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: transform 0.2s, box-shadow 0.2s; /* Smooth transition for hover effect */
+}
+
+.pageContainer:hover {
+    transform: translateY(-5px); /* Slightly lift the container on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 12px 40px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif; /* Apply the Montserrat font to headings */
+    color: #1f1c2c; /* Darker color for headings */
+    margin-top: 0;
+}
+
+p {
+    line-height: 1.6; /* Improve readability */
+    margin: 0 0 10px;
+}
+
+a {
+    color: #1f1c2c; /* Link color */
+    text-decoration: none;
+    transition: color 0.2s; /* Smooth transition for link hover effect */
+}
+
+a:hover {
+    color: #928dab; /* Change link color on hover */
 }
