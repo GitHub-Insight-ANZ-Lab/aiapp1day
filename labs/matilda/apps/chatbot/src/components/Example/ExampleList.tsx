@@ -3,9 +3,9 @@ import { Example } from "./Example";
 import styles from "./Example.module.css";
 
 const DEFAULT_EXAMPLES: string[] = [
-    "Should I get a supervisor’s approval before proceeding?",
+    "What all smartwatches do we have?",
     "How do I check if the product was originally purchased from our store?",
-    "What are the main features of POS?"
+    "How do I exchange a product?"
 ];
 
 const GPT4V_EXAMPLES: string[] = [

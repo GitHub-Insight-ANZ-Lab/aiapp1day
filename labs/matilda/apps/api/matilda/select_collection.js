@@ -14,7 +14,7 @@ async function routeQuestion(question) {
         - documents: for user manuals and POS system documentation
         - products: for product information including price, stock, and aisle location
         - transactions: for store transactions including purchases and sales
-        - training_topics: for mandatory training information for employees
+        - training_topics: for mandatory training information for employees and training modules and topics
         - store_tasks: for store processes and steps to follow for tasks
         - asile_location: for giving hints from the collection, near which place we can find the aisle 
         
