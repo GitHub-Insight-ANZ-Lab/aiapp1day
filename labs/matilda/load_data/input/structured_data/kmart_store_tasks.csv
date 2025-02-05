@@ -1,0 +1,20 @@
+Store_Id,Store_name,Task ID,Task Name,Step 1,Step 2,Step 3,Step 4
+1144,NEW IN TOWN,T101,Restocking Shelves,Retrieve stock from the back,Check expiry date,Place items front-facing,Scan updated stock levels
+1144,NEW IN TOWN,T205,Processing Returns,Scan receipt,Inspect item condition,Process refund/exchange,Update inventory system
+1144,NEW IN TOWN,T310,Store Closing Checklist,Clean checkout area,Lock storage rooms,Update sales report,Arm security system
+1144,NEW IN TOWN,T415,Customer Assistance,Greet customer,Understand their needs,Guide to correct aisle,Offer additional help
+1144,NEW IN TOWN,T520,Price Tag Verification,Scan barcode,Check against system price,Update price if needed,Print new price tag
+1144,NEW IN TOWN,T625,Cash Register Operation,Log in to register,Process customer purchases,Handle payment,Print receipt
+1144,NEW IN TOWN,T730,Online Order Processing,Pick items from store,Verify order details,Pack securely,Mark order as ready
+1144,NEW IN TOWN,T845,Inventory Stock Take,Scan inventory barcode,Compare with system records,Adjust stock levels,Report discrepancies
+1144,NEW IN TOWN,T950,Cleaning & Maintenance,Sweep and mop floors,Sanitize surfaces,Dispose trash,Restock cleaning supplies
+1144,NEW IN TOWN,T1060,Promotional Setup,Retrieve promotional items,Set up display area,Place promotional signs,Update pricing in system
+1144,NEW IN TOWN,T1175,Loss Prevention Monitoring,Monitor security cameras,Check suspicious activity,Engage security if needed,Log incidents
+1144,NEW IN TOWN,T1280,Cart & Basket Collection,Gather carts and baskets,Inspect for damage,Sanitize handles,Return to designated area
+1144,NEW IN TOWN,T1395,New Product Arrival,Unload delivery truck,Check invoice vs shipment,Stock items in storage,Update inventory system
+1144,NEW IN TOWN,T1505,Customer Feedback Handling,Ask customer for feedback,Record concerns or praise,Escalate if needed,Document for review
+1144,NEW IN TOWN,T1610,Store Opening Preparation,Unlock entrance,Turn on lights and systems,Set up cash registers,Check initial stock levels
+1144,NEW IN TOWN,T1725,Shelf Labeling,Check shelf labels,Replace outdated labels,Ensure pricing accuracy,Report missing tags
+1144,NEW IN TOWN,T1840,Break Room Maintenance,Check supplies,Clean tables and appliances,Dispose of expired food,Restock utensils
+1144,NEW IN TOWN,T1955,Checkout Bagging,Ask customer preference,Pack items efficiently,Separate fragile goods,Hand over receipt
+1144,NEW IN TOWN,T2060,Gift Wrapping Service,Confirm wrapping request,Choose appropriate wrap,Wrap neatly,Attach message card

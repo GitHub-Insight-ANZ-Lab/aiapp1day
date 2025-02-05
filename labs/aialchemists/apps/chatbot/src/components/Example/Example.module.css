@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Montserrat:ital,wght@0,100..900;1,100..900&family=PT+Serif+Caption:ital@0;1&family=Radley:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+.examplesNavList {
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    flex: 1;
+    justify-content: center;
+}
+
+.flex-wrap {
+    wrap: wrap;
+    gap: 10px;
+    flex: 1;
+    justify-content: center;
+}
+
+.example {
+    word-break: break-word;
+    background: #ffff; /* Gradient background for a futuristic look */
+    border-radius: 16px; /* Rounded edges */
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin-bottom: 10px; /* Spacing between boxes */
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.2s, box-shadow 0.2s; /* Smooth transition for hover effect */
+}
+
+.example:hover {
+    transform: translateY(-5px); /* Lift the box on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 12px 40px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+.exampleText {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    font-size: 14px;
+    width: 280px;
+    min-height: 100px;
+    letter-spacing: 0.5px; 
+    color: #1D1616; /* White text for contrast */
+    font-weight: bold; 
+}
+
+@media only screen and (max-height: 780px) {
+    .exampleText {
+        font-size: 20px;
+        height: 80px;
+    }
+}

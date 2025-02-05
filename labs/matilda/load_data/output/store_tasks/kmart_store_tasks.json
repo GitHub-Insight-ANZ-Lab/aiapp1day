@@ -1,0 +1,192 @@
+[
+  {
+    "Store_Id": "1144",
+    "Store_name": "NEW IN TOWN",
+    "Task ID": "T101",
+    "Task Name": "Restocking Shelves",
+    "Step 1": "Retrieve stock from the back",
+    "Step 2": "Check expiry date",
+    "Step 3": "Place items front-facing",
+    "Step 4\r": "Scan updated stock levels\r"
+  },
+  {
+    "Store_Id": "1144",
+    "Store_name": "NEW IN TOWN",
+    "Task ID": "T205",
+    "Task Name": "Processing Returns",
+    "Step 1": "Scan receipt",
+    "Step 2": "Inspect item condition",
+    "Step 3": "Process refund/exchange",
+    "Step 4\r": "Update inventory system\r"
+  },
+  {
+    "Store_Id": "1144",
+    "Store_name": "NEW IN TOWN",
+    "Task ID": "T310",
+    "Task Name": "Store Closing Checklist",
+    "Step 1": "Clean checkout area",
+    "Step 2": "Lock storage rooms",
+    "Step 3": "Update sales report",
+    "Step 4\r": "Arm security system\r"
+  },
+  {
+    "Store_Id": "1144",
+    "Store_name": "NEW IN TOWN",
+    "Task ID": "T415",
+    "Task Name": "Customer Assistance",
+    "Step 1": "Greet customer",
+    "Step 2": "Understand their needs",
+    "Step 3": "Guide to correct aisle",
+    "Step 4\r": "Offer additional help\r"
+  },
+  {
+    "Store_Id": "1144",
+    "Store_name": "NEW IN TOWN",
+    "Task ID": "T520",
+    "Task Name": "Price Tag Verification",
+    "Step 1": "Scan barcode",
+    "Step 2": "Check against system price",
+    "Step 3": "Update price if needed",
+    "Step 4\r": "Print new price tag\r"
+  },
+  {
+    "Store_Id": "1144",
+    "Store_name": "NEW IN TOWN",
+    "Task ID": "T625",
+    "Task Name": "Cash Register Operation",
+    "Step 1": "Log in to register",
+    "Step 2": "Process customer purchases",
+    "Step 3": "Handle payment",
+    "Step 4\r": "Print receipt\r"
+  },
+  {
+    "Store_Id": "1144",
+    "Store_name": "NEW IN TOWN",
+    "Task ID": "T730",
+    "Task Name": "Online Order Processing",
+    "Step 1": "Pick items from store",
+    "Step 2": "Verify order details",
+    "Step 3": "Pack securely",
+    "Step 4\r": "Mark order as ready\r"
+  },
+  {
+    "Store_Id": "1144",
+    "Store_name": "NEW IN TOWN",
+    "Task ID": "T845",
+    "Task Name": "Inventory Stock Take",
+    "Step 1": "Scan inventory barcode",
+    "Step 2": "Compare with system records",
+    "Step 3": "Adjust stock levels",
+    "Step 4\r": "Report discrepancies\r"
+  },
+  {
+    "Store_Id": "1144",
+    "Store_name": "NEW IN TOWN",
+    "Task ID": "T950",
+    "Task Name": "Cleaning & Maintenance",
+    "Step 1": "Sweep and mop floors",
+    "Step 2": "Sanitize surfaces",
+    "Step 3": "Dispose trash",
+    "Step 4\r": "Restock cleaning supplies\r"
+  },
+  {
+    "Store_Id": "1144",
+    "Store_name": "NEW IN TOWN",
+    "Task ID": "T1060",
+    "Task Name": "Promotional Setup",
+    "Step 1": "Retrieve promotional items",
+    "Step 2": "Set up display area",
+    "Step 3": "Place promotional signs",
+    "Step 4\r": "Update pricing in system\r"
+  },
+  {
+    "Store_Id": "1144",
+    "Store_name": "NEW IN TOWN",
+    "Task ID": "T1175",
+    "Task Name": "Loss Prevention Monitoring",
+    "Step 1": "Monitor security cameras",
+    "Step 2": "Check suspicious activity",
+    "Step 3": "Engage security if needed",
+    "Step 4\r": "Log incidents\r"
+  },
+  {
+    "Store_Id": "1144",
+    "Store_name": "NEW IN TOWN",
+    "Task ID": "T1280",
+    "Task Name": "Cart & Basket Collection",
+    "Step 1": "Gather carts and baskets",
+    "Step 2": "Inspect for damage",
+    "Step 3": "Sanitize handles",
+    "Step 4\r": "Return to designated area\r"
+  },
+  {
+    "Store_Id": "1144",
+    "Store_name": "NEW IN TOWN",
+    "Task ID": "T1395",
+    "Task Name": "New Product Arrival",
+    "Step 1": "Unload delivery truck",
+    "Step 2": "Check invoice vs shipment",
+    "Step 3": "Stock items in storage",
+    "Step 4\r": "Update inventory system\r"
+  },
+  {
+    "Store_Id": "1144",
+    "Store_name": "NEW IN TOWN",
+    "Task ID": "T1505",
+    "Task Name": "Customer Feedback Handling",
+    "Step 1": "Ask customer for feedback",
+    "Step 2": "Record concerns or praise",
+    "Step 3": "Escalate if needed",
+    "Step 4\r": "Document for review\r"
+  },
+  {
+    "Store_Id": "1144",
+    "Store_name": "NEW IN TOWN",
+    "Task ID": "T1610",
+    "Task Name": "Store Opening Preparation",
+    "Step 1": "Unlock entrance",
+    "Step 2": "Turn on lights and systems",
+    "Step 3": "Set up cash registers",
+    "Step 4\r": "Check initial stock levels\r"
+  },
+  {
+    "Store_Id": "1144",
+    "Store_name": "NEW IN TOWN",
+    "Task ID": "T1725",
+    "Task Name": "Shelf Labeling",
+    "Step 1": "Check shelf labels",
+    "Step 2": "Replace outdated labels",
+    "Step 3": "Ensure pricing accuracy",
+    "Step 4\r": "Report missing tags\r"
+  },
+  {
+    "Store_Id": "1144",
+    "Store_name": "NEW IN TOWN",
+    "Task ID": "T1840",
+    "Task Name": "Break Room Maintenance",
+    "Step 1": "Check supplies",
+    "Step 2": "Clean tables and appliances",
+    "Step 3": "Dispose of expired food",
+    "Step 4\r": "Restock utensils\r"
+  },
+  {
+    "Store_Id": "1144",
+    "Store_name": "NEW IN TOWN",
+    "Task ID": "T1955",
+    "Task Name": "Checkout Bagging",
+    "Step 1": "Ask customer preference",
+    "Step 2": "Pack items efficiently",
+    "Step 3": "Separate fragile goods",
+    "Step 4\r": "Hand over receipt\r"
+  },
+  {
+    "Store_Id": "1144",
+    "Store_name": "NEW IN TOWN",
+    "Task ID": "T2060",
+    "Task Name": "Gift Wrapping Service",
+    "Step 1": "Confirm wrapping request",
+    "Step 2": "Choose appropriate wrap",
+    "Step 3": "Wrap neatly",
+    "Step 4\r": "Attach message card"
+  }
+]

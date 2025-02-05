@@ -1,0 +1,21 @@
+﻿Aisle No,Location in Store,Nearby Sections,Distance from Entrance (m),Special Notes
+1,Entrance Area,Promotional Displays,5,"High foot traffic, seasonal deals"
+2,Front Left,Grocery,10,Close to checkout for impulse buys
+3,Front Center,Fresh Produce,12,"Open space, regularly restocked"
+4,Front Right,Bakery & Dairy,15,Refrigerated section nearby
+5,Middle Left,Frozen Foods,20,Requires frequent temperature checks
+6,Middle Center,Household Essentials,25,Cleaning & home care items
+7,Middle Right,Kitchenware,30,"Fragile section, handle with care"
+8,Back Left,Electronics,35,"High-security area, staff required"
+9,Back Center,Tech Accessories,38,Locked cabinets for high-value items
+10,Back Right,Men's Clothing,40,Clothing trial rooms nearby
+11,Rear Left,Women's Clothing,45,Seasonal collections displayed
+12,Rear Center,Kids' Clothing,50,Family shopping area
+13,Rear Right,Footwear,55,Shoe fitting benches available
+14,Side Left,Sports & Fitness,60,"Gym equipment, fitness gear"
+15,Side Center,Toys & Games,65,Popular among families & kids
+16,Side Right,Books & Stationery,70,"Quiet area, reading zone nearby"
+17,Checkout Zone,Pharmacy & Health,75,Last-minute essential items
+18,Customer Service Desk,Returns & Inquiries,78,Assistance available for customers
+19,Exit Area,Clearance Section,80,"Discounts, end-of-season sales"
+20,Storage & Backroom,Staff Only,N/A,Not accessible to customers
