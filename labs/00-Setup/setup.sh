@@ -13,7 +13,7 @@ declare -A replacements=(
     # ["<MONGODB_Name>"]="aiapp1day_daniel_66"
     # ["<MONGODB_CONNECTION_STRING>"]="mongodb+srv://aiapp1dayadmin:Aiapp1daypassword123@arg-syd-aiapp1day-mongo.global.mongocluster.cosmos.azure.com/?tls=true&authMechanism=SCRAM-SHA-256&retrywrites=false&maxIdleTimeMS=120000"
     # ["<AZURE_OPENAI_API_INSTANCE_NAME>"]="arg-syd-aiapp1day-openai"
-    # ["<AZURE_OPENAI_API_KEY>"]="e4e18d6e8fc44398b8571c9ba419bf84"
+    # ["<AZURE_OPENAI_API_KEY>"]="a30df7e6e63f424884fde2f86b2624b5"
     # ["<GRAPH_RAG_API>"]="https://arg-syd-aiapp1day-ca--miqityv.niceisland-66754352.eastus.azurecontainerapps.io"
 )
 
