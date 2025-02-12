@@ -29,9 +29,6 @@ const Layout = () => {
                             <li>
                                 <a href="/seo" >SEO</a>
                             </li>
-                            {/* <li>
-                                <a href="/search" >Search</a>
-                            </li> */}
                             <li>
                                 <a href="/automation" >Automation</a>
                             </li>

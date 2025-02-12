@@ -20,7 +20,7 @@ const Page = () => {
         }
     }
 
-    async function seoApi(url): Promise<string> {
+    async function seoApi(url: string): Promise<string> {
         // todo
         return "";
     }

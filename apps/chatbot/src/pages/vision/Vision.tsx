@@ -22,21 +22,25 @@ const Page = () => {
         }
     }
 
-    async function visionApi(text, image): Promise<string> {
+    async function visionApi(text : string, image : string): Promise<string> {
         // todo
         return "";
     }
 
-    function getBase64(event) {
-        let file = event.target.files[0];
-        let reader = new FileReader();
-        reader.readAsDataURL(file);
-        reader.onload = function () {
-            setimageBase64(reader.result);
-        };
-        reader.onerror = function (error) {
-            console.log('Error: ', error);
-        };
+    function getBase64(event: React.ChangeEvent<HTMLInputElement>) {
+        if (event.target.files) {
+            let file = event.target.files[0];
+            let reader = new FileReader();
+            reader.readAsDataURL(file);
+            reader.onload = function () {
+                if (typeof reader.result === "string") {
+                    setimageBase64(reader.result);
+                }
+            };
+            reader.onerror = function (error) {
+                console.log('Error: ', error);
+            };
+        }
     }
 
     const updateText = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -52,8 +56,10 @@ const Page = () => {
                     type="file"
                     name="myImage"
                     onChange={(event) => {
-                        setSelectedImage(event.target.files[0]);
-                        getBase64(event);
+                        if (event.target.files) {
+                            setSelectedImage(event.target.files[0]);
+                            getBase64(event);
+                        }
                     }}
                 />
                 <br />
