@@ -14,8 +14,6 @@ import Translation from "./pages/translation/Translation";
 import Vision from "./pages/vision/Vision";
 import Speech from "./pages/speech/Speech";
 import Seo from "./pages/seo/Seo";
-import Search from "./pages/search/Search";
-import Automation from "./pages/automation/Automation";
 
 var layout;
 
@@ -35,8 +33,6 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
           <Route path="/vision" element={<Vision />} />
           <Route path="/speech" element={<Speech />} />
           <Route path="/seo" element={<Seo />} />
-          <Route path="/search" element={<Search />} />
-          <Route path="/automation" element={<Automation />} />
         </Route>
       </Routes>
     </Router>

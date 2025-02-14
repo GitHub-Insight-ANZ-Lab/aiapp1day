@@ -29,12 +29,6 @@ const Layout = () => {
                             <li>
                                 <a href="/seo" >SEO</a>
                             </li>
-                            {/* <li>
-                                <a href="/search" >Search</a>
-                            </li> */}
-                            <li>
-                                <a href="/automation" >Automation</a>
-                            </li>
                         </ul>
                     </nav>
                     <h4 className={styles.headerRightText}>AI App in 1 Day</h4>

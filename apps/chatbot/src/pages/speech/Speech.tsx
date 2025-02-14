@@ -8,8 +8,8 @@ const Page = () => {
 
     const { promiseInProgress } = usePromiseTracker();
     const [speechText, setSpeechText] = useState<string>();
-    const synthesizer = React.useRef(null);
-    const speechConfig = React.useRef(null);
+    const synthesizer = React.useRef<sdk.SpeechSynthesizer | null>(null);
+    const speechConfig = React.useRef<sdk.SpeechConfig | null>(null);
 
     useEffect(() => {
         const speech_key = '44044fcc5f2d44b19c9b97be6161883c';
@@ -30,7 +30,7 @@ const Page = () => {
             trackPromise(
                 speechApi(speechText)
             ).then((res) => {
-                setTranslatedText(res);
+                
             }
             )
         }

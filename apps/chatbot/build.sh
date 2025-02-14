@@ -3,3 +3,4 @@ echo "export const BACKEND_URI = '$APPSETTING_API_ENDPOINT';" > ./src/api/BACKEN
 NODE_OPTIONS='--max_old_space_size=16384'
 
 tsc && vite build
+#  npx vite build
