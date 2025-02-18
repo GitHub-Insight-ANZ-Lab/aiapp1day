@@ -11,6 +11,7 @@
   "dependencies": {
     "@azure/openai": "1.0.0-beta.11",
     "@langchain/community": "0.0.32",
+    "axios": "^1.7.9",
     "cors": "^2.8.5",
     "dotenv": "16.4.4",
     "langchain": "0.1.21",
