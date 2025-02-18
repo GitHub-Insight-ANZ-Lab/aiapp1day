@@ -149,6 +149,8 @@ async function buildAgentExecutor() {
                     Returns the product name, sku and feedback in text format.
                     If the product is not found, returns null.`,
         func: async (input) => {
+            
+            console.log('Graph RAG API.');
             const url = `${graphRagAPI}/query/global`;
             const requestBody = {
                 index_name: "bike",
@@ -157,6 +159,7 @@ async function buildAgentExecutor() {
             };
             
             const response = await axios.post(url, requestBody, {});
+            console.log(response);
             return response.data.result;
         },
     });
