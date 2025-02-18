@@ -12,6 +12,7 @@ const { ChatOpenAI, OpenAIEmbeddings } = require("@langchain/openai");
 const { AzureCosmosDBVectorStore } = require("@langchain/community/vectorstores/azure_cosmosdb");
 
 var dbname = process.env.MONGODB_Name;
+var graphRagAPI = process.env.GRAPH_RAG_API;
 
 class ContosoBikeStoreAgent {
     constructor() {
@@ -136,9 +137,30 @@ class ContosoBikeStoreAgent {
             },
         });
 
+        const productFeedbackTool = new DynamicTool({
+            name: "product_feedback_lookup_tool",
+            description: `Searches Contoso Bike Store feedback based on the question.
+                        Returns the product name, sku and feedback in text format.
+                        If the product is not found, returns null.`,
+            func: async (input) => {
+                
+                console.log('Graph RAG API.');
+                const url = `${graphRagAPI}/query/global`;
+                const requestBody = {
+                    index_name: "bike",
+                    query: `whats the top 2 products based on:  ${input}?`,
+                    community_level: 1
+                };
+                
+                const response = await axios.post(url, requestBody, {});
+                console.log(response);
+                return response.data.result;
+            },
+        });
+
         // Generate OpenAI function metadata to provide to the LLM
         // The LLM will use this metadata to decide which tool to use based on the description.
-        const tools = [productsRetrieverTool, productLookupTool];
+        const tools = [productsRetrieverTool, productLookupTool, productFeedbackTool];
         const modelWithFunctions = this.chatModel.bind({
             functions: tools.map((tool) => convertToOpenAIFunction(tool)),
         });
