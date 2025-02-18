@@ -14,7 +14,7 @@ declare -A replacements=(
     # ["<MONGODB_CONNECTION_STRING>"]="mongodb+srv://aiapp1dayadmin:Aiapp1daypassword123@arg-syd-aiapp1day-mongo.global.mongocluster.cosmos.azure.com/?tls=true&authMechanism=SCRAM-SHA-256&retrywrites=false&maxIdleTimeMS=120000"
     # ["<AZURE_OPENAI_API_INSTANCE_NAME>"]="arg-syd-aiapp1day-openai"
     # ["<AZURE_OPENAI_API_KEY>"]="a30df7e6e63f424884fde2f86b2624b5"
-    # ["<GRAPH_RAG_API>"]="https://arg-syd-aiapp1day-ca--miqityv.niceisland-66754352.eastus.azurecontainerapps.io"
+    # ["<GRAPH_RAG_API>"]="https://arg-syd-aiapp1day-ca.ashycoast-2c2322dd.eastus.azurecontainerapps.io"
 )
 
 # Check if parent directory exists
