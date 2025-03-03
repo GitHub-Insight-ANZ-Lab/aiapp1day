@@ -99,7 +99,7 @@ The `product` data set is located in the `data\product.csv` file. It has the fol
 
 5. It seems `price` field is a string rather than float. The datatype is important, Lets correct it.
 
-6. To convert the price tag to a float in the JSON file, head back to the _convert.js_ file and modify the code as follows:
+6. To convert the price tag to a float in the JSON file, head back to the _convert.js_ file and modify the code as below in line 21-27:
 
    ```javascript
    if (header === "tags") {
