@@ -153,7 +153,7 @@ We'll also define a reusable RAG chain to control the flow and behavior of the c
    }
    ```
 
-3. In the `require("@langchain/openai")` import statement, add the `ChatOpenAI` class that will be used to interact with the LLM.
+3. Below `require("@langchain/community/vectorstores/azure_cosmosdb")` import statement, add below class that will be used to interact with the LLM.
 
    ```javascript
    const { OpenAIEmbeddings, ChatOpenAI } = require("@langchain/openai");

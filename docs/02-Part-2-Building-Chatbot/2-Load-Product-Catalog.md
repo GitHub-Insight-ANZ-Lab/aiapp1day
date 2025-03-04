@@ -99,7 +99,7 @@ The `product` data set is located in the `data\product.csv` file. It has the fol
 
 5. It seems `price` field is a string rather than float. The datatype is important, Lets correct it.
 
-6. To convert the price tag to a float in the JSON file, head back to the _convert.js_ file and modify the code as follows:
+6. To convert the price tag to a float in the JSON file, head back to the _convert.js_ file and modify the code as below in line 21-27:
 
    ```javascript
    if (header === "tags") {
@@ -111,9 +111,6 @@ The `product` data set is located in the `data\product.csv` file. It has the fol
    } else {
      obj[header] = values[index];
    }
-
-   // as well as the following
-   const jsonFilePath = path.join(rootDir, "product2.json");
    ```
 
 7. Execute the code again and compare the two JSON files once more.
@@ -128,7 +125,7 @@ There are multiple options available for performing bulk operations in Cosmos DB
 
 1. Open the `import.js` file, and add the following code after the code block `const db = client.db(dbname);`. The code below is to be within the try-catch block.
 
-   This will read the `product2.json` file and load the data into the `productRawData` variable. Product2.json file is used as it contains the fixes we made for _price_ field. The database collection for `product` is also initialized. Note that MongoDB will create the collections if they do not already exist.
+   This will read the `product.json` file and load the data into the `productRawData` variable. product.json file is used as it contains the fixes we made for _price_ field. The database collection for `product` is also initialized. Note that MongoDB will create the collections if they do not already exist.
 
    ```javascript
    // Load product data
@@ -137,11 +134,11 @@ There are multiple options available for performing bulk operations in Cosmos DB
    const productCollection = db.collection("products");
 
    // Define the path to the local JSON file
-   const jsonFilePath = path.join("data", "product2.json");
+   const jsonFilePath = path.join("data", "product.json");
 
    // Read the JSON file
    const productRawData = fs.readFileSync(
-     path.join("data", "product2.json"),
+     path.join("data", "product.json"),
      "utf8"
    );
    const productData = JSON.parse(productRawData).map((prod) =>
