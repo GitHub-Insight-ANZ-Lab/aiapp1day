@@ -238,11 +238,11 @@ The `Customer` and `Sales` data is in the `custSalesData.json` file. We will be 
 
    ![alt text](images/rag_load_data_image-6.png)
 
-2. Add a connection to the data.
+2. Locate `MongoDb` extension icon in the left navigation bar, it looks like a leaf icon. Once opened, let's add a connection to the database. Click on `Connect` icon, copy CosmosDb connection string to the top textbox in VS Code. 
 
    ![alt text](images/rag_load_data_image-2.png)
 
-3. Browse the json records in the product and customer table.
+3. Click on the first item in the `Connections` tab, and locate your own database. Then you can browse the json records in the `product` and `customer` table by expending it.
 
    ![alt text](images/rag_load_data_image-7.png)
 
