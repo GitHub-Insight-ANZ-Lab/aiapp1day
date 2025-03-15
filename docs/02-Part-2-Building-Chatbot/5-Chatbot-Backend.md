@@ -42,12 +42,12 @@ When developing a backend api, it is often useful to run the application locally
    npm run dev
    ```
 
-3. Open a browser and navigate to http://localhost:5000/docs to view the Swagger UI.
+3. Open a browser and navigate to http://localhost:5000/docs to view the Swagger UI. If you are using `codespaces`, refer to the note below. In the newly opened browser, add `/docs` to the url in the address bar to open swagger interface.
 
    ![The Swagger UI displays for the locally running backend api](images/local_backend_swagger_ui.png "Local backend api Swagger UI")
 
    :::info
-   If you are running the `codespaces` in web browser, please use the codespaces generated url. You shall see `Open in browser` button asking if you want to open the site in browser. If you missed the button, go to `PORTS` tab to find it.
+   If you are running the `codespaces` in web browser, please use the codespaces generated url. You shall see `Open in browser` button asking if you want to open the site in browser. If you missed the button, go to `PORTS` tab to find it. In the newly opened browser, add `/docs` to the url in the address bar to open swagger interface.
 
    The url would look similiar to: https://ominous-space-goldfish-v6vv749557wjfxj99-5000.app.github.dev/docs/
 
