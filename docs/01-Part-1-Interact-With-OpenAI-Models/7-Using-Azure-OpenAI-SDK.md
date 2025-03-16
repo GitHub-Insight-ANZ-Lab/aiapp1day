@@ -8,36 +8,39 @@ In this lab, you will learn how to use the Azure OpenAI SDK to interact with Azu
 
 ## Setup Node.js project
 
-1. Open `Terminal` in VS code. **Create** a new directory `labs/01-LAB-01/7-Using-Azure-OpenAI-SDK/openai-nodejs` and navigate to the directory:
+1. Open a new `Terminal` window in VS code. 
+
+![alt text](images/openterminal.png)
+
+2. **Create** a new directory `labs/01-LAB-01/7-Using-Azure-OpenAI-SDK/openai-nodejs` and navigate to the directory.
 
 ```bash
 cd labs/01-LAB-01/7-Using-Azure-OpenAI-SDK
 mkdir openai-nodejs
 cd openai-nodejs
 ```
-
 ![alt text](images/creatfolder.png)
 
-2. Run the following command to create a new Node.js project:
+3. Run the following command to create a new Node.js project:
 
 ```bash
 npm init -y
 ```
 
-3. When integrating Azure OpenAI service in a solution written in Node.js, the OpenAI NPM client library is used.
+4. When integrating Azure OpenAI service in a solution written in Node.js, the OpenAI NPM client library is used.
    Install the latest openai client library using `npm`:
 
 ```bash
 npm install @azure/openai@1.0.0-beta.11
 ```
 
-4. Locate `openai-nodejs` folder in VS code `Explorer`. Create a new `app.js` file for the Node.js program using the `+` icon or `File -> New Text File -> Save`. Then add the following variable definition to the `app.js` file using `require` to use the OpenAI library.
+5. Locate `openai-nodejs` folder in VS code `Explorer`. Create a new `app.js` file for the Node.js program using the `+` icon or `File -> New Text File -> Save`. Then add the following variable definition to the `app.js` file using `require` to use the OpenAI library.
 
 ```javascript
 const { OpenAIClient, AzureKeyCredential } = require("@azure/openai");
 ```
 
-5. Create the Azure OpenAI client to call the Azure OpenAI Chat completion API. Have a look at Azure OpenAI service endpoint and Azure OpenAI service key in the code below. Please copy below Javascript code into `app.js` below earlier block.
+6. Create the Azure OpenAI client to call the Azure OpenAI Chat completion API. Have a look at Azure OpenAI service endpoint and Azure OpenAI service key in the code below. Please copy below Javascript code into `app.js` below earlier block.
 
 ```javascript
   const client = new OpenAIClient(
@@ -46,14 +49,13 @@ const { OpenAIClient, AzureKeyCredential } = require("@azure/openai");
   );
 ```
 
-Azure OpenAI service endpoint is in the format of `https://<AZURE_OPENAI_API_INSTANCE_NAME>.openai.azure.com/`, for example, `https://arg-syd-aiapp1day-openai.openai.azure.com`. If not sure about the value of AZURE_OPENAI_API_INSTANCE_NAME, please refer to `Lab Setup` step.
+7. Please edit the placeholder string to the right value. Azure OpenAI service endpoint is in the format of `https://<AZURE_OPENAI_API_INSTANCE_NAME>.openai.azure.com/`, for example, `https://arg-syd-aiapp1day-openai.openai.azure.com`. If not sure about the value of AZURE_OPENAI_API_INSTANCE_NAME, please refer to `Lab Setup` step.
 
 :::info
 More information on the Azure OpenAI client methods can be found in the [@azure/openai package](https://learn.microsoft.com/en-us/javascript/api/%40azure/openai/?view=azure-node-preview) documentation. 
 :::
 
-
-5. Once the Azure OpenAI client has been created, the next step is to call the `.getCompletions` method on the client to perform a chat completion.
+8. Once the Azure OpenAI client has been created, the next step is to call the `.getCompletions` method on the client to perform a chat completion.
 
 ```javascript
 const chatResponse = client.getChatCompletions("completions", [
@@ -61,7 +63,7 @@ const chatResponse = client.getChatCompletions("completions", [
 ]);
 ```
 
-6. Print the response from Azure OpenAI to the console.
+9. Print the response from Azure OpenAI to the console.
 
 ```javascript
 chatResponse
@@ -73,7 +75,7 @@ chatResponse
   .catch((err) => console.log(`Error: ${err}`));
 ```
 
-6. Open terminal window in VS code, and run below command. You should see the response from the Azure OpenAI service in the console.
+10. Open terminal window in VS code, and run below command. You should see the response from the Azure OpenAI service in the console.
 
 ```
 node app.js
