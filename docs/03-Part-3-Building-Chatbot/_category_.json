@@ -2,6 +2,6 @@
     "position": 20,
     "label": "LAB 3 - Building a Chatbot using RAG",
     "collapsible": true,
-    "collapsed": false,
+    "collapsed": true,
     "className": "red"
 }

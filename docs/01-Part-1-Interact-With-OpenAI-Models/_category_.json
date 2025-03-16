@@ -2,6 +2,6 @@
   "position": 4,
   "label": "LAB 1 - Interact with OpenAI Models",
   "collapsible": true,
-  "collapsed": false,
+  "collapsed": true,
   "className": "red"
 }
