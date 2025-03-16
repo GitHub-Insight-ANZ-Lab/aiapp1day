@@ -16,10 +16,12 @@ By the end of this lab, you should be able to:
 
 The lab is organized into two parts. The first part focuses on understanding the basics of interacting with OpenAI models. You will be exploring the various prompt techniques and understanding how to guide the models to create better answers. The second part focuses on building a chatbot using the concepts learned in the first part. You will be using the Azure OpenAI Service and bringing in external knowledge using RAG (Retrieval Augmented Generation) to answer questions based on the knowledge base provided.
 
-1. [Setup Instructions](/01-Lab-Setup.mdx). Set up your development environment.
-2. [LAB 1 - Interact with Open AI Models](/01-Part-1-Interact-With-OpenAI-Models/0-Getting-Started.md). Learn the basics of interacting with the GPT Models and how to guide the models to create better answers.
-3. [LAB 2 - Building Chatbot](/02-Part-2-Building-Chatbot/0-Getting-Started.md). Implement RAG (Retrieval Augmented Generation) to bring in external knowledge for the solution.
-4. [Additional Resources](/03-Additional-Resources/1-Explore-Models.md). Additional resources to help you learn more about Azure OpenAI Service.
+- [Setup Instructions](/01-Lab-Setup.mdx). Set up your development environment.
+- [LAB 1 - Interact with Open AI Models](/01-Part-1-Interact-With-OpenAI-Models/0-Getting-Started.md). Learn the basics of interacting with the GPT Models and how to guide the models to create better answers.
+- [LAB 2 - Graph RAG](/02-Part-2-Graph-RAG/0-Getting-Started.md). Explore Graph RAG from Microsoft Research using Jupyter Notebook.
+- [LAB 3 - Building Chatbot](/03-Part-3-Building-Chatbot/0-Getting-Started.md). Implement RAG (Retrieval Augmented Generation) to bring in external knowledge for the solution.
+- [Home Challenges](/04-Home-Challenges/0-Problem-Statement.md). Additional resources to help you learn more about Azure OpenAI Service.
+- [Additional Resources](/10-Additional-Resources/1-Explore-Models.md). Additional resources to help you learn more about Azure OpenAI Service.
 
 ## Learner Feedback
 

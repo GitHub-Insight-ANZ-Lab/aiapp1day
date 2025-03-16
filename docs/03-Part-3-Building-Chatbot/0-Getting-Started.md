@@ -43,17 +43,17 @@ The product catalog for the bicycle store is stored in Azure Cosmos DB database.
 
 ## Lab Outline
 
-1. [Azure Deployment Guide](/02-Part-2-Building-Chatbot/1-Azure-Deployment.md): **The Azure resources required for this lab have already been provisioned for you.** If you would like to provision the resources on your own subscription, follow the instructions on the [Azure Deployment Guide](/02-Part-2-Building-Chatbot/1-Azure-Deployment.md) page.
+1. [Azure Deployment Guide](/03-Part-3-Building-Chatbot/1-Azure-Deployment.md): **The Azure resources required for this lab have already been provisioned for you.** If you would like to provision the resources on your own subscription, follow the instructions on the [Azure Deployment Guide](/03-Part-3-Building-Chatbot/1-Azure-Deployment.md) page.
 
-2. [Loading Product Catalog](/02-Part-2-Building-Chatbot/2-Load-Product-Catalog.md): The first step in building the chatbot is to load some sample data into the Azure Cosmos DB database to build a product catalog.
+2. [Loading Product Catalog](/03-Part-3-Building-Chatbot/2-Load-Product-Catalog.md): The first step in building the chatbot is to load some sample data into the Azure Cosmos DB database to build a product catalog.
 
-3. [Vector Search with Azure Cosmos DB](/02-Part-2-Building-Chatbot/3-Vector-Search.md): Use text embeddings to perform vector search in Azure Cosmos DB.
+3. [Vector Search with Azure Cosmos DB](/03-Part-3-Building-Chatbot/3-Vector-Search.md): Use text embeddings to perform vector search in Azure Cosmos DB.
 
-4. [Workflow Orchestration using LangChain](/02-Part-2-Building-Chatbot/4-Using-Langchain.md): Use LangChain to orchestrate the workflow of querying Azure Cosmos DB and Azure OpenAI services.
+4. [Workflow Orchestration using LangChain](/03-Part-3-Building-Chatbot/4-Using-Langchain.md): Use LangChain to orchestrate the workflow of querying Azure Cosmos DB and Azure OpenAI services.
 
-5. [Chatbot Backend API](/02-Part-2-Building-Chatbot/5-Chatbot-Backend.md): Build the Node.js backend API to expose the Azure Open AI functionality.
+5. [Chatbot Backend API](/03-Part-3-Building-Chatbot/5-Chatbot-Backend.md): Build the Node.js backend API to expose the Azure Open AI functionality.
 
-6. [Chatbot Frontend](/02-Part-2-Building-Chatbot/6-Chatbot-Frontend.md): Connect Chatbot Frontend with the Backend API.
+6. [Chatbot Frontend](/03-Part-3-Building-Chatbot/6-Chatbot-Frontend.md): Connect Chatbot Frontend with the Backend API.
 
 ## Deployment Architecture
 
