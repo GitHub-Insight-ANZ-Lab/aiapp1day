@@ -18,7 +18,7 @@ The lab is organized into two parts. The first part focuses on understanding the
 
 - [Setup Instructions](/01-Lab-Setup.mdx). Set up your development environment.
 - [LAB 1 - Interact with Open AI Models](/01-Part-1-Interact-With-OpenAI-Models/0-Getting-Started.md). Learn the basics of interacting with the GPT Models and how to guide the models to create better answers.
-- [LAB 2 - Graph RAG](/02-Part-2-Graph-RAG/0-Getting-Started.md). Explore Graph RAG from Microsoft Research using Jupiter Notebook.
+- [LAB 2 - Graph RAG](/02-Part-2-Graph-RAG/0-Getting-Started.md). Explore Graph RAG from Microsoft Research using Jupyter Notebook.
 - [LAB 3 - Building Chatbot](/03-Part-3-Building-Chatbot/0-Getting-Started.md). Implement RAG (Retrieval Augmented Generation) to bring in external knowledge for the solution.
 - [Home Challenges](/04-Home-Challenges/0-Problem-Statement.md). Additional resources to help you learn more about Azure OpenAI Service.
 - [Additional Resources](/10-Additional-Resources/1-Explore-Models.md). Additional resources to help you learn more about Azure OpenAI Service.
