@@ -16,7 +16,9 @@
 		  "ms-azuretools.vscode-azureappservice",
 		  "ms-azuretools.vscode-bicep",
 		  "github.copilot-chat",
-		  "github.copilot"
+		  "github.copilot",
+          "ms-python.python",
+          "ms-toolsai.jupyter"
 		]
 	  }
 	}

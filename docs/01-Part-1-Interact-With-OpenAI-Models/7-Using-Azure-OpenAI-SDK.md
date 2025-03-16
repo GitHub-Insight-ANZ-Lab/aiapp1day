@@ -31,19 +31,13 @@ npm init -y
 npm install @azure/openai@1.0.0-beta.11
 ```
 
-4. Locate `openai-nodejs` folder in VS code `Explorer`. Create a new `app.js` file for the Node.js program, and add the following variable definition using `require` to use the OpenAI library.
+4. Locate `openai-nodejs` folder in VS code `Explorer`. Create a new `app.js` file for the Node.js program using the `+` icon or `File -> New Text File -> Save`. Then add the following variable definition to the `app.js` file using `require` to use the OpenAI library.
 
 ```javascript
 const { OpenAIClient, AzureKeyCredential } = require("@azure/openai");
 ```
 
-5. Create the Azure OpenAI client to call the Azure OpenAI Chat completion API. Have a look at Azure OpenAI service endpoint and Azure OpenAI service key in the code below. Azure OpenAI service endpoint is in the format of `https://<AZURE_OPENAI_API_INSTANCE_NAME>.openai.azure.com/`, for example, `https://arg-syd-aiapp1day-openai.openai.azure.com`. If not sure about the value of AZURE_OPENAI_API_INSTANCE_NAME, please refer to `Lab Setup` step.
-
-Then copy below Javascript code into `app.js`.
-
-:::info
-More information on the Azure OpenAI client methods can be found in the [@azure/openai package](https://learn.microsoft.com/en-us/javascript/api/%40azure/openai/?view=azure-node-preview) documentation. 
-:::
+5. Create the Azure OpenAI client to call the Azure OpenAI Chat completion API. Have a look at Azure OpenAI service endpoint and Azure OpenAI service key in the code below. Please copy below Javascript code into `app.js` below earlier block.
 
 ```javascript
   const client = new OpenAIClient(
@@ -51,6 +45,13 @@ More information on the Azure OpenAI client methods can be found in the [@azure/
     new AzureKeyCredential("<AZURE_OPENAI_API_KEY>")
   );
 ```
+
+Azure OpenAI service endpoint is in the format of `https://<AZURE_OPENAI_API_INSTANCE_NAME>.openai.azure.com/`, for example, `https://arg-syd-aiapp1day-openai.openai.azure.com`. If not sure about the value of AZURE_OPENAI_API_INSTANCE_NAME, please refer to `Lab Setup` step.
+
+:::info
+More information on the Azure OpenAI client methods can be found in the [@azure/openai package](https://learn.microsoft.com/en-us/javascript/api/%40azure/openai/?view=azure-node-preview) documentation. 
+:::
+
 
 5. Once the Azure OpenAI client has been created, the next step is to call the `.getCompletions` method on the client to perform a chat completion.
 

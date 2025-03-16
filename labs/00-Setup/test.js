@@ -29,7 +29,7 @@ async function main() {
         // const adminDb = client.db().admin();
         // const databases = await adminDb.listDatabases();
         // console.log('Databases:');
-        // databases.databases.forEach(db => console.log(` - ${db.name}`));
+        // databases.databases.forEach(db => console.log(` await client.db('${db.name}').dropDatabase(); `));
         // await client.db('aiapp1day_daniel').dropDatabase();
 
     } catch (err) {
