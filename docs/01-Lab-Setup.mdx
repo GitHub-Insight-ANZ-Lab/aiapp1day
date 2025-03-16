@@ -6,9 +6,7 @@ slug: /lab-setup
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-## Lab Environment
-
-## Source Code Repository
+## Lab Code Repository
 
 The source code for the labs is hosted on GitHub. You can access the repository using the following link:
 https://github.com/GitHub-Insight-ANZ-Lab/aiapp1day
@@ -19,7 +17,7 @@ The repository contains the following folders:
 - Node.js Backend API: `~/apps/backend`
 - Frontend Web App: `~/apps/chatbot`
 
-## Lab Setup
+## Lab Environment Setup
 
 <Tabs>
   <TabItem value="codespaces" label="GitHub Codespaces (Recommended)" default>
@@ -86,19 +84,80 @@ Once restarted, search `Windows Sandbox` in `Start` button.
   </TabItem>
 </Tabs>
 
-## Azure Deployment
 
-The Azure Resources required for the labs have already been provisioned.
+## Lab Configuration & Verify Connection
 
-The details of the shared Azure resources are provided in the table below. You will need these details to connect to the Azure services during the labs.
+Let us test the connection to Cosmos DB instance and OpenAI service.
 
+1.  Open VS Code and navigate to the `aiapp1day` repository folder. If you are using Codespaces, you should already be in the repository folder.
+
+2.  Navigate to the setup folder `~/labs/00-Setup/` within the repository. Go to `Terminal` window in VS Code.
+    ```bash
+    cd labs/00-Setup/
+    ```
+
+3.  Open `setup.sh`, let's update `<MONGODB_Name>` setting with your own database name. Replace `add_value` with `aiapp1day_xxxxx_xx` (for example: aiapp1day_daniel_66).
+
+    :::info
+    if you are deploying your own Azure resources (optional), please update keys and connection string with your own.
+    :::
+
+    ![edit setting](images/edit-settings.png)
+
+
+4.  Update `<MONGODB_CONNECTION_STRING>` with `mongodb+srv://aiapp1dayadmin:Aiapp1daypassword123@arg-syd-aiapp1day-mongo.global.mongocluster.cosmos.azure.com/?tls=true&authMechanism=SCRAM-SHA-256&retrywrites=false&maxIdleTimeMS=120000`
+
+5.  Update `<AZURE_OPENAI_API_INSTANCE_NAME>` with `arg-syd-aiapp1day-openai`
+
+6.  Update `<AZURE_OPENAI_API_KEY>` with `a30df7e6e63f424884fde2f86b2624b5`
+
+7.  Update `<GRAPH_RAG_API>` with `https://arg-syd-aiapp1day-ca.ashycoast-2c2322dd.eastus.azurecontainerapps.io`
+
+8.  Go to terminal windows and run below bash command to replace all variables in the repo. 
+
+    ```bash
+    chmod +x setup.sh
+    ./setup.sh
+    ```
+
+    :::info
+    If you have issue running above script, you can also carry out variable replacement manually. 
+    - Switch to VS Code `Search` tab, replace `<MONGODB_Name>` placeholder with your own database name. 
+    - Search for `<MONGODB_Name>` and replace with `aiapp1day_xxxxx_xx` (for example: aiapp1day_daniel_66). 
+    - Then click `Replace All` icon, there will be multiple items to be replaced. The placeholder string will be replaced in the whole repo so that you have a dedicated database on the shared Cosmos DB instance.
+
+    ![alt text](images/setup.png)
+    :::
+
+9.  Install node packages for test program.
+
+    ```bash
+    npm install
+    ```
+
+10.  Test Connection to CosMos Db and OpenAI service. Run the following command in the terminal window to execute the script:
+
+    ```bash
+    node test.js
+    ```
+
+11.  If you see below message in the console, you are ready to go! otherwise, please `Raise your hand and ask for help`. Note, you do not need to commit any changes of the `.env` files to Git repo.
+
+    ![alt text](images/setup-test.png)
+
+
+## Azure Resources & Deployment
+
+The Azure Resources required for the labs have already been provisioned. The details of the shared Azure resources are provided in the table below. You will need these details to connect to the Azure services during the labs.
+
+:::info
 If you have an Azure Subscription, you can provision these resources yourself using the instructions and `bicep` files provided on the `Azure Deployment Guide` page. However, this is optional.
 
 You can also create a free Azure account with $200 credit to use on Azure services within 30 days. If you are a Visual Studio subscriber, you can activate monthly Azure credits. Refer to the links below for more information.
 
-https://azure.microsoft.com/en-au/pricing/purchase-options/azure-account?icid=azurefreeaccount
-
-https://azure.microsoft.com/en-au/pricing/member-offers/credit-for-visual-studio-subscribers
+- https://azure.microsoft.com/en-au/pricing/purchase-options/azure-account?icid=azurefreeaccount
+- https://azure.microsoft.com/en-au/pricing/member-offers/credit-for-visual-studio-subscribers
+:::
 
 ### Azure AI Proxy Playground
 
@@ -146,67 +205,3 @@ API keys and connection details will be reset after the lab session.
 | Translator Service | https://api.cognitive.microsofttranslator.com/translate?api-version=3.0&to=xx&from=xx | 8a2c06f38dc2447da606bfe49bd78db1 |
 | Speech Service | https://eastus.api.cognitive.microsoft.com/ | 274f545088c54f689ef7c04496488864 (region: eastus) |
 
-
-## Configure the Lab Environment & Verify Connection
-
-Let us test the connection to Cosmos DB instance and OpenAI service.
-
-1.  Open VS Code and navigate to the `aiapp1day` repository folder. If you are using Codespaces, you should already be in the repository folder.
-
-2.  Navigate to the setup folder `~/labs/00-Setup/` within the repository. Go to `Terminal` window in VS Code.
-    ```bash
-    cd labs/00-Setup/
-    ```
-
-3.  Open `setup.sh`, let's update `<MONGODB_Name>` setting with your own database name. Replace `add_value` with `aiapp1day_xxxxx_xx` (for example: aiapp1day_daniel_66).
-
-    ![edit setting](images/edit-settings.png)
-
-    :::info
-    if you are deploying your own Azure resources, please update above shared keys and connection string with your own.
-    :::
-
-4.  Update `<MONGODB_CONNECTION_STRING>` with `mongodb+srv://aiapp1dayadmin:Aiapp1daypassword123@arg-syd-aiapp1day-mongo.global.mongocluster.cosmos.azure.com/?tls=true&authMechanism=SCRAM-SHA-256&retrywrites=false&maxIdleTimeMS=120000`
-
-5.  Update `<AZURE_OPENAI_API_INSTANCE_NAME>` with `arg-syd-aiapp1day-openai`
-
-6.  Update `<AZURE_OPENAI_API_KEY>` with `a30df7e6e63f424884fde2f86b2624b5`
-
-7.  Update `<GRAPH_RAG_API>` with `https://arg-syd-aiapp1day-ca.ashycoast-2c2322dd.eastus.azurecontainerapps.io`
-
-8.  Go to terminal windows and run below bash command to replace all variables in the repo.
-
-    ```bash
-    chmod +x setup.sh
-    ./setup.sh
-    ```
-
-    :::info
-    **Remember to not commit any changes to the .env files**. Please notify the lab supervisors if you have done so by raising your hand.
-
-    If you have issue running above script, you can also carry out variable replacement manually. 
-    
-    Switch to VS Code `Search` tab, replace `<MONGODB_Name>` placeholder with your own database name. 
-    
-    Search for `<MONGODB_Name>` and replace with `aiapp1day_xxxxx_xx` (for example: aiapp1day_daniel_66). 
-    
-    Then click `Replace All` icon, there will be multiple items to be replaced. The placeholder string will be replaced in the whole repo so that you have a dedicated database on the shared Cosmos DB instance.
-
-    ![alt text](images/setup.png)
-    :::
-
-9.  Install node packages for test program.
-
-    ```bash
-    npm install
-    ```
-
-10.  Test Connection to CosMos Db and OpenAI service. Run the following command in the terminal window to execute the script:
-
-    ```bash
-    node test.js
-    ```
-
-11.  If you see below message in the console, you are ready to go! otherwise, please `Raise your hand and ask for help`.
-
-    ![alt text](images/setup-test.png)
