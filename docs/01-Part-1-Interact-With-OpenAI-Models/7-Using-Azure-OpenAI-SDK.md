@@ -58,6 +58,7 @@ More information on the Azure OpenAI client methods can be found in the [@azure/
 8. Once the Azure OpenAI client has been created, the next step is to call the `.getCompletions` method on the client to perform a chat completion.
 
 ```javascript
+// Block Reference 1
 const chatResponse = client.getChatCompletions("completions", [
   { role: "user", content: "What are the different types of road bikes?" },
 ]);
@@ -66,13 +67,14 @@ const chatResponse = client.getChatCompletions("completions", [
 9. Print the response from Azure OpenAI to the console.
 
 ```javascript
+// Block Reference 2
 chatResponse
   .then((result) => {
     for (const choice of result.choices) {
       console.log(choice.message.content);
     }
   })
-  .catch((err) => console.log(`Error: ${err}`));
+  .catch((err) => console.log(`Error: ${JSON.stringify(err)}`));
 ```
 
 10. Open terminal window in VS code, and run below command. You should see the response from the Azure OpenAI service in the console.
@@ -85,9 +87,10 @@ Try the other examples in the next sections to see how you can interact with Azu
 
 ## System Message
 
-You can set the system message to provide context to the conversation. The system message can be set using the `role: "system"`. If you see an error saying `variable already exists or defined`, please replace the code in earlier step with new code block.
+You can set the system message to provide context to the conversation. The system message can be set using the `role: "system"`. If you see an error saying `variable already exists or defined`, please replace the previous code block `Block Reference 1` with new code block below.
 
 ```javascript
+// Block Reference 1
 const chatResponse = client.getChatCompletions("completions", [
   {
     role: "system",
@@ -100,9 +103,10 @@ const chatResponse = client.getChatCompletions("completions", [
 
 ## Conversation History
 
-You can send previous chat history to the model as part of the conversation. This can help the model provide more accurate responses.
+You can send previous chat history to the model as part of the conversation. This can help the model provide more accurate responses. Replace the previous code block `Block Reference 1` in earlier step with new code block below.
 
 ```javascript
+// Block Reference 1
 const chatResponse = client.getChatCompletions("completions", [
   {
     role: "system",
@@ -128,7 +132,7 @@ You can call a function from the model to perform a specific task. The available
 
 In the following example, the model calls the `search_bike` function to retrieve bikes from the search index based on the location, company, and model of the bike. 
 
-1. Add the function `searchBikeStore` in `app.js` file:
+1. Add the function `searchBikeStore` in `app.js` file below `const client = new OpenAIClient` code block.
 
 ```javascript
 const searchBikeStore = {
@@ -153,11 +157,7 @@ const searchBikeStore = {
     required: ["location"],
   },
 };
-```
 
-2. Call the chat completions API, by passing the `searchBikeStore` function.
-
-```javascript
 const options = {
     tools: [
         {
@@ -167,6 +167,12 @@ const options = {
     ],
 };
 
+```
+
+2. Call the chat completions API, by passing the `searchBikeStore` function. Replace the previous code block `Block Reference 1` in earlier step with new code block below.
+
+```javascript
+// Block Reference 1
 const chatResponse = client.getChatCompletions("completions", [
     {
         role: "system",
@@ -181,7 +187,7 @@ const chatResponse = client.getChatCompletions("completions", [
 ], options);
 ```
 
-3. The response message includes one or more "tool calls" that must be resolved via "tool messages". Add the following function to handle the request from the model to invoke the function.
+3. The response message includes one or more `tool calls` that must be resolved via `tool messages`. Add the following function to handle the request from the model to invoke the function below `const chatResponse = client.getChatCompletions` code block.
 
 ```javascript
 // Purely for convenience and clarity, this function handles tool call responses.
@@ -200,10 +206,10 @@ function applyToolCall({ function: call, id }) {
 }
 ```
 
-4. Print the final response from the tool call to the console. In some cases, you may need to send the response from the tool back to the model along with the original conversation history to get the final response.
+4. Print the final response from the tool call to the console. In some cases, you may need to send the response from the tool back to the model along with the original conversation history to get the final response. Replace the previous code block `Block Reference 2` in earlier step with new code block below.
 
 ```javascript
-
+// Block Reference 2
 chatResponse
     .then(async (result) => {
 
@@ -235,7 +241,13 @@ chatResponse
             }
         }
     })
-    .catch((err) => console.log(`Error: ${err}`));
+    .catch((err) => console.log(`Error: ${JSON.stringify(err)}`));
+```
+
+5. Run below command to execute the code.
+
+```
+node app.js
 ```
 
 :::tip

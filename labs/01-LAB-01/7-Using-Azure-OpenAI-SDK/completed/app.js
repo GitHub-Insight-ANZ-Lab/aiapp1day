@@ -1,42 +1,9 @@
 const { OpenAIClient, AzureKeyCredential } = require("@azure/openai");
 
 const client = new OpenAIClient(
-    "https://arg-syd-aiapp1day-openai.openai.azure.com",
-    new AzureKeyCredential("70563d5a57cc45999cdd80b9bf50ed4d")
+    "https://<AZURE_OPENAI_API_INSTANCE_NAME>.openai.azure.com/",
+    new AzureKeyCredential("<AZURE_OPENAI_API_KEY>")
 );
-
-// code block from earlier step
-//   const chatResponse = client.getChatCompletions("completions", [
-//     { role: "user", content: "What are the different types of road bikes?" },
-//   ]);
-
-//   const chatResponse = client.getChatCompletions("completions", [
-//     {
-//       role: "system",
-//       content:
-//         "You are a helpful, fun and friendly sales assistant for Contoso Bike Store, a bicycle and bicycle accessories store.",
-//     },
-//     { role: "user", content: "Do you sell bicycles?" },
-//   ]);
-
-// code block from earlier step
-// const chatResponse = client.getChatCompletions("completions", [
-//     {
-//         role: "system",
-//         content:
-//             "You are a helpful, fun and friendly sales assistant for Contoso Bike Store, a bicycle and bicycle accessories store.",
-//     },
-//     { role: "user", content: "Do you sell bicycles?" },
-//     {
-//         role: "assistant",
-//         content:
-//             "Yes, we do sell bicycles. What kind of bicycle are you looking for?",
-//     },
-//     {
-//         role: "user",
-//         content: "I'm not sure what I'm looking for. Could you help me decide?",
-//     },
-// ]);
 
 const searchBikeStore = {
     name: "search_bike",
@@ -61,14 +28,6 @@ const searchBikeStore = {
     },
 };
 
-// code block from earlier step
-//   chatResponse
-//   .then((result) => {
-//     for (const choice of result.choices) {
-//       console.log(choice.message.content);
-//     }
-//   })
-//   .catch((err) => console.log(`Error: ${err}`));
 
 const options = {
     tools: [
@@ -79,6 +38,42 @@ const options = {
     ],
 };
 
+// // Block Reference 1
+//   const chatResponse = client.getChatCompletions("completions", [
+//     { role: "user", content: "What are the different types of road bikes?" },
+//   ]);
+
+//   const chatResponse = client.getChatCompletions("completions", [
+//     {
+//       role: "system",
+//       content:
+//         "You are a helpful, fun and friendly sales assistant for Contoso Bike Store, a bicycle and bicycle accessories store.",
+//     },
+//     { role: "user", content: "Do you sell bicycles?" },
+//   ]);
+
+
+// // Block Reference 1
+// const chatResponse = client.getChatCompletions("completions", [
+//     {
+//         role: "system",
+//         content:
+//             "You are a helpful, fun and friendly sales assistant for Contoso Bike Store, a bicycle and bicycle accessories store.",
+//     },
+//     { role: "user", content: "Do you sell bicycles?" },
+//     {
+//         role: "assistant",
+//         content:
+//             "Yes, we do sell bicycles. What kind of bicycle are you looking for?",
+//     },
+//     {
+//         role: "user",
+//         content: "I'm not sure what I'm looking for. Could you help me decide?",
+//     },
+// ]);
+
+
+// Block Reference 1
 const chatResponse = client.getChatCompletions("completions", [
     {
         role: "system",
@@ -109,8 +104,17 @@ function applyToolCall({ function: call, id }) {
 }
 
 
+// // Block Reference 2
+//   chatResponse
+//   .then((result) => {
+//     for (const choice of result.choices) {
+//       console.log(choice.message.content);
+//     }
+//   })
+//    .catch((err) => console.log(`Error: ${JSON.stringify(err)}`));
 
 
+// Block Reference 2
 chatResponse
     .then(async (result) => {
 
@@ -142,5 +146,5 @@ chatResponse
             }
         }
     })
-    .catch((err) => console.log(`Error: ${err}`));
+    .catch((err) => console.log(`Error: ${JSON.stringify(err)}`));
 
