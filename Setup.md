@@ -4,7 +4,7 @@
 
 ### Run bicep deployment locally
 
-- go to labs\02-lab-02\1-azure-deployment
+- go to labs\03-LAB-03\1-azure-deployment
 - modify azuredeploy.parameters.json to give resources a good name. e.g. arg-syd-aiapp1day
 - modify deploy-core.ps1
 - sub for demo sub: 9df3a442-42f1-40dd-8547-958c3e01597a
@@ -45,10 +45,10 @@
 
 ### Scripts to run
 
-- labs\02-LAB-02\2-Load-Data\completed> npm install
-- labs\02-LAB-02\2-Load-Data\completed> node .\convert.js
-- labs\02-LAB-02\2-Load-Data\completed> node .\import.js
-- labs\02-LAB-02\2-Load-Data\completed> npm install
-- labs\02-LAB-02\3-Vector-Search\completed> node .\vectorize.js
+- labs\03-LAB-03\2-Load-Data\completed> npm install
+- labs\03-LAB-03\2-Load-Data\completed> node .\convert.js
+- labs\03-LAB-03\2-Load-Data\completed> node .\import.js
+- labs\03-LAB-03\2-Load-Data\completed> npm install
+- labs\03-LAB-03\3-Vector-Search\completed> node .\vectorize.js
 
 

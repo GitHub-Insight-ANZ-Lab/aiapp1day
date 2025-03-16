@@ -14,14 +14,14 @@ The product catalog data is shared in a CSV file. You will be writing a custom s
 
 ## Setup the lab environment
 
-1. Open repo in `VS Code` and then open `Terminial` -> `New Terminal`. Navigate to the lab folder `~/labs/02-LAB-02/2-Load-Data/start` within the repository.
+1. Open repo in `VS Code` and then open `Terminial` -> `New Terminal`. Navigate to the lab folder `~/labs/03-LAB-03/2-Load-Data/start` within the repository.
 
    ```bash
-   cd labs/02-LAB-02/2-Load-Data/start
+   cd labs/03-LAB-03/2-Load-Data/start
    ```
 
 :::info
-The `~/labs/02-LAB-02/2-Load-Data/completed` folder contains the completed solution for this lab. Please use `start` folder to carry out the exercise. You can compare your code with the files in `completed` folder if your code does not run correctly.
+The `~/labs/03-LAB-03/2-Load-Data/completed` folder contains the completed solution for this lab. Please use `start` folder to carry out the exercise. You can compare your code with the files in `completed` folder if your code does not run correctly.
 :::
 
 2. Check `.env` file has correct configurations. Placeholder string should be all replaced in earlier `Lab Setup` step.

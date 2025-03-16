@@ -13,14 +13,14 @@ You will also learn how to use the vector index to retrieve the relevant documen
 
 ## Setup the lab environment
 
-1. Navigate to the lab folder `~/labs/02-LAB-02/3-Vector-Search/start` in the `Terminal` window.
+1. Navigate to the lab folder `~/labs/03-LAB-03/3-Vector-Search/start` in the `Terminal` window.
 
     ```bash
-    cd  labs/02-LAB-02/3-Vector-Search/start
+    cd  labs/03-LAB-03/3-Vector-Search/start
     ```
 
     :::info
-    The `~/labs/02-LAB-02/3-Vector-Search/completed` folder contains the completed solution for this lab. Please use `start` folder to carry out the exercise. You can compare your code with the files in `completed` folder if your code does not run correctly.
+    The `~/labs/03-LAB-03/3-Vector-Search/completed` folder contains the completed solution for this lab. Please use `start` folder to carry out the exercise. You can compare your code with the files in `completed` folder if your code does not run correctly.
     :::
 
 2. Check `.env` file has correct configurations. Placeholder string should be all replaced in earlier `Lab Setup` step.

@@ -16,7 +16,7 @@ When developing a backend api, it is often useful to run the application locally
 
 1. In the previous task, we created a LangChain agent that is capable of generating responses using RAG. Now, let's integrate this code into our Backend API service.
 
-2. Compare `labs\02-LAB-02\5-Chatbot-Backend\agent.js` and `labs\02-LAB-02\5-Chatbot-Backend\langchain-agent.js`. You will notice that additional code has been added to the function to manage chat history.
+2. Compare `labs\03-LAB-03\5-Chatbot-Backend\agent.js` and `labs\03-LAB-03\5-Chatbot-Backend\langchain-agent.js`. You will notice that additional code has been added to the function to manage chat history.
 
    ![alt text](images/chatbot-frontend-image-1.png)
 

@@ -8,14 +8,14 @@ Throughout this lab, notice how much more concise the code is compared to the pr
 
 ## Setup the lab environment
 
-1. Navigate to the lab folder `~/labs/02-LAB-02/4-Using-Langchain/start` within the repository.
+1. Navigate to the lab folder `~/labs/03-LAB-03/4-Using-Langchain/start` within the repository.
 
     ```bash
-    cd  labs/02-LAB-02/4-Using-Langchain/start
+    cd  labs/03-LAB-03/4-Using-Langchain/start
     ```
 
     :::info
-    The `~/labs/02-LAB-02/4-Using-Langchain/completed` folder contains the completed solution for this lab. Please use `start` folder to carry out the exercise. You can compare your code with the files in `completed` folder if your code does not run correctly.
+    The `~/labs/03-LAB-03/4-Using-Langchain/completed` folder contains the completed solution for this lab. Please use `start` folder to carry out the exercise. You can compare your code with the files in `completed` folder if your code does not run correctly.
     :::
 
 2. Check `.env` file has correct configurations. Placeholder string should be all replaced in earlier `Lab Setup` step.

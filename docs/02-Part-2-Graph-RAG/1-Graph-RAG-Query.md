@@ -40,7 +40,7 @@ Given a user query and, optionally, the conversation history, the local search m
 
 Jupyter Notebook is used to create interactive notebook documents that can contain live code, equations, visualizations, media and other computational outputs. Jupyter Notebook is often used by programmers, data scientists and students to document and demonstrate coding workflows or simply experiment with code.
 
-1. Go to `labs\02-LAB-03` in the VS Code `Explorer`, find the `1-Graph-RAG` folder and open `1-GraphRagQuery.ipynb`
+1. Go to `labs\02-LAB-02` in the VS Code `Explorer`, find the `1-Graph-RAG` folder and open `1-GraphRagQuery.ipynb`
 
 2. The `Jupyter Notebook` will open and looks like below. Now you can follow each step and use the `play` icon to execute the steps.
 

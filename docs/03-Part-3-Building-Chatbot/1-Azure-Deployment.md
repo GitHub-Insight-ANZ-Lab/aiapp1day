@@ -18,7 +18,7 @@ This deployment will only create 2 web apps for the Chatbot Frontend and Backend
 
 ### Run Deployment
 
-Open a terminal and navigate to `labs/02-LAB-02/1-Azure-Deployment/lab-user` folder within the repository.
+Open a terminal and navigate to `labs/03-LAB-03/1-Azure-Deployment/lab-user` folder within the repository.
 
 1. Login
 
@@ -65,7 +65,7 @@ This deployment will create all the resources required for the lab, including Az
 
 ### Configure Deployment
 
-Open a terminal and navigate to `labs/02-LAB-02/1-Azure-Deployment/lab-core` folder within the repository.
+Open a terminal and navigate to `labs/03-LAB-03/1-Azure-Deployment/lab-core` folder within the repository.
 
 Open the `azuredeploy.parameters.json` file, edit the `name` (it will be the prefix of all resources). e.g.: arg-syd-daniel
 
