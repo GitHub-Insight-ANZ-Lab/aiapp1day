@@ -48,6 +48,8 @@ Jupyter Notebook is used to create interactive notebook documents that can conta
 
 3. Click the `play` icon in the first cell under `Install 3rd party packages`, VS Code will ask to select a python environment. Python and related extensions should be already installed in `codespaces`, select an existing python environment from top panel of VS Code as prompted.
 
+![alt text](images/graphrag-python.png)
+![alt text](images/graphrag-python-ver.png)
 ![alt text](images/graphrag-install.png)
 
 4. Once installed, you can continue to carry out the rest of the exercises in the notebook. The `data` folder contains user feedback data we ingested to Graph RAG.
