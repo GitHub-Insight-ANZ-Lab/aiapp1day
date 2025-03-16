@@ -1,6 +1,6 @@
 ---
 title: Getting Started
-slug: /lab2-setup
+slug: /lab3-setup
 ---
 
 :::info LAB PRE-REQUISITES

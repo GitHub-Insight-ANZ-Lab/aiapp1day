@@ -38,8 +38,8 @@ Using GraphRAG with your data out of the box may not yield the best possible res
 
 ## Read More
 
-👉 Graph RAG: https://microsoft.github.io/graphrag/
-👉 Microsoft Research Blog Post: https://www.microsoft.com/en-us/research/blog/graphrag-unlocking-llm-discovery-on-narrative-private-data/
-👉 GraphRAG Accelerator: https://github.com/Azure-Samples/graphrag-accelerator
-👉 GraphRAG Arxiv: https://arxiv.org/pdf/2404.16130
+- 👉 Graph RAG: https://microsoft.github.io/graphrag/
+- 👉 Microsoft Research Blog Post: https://www.microsoft.com/en-us/research/blog/graphrag-unlocking-llm-discovery-on-narrative-private-data/
+- 👉 GraphRAG Accelerator: https://github.com/Azure-Samples/graphrag-accelerator
+- 👉 GraphRAG Arxiv: https://arxiv.org/pdf/2404.16130
 

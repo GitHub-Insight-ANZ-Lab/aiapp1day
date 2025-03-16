@@ -6,7 +6,7 @@ At query time, these structures are used to provide materials for the LLM contex
 - Local Search for reasoning about specific entities by fanning-out to their neighbors and associated concepts.
 - DRIFT Search for reasoning about specific entities by fanning-out to their neighbors and associated concepts, but with the added context of community information.
 
-## Global Search 🔎
+## Global Search
 
 ### Whole Dataset Reasoning
 
@@ -23,7 +23,7 @@ The quality of the global search’s response can be heavily influenced by the l
 ![alt text](images/graphrag-global.png)
 
 
-## Local Search 🔎
+## Local Search
 
 ### Entity-based Reasoning
 
@@ -36,7 +36,7 @@ Given a user query and, optionally, the conversation history, the local search m
 ![alt text](images/graphrag-local.png)
 
 
-## Try it out in Jupyter Notebook 🔎
+## Try it out in Jupyter Notebook
 
 Jupyter Notebook is used to create interactive notebook documents that can contain live code, equations, visualizations, media and other computational outputs. Jupyter Notebook is often used by programmers, data scientists and students to document and demonstrate coding workflows or simply experiment with code.
 
