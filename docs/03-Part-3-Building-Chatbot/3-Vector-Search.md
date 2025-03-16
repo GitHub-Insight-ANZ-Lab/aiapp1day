@@ -112,7 +112,7 @@ In this section, a function is added that will loop through each document in a c
 We have a lot of people doing the lab at the same time. Get in quick before rate limit is hit!
 ::: -->
 
-1. In `vectorize.js`, add the following code directly above the last line of the file (that calls the `main` function) - the code is documented inline to explain the steps taken:
+1. In `vectorize.js`, add the following code above the last line of the file `main().catch(console.error);` (that calls the `main` function) - the code is documented inline to explain the steps taken:
 
    ```javascript
    async function addCollectionContentVectorField(db, collectionName) {
@@ -224,7 +224,7 @@ We have a lot of people doing the lab at the same time. Get in quick before rate
 We have generated vector embeddings for each document and created vector indexes.
 In this section, we will add the steps to retrieve the most relevant documents from Cosmos DB based based on the cosine similarity of the query vector and the content vectors of the documents in the collection.
 
-1. In `search.js`, add the following code directly above the last line of the file (that calls the `main` function) - the code is documented inline to explain the steps taken. This code introduces two functions, one to perform a vector search and another to format and print the search results:
+1. In `search.js`, add the following code directly above the last line of the file `main().catch(console.error);` (that calls the `main` function) - the code is documented inline to explain the steps taken. This code introduces two functions, one to perform a vector search and another to format and print the search results:
 
    ```javascript
    async function vectorSearch(db, collectionName, query, numResults = 3) {
@@ -292,7 +292,7 @@ In this section, we will add the steps to retrieve the most relevant documents f
 
 In this section, a function is added that will use the vector search results to augment a prompt to a large language model (LLM). This is considered a RAG (Retrieval Augmented Generation) pattern. The function will use the search results in the prompt to the LLM.
 
-1. In `rag.js`, add the following code directly above the last line of the file (that calls the `main` function) - the code is documented inline to explain the steps taken:
+1. In `rag.js`, add the following code directly above the last line of the file `main().catch(console.error);` (that calls the `main` function) - the code is documented inline to explain the steps taken:
 
    ```javascript
    async function ragWithVectorsearch(
