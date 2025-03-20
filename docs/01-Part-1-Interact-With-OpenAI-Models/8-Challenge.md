@@ -17,7 +17,7 @@ You have a home automation system that controls the lights in your home. You wan
 
 Create a simple Node.js application that prints the response from the chatbot to the console window.
 
-Hint: Use [chat tools]('https://learn.microsoft.com/en-us/javascript/api/overview/azure/openai-readme?view=azure-node-preview#use-chat-tools') to turn on and off the lights in your home.
+Hint: Use [chat tools](https://learn.microsoft.com/en-us/javascript/api/overview/azure/openai-readme?view=azure-node-preview#use-chat-tools) to turn on and off the lights in your home.
 
 The completed code is available in the `labs/01-Lab-01/8-Exercise` folder.
 
