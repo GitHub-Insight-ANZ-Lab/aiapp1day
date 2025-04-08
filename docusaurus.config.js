@@ -11,7 +11,7 @@ const config = {
   title: "Azure AI App In a Day Hackathon",
   tagline:
     "Accelerate Your AI Journey: Learn the Basics of AI and Build Your First AI App",
-  url: "https://GitHub-Insight-ANZ-Lab.io/",
+  url: "https://github-insight-anz-lab.github.io",
   baseUrl: "/aiapp1day/",
 
   onBrokenLinks: "ignore",
